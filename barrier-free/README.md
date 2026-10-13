@@ -11,8 +11,18 @@
 | `all_ratings.csv` | 전체 등급 통합본 (47개국 + 미국 주·도시 15곳), ISO3 코드·평가된 차원 수·평균 점수(상3/중2/하1) 포함 |
 | `all_indicators.csv` | 전체 지표 통합본, ISO3 코드 포함 |
 | `scripts/merge.py` | 지역 파일 → 통합본 재생성 (`python3 barrier-free/scripts/merge.py`) |
+| `all_indicators_verified.csv` | 지표별 원문 검증 결과와 수정값(`value_final`, `year_final`) — **분석에는 이 파일을 사용** |
+| `RELIABILITY.md` | 원문 검증 절차·결과·오류율 |
+| `VALIDITY.md` | 지표 타당성 검토, 수치 채점 규칙, 세계지도용 글로벌 지표 평가 |
+| `reference/` | 공식 원자료: UN CRPD 비준표, Eurostat 고용격차·GALI, World Bank 65+, DDI (`scripts/fetch_reference.py`) |
+| `verification/` | 단계별 검증 작업표와 결과 (`scripts/check_sources.py`, `scripts/apply_verification.py`) |
+| `rescoring/` | 수치 규칙 + 이중 채점 재산정 결과 (`scripts/score.py`) |
+| `perception/` | 자국 인식 vs 해외 인식(설문·한국 SNS·일본어/영어 담론) |
 
-## 국가별 등급
+## 국가별 등급 (초기 판단 등급 — 지도·비교용으로 쓰지 말 것)
+
+> 아래 등급은 지역별 수집 단계의 판단 등급이다. 수치 규칙으로 재산정하면 47개국 중 45개국이 `자료부족`이다(`rescoring/README.md`). 이력 보존용으로만 남긴다.
+
 평가 차원: LAW 법·제도 / TRANS 교통 / BUILT 건축·도시 / DIGI 디지털 / EMP 고용 / TOUR 관광. "평가 차원"은 6개 중 확인필요가 아닌 차원 수다.
 
 | 군집 | 국가 | LAW | TRANS | BUILT | DIGI | EMP | TOUR | 종합 | 평가 차원 |
