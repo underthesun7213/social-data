@@ -6,12 +6,16 @@ Outputs (barrier-free/reference/):
   eurostat_employment_gap.csv  Eurostat tepsr_sp200, disability employment gap (pp), some or severe, total
   eurostat_gali.csv         Eurostat hlth_silc_12, share of 16+ with activity limitation (some or severe)
   worldbank_age65.csv       World Bank SP.POP.65UP.TO.ZS, latest year per country
+  ddi_estimates.csv         Disability Data Initiative (Fordham) cross-country estimates,
+                            adults 15+: prevalence and employment by disability status
 """
 import csv
 import html
 import json
 import os
 import re
+import time
+import urllib.parse
 import urllib.request
 
 import pycountry
@@ -19,6 +23,9 @@ import pycountry
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(BASE, "reference")
 UA = {"User-Agent": "Mozilla/5.0"}
+
+DDI_NAMES = {"Congo, Rep.": "COG", "Guinea Bissau": "GNB", "Palestine": "PSE",
+             "Cote d'Ivoire": "CIV", "Bolivia": "BOL", "Tanzania": "TZA", "Vietnam": "VNM"}
 
 # UN participant names that pycountry's fuzzy lookup gets wrong or misses.
 UN_NAMES = {
@@ -37,10 +44,16 @@ UN_NAMES = {
 }
 
 
-def get(url):
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=120) as r:
-        return r.read().decode("utf-8")
+def get(url, tries=4):
+    for attempt in range(tries):
+        try:
+            req = urllib.request.Request(url, headers=UA)
+            with urllib.request.urlopen(req, timeout=120) as r:
+                return r.read().decode("utf-8")
+        except urllib.error.URLError:
+            if attempt == tries - 1:
+                raise
+            time.sleep(2 ** (attempt + 1))
 
 
 def iso3(name):
@@ -115,6 +128,25 @@ def worldbank():
     write("worldbank_age65.csv", rows)
 
 
+def ddi():
+    api = "https://www.disabilitydatainitiative.org/api"
+    countries = [c["value"] for c in json.loads(get(api + "/cos"))]
+    queries = [("Adults with disabilities", ["Any difficulty", "A lot of difficulty/Cannot do at all"]),
+               ("Employment", ["No difficulty", "Any difficulty"])]
+    rows = []
+    for ind, dis in queries:
+        qs = urllib.parse.urlencode([("cos", c) for c in countries] + [("ind", ind),
+                                    ("pop", "All adults (ages 15 and older)")] + [("dis", d) for d in dis])
+        for r in json.loads(get(f"{api}/cross?{qs}")):
+            if r["Value"] in (None, "", "NA"):
+                continue
+            rows.append({"iso3": DDI_NAMES.get(r["Country"]) or iso3(r["Country"]), "country": r["Country"],
+                         "indicator": ind, "difficulty": r["DifficultyName"],
+                         "pct": round(float(r["Value"]) * 100, 2),
+                         "source_url": "https://www.disabilitydatainitiative.org/DS-E"})
+    write("ddi_estimates.csv", rows)
+
+
 def write(name, rows):
     os.makedirs(OUT, exist_ok=True)
     with open(os.path.join(OUT, name), "w", encoding="utf-8", newline="") as fh:
@@ -130,3 +162,4 @@ if __name__ == "__main__":
     eurostat("hlth_silc_12", {"freq": "A", "unit": "PC", "quant_inc": "TOTAL", "age": "Y_GE16",
                               "sex": "T", "lev_limit": "SM_SEV"}, "gali")
     worldbank()
+    ddi()
