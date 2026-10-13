@@ -1,0 +1,48 @@
+iso3,country,LAW1,LAW2,LAW3,LAW4,LAW5,LAW6,BUILT1,BUILT2,BUILT3,BUILT4,DIGI1,DIGI2,DIGI3,DIGI4,TRANS_A,TRANS_B,TRANS_C,EMP_GAP,EMP_RATIO,EMP_YEAR,evidence
+JPN,일본,1,0,0,1,0,1,1,0,,,0,0,,,,,,,,,"LAW3: 2024 민간 합리적배려 의무화(east_asia:2)이나 거부를 차별로 규정 안함(사전지식); LAW5: 독립 인권기구 없음·과료만; A·C: 94.3%는 1일 3천명 이상 여객시설(이용자기준 분모, east_asia:4)→규칙상 제외; B: 72.1%는 적용제외 차량 제외 분모(east_asia:8)→제외"
+KOR,한국,1,1,1,1,1,1,1,1,1,,1,1,1,,100,44.4,,,,,"LAW3·5: 장차법 정당한편의 거부=차별, 인권위+시정명령·과태료(east_asia:23); BUILT2: 편의증진법 기존시설 정비기한(사전지식); BUILT3: 편의시설 실태조사 공표, 준수율 수치 미확보; DIGI: east_asia:33,34; A: 서울 지하철 338역 1역사1동선 완료(east_asia:29, 코레일 6역 제외); B: 전국 저상버스 44.4%(east_asia:25)"
+DEU,독일,1,1,0,1,1,1,1,0,0,0,1,1,1,,,,78,23.0,,2025,"LAW3: AGG 합리적 편의 미규정(europe_central_east:11); DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); C: DB 역 기준 78%(europe_central_east:18, 2020); 승강장 87%는 정의 상이; EMP: Eurostat tepsr_sp200 2025"
+AUT,오스트리아,1,1,1,1,1,1,1,1,,,1,1,1,,100,100,,18.8,,2025,"LAW3·5: BGStG 민간 포함·조정 후 손해배상(europe_central_east:19); BUILT2: 연방건물 Etappenplan(사전지식); DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); 빈 U-Bahn·버스 100%(europe_central_east:25, 2차확인); EMP: Eurostat tepsr_sp200 2025"
+CHE,스위스,1,0,0,1,0,1,1,0,,,1,0,,,,,,13.3,,2024,"LAW3·5: BehiG 민간 범위·구제 제한(사전지식); DIGI1: eCH-0059(BehiV); C: 1,838역 중 922 적합/499 미완료(europe_central_east:28) 정의 불명확해 공란; EMP: Eurostat tepsr_sp200 2024"
+POL,폴란드,1,0,1,1,1,1,1,,,,1,1,1,,,,,35.0,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025 flag u"
+CZE,체코,1,1,1,1,1,1,1,,,,1,1,1,,78.7,,,23.8,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); A: 프라하 48/61역(europe_central_east:41, 연도 불명확); EMP: Eurostat tepsr_sp200 2025"
+HUN,헝가리,1,1,,1,1,0,1,,,,1,1,1,,,,,24.3,,2025,"LAW6: CRPD 조사 2020 중대·체계적 위반(europe_central_east:42); DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025"
+ROU,루마니아,1,0,,1,1,1,1,,,,1,1,1,,,,,45.4,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025"
+BGR,불가리아,1,0,1,1,1,1,1,,,,1,1,1,,,,,33.2,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025"
+EST,에스토니아,1,1,,1,1,1,1,,,,1,1,1,,,,,16.0,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025"
+LVA,라트비아,1,1,,1,1,1,1,,,,1,1,1,,,,,19.8,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025"
+LTU,리투아니아,1,1,,1,1,1,1,,,,1,1,1,,,,,42.8,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025 flag p"
+UKR,우크라이나,1,1,,1,,1,1,,,,,,,,,,,,,,
+SRB,세르비아,1,1,,1,1,1,1,,,,,,,,,,,37.5,,2025,EMP: Eurostat tepsr_sp200 2025
+RUS,러시아,1,0,0,1,0,1,1,,,,,,,,,,,,,,LAW3: 181-FZ 합리적편의 거부 차별 미규정(사전지식); LAW5: 독립기구 없음
+ESP,스페인,1,1,1,1,1,0,1,1,,,1,1,1,,70,,,22.6,,2025,"BUILT2: RDL1/2013 기존환경 기한 2017(europe_south:9); LAW6: CRPD 조사 2018 교육권 중대·체계적 위반(사전지식, CRPD/C/20/3); DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); A: 마드리드 메트로 70%(europe_south:19, 2024); EMP: Eurostat tepsr_sp200 2025"
+ITA,이탈리아,1,1,1,1,1,1,1,1,,,1,1,1,,,,,25.1,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); A: 로마 약50%는 언론 추정(europe_south:31)→제외; EMP: Eurostat tepsr_sp200 2025"
+PRT,포르투갈,1,1,,1,1,1,1,,,,1,1,1,,76.8,,,24.5,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); A: 리스본 43/56역(europe_south:35, 2023); EMP: Eurostat tepsr_sp200 2025"
+GRC,그리스,1,1,1,1,1,1,1,,,,1,1,1,,100,,,35.9,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); A: 아테네 메트로 전역(europe_south:41, 2021); EMP: Eurostat tepsr_sp200 2025"
+MLT,몰타,1,1,1,1,1,1,1,,,,1,1,1,,,,,30.1,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025"
+CYP,키프로스,1,1,1,1,1,1,1,,,,1,1,1,,,,,23.9,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025"
+GBR,영국,1,1,1,1,1,0,1,0,0,0,1,0,1,,34.6,,61,29.7,,2025,"LAW3: 평등법 합리적 조정(europe_west:8); BUILT2: 소급 없음(europe_west:22); DIGI: PSBAR+GDS(europe_west:11,12); LAW6: CRPD 위원회 조사 2016 중대·체계적 위반(europe_west:9), 2024 후속 진전없음; A: 런던 지하철 94/272역(europe_west:13, 2025, 분모 근사); C: GB 철도 61%(europe_west:15, 2019 연도창 밖); EMP: ONS LFS 16-64 격차 29.7(europe_west:24); Eurostat UK 2018은 연도창 밖"
+FRA,프랑스,1,1,1,1,1,1,1,1,1,0,1,1,1,,9.4,100,,21.6,,2025,"BUILT2·3·4: 2005법 ERP 기한·Ad'AP, 미착수 약50%(europe_west:27,30); DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); A: 파리권 접근역 29/약308(europe_west:32, 2025, 분모 근사); B: 파리 버스 100%(europe_west:33); EMP: Eurostat tepsr_sp200 2025"
+NLD,네덜란드,1,0,1,1,1,1,1,,,,1,1,1,,,,,24.3,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025"
+BEL,벨기에,1,1,1,1,1,1,1,,,,1,1,1,,,,,34.7,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025"
+LUX,룩셈부르크,1,1,,1,1,1,1,,,,1,1,1,,,,,8.5,,2022,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2022 flag b"
+IRL,아일랜드,1,1,1,1,1,1,1,,,,1,1,1,,,,,30.5,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025"
+SWE,스웨덴,1,1,1,1,1,1,1,,,,1,1,1,,,,,22.6,,2025,"LAW3: 불충분한 접근성=차별(europe_west:55); DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025"
+NOR,노르웨이,1,0,1,1,1,1,1,,,,1,1,1,,,,,23.8,,2025,DIGI2: 2013 ICT UD 규정 민간 포함(europe_west:58); EMP: Eurostat tepsr_sp200 2025 flag b
+DNK,덴마크,1,1,1,1,1,1,1,,,,1,1,1,,,,,23.5,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025"
+FIN,핀란드,1,1,1,1,1,1,1,,,,1,1,1,,,,,20.5,,2025,"DIGI1-3: WAD(EN 301 549)·EAA 2025·WAD 3년 모니터링(europe_west:1,3); EMP: Eurostat tepsr_sp200 2025"
+SAU,사우디아라비아,1,1,,,,1,1,,,,,,,,,,,,,,"2023 장애인권리법(middle_east_others:1,2) 조문 미확인→LAW3~5 공란; BUILT1: SBC 201(middle_east_others:20, 미확인이나 국가 강제코드)"
+ARE,아랍에미리트,1,0,,,,1,,,,,,,,,,,,,,,
+QAT,카타르,1,0,,,,1,,,,,,,,,100,,,,,,"A: 도하 메트로 37/37역(middle_east_others:36, new system)"
+CAN,캐나다,1,1,1,1,1,1,1,0,0,0,0,,,,,,,16,,2022,EMP: 25-64세 78-62(middle_east_others:43)
+NZL,뉴질랜드,1,1,0,1,1,1,1,,,,0,0,,,,,,42.3,,2023,LAW3: 합리적 편의 거부 차별 미규정(사전지식); DIGI1: 정부 표준(내각 결정); EMP: 15-64세 81.7-39.4(middle_east_others:49)
+CHN,중국,1,0,0,1,0,1,1,,,,0,0,,,,,,,,,LAW3·5: 해당 없음(사전지식); BUILT1: GB 50763 강제규범
+IND,인도,1,0,1,0,1,1,0,1,1,,,,,,,,,,,,LAW4·BUILT1: Raturi 판결 규칙15 권고적(middle_east_others:61); BUILT2: RPwD s.45 5년 기한; BUILT3: CAG 감사(middle_east_others:59)
+BRA,브라질,1,1,1,1,1,1,1,1,,,0,1,,,,,,,,,LAW3: LBI 합리적 적응 거부=차별(middle_east_others:65); DIGI1: eMAG(WCAG2.0)→0
+MEX,멕시코,1,1,1,,1,1,,,,,,,,,,,,,,,LAW3: LFPED 합리적 편의 거부=차별(사전지식); 멕시코시티 56/195 미확인(middle_east_others:68)→제외
+ISR,이스라엘,1,0,1,1,1,1,1,1,1,0,,1,,,,,,,,,"BUILT3·4: 공공건물 약60% 접근불가(middle_east_others:71,72); BUILT2·DIGI2: 2011/2013 규정(사전지식)"
+ZAF,남아프리카공화국,1,1,1,1,1,1,1,,,,,,,,,,,,,,
+EGY,이집트,1,0,,,,1,,,,,,,,,,,,,,,
+SGP,싱가포르,1,0,0,1,0,1,1,0,0,0,0,0,,,100,100,,,,,LAW3·5: 포괄적 차별금지법 없음(sg_au:2); DIGI1: DSS는 정책(sg_au:13); A: MRT·LRT 100%(sg_au:5); B: 공공버스 100%(sg_au:6)
+AUS,호주,1,1,1,1,1,1,1,0,0,0,0,0,,,,,,26.3,,2022,"LAW3: DDA(sg_au:20); BUILT2: 소급 없음(sg_au:28); DIGI: 정책·지침(sg_au:29,30); NSW 철도 72.3%(sg_au:24)는 주 단위·수도권 아님→공란; EMP: 15-64세 계산: 장애 60.5×(1-0.075)=56.0 vs 비장애 84.9×(1-0.031)=82.3(sg_au:31,32)"
+USA,미국,0,0,1,1,1,1,1,1,0,0,1,0,1,,100,,,34.7,,2023,LAW1: 서명만(un_crpd); DIGI1: DOJ Title II WCAG 2.1 AA(usa:15); DIGI2: 민간 기준 부재(usa:15); DIGI3: GSA Section 508 평가(사전지식); A: 수도권 WMATA 98/98역(usa:34); EMP: ACS 21-64세 81.5-46.8(usa:23)
