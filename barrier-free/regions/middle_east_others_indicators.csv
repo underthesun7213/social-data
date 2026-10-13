@@ -1,0 +1,80 @@
+cluster,country,sub_unit,dimension,indicator,value,unit,year,source_name,source_url,notes
+중동,사우디아라비아,국가,LAW,장애인권리법(Rights of Persons with Disabilities System) 공포,2023-08-27,날짜,2023,Saudipedia,https://saudipedia.com/en/the-rights-of-persons-with-disabilities-law-in-saudi-arabia,"각의 승인 2023-08-22, 칙령 2023-08-27; 2000년 장애복지법 대체"
+중동,사우디아라비아,국가,LAW,장애인권리법 조문 수,33,개조,2023,Saudipedia,https://saudipedia.com/en/the-rights-of-persons-with-disabilities-law-in-saudi-arabia,5부 구성; 접근성·합리적 편의·차별금지 포함; 제25조 위반 조사·감독은 장애인돌봄청(APD)
+중동,사우디아라비아,국가,LAW,장애인돌봄청(APD) 설립,2018,연도,2018,Saudipedia,https://saudipedia.com/en/does-saudi-arabia-protect-the-rights-of-persons-with-disabilities,설립연도 1차 출처 미확인 — 확인필요
+중동,사우디아라비아,국가,LAW,CRPD 및 선택의정서 비준,2008-06-24,날짜,2008,UN Treaty Collection,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en,"선택의정서 동시 비준; 이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요"
+중동,사우디아라비아,국가,LAW,CRPD 위원회 최종견해(CRPD/C/SAU/CO/1) 채택,2019-04-02,날짜,2019,UN Digital Library,https://digitallibrary.un.org/record/3848352,차별금지 원칙 미인정·장애인단체 협의 부족·국가전략 부재 지적(2023 신법 이전); 2~4차 보고서 2026-07 제출 기한
+중동,사우디아라비아,국가,DATA,"장애 출현율(극심한 어려움, 사우디 국민)",2.9,%,2017,GASTAT 장애조사,https://stats.gov.sa/en/w/gastat-2.9-of-saudi-population-have-disability-with-extreme-difficulty,워싱턴그룹 정의; 국민만 대상
+중동,사우디아라비아,국가,DATA,"장애 출현율(모든 정도, 사우디 국민)",7.1,%,2017,GASTAT 장애조사,https://stats.gov.sa/en/w/dis,널리 인용(DGA 문서 '약 7%')되나 이번 세션 원문 확인 실패 — 확인필요; WHO 추정 16% 대비 크게 낮음
+중동,사우디아라비아,국가,DATA,단일장애 중 시각장애 비중,46.02,%,2017,GASTAT,https://stats.gov.sa/en/w/gastat-2.9-of-saudi-population-have-disability-with-extreme-difficulty,복합장애 중 이동장애 29.13%; 지역 분포 리야드 25.13%
+중동,사우디아라비아,국가,DATA,고령화율(65세 이상),약 2.8,%,2023,World Bank WDI,https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS,"추정; 이주노동자 포함 전체 인구 기준; 이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요"
+중동,사우디아라비아,국가,EMP,장애인 노동시장 참여/고용 비율(국가변혁프로그램 지표),7.7,%,2017,Arab News(HRSD 인용),https://www.arabnews.pk/node/1831677,기준연도 2016/2017 출처 간 불일치; 지표 정의(분모) 불명확
+중동,사우디아라비아,국가,EMP,장애인 노동시장 참여/고용 비율,12,%,2020,Arab News(HRSD 인용),https://www.arabnews.pk/node/1831677,NTP 목표치 12% 도달 보도
+중동,사우디아라비아,국가,EMP,장애인 노동시장 참여/고용 비율,12.4,%,2022,Arab News,https://arabnews.com/node/2322221/,
+중동,사우디아라비아,국가,EMP,장애인 노동시장 참여/고용 비율,13.2,%,2023,Okaz,https://www.okaz.com.sa/local/na/2256672,후속(2030) 공식 목표치 미확인 — 확인필요; Arabian Business는 2024 상반기 12.6% 보도
+중동,사우디아라비아,국가,EMP,장애인 고용률(2017 전국 장애조사 기반 연구 추정),18.5,%,2017,INQUIRY(2026),https://journals.sagepub.com/doi/reader/10.1177/00469580261441064,정의 상이 — 정부 12~13% 지표와 직접 비교 불가
+중동,사우디아라비아,국가,EMP,니타캇(Nitaqat) 장애인 근로자 1인 산정 가중치,4,명으로 산정,2022,CIPD(Clyde & Co) / HRSD,https://www.cipd.org/en/about/news/legal-update-disabilities-clydeandco/,"GOSI 장애 등록 + 사업장 Mowaamah 인증 조건; 미인증 중규모 사업장은 2명; 최저임금 조건(3,000→4,000리얄) 확인필요; 2014년 위장고용 악용 단속 보도(https://www.arabnews.pk/node/668001)"
+중동,사우디아라비아,국가,EMP,Mowaamah(장애친화 사업장) 인증 획득 사업장,150,개,2022,HRSD,https://www.hrsd.gov.sa/en/media-center/news/201035,2022년 9월 기준; 대형·초대형 사업장은 인증 취득 의무화; 최신 누계 미확인
+중동,사우디아라비아,리야드,TRANS,리야드 메트로 역 수,85,개역,2025,UrbanRail.net,https://urbanrail.net/as/riyadh/riyadh.htm,"6개 노선; 2024-12-01 청·황·보라, 12-15 적·녹, 2025-01-05 주황 개통"
+중동,사우디아라비아,리야드,TRANS,리야드 메트로 연장,176,km,2025,Wikipedia(공식 발표 인용),https://en.wikipedia.org/wiki/Riyadh_Metro,UrbanRail.net 노선별 합계 162km; 무인 자동운전 190편성
+중동,사우디아라비아,리야드,TRANS,리야드 메트로 역 엘리베이터·점자블록·전용석,설계 반영(주장),정성,2025,Wasalt / Railway Pro,https://blog.wasalt.sa/en/riyadh-metro/,역별 무단차 감사·RPTA 공식자료 미확인 — 확인필요; 버스·보도 등 '첫/마지막 1km' 접근성은 별개
+중동,사우디아라비아,국가,BUILT,사우디 건축법 SBC 201 접근성 장 — ICC A117.1 준용,준용,정성,2018,SBC 201(사본),https://www.scribd.com/document/544940070/P-201E,1102.1조가 ICC A117.1 준수 규정(2차자료) — 확인필요; 기존 건물 소급 범위 불명
+중동,사우디아라비아,메디나,TOUR,예언자 모스크 휠체어·골프카트 이용자(1446H 하지 시즌),631267,명,2025,두 성원 관리청(SPA/Riyadh Daily),https://alriyadhdaily.com/article/a4d4edd3340f43dab09cfdb1c2813c3d,정부 발표치
+중동,사우디아라비아,메디나,TOUR,예언자 모스크 대여 휠체어,4700,대,2026,APP(SPA 인용),https://www.app.com.pk/?p=1212199,"외곽 광장 전동카트 일 8,000명 이상 이용(1447H)"
+중동,사우디아라비아,메카,TOUR,그랜드 모스크 전동카트(통합 모빌리티 플랫폼·Tawakkalna 예약),약 400,대,2026,Gulf News,https://gulfnews.com/amp/world/gulf/saudi/saudi-grand-mosque-enhances-accessibility-for-people-of-determination-with-new-facilities-1.102819030,타와프용 전동휠체어·흰지팡이·수어·점자 쿠란 제공
+중동,사우디아라비아,NEOM,BUILT,NEOM/The Line 장애 접근성 기준 공개 여부,미공개,정성,2022,Arab News(The Line 디자인 발표),https://www.arabnews.com/node/2129296/amp,'5분 도보권'·'끝단 간 20분' 등 일반 주장만; 유니버설디자인 기준 공개자료 확인 안 됨(계획 축소 보도도 있음)
+중동,사우디아라비아,국가,DIGI,정부 디지털 접근성 기준,WCAG 2.1 AA,기준,2022,Deque(DGA 정책 요약),https://www.deque.com/accessibility-compliance/mena/saudi-arabia/,디지털정부청(DGA) 디지털 접근성 정책; Qiyas 지표로 평가; 민간 적용범위 2차자료 간 불일치
+중동,아랍에미리트(UAE),연방,LAW,"연방법 2006년 제29호(특수필요인 권리법), 2009년 제14호로 개정",2006/2009,연도,2009,UAE 법무부 e-laws,https://elaws.moj.gov.ae/UAE-MOJ_LC-En/00_SOCIAL%20WELFARE/UAE-LC-En_2006-08-13_00029_Kait.html,2017년부터 '결의의 사람들(People of Determination)' 명칭 사용; 2018년 대체 여부 2차자료 상충
+중동,아랍에미리트(UAE),연방,LAW,CRPD 비준,2010-03-19,날짜,2010,UN Treaty Collection,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en,"선택의정서 미가입; 이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요"
+중동,아랍에미리트(UAE),연방,EMP,민간부문 장애인 고용 할당(각료결의 2018년 제43호),2,%,2018,Business & Disability Network,https://www.businessanddisability.org/node/554,현행 유효성·집행 실적 확인필요; 연방 장애인 고용률 통계 미공개
+중동,아랍에미리트(UAE),두바이,EMP,두바이 정부기관 고용 장애인,326,명,2024,DGHR(Zawya),https://www.zawya.com/en/press-release/government-news/dghr-reinforces-commitment-to-inclusive-employment-for-people-of-determination-across-dubais-government-entities-l1949xrg,UAE 국민 237명 포함; 연도 확인필요
+중동,아랍에미리트(UAE),두바이,BUILT,두바이 유니버설디자인 코드 시행,2017,연도,2017,Dubai Municipality,https://www.dm.gov.ae/municipality-business/dubai-universal-design-code/,"신축 전면 의무, 허가 필요한 기존 건물은 2020년 3월까지 준수계획"
+중동,아랍에미리트(UAE),두바이,BUILT,UD 코드(결의의 사람들 범주) 준수 완공 건물,125,동,2023,Dubai Media Office,https://mediaoffice.ae/en/news/2023/December/14-12/DM-achieves-Guinness-World-in-Dubai-Frame,'Wosool' 인증을 건축허가·준공 조건으로 연계
+중동,아랍에미리트(UAE),두바이,TOUR,완전 접근 가능 공공해변 비율,90,%,2025,Gulf News,https://gulfnews.com/uae/90-of-dubais-beaches-and-80-of-public-parks-now-fully-accessible-1.500294328,공원 80%; 기사연도 확인필요; 정부 자체 발표
+중동,아랍에미리트(UAE),두바이,LAW,'2020년까지 장애친화 도시' 목표(My Community… A City for Everyone),2020,목표연도,2013,Gulf News(RTA),https://gulfnews.com/uae/rta-facilities-meet-needs-of-people-of-determination-1.69085529,Expo 2020 연계; 달성 여부 독립 평가 없음
+중동,아랍에미리트(UAE),두바이,TRANS,두바이 메트로 전 열차 휠체어 공간·점자블록·대형 엘리베이터,제공,정성,2018,Gulf News(RTA),https://gulfnews.com/uae/transport/rta-makes-it-easy-for-people-of-determination-1.2195129,개인 Nol 카드로 메트로·버스 무료(5년 유효); 시각장애 내비 파일럿(2018)
+중동,아랍에미리트(UAE),국가,DATA,고령화율(65세 이상),약 2,%,2023,World Bank WDI,https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS,"추정; 이주노동자 비중 커 인구통계 왜곡; 이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요"
+중동,카타르,도하,TRANS,도하 메트로 무단차·휠체어 접근 역,37,개역(전체),2023,FIFA 최종 지속가능성 보고서,https://publications.fifa.com/fr/final-sustainability-report/social-pillar/accessibility/wider-accessibility-in-qatar/,레벨 탑승·점자블록·휠체어석; 투어버스 계단 등 버스 접근성 비판(2024 여행기)
+중동,카타르,국가,TOUR,2022 월드컵 감각실 운영 경기장,3,개,2022,FIFA,https://publications.fifa.com/de/final-sustainability-report/social-pillar/accessibility/accessibility-at-the-tournament,27경기; 전 경기 아랍어 음성해설; '메가 스포츠 이벤트 최대 규모'
+중동,카타르,국가,TOUR,장애 관중 만족도(월드컵),4.5,점/5,2022,FIFA,https://publications.fifa.com/de/final-sustainability-report/social-pillar/accessibility/accessibility-at-the-tournament,주최 측 자체 보고; 2016년 접근성 포럼 구성
+중동,카타르,국가,LAW,CRPD 비준,2008-05-13,날짜,2008,UN Treaty Collection,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en,"선택의정서 미가입; 국내법 2004년 법률 제2호 — 이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요"
+기타 주목국가,캐나다,연방,LAW,"접근성법(Accessible Canada Act, 2019) — 장벽 없는 캐나다 목표일",2040-01-01,목표일,2019,Accessibility Standards Canada,https://accessible.canada.ca/2023-2024-departmental-results-report-glance,연방 관할 부문(은행·항공·통신·연방정부) 대상; 표준기구 신설
+기타 주목국가,캐나다,연방,BUILT,CSA/ASC B651 건조환경 접근성 표준 2023판(무료 공개),2023,판,2023,Government of Canada,https://www.canada.ca/en/accessibility-standards-canada/news/2023/02/accessibility-standards-canada-and-csa-group-collaborate-to-publish-three-new-accessibility-standards.html,1990 초판; 국가건축법 참조; B652(주택) 동시 발간
+기타 주목국가,캐나다,국가,DATA,장애 출현율(15세 이상),27,%,2022,Statistics Canada CSD,https://www150.statcan.gc.ca/n1/daily-quotidien/231201/dq231201b-eng.htm,800만 명; 2017년 22%; 정신건강·통증 포함 넓은 정의
+기타 주목국가,캐나다,국가,EMP,장애인 고용률(25~64세),62,%,2022,Statistics Canada CSD,https://www150.statcan.gc.ca/n1/daily-quotidien/231201/dq231201b-eng.htm,"비장애인 78%; 최중증 30%, 경증 75%"
+기타 주목국가,캐나다,온타리오,LAW,AODA '2025년 완전 접근' 법정 목표,미달성,정성,2025,AODA Alliance,https://www.aodaalliance.org/media/2025-has-arrived-where-is-the-barrier-free-society-that-the-ontario-legislature-unanimously-promised-ontarians-with-disabilities-twenty-years-ago/,2019 Onley 검토 '근처에도 못 감'(https://amp.cbc.ca/news/canada/toronto/ontario-nowhere-near-goal-of-full-accessibility-by-2025-review-finds-1.5049380); 2023 Donovan 검토 '접근성 위기'
+기타 주목국가,캐나다,토론토,TRANS,TTC 지하철 Easier Access 잔여역 완공 예정,2026,연도,2026,TTC,https://www.ttc.ca/accessibility/easier-access-program-schedule,Spadina·Old Mill·King·Islington 등; 원래 2025 목표 지연
+기타 주목국가,캐나다,연방,LAW,CRPD 선택의정서 가입,2018-12-03,날짜,2018,UN Treaty Collection,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en,"CRPD 비준 2010; 이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요"
+기타 주목국가,캐나다,국가,DATA,고령화율(65세 이상),약 19,%,2023,World Bank WDI,https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS,"추정; 이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요"
+기타 주목국가,뉴질랜드,국가,DATA,장애 출현율(가구 거주자),17,%,2023,Stats NZ 가구장애조사(Whaikaha),https://www.whaikaha.govt.nz/news/news/17-percent-of-new-zealanders-are-disabled,약 85.1만 명; 2025-02 공표; 이전 조사와 비교 불가
+기타 주목국가,뉴질랜드,국가,EMP,장애인 고용률(15~64세),39.4,%,2023,Stats NZ 노동시장(장애) 2023 6월분기,https://www.scoop.co.nz/stories/BU2308/S00203.htm,비장애인 81.7% — 격차 42%p; 표본오차 큼
+기타 주목국가,뉴질랜드,국가,EMP,장애인 실업률(15~64세),10.7,%,2023,Stats NZ,https://www.scoop.co.nz/stories/BU2308/S00203.htm,비장애인 3.5%; 경제활동참가율 44.1% vs 84.7%
+기타 주목국가,뉴질랜드,국가,LAW,접근성법안(Accessibility for New Zealanders Bill) 작업 중단,2024-08,날짜,2024,Whaikaha 내각문서,https://www.whaikaha.govt.nz/assets/Cabinet-Papers/Hon-Louise-Upston/Coversheet-Confirming-the-status-of-the-Accessibility-for-New-Zealanders-Bill.docx,2023 보류 → 2024-08 폐기; 기존 법령으로 대응
+기타 주목국가,중국,국가,LAW,무장애환경건설법(无障碍环境建设法) 시행,2023-09-01,날짜,2023,China Daily(NPC),https://subsites.chinadaily.com.cn/npc/2023-06/29/c_898568.htm,2023-06-28 전인대 상무위 통과; 시설·정보교류·사회서비스 포괄
+기타 주목국가,중국,국가,DATA,장애인 수,"약 8,500만",명,2021,Xinhua/China Daily,https://subsites.chinadaily.com.cn/npc/2023-06/29/c_898568.htm,인구 대비 약 6%(추정); 60세 이상 2.67억 명
+기타 주목국가,중국,국가,EMP,취업 중인 등록 장애인,906만,명,2023,CGTN(중국장애인연합회 인용),https://news.cgtn.com/news/2024-12-03/Empowering-lives-China-s-support-for-people-with-disabilities-1z2f9H6hsvm/share_amp.html,신규 취업 54.4만(농촌 39.2만); 고용률 아님
+기타 주목국가,중국,국가,BUILT,장애인 가정 무장애 주택개조(14차 5개년 누계),128만,가구,2025,China Daily(CDPF),https://regional.chinadaily.com.cn/CDPF/2025-07/23/c_1111695.htm,목표 110만 초과; 농촌 공공공간 격차 정량자료 부족
+기타 주목국가,중국,국가,LAW,CRPD 비준(선택의정서 미가입),2008-08-01,날짜,2008,UN Treaty Collection,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en,"이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요"
+기타 주목국가,인도,국가,DATA,장애 출현율(인구센서스),2.21,%,2011,Census 2011(통계 프로필 2021),https://ruralindiaonline.org/en/library/resource/persons-with-disabilities-divyangjan-in-india---a-statistical-profile-2021/,"약 2,680만 명(남 1,490만·여 1,190만); 좁은 의학적 정의로 과소추정"
+기타 주목국가,인도,국가,TRANS,AIC 목표: 철도역 50% 완전 접근(2018-03),미달성→2020-03 연기,정성,2019,Drishti IAS,https://www.drishtiias.com/daily-updates/daily-news-analysis/accessible-india-campaign,
+기타 주목국가,인도,국가,BUILT,AIC 목표: 수도·주도 정부건물 50% 완전 접근(2018-12),미달성→2020-03 연기,정성,2019,Drishti IAS,https://www.drishtiias.com/daily-updates/daily-news-analysis/accessible-india-campaign,CAG 감사: 예산 집행 부진·학교 접근성 미비(https://cag.gov.in/uploads/download_audit_report/2024/Chapter-3---Accessibility-0669f9a41705250.38244080.pdf)
+기타 주목국가,인도,국가,BUILT,중앙정부 접근성 감사 실시 주·UT 정부건물,1671,동,2025,라즈야 사바 답변,https://rsdebate.nic.in/bitstream/123456789/757581/1/PQ_267_19032025_U2206_p389_p397.pdf,주 건물 현황은 중앙 집계 안 함
+기타 주목국가,인도,국가,LAW,"대법원 Rajive Raturi 판결 — RPwD 규칙 15조 '권고적', 의무 기준 제정 명령",2024-11-08,날짜,2024,Verdictum,https://www.verdictum.in/court-updates/supreme-court/rpwd-accessibility-standards-rajive-raturi-v-union-of-india-writ-petition-228-of-2006-1557349,2005년 제소; 준공증명 보류 등 제재 연계
+기타 주목국가,브라질,국가,DATA,장애 출현율(2세 이상),8.9,%,2022,IBGE PNAD Contínua,https://agenciadenoticias.ibge.gov.br/pt/agencia-noticias/37317-pessoas-com-deficiencia-tem-menor-acesso-a-educacao-ao-trabalho-e-a-renda.html?lang=pt-BR,"1,860만 명; 워싱턴그룹 기준"
+기타 주목국가,브라질,국가,EMP,장애인 취업률(taxa de ocupação),29,%,2022,IBGE 연구(Viva 보도),https://viva.com.br/carreira-e-educacao/so-29-das-pessoas-com-deficiencia-trabalhavam-no-brasil-em-2022.html,비장애인 55.8%; 다른 집계 26.6% vs 60.6%
+기타 주목국가,브라질,국가,EMP,의무고용률(Lei 8.213/1991 제93조),2~5,%,1991,VLF 법률 해설,https://www.vlf.adv.br/noticia_aberta.php?id=2741,100인 이상; 2015년 완전 준수 시 90만 vs 실제 약 30.6만 정규직(https://www.sedep.com.br/?p=49974)
+기타 주목국가,브라질,국가,LAW,"장애인포용법(LBI, Lei 13.146) 제정",2015,연도,2015,Planalto,https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm,"CRPD+선택의정서 헌법적 지위(2008); 이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요"
+기타 주목국가,브라질,쿠리치바,TRANS,BRT 튜브역 레벨 탑승+휠체어 리프트,제공,정성,확인필요,Independent Living Institute / UFPR,https://www.independentliving.org/mobility/transit3.html,UFPR 논문(https://acervodigital.ufpr.br/xmlui/handle/1884/30491)은 리프트 접근성 '부분적' 평가
+기타 주목국가,멕시코,국가,DATA,장애·제약·정신질환 인구 비율,16.4,%,2020,INEGI 센서스(CDMX 문서 인용),https://www.tlalpan.cdmx.gob.mx/wp-content/uploads/2023/06/Lineamientos-de-Operacion-AS-Apoyo-a-personas-con-discapacidad.pdf,"2,083.8만 명; '경미한 제약' 포함 — 협의의 장애는 약 4.9%(확인필요)"
+기타 주목국가,멕시코,멕시코시티,TRANS,메트로 엘리베이터 설치역,56/195,역,확인필요,CDMX 접근 관광 안내서,https://turismo.cdmx.gob.mx/storage/app/media/Turismo%20Accesible/TURISMO%20ACCESIBLE%20ESPANOL%20CDMX.pdf,약 29%; 문서연도 미상; 2024년 말 엘리베이터 184기 보도(Expansión) — 역 단위 비교 불가
+기타 주목국가,멕시코,멕시코시티,TRANS,"휠체어 이용자 vs 메트로 소송(연방법원 승소, 이행 지연)",1,건,2025,Expansión Política,https://politica.expansion.mx/cdmx/2025/01/18/persona-con-discapacidad-demanda-a-metro-cdmx,엘리베이터 고장 빈발 보도(La Razón)
+기타 주목국가,이스라엘,국가,LAW,장애인평등권법,1998,연도,1998,DREDF,https://archive.dredf.org/legal-advocacy/international-disability-rights/international-laws/israel-equal-rights-for-people-with-disabilities-law/,2005 접근성 장 추가(확인필요); 법무부 장애인평등권위원회 집행
+기타 주목국가,이스라엘,지방정부,BUILT,접근 불가능한 공공건물 비율,약 60,%,2020,국가감사원 2024 보고서,https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2024/Shilton/EN/2024-Shilton-205-Accessibility-EN.pdf,지방정부연합 2020-09 조사(교육시설 포함)
+기타 주목국가,이스라엘,지방정부,BUILT,접근성 법적 요건 완전 미준수 지방정부 비율,약 92,%,2020,국가감사원 2024 보고서,https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2024/Shilton/EN/2024-Shilton-205-Accessibility-EN.pdf,256개 지자체 대상
+기타 주목국가,러시아,국가,LAW,CRPD 비준(선택의정서 미가입),2012-09-25,날짜,2012,UN Treaty Collection,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en,"이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요"
+기타 주목국가,러시아,국가,BUILT,국가프로그램 '접근 가능한 환경(Доступная среда)',2011~2030,기간,2011,러시아 정부,http://government.ru/rugovclassifier/859/events/,"이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요; 성과 정량 미확인"
+기타 주목국가,남아프리카공화국,국가,DATA,"장애 출현율(5세 이상, 워싱턴그룹)",7.5,%,2011,Stats SA 보고서 03-01-59,https://www.statssa.gov.za/publications/Report-03-01-59/Report-03-01-592011.pdf,"이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요"
+기타 주목국가,남아프리카공화국,국가,EMP,공공부문 장애인 고용 목표,2,%,확인필요,DPSA,https://www.dpsa.gov.za/,"이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요; 장기 미달 보도"
+기타 주목국가,이집트,국가,LAW,장애인권리법(2018년 법률 제10호),2018,연도,2018,Egypt NCPD,https://ncpd.gov.eg/,"이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요; 5% 고용할당"
+기타 주목국가,이집트,카이로,TRANS,카이로 메트로 1·2호선 무단차 접근,대부분 불가(추정),정성,확인필요,Egypt NCPD,https://ncpd.gov.eg/,"이번 세션에서 웹 재검증 불가(검색 한도 소진) — 사전지식 기반, 확인필요; 3호선 신설역은 엘리베이터"
+기타 주목국가,(기준),세계,DATA,WHO 추정 세계 장애 출현율,16,%,2021,WHO Global report on health equity(2022),https://www.who.int/publications/i/item/9789240063600,약 13억 명; 각국 공식치 비교 기준
