@@ -1,0 +1,49 @@
+row_id,check_type,status,confidence,corrected_value,corrected_year,verify_url,comment
+east_asia:4,flagged,확인,상,,,https://www.mlit.go.jp/report/press/sogo09_hh_000425.html,"국토교통성 발표(2026-02-24, 2025-03-31 기준) 여객시설 단차해소 94.3%(+0.3), 목표 100% 확인. 94.3%는 여객시설 전체 수치이며 철도역 단독은 94.2%(3,371역, https://www.mlit.go.jp/report/press/tetsudo07_hh_000316.html)"
+east_asia:10,flagged,미확인,하,,,https://spaceshipearth.jp/?p=56041,"59,918대 직접 확인 실패. 2차 자료상 2024-03말 복지택시 52,553대(UD 39,708대) → +7,365대 시 59,918로 산술상 정합. 목표 약 90,000대는 MLIT 세제요망 자료로 확인. 원자료(MLIT 별지) 확인 필요"
+east_asia:11,flagged,확인,상,,,https://www.mlit.go.jp/sogoseisaku/barrierfree/content/001713417.pdf,"MLIT 집계표에서 복지택시 45,311대 중 UD택시 33,272대(내수) 확인. 2022년도말(2023-03-31) 수치로 판단(표 배열상 추정). 1차 출처로 교체 권장"
+east_asia:19,flagged,미확인,하,,,,검색 한도로 미검증. 정성 항목
+east_asia:20,flagged,수정,중,"약 1,152.8만명(약 9.3%)",2025,https://www8.cao.go.jp/shougai/whitepaper/r07hakusho/zenbun/siryo_01.html,"1,164.6만명은 令和6年版 障害者白書(신체423.0+지적126.8+정신614.8) 합계로 보임. 令和7年版은 정신 603.0만(2023 환자조사)으로 합계 약 1,152.8만(본인 합산). 출처도 '生活のしづらさ조사'가 아니라 내각부 장애인백서(복수 통계 합산, 중복 있음). 生活のしづらさ조사 자체는 수첩소지자 610.0만"
+east_asia:28,flagged,미확인,하,,,https://brunch.co.kr/@blues1000/256,시도별 수치는 동일 브런치 칼럼에서만 확인. 원자료(국토부 2024 교통약자 이동편의 실태조사) 미확인. 전국 보급률도 44.4%(칼럼) vs 39.7%(경북매일) 상충
+east_asia:32,flagged,확인,중,,,https://kbmaeil.com/article/20250709500353,인증기관 11곳·2015년 법개정 후 공공 신축 의무 확인(언론). 2015-07 시행 일자와 누적 인증 건수는 미확인. 장애인개발원 'BF 인증기관 현황'(2026-01-20 공지) 원문 확인 권장
+east_asia:34,flagged,확인,중,,,https://eiec.kdi.re.kr/policy/materialView.do?num=278528,"과기정통부 2026-03-26 발표 2025 웹접근성 실태조사: 8개 업종 1,000개 사이트 평균 70.4점(+3.7), 금융·보험 79.0, 도소매 65.7 확인(KDI 경제정보센터 게재 보도자료)"
+east_asia:35,flagged,확인,중,,,https://www.heraldk.com/article/2025111020253239984,"단계적 적용·과태료 최대 3천만원·50㎡ 미만 예외 확인. 단, 2025-11 시행령 개정으로 의무 완화(과기정통부 검증기준 키오스크+음성안내장치 설치로 이행, 소규모는 보조기기/보조인력/호출벨 중 선택), 모든 설치현장 2026-01-28까지 이행. 비고의 '모바일 원격 보조수단' 표현은 최신 개정 내용으로 갱신 필요"
+east_asia:40,flagged,확인,상,,,https://www.mcst.go.kr/kor/s_open/realnmPolicy/realnmPolicyView.jsp?pSeq=235,"문체부 정책실명제: 2024년 신규 30개소, 2024년 기준 누적 162개소 확인. 2025년 신규 개소 수는 보도마다 상이(10개 지자체, 20개소 보도), 2025 누적 공식치 미확인"
+middle_east_others:3,flagged,확인,상,,,https://www8.cao.go.jp/shougai/suishin/tyosa/h30kokusai/shiryo_08_02.html,"각료회의 결정 제266호(1439-05-27H ≈ 2018-02-13)로 설립 확인(일본 내각부 국외조사, UNESCWA https://e-inclusion.unescwa.org/resources/1061)"
+middle_east_others:4,flagged,확인,중,,,https://e-inclusion.unescwa.org/node/1126,UNESCWA 표에서 협약·선택의정서 모두 24/06/2008 비준 확인. UNTC 원문 직접 확인은 못함
+middle_east_others:7,flagged,미확인,하,,,https://stats.gov.sa/en/w/gastat-2.9-of-saudi-population-have-disability-with-extreme-difficulty,GASTAT 2017 장애조사 공식 보도의 헤드라인은 '극심한 어려움' 2.9%뿐이며 7.1%(전 정도) 수치는 검색으로 확인 불가. 지표 정의(경도 포함 여부) 명시 필요. GASTAT 'Disability Statistics Publication 2023' 최신값 확인 권장
+middle_east_others:9,flagged,확인,중,,,https://fred.stlouisfed.org/series/SPPOP65UPTOZSSAU,World Bank 시리즈(FRED 미러) 2023년 2.82% 확인
+middle_east_others:13,flagged,수정,중,13.2,2024,https://social.desa.un.org/sites/default/files/inline-files/Saudi%20Arabia.pdf,"UN DESA 게재 사우디 자료: 장애인 노동시장 참여율 2016년 7.7% → 2024년 1분기 13.2%. 연도 2023→2024(Q1). 참고: 알와탄은 2024년 13.9%(국가전환프로그램), Arab News는 2022년 12.4% 보도"
+middle_east_others:15,flagged,확인,상,,,https://hrsd.gov.sa/en/media-center/news/152289,"HRSD: Mowaamah 인증 시 장애인 1명을 니타캇상 4명으로 산정, 미인증 시 2명(2020-08-20부터 1명으로 축소 예고). 최저임금 3,000리얄은 2014 Arab News 보도뿐이며 4,000리얄 근거는 미발견"
+middle_east_others:19,flagged,미확인,하,,,https://alriyadh.gov.sa/en/content/people-with-disabilities,RCRC 접근성 프로그램 존재만 확인. 85개역 무단차·엘리베이터·점자블록 주장은 여행 블로그 등 2차자료뿐. RPTA 공식자료 미발견
+middle_east_others:20,flagged,확인,하,,,https://sa.linkedin.com/in/yara-gedeon-3b112917,SBC 201 §1102.1이 ICC A117.1 준수를 규정한다는 실무자 글(2차)만 확인. SBC 원문·준용 판(edition) 미확인
+middle_east_others:27,flagged,확인,상,,,https://www.un.int/uae/node/19237,"UAE 유엔대표부: 2008-02-08 서명, 2010-03-19 비준. UNESCWA 표도 19.3.2010·선택의정서 미비준 확인"
+middle_east_others:28,flagged,불일치,중,,,https://www.wam.ae/en/article/hszr7cfm-mohammed-bin-rashid-issues-resolution-supporting,"Business & Disability Network는 2% 할당 요구로 설명하나, WAM 보도상 결의 제43호(각료결의 아닌 내각결의)는 민간 고용 '장려'·면제·혜택 중심이고 지역사회개발부 장관은 '할당제가 아닌 장려'라고 언급(Gulf News). 관보 원문 확인 필요"
+middle_east_others:29,flagged,확인,중,,,https://www.zawya.com/en/press-release/government-news/dghr-reinforces-commitment-to-inclusive-employment-for-people-of-determination-across-dubais-government-entities-l1949xrg,"DGHR 'Inclusive Employment 2024' 보고서: 2024년 기준 326명, UAE 국민 237명 확인. 연도 2024 맞음"
+middle_east_others:32,flagged,확인,상,,,https://www.dm.gov.ae/inclusive-initiatives-showcased-at-accessabilities-expo-2025/,"두바이시청 2025-10 발표(AccessAbilities Expo 2025): 공공해변 90%, 공원 80% 확인. UAE 전체가 아닌 두바이 수치이며 정부 자체 주장"
+middle_east_others:35,flagged,수정,중,1.7,2023,https://fred.stlouisfed.org/series/SPPOP65UPTOZSARE,World Bank 시리즈(FRED 미러) 2023년 1.70% — '약 2'보다 낮음
+middle_east_others:39,flagged,확인,중,,,https://nwm.unescwa.org/sites/default/files/2023-09/initial-report-crpd-qatar-en.pdf,카타르 CRPD 최초보고서에 2008-05-13 가입 명시. 선택의정서 미비준(2007 서명만) 여부와 2004년 법률 제2호는 이번에 미검증
+middle_east_others:46,flagged,확인,상,,,https://www.canada.ca/en/employment-social-development/news/2019/01/canadaaccedes-to-the-optional-protocol-to-the-united-nations-convention-on-the-rights-of-persons-with-disabilities.html,"캐나다 정부: 2018-12-03 선택의정서 가입, 협약 비준 2010 확인"
+middle_east_others:47,flagged,확인,중,,,https://fred.stlouisfed.org/series/SPPOP65UPTOZSCAN,World Bank 시리즈(FRED 미러) 2023년 19.36% — 19.4로 정밀화 권장
+middle_east_others:53,flagged,확인,중,,,https://subsites.chinadaily.com.cn/npc/2023-06/29/c_898568.htm,"Xinhua/China Daily: 2021년말 장애인 약 8,500만, 60세 이상 2.67억 확인. 8,500만은 2006 표본조사 기반 추계치"
+middle_east_others:56,flagged,확인,하,,,https://www.rease.e.u-tokyo.ac.jp/act/handout/160220/china_fu_en_utf8.txt,"전인대 상무위 2008-06-26 비준, 2008-08-31 발효(→기탁 08-01과 정합, 간접 확인). 선택의정서 미가입은 HRIC(2014) 확인. UNTC 직접 확인 못함"
+middle_east_others:57,flagged,확인,상,,,https://eparlib.nic.in/bitstream/123456789/707716/1/6068.pdf,"인도 의회 답변: 2.68 crore(2.21%), 남 약 1.50 crore·여 1.18 crore. 비고의 여성 1,190만→1,180만으로 미세 수정 권장"
+middle_east_others:65,flagged,확인,상,,,https://trt15.jus.br/sites/portal/files/roles/trabalho-escravo/bases_normativas/Lei%2013.146-2015%20Inclus%C3%A3o%20da%20pessoa%20com%20defici%C3%AAncia.pdf,"Lei 13.146, 2015-07-06 제정 확인(Planalto 원문 사본). CRPD+선택의정서 Decreto Legislativo 186/2008 승인 확인"
+middle_east_others:66,flagged,미확인,하,,,,검색 한도로 미검증
+middle_east_others:67,flagged,수정,중,16.5,2020,https://repositorio.xoc.uam.mx/jspui/retrieve/76611849-4b9c-442f-be0b-1f9c8bf1afa7/250485.pdf,"INEGI 2020 센서스 기준 장애·제약·정신질환 인구 20,838,108명=16.5%(16.4 아님). 협의의 장애 6,179,890명=4.9% 확인(Jalisco IIEG 자료도 동일 취지)"
+middle_east_others:68,flagged,미확인,하,,,,검색 한도로 미검증
+middle_east_others:70,flagged,미확인,하,,,,검색 한도로 미검증(사전지식상 1998 제정·2005 접근성 장 추가와 부합하나 검색 미실시)
+middle_east_others:73,flagged,확인,상,,,https://treaties.un.org/doc/Publication/UNTS/Volume%202869/volume-2869-A-44910.pdf,"UNTS: 2012-09-25 비준서 기탁, 2012-10-25 발효. 국내 비준법 2012-05-03 제46-FZ(정부 최초보고서). IDA도 동일일자 보도"
+middle_east_others:74,flagged,미확인,하,,,,검색 한도로 미검증
+middle_east_others:75,flagged,확인,상,,,https://www.sanews.gov.za/node/23790,"정부 뉴스(SAnews): 센서스 2011 장애출현율 7.5%(5세 이상, 2014-09 발표) 확인. DWYPD 팩트시트는 7.4% 표기"
+middle_east_others:76,flagged,미확인,하,,,,검색 한도로 미검증
+middle_east_others:77,flagged,확인,중,,,https://webiis05.mondaq.com/employee-rights-labour-relations/1113692/tax-benefits-for-hiring-people-with-disabilities-legal-alert-158,2018년 법률 제10호(2018-02-20 공포)·5% 고용할당(20인 이상 사업주) 확인(법률자문·HRW). 2025년 개정안 국회 계류 보도(https://www.ecoi.net/en/document/2140780.html)
+middle_east_others:78,flagged,미확인,하,,,,검색 한도로 미검증
+middle_east_others:63,spot,수정,상,26.6,2022,https://agenciadenoticias.ibge.gov.br/pt/agencia-noticias/37317-pessoas-com-deficiencia-tem-menor-acesso-a-educacao-ao-trabalho-e-a-renda.html?lang=pt-BR,IBGE PNAD Contínua 2022(3분기): 장애인 고용률(nível de ocupação) 26.6% vs 비장애인 60.7%. 29.2%는 경제활동참가율(비장애인 66.4%). 29%·55.8% 수치는 공식 지표와 불일치 — 지표 정의 오류
+middle_east_others:36,spot,확인,상,,,https://publications.fifa.com/fr/final-sustainability-report/social-pillar/accessibility/wider-accessibility-in-qatar/,FIFA 최종 지속가능성 보고서: 도하 메트로 37개역 전부 접근 가능(레벨탑승·휠체어석·점자블록) 확인. 2022 대회 기준
+east_asia:6,spot,확인,상,,,https://www.mlit.go.jp/report/press/sogo09_hh_000425.html,"2,830번선(+183), 목표 3,000번선 확인"
+east_asia:5,spot,확인,상,,,https://www.mlit.go.jp/report/press/sogo09_hh_000387.html,令和5年度末 여객시설 단차해소 94.0%(+0.4) 확인. 철도역 단독은 93.9%
+east_asia:15,spot,확인,상,,,https://www.mhlw.go.jp/stf/newpage_47084.html,2024-04 법정고용률 2.3%→2.5% 확인(2024 실고용률 2.41%). 2026-07 2.7%는 이번 검색에서 별도 미확인
+east_asia:37,spot,확인,중,,,https://futurechosun.com/?p=64355,"고용부 2024 의무고용 현황: 민간 3.03%, 공공 3.9%, 교육청 2.52% 확인(뉴시스 동일). 참고: 2025년 민간 3.10%로 첫 의무률 달성(https://www.newsis.com/view/NISX20260429_0003611069)"
+east_asia:39,spot,미확인,하,,,https://sgsg.hankyung.com/article/2025110796921,"경활 38.1%·고용률 37.5%는 학생기자 칼럼(2차)에서만 확인, 공단 원자료 미확인. 두 값이면 실업률 약 1.6%로 장애인 통계로는 비정상적으로 낮아 재확인 필요"
+middle_east_others:49,spot,확인,중,,,https://www.scoop.co.nz/stories/BU2308/S00203.htm,Stats NZ 2023년 6월분기: 장애인 고용률 39.4% vs 비장애인 81.7%(격차 42.3%p) 확인(Stats NZ 보도자료 전재)

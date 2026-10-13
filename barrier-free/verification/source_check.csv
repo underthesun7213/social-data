@@ -1,0 +1,406 @@
+row_id,country,indicator,value,http_status,text_chars,numbers,found,match,source_url
+east_asia:1,일본,UN 장애인권리협약(CRPD) 비준,비준(2014-01-20),200,249470,20,20,전부,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+east_asia:2,일본,장애인차별해소법(障害者差別解消法) 개정 - 민간사업자 합리적 배려 법적 의무화,시행(2024-04-01),200,2644,,,수치없음,https://www.cao.go.jp/press/new_wave/20240520.html
+east_asia:3,일본,배리어프리법(バリアフリー法) 제정·개정,"2006 제정, 2018·2020 개정",200,4631,,,수치없음,https://www.mlit.go.jp/sogoseisaku/barrierfree/
+east_asia:4,일본,여객시설(1일 3천명 이상 등) 단차해소율,94.3,200,3309,94.3,94.3,전부,https://www.mlit.go.jp/report/press/sogo09_hh_000425.html
+east_asia:5,일본,여객시설 단차해소율(전년도),94.0,200,3172,94.0,94.0,전부,https://www.mlit.go.jp/report/press/sogo09_hh_000387.html
+east_asia:6,일본,철도역 홈도어 설치 번선 수,2830,200,3309,2830,2830,전부,https://www.mlit.go.jp/report/press/sogo09_hh_000425.html
+east_asia:7,일본,철도차량 이동원활화 기준 적합률,62.7,200,3309,62.7,62.7,전부,https://www.mlit.go.jp/report/press/sogo09_hh_000425.html
+east_asia:8,일본,논스텝(저상)버스 도입률(노선버스),72.1,200,3309,72.1,72.1,전부,https://www.mlit.go.jp/report/press/sogo09_hh_000425.html
+east_asia:9,일본,리프트 부착 버스 등 비율(적용제외 차량 중),6.2,200,3309,6.2,6.2,전부,https://www.mlit.go.jp/report/press/sogo09_hh_000425.html
+east_asia:10,일본,복지택시(UD택시 포함) 대수,59918,200,3309,59918,59918,전부,https://www.mlit.go.jp/report/press/sogo09_hh_000425.html
+east_asia:11,일본,UD택시 대수,33272,200,6890,33272,,없음,https://response.jp/article/2024/01/02/378121.html
+east_asia:12,일본,호텔·료칸 휠체어 사용자용 객실 의무 비율,1,200,1022,,,수치없음,https://www.mlit.go.jp/common/001257478.pdf
+east_asia:13,일본,도쿄도 건축물 BF 조례 일반객실 기준,적용,200,59918,,,수치없음,https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku/bfree/gimu_04.htm
+east_asia:14,일본,웹접근성 기준,JIS X 8341-3:2016(WCAG 2.0 일치),200,7034,8341 2.0,8341,일부,https://www.digital.go.jp/accessibility-statement/test-result
+east_asia:15,일본,민간기업 법정고용률,2.5,200,7535,2.5,2.5,전부,https://www.mhlw.go.jp/stf/newpage_47084.html
+east_asia:16,일본,민간기업 실고용률,2.41,200,7497,2.41,2.41,전부,https://www.mhlw.go.jp/stf/newpage_67490.html
+east_asia:17,일본,법정고용률 달성기업 비율,46.0,200,7497,46.0,46.0,전부,https://www.mhlw.go.jp/stf/newpage_67490.html
+east_asia:18,일본,국가기관 실고용률,3.07,200,7535,3.07,3.07,전부,https://www.mhlw.go.jp/stf/newpage_47084.html
+east_asia:19,일본,유니버설 투어리즘 정책,관광청 유니버설투어리즘 촉진사업(숙박시설 BF 보조 등),200,26427,,,수치없음,https://www.mlit.go.jp/kankocho/
+east_asia:20,일본,장애인 추계 총수 및 인구 비율,1164.6만명(약 9.3%),200,3951,1164.6 9.3,1164.6 9.3,전부,https://www.mhlw.go.jp/toukei/list/seikatsu_chousa_b_r04.html
+east_asia:21,일본,고령화율(65세 이상),29.3,200,5544,29.3,29.3,전부,https://www.stat.go.jp/data/topics/topi1420.html
+east_asia:22,한국,UN 장애인권리협약(CRPD) 비준,"비준(2008-12-11), 선택의정서 가입(2022)",200,249470,12 11,12 11,전부,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+east_asia:23,한국,장애인차별금지 및 권리구제 등에 관한 법률,"2007 제정, 2008-04-11 시행",error:UnicodeEncodeError,0,11,,열람불가,https://www.law.go.kr/법령/장애인차별금지및권리구제등에관한법률
+east_asia:24,한국,교통약자의 이동편의 증진법,"2005 제정, 2006 시행",error:UnicodeEncodeError,0,,,열람불가,https://www.law.go.kr/법령/교통약자의이동편의증진법
+east_asia:25,한국,시내버스 저상버스 보급률,44.4,200,38943,44.4,44.4,전부,https://www.newsis.com/view/NISX20251126_0003417091
+east_asia:26,한국,교통약자 수 및 인구 비율,1613만명(31.5%),200,38943,1613 31.5,1613 31.5,전부,https://www.newsis.com/view/NISX20251126_0003417091
+east_asia:27,한국,이동편의시설 기준적합 설치율(교통수단·여객시설·도로),79.3,200,38943,79.3,79.3,전부,https://www.newsis.com/view/NISX20251126_0003417091
+east_asia:28,한국,시도별 저상버스 보급률 격차(서울 vs 울산),서울 71 / 울산 18.7,302,0,71 18.7,,열람불가,https://brunch.co.kr/@blues1000/256
+east_asia:29,한국,서울 지하철 '1역사 1동선' 엘리베이터 확보,338개 전 역사 완료,200,5018,338,338,전부,https://www.sidae.com/article/2025122916381331295
+east_asia:30,한국,서울교통공사 1~8호선 1역사 1동선 확보율,95.2,200,10710,95.2,,없음,https://news.seoul.go.kr/traffic/archives/507273
+east_asia:31,한국,전장연 '출근길 지하철 탑니다' 시위 차수,62,200,55358,62,62,전부,https://www.khan.co.kr/article/202504212054015
+east_asia:32,한국,BF(장애물 없는 생활환경) 인증,"공공 신축 의무(2015-07~), 인증기관 11곳",200,9184,11,,없음,https://www.koddi.or.kr/bf/info/bf.do
+east_asia:33,한국,웹접근성 법적 의무 범위,"공공·민간 모두(장차법 제20·21조), KWCAG 2.2",error:UnicodeEncodeError,0,20 21 2.2,,열람불가,https://www.law.go.kr/법령/장애인차별금지및권리구제등에관한법률
+east_asia:34,한국,민간 웹사이트 접근성 실태조사 평균점수,70.4,200,3,70.4,,열람불가,https://www.msit.go.kr
+east_asia:35,한국,무인정보단말기(키오스크) 접근성 의무,"시행령 2023-01-28 시행, 단계적 적용(최종 2026-01 본격화)",200,10480,28,28,전부,https://futurechosun.com/?p=74373
+east_asia:36,한국,의무고용률(민간/공공),3.1 / 3.8,200,9961,3.1 3.8,3.1,일부,https://futurechosun.com/?p=64355
+east_asia:37,한국,민간기업 장애인 고용률,3.03,200,9961,3.03,,없음,https://futurechosun.com/?p=64355
+east_asia:38,한국,민간기업 장애인 고용률(2025),3.10,200,38087,3.10,3.10,전부,https://www.newsis.com/view/NISX20260429_0003611069
+east_asia:39,한국,15세 이상 등록장애인 고용률,37.5,200,21275,37.5,,없음,https://www.heraldk.com/article/2026010416181401035
+east_asia:40,한국,열린관광지 누적 조성,162,200,25285,162,162,전부,https://www.mcst.go.kr/kor/s_open/realnmPolicy/realnmPolicyView.jsp?pSeq=235
+east_asia:41,한국,등록장애인 수 및 인구 비율,"2,631,356명(5.1%)",error:URLError,0,2631356 5.1,,열람불가,https://www.index.go.kr/unify/idx-info.do?idxCd=2768
+east_asia:42,한국,고령화율(65세 이상 주민등록인구),20.0,200,22075,20.0,20.0,전부,https://www.heraldk.com/article/2025110216080135607
+europe_central_east:1,EU27,유럽접근성법(EAA) 적용 개시일,2025-06-28,202,0,28,,열람불가,https://eur-lex.europa.eu/eli/dir/2019/882/oj
+europe_central_east:2,EU27,공공부문 웹접근성지침(WAD) 채택,2016,202,0,,,열람불가,https://eur-lex.europa.eu/eli/dir/2016/2102/oj
+europe_central_east:3,EU27,장애 출현율(GALI 일부·심각 활동제약 16세+),23.9,200,6365,23.9,23.9,전부,https://www.epr.eu/?p=9337
+europe_central_east:4,EU27,장애 고용격차(장애 유무 간 고용률 차이),24,200,115249,24,24,전부,https://euronews.com/my-europe/2025/08/28/finances-of-people-with-disabilities-are-worse-in-the-balkans-and-baltics
+europe_central_east:5,EU27,장애 고용격차,21.4,200,122607,21.4,21.4,전부,https://www.euronews.com/health/2024/04/02/where-is-it-hardest-to-live-in-europe-as-a-person-with-a-disability
+europe_central_east:6,EU27,Access City Award 2025 1위,빈(오스트리아),200,21841,,,수치없음,https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/access-city-award-aca_en
+europe_central_east:7,EU27,Access City Award 2026 수상 결과,"1위 사라고사, 2위 발렌시아, 3위 렌; 특별언급 잘츠부르크(주거 접근성)",200,18420,,,수치없음,https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/access-city-award-aca/winners-access-city-award-2026-easy-read_en
+europe_central_east:8,독일,중증장애인(GdB 50 이상) 비율,9.4,200,16030,9.4,9.4,전부,https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/07/PD26_246_227.html
+europe_central_east:9,독일,중증장애인 비율,9.3,200,6719,9.3,9.3,전부,https://www.aerzteblatt.de/news/93-prozent-der-deutschen-leben-mit-schwerer-behinderung-9468ba98-e249-4a61-9fbd-915a97dcee87
+europe_central_east:10,독일,장애인평등법(BGG) 제정,2002,200,3312,,,수치없음,https://www.gesetze-im-internet.de/bgg/
+europe_central_east:11,독일,일반평등대우법(AGG) 제정,2006,200,4565,,,수치없음,https://www.gesetze-im-internet.de/agg/
+europe_central_east:12,독일,접근성강화법(BFSG) 시행,2025-06-28,200,168,28,,없음,https://www.ihk.de/koblenz/unternehmensservice/recht/aktuelles/aktuelle-informationen-aus-recht-und-steuern/barrierefreiheit-6616444
+europe_central_east:13,독일,BFSG 위반 과태료 상한,100000,200,168,100000,,없음,https://www.ihk.de/koblenz/unternehmensservice/recht/aktuelles/aktuelle-informationen-aus-recht-und-steuern/barrierefreiheit-6616444
+europe_central_east:14,독일,중증장애인 의무고용률,5,200,2252,,,수치없음,https://www.gesetze-im-internet.de/sgb_9_2018/__154.html
+europe_central_east:15,독일,고용부담금(Ausgleichsabgabe) 최고 단계(고용률 0%),720,200,14868,720,720,전부,https://www.deutsche-handwerks-zeitung.de/?p=147528
+europe_central_east:16,독일,의무고용 완전 이행 사업주 비율,39,200,14868,39,39,전부,https://www.deutsche-handwerks-zeitung.de/?p=147528
+europe_central_east:17,독일,무단차(stufenfrei) 승강장 비율,87,404,0,87,,열람불가,https://dbzeitarbeit-mitarbeiterportal.extranet.deutschebahn.com/resource/blob/10542446/f32f5e532450f6790ce8cf67f134cd6c/Themendienst-Barrierefreiheit-data.pdf
+europe_central_east:18,독일,무단차 역(Bahnhof) 비율,78,200,6999,78,78,전부,https://www.aerzteblatt.de/themen/menschen-mit-behinderungen/mehr-als-1000-bahnhoefe-nicht-barrierefrei-fcf7da27-e04c-4458-94cf-57cdc44fe2b1
+europe_central_east:19,오스트리아,연방장애인평등법(BGStG) 시행,2006,200,46567,,,수치없음,https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20004228
+europe_central_east:20,오스트리아,접근성법(BaFG; EAA 이행) 적용,2025-06-28,200,177090,28,28,전부,https://www.sozialministerium.gv.at/Themen/Soziales/Menschen-mit-Behinderungen/Barrierefreiheitsgesetz.html
+europe_central_east:21,오스트리아,의무고용(직원 25명당 1명),4,200,11366,,,수치없음,https://www.usp.gv.at/themen/mitarbeiter-und-gesundheit/einstellung-mitarbeiter-und-arten-der-beschaeftigung/weitere-informationen-zu-arbeit-und-behinderung/auflagen-fuer-arbeitgeber.html
+europe_central_east:22,오스트리아,고용부담금(Ausgleichstaxe) 25~99인,335,200,1762,335,335,전부,https://ris.bka.gv.at/Dokumente/BgblAuth/BGBLA_2024_II_385/BGBLA_2024_II_385.pdfsig
+europe_central_east:23,오스트리아,장애 인구 비율(15~89세 민간가구),24.7,200,3735,24.7,,없음,https://orf.at/stories/3385230/
+europe_central_east:24,오스트리아,장애 고용격차(여성·심각 제약),40.5,200,15009,40.5,40.5,전부,https://db.nomics.world/Eurostat/tepsr_sp200
+europe_central_east:25,오스트리아,U-Bahn 무단차 접근 역 비율,100,200,1518,100,,없음,https://www.wienerlinien.at/de/modernisierungen/aufzuege-rolltreppen
+europe_central_east:26,오스트리아,고상(비접근) 트램 차량 수,85,200,92715,85,85,전부,https://www.falter.at/morgen/20240305/wie-barrierefrei-sind-die-wiener-oeffis
+europe_central_east:27,스위스,장애인평등법(BehiG) 시행,2004,200,3297,,,수치없음,https://www.fedlex.admin.ch/eli/cc/2003/667/de
+europe_central_east:28,스위스,2023년 말 기한 내 미완료 역(SBB+지역사업자),499,200,6484,499,499,전부,https://www.iamexpat.ch/expat-info/swiss-expat-news/switzerland-misses-target-make-500-stations-fully-accessible
+europe_central_east:29,스위스,장애인 취업률,73,200,13131,73,,없음,https://www.bfs.admin.ch/bfs/en/home/statistics/catalogues-databases/graphs.assetdetail.26985550.html
+europe_central_east:30,스위스,장애인 빈곤율(가처분소득 중위 60% 미만),16,200,12099,16,16,전부,https://www.proinfirmis.ch/angebot/obwalden/aktuelles/detail/news/anhaltende-ungleichheit-menschen-mit-behinderungen-staerker-von-armut-betroffen.html
+europe_central_east:31,폴란드,접근성 보장법(특별한 필요가 있는 사람) 제정,2019-07-19,403,0,19,,열람불가,https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20190001696
+europe_central_east:32,폴란드,Dostępność Plus 프로그램 예산,23.2,error:RemoteDisconnected,0,23.2,,열람불가,https://bank.pl/?p=257689
+europe_central_east:33,폴란드,장애 신고 인구(인구센서스 NSP 2021),14.3,200,47249,14.3,14.3,전부,https://goldap.praca.gov.pl/documents/d/wojewodzki-urzad-pracy-w-bialymstoku/sytuacja-osob-z-niepelnosprawnosciami-na-rynku-pracy-w-woj-podlaskim-w-2024-roku
+europe_central_east:34,폴란드,법적 장애판정 인구 비율(15~89세; BAEL),8.8,200,47249,8.8,8.8,전부,https://goldap.praca.gov.pl/documents/d/wojewodzki-urzad-pracy-w-bialymstoku/sytuacja-osob-z-niepelnosprawnosciami-na-rynku-pracy-w-woj-podlaskim-w-2024-roku
+europe_central_east:35,폴란드,장애인 고용률(16~89세; BAEL),17.7,200,47249,17.7,17.7,전부,https://goldap.praca.gov.pl/documents/d/wojewodzki-urzad-pracy-w-bialymstoku/sytuacja-osob-z-niepelnosprawnosciami-na-rynku-pracy-w-woj-podlaskim-w-2024-roku
+europe_central_east:36,폴란드,의무고용률(PFRON 부담금),6,200,85346,,,수치없음,https://www.pfron.org.pl/
+europe_central_east:37,체코,장애 인구 비율(15세+ 민간가구),15,200,6493,15,15,전부,https://csu.gov.cz/people-with-a-disability
+europe_central_east:38,체코,장애 인구 비율(15세+; VŠPO 표본조사),13,200,6493,13,13,전부,https://csu.gov.cz/people-with-a-disability
+europe_central_east:39,체코,장애 고용격차(여성·심각 제약),41,200,15009,41,41,전부,https://db.nomics.world/Eurostat/tepsr_sp200
+europe_central_east:40,체코,의무고용률,4,200,375847,,,수치없음,https://www.zakonyprolidi.cz/cs/2004-435
+europe_central_east:41,체코,지하철 무단차 접근 역,48/61,200,15400,48 61,48 61,전부,https://spheresofinfluence.ca/?p=33971
+europe_central_east:42,헝가리,CRPD 조사절차 결과 '중대·체계적 위반' 판정,2020,202,0,,,열람불가,https://digitallibrary.un.org/record/3884297/files/CRPD_C_HUN_IR_1-EN.pdf
+europe_central_east:43,헝가리,사회복지시설 수용 인원(장애인 포함),"약 100,000명 (장애인 27,000명)",200,13726,100000 27000,100000 27000,전부,https://enil.eu/un-finds-hungary-responsible-for-grave-and-systematic-violations-of-disability-rights-condemns-mass-institutionalisation-funded-by-the-eu/
+europe_central_east:44,헝가리,장애 자기신고 인구(센서스),"274,000명",200,20913,274000,,없음,https://nepszamlalas2022.ksh.hu/eredmenyek/vegleges-adatok/kiadvany/assets/nepszamlalas2022-vegleges-adatok.pdf
+europe_central_east:45,헝가리,M3 지하철 전 구간 무단차화,완료,200,8777,,,수치없음,https://bkk.hu/hirek/2023/01/atadtuk-a-deak-ferenc-ter-es-ferenciek-tere-metroallomasokat.9164
+europe_central_east:46,루마니아,장애 등록 인구,"980,873명",200,42075,980873,980873,전부,https://newsweek.ro/social/1000000-de-romani-au-certificat-de-handicap-care-e-handicapul-pentru-care-se-emit-cele-mai-multe-incadrari
+europe_central_east:47,루마니아,성인 장애인 거주시설 수용 인원,"15,903명 (1.62%)",200,34166,15903 1.62,15903 1.62,전부,https://www.gandul.ro/?p=20970851
+europe_central_east:48,루마니아,성인 장애인 공공 사회지원기관 수(그중 거주형),555 (496),200,57518,555 496,555 496,전부,https://www.ces.ro/newlib/PDF/proiecte/2023/NF-HG-PIN.pdf
+europe_central_east:49,루마니아,의무고용률,4,error:RemoteDisconnected,0,,,열람불가,https://legislatie.just.ro/Public/DetaliiDocument/77815
+europe_central_east:50,불가리아,장애 출현율(GALI),12.7,200,6365,12.7,12.7,전부,https://www.epr.eu/?p=9337
+europe_central_east:51,불가리아,장애 고용격차,29.5,200,36460,29.5,29.5,전부,https://www.edf-feph.org/content/uploads/2024/10/bulgaria-accessible_DATA_project.pdf
+europe_central_east:52,불가리아,의무고용(장애인법 2019),"50~99인: 1명, 100인 이상: 2%",200,20645,50 99 100,50 99 100,전부,https://mondaq.com/employment/800706/bulgaria-introduces-mandatory-quotas-for-hiring-permanently-disabled-persons
+europe_central_east:53,라트비아,장애 출현율(GALI),41.2,200,6365,41.2,41.2,전부,https://www.epr.eu/?p=9337
+europe_central_east:54,리투아니아,장애 고용격차,35,200,122607,35,35,전부,https://www.euronews.com/health/2024/04/02/where-is-it-hardest-to-live-in-europe-as-a-person-with-a-disability
+europe_central_east:55,에스토니아,EAA 이행법(제품·서비스 접근성법 TTLS) 적용,2025-06-28,200,9632,28,28,전부,https://www.qualibooth.com/accessibility/compliance/europe/estonia---product-and-service-accessibility-act
+europe_central_east:56,에스토니아,공공 웹 접근성 의무 기한(신규 사이트),2019-09-23,200,8266,23,23,전부,https://accesstive.com/compliance-hub/estonia-2019/
+europe_central_east:57,우크라이나,국가 무장벽 공간 조성 전략 2030 승인,2021-04-14,404,0,14,,열람불가,https://mvs.gov.ua/en/right/nediskriminaciia-ta-bezbarjernist/vikonannia-nacionalnoyi-strategiyi-iz-stvorennia-bezbarjernogo-prostoru-v-ukrayini-na-period-do-2030-roku
+europe_central_east:58,우크라이나,장애인 수,3.4,200,24011,3.4,3.4,전부,https://ukrinform.net/rubric-society/4132988-war-increases-number-of-people-with-disabilities-in-ukraine-by-600000-ombudsman-representative-tells-un.html
+europe_central_east:59,우크라이나,장애인 수(전쟁 전),2.7,200,149047,2.7,2.7,전부,https://www.undp.org/sites/g/files/zskgke326/files/2024-06/pwd-report-rescore.pdf
+europe_central_east:60,우크라이나,전면침공 후 장애인 증가(정부),"300,000명",200,4135,300000,300000,전부,https://global.espreso.tv/russia-ukraine-war-ukraine-sees-300000-rise-in-disability-cases-since-russias-invasion
+europe_central_east:61,러시아,국가프로그램 '접근가능한 환경(Dostupnaya Sreda)' 기간·예산,"2011~2025, 약 75억 USD(10년)",404,0,75 10,,열람불가,https://ungeneva.org/en/news-media/meeting-summary/2018/02/committee-rights-persons-disabilities-examines-report-russia
+europe_central_east:62,러시아,CRPD 비준,2012,200,249470,,,수치없음,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+europe_central_east:63,독일·오스트리아·헝가리·라트비아·리투아니아·에스토니아·우크라이나·세르비아,CRPD 선택의정서(개인진정) 가입,가입,200,48054,,,수치없음,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15-a&chapter=4
+europe_south:1,EU,활동제약(GALI) 일부·심각 제약 비율(16세+),23.9,200,38007,23.9,23.9,전부,https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Population_with_disability
+europe_south:2,EU,장애 고용격차(20-64세),24.0,200,35244,24.0,24.0,전부,https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20250527-1
+europe_south:3,EU,장애 고용격차(20-64세),21.4,401,0,21.4,,열람불가,https://easpd.eu/fileadmin/user_upload/Publications/European_Semester_Report_2024_EASPD_Summary.pdf
+europe_south:4,EU,유럽접근성법(EAA) 적용 개시일,2025-06-28,202,0,28,,열람불가,https://eur-lex.europa.eu/eli/dir/2019/882/oj
+europe_south:5,EU,Access City Award 2024 대상,San Cristóbal de La Laguna(스페인),200,5901,,,수치없음,https://accessible-eu-centre.ec.europa.eu/content-corner/news/san-cristobal-de-la-laguna-wins-2024-access-city-award-2023-12-05_en
+europe_south:6,EU,Access City Award 2025 수상 도시,Cartagena(스페인) 외 Vienna·Nuremberg·Borås,200,18420,,,수치없음,https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/access-city-award-aca/winners-access-city-award-2026-easy-read_en
+europe_south:7,EU,Access City Award 2026 1위·2위,Zaragoza 1위 / Valencia 2위(비상대비 특별언급),200,18420,,,수치없음,https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/access-city-award-aca/winners-access-city-award-2026-easy-read_en
+europe_south:8,Spain,헌법 제49조 개정(‘disminuidos’→‘personas con discapacidad’),시행,200,31776,,,수치없음,https://www.boe.es/boe/dias/2024/02/17/pdfs/BOE-A-2024-3099.pdf
+europe_south:9,Spain,장애인권리일반법(RDL 1/2013) 기존 환경 접근성 의무 최종기한,2017-12-04,200,140787,12,12,전부,https://www.boe.es/eli/es/rdlg/2013/11/29/1
+europe_south:10,Spain,인지 접근성(쉬운 읽기 등) 법제화 - Ley 6/2022,제정,200,33093,,,수치없음,https://www.boe.es/eli/es/l/2022/03/31/6
+europe_south:11,Spain,EAA 국내법화 - Ley 11/2023,2025-06-28 적용,200,630744,28,28,전부,https://www.boe.es/eli/es/l/2023/05/08/11
+europe_south:12,Spain,공공부문 웹 접근성 - RD 1112/2018,시행(WAD 이행; EN 301 549/WCAG 2.1 AA),200,68358,301 549 2.1,301 549 2.1,전부,https://www.boe.es/eli/es/rd/2018/09/07/1112
+europe_south:13,Spain,장애인 의무고용률(근로자 50인 이상 기업),2,200,140787,,,수치없음,https://www.boe.es/eli/es/rdlg/2013/11/29/1
+europe_south:14,Spain,장애 고용격차,14.6,200,149853,14.6,14.6,전부,https://sid-inico.usal.es/wp-content/uploads/2025/07/ES_2024_Semester_final-for-web.pdf
+europe_south:15,Spain,장애인 고용률(국가 통계 정의),34.3,200,93311,34.3,34.3,전부,https://ec.europa.eu/social/BlobServlet?docId=27971&langId=en
+europe_south:16,Spain,장애인 경제활동참가율(국가 통계 정의),35.3,200,93311,35.3,35.3,전부,https://ec.europa.eu/social/BlobServlet?docId=27971&langId=en
+europe_south:17,Spain,메트로 접근가능 역 비율,93,404,0,93,,열람불가,https://www.tmb.cat/en/accessibilitat-i-mobilitat-reduida
+europe_south:18,Spain,TMB 버스 저상·접근 차량 비율,100,404,0,100,,열람불가,https://barcelona.tbs-education.com/news/barcelona-stands-out-for-its-universal-accessibility
+europe_south:19,Spain,메트로 완전 접근가능 역 비율,70,200,23334,70,70,전부,https://www.eldebate.com/espana/madrid/20240308/seis-nuevas-estaciones-metro-contaran-ascensores-directos-anden_180470.html
+europe_south:20,Spain,접근성·포용 계획 2021-2028 투자 및 목표,"3억3200만 유로, 엘리베이터 103기, 목표 82%",200,27235,3200 103 82,103 82,일부,https://www.comunidad.madrid/node/60630
+europe_south:21,Spain,65세 이상 인구 비율,확인필요,200,22464,,,수치없음,https://ec.europa.eu/eurostat/statistics-explained/index.php/Population_structure_and_ageing
+europe_south:22,Italy,장애인 기본법 Legge 104/1992,시행,200,26968,,,수치없음,https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-02-05;104
+europe_south:23,Italy,웹 접근성법 Legge Stanca(L. 4/2004),시행,200,25258,,,수치없음,https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2004-01-09;4
+europe_south:24,Italy,EAA 국내법화 D.Lgs. 82/2022 시행일,2022-07-16,200,43535,16,16,전부,https://www.normattiva.it/eli/id/2022/07/01/22G00089/CONSOLIDATED
+europe_south:25,Italy,장애인 의무고용률(50인 초과 사업장),7,200,30217,,,수치없음,https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1999-03-12;68
+europe_south:26,Italy,장애 고용격차,14,200,60746,14,14,전부,https://www.edf-feph.org/publications/european-semester-outcomes-spring-package-2024-european-disability-forum/
+europe_south:27,Italy,장애 고용격차(대안 수치),20.8,401,0,20.8,,열람불가,https://easpd.eu/fileadmin/user_upload/Publications/European_Semester_Report_2024_EASPD_Summary.pdf
+europe_south:28,Italy,활동제약(GALI) 일부·심각 비율(16세+),14.5,200,38007,14.5,14.5,전부,https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Population_with_disability
+europe_south:29,Italy,65세 이상 인구 비율,24.3,200,22464,24.3,,없음,https://ec.europa.eu/eurostat/statistics-explained/index.php/Population_structure_and_ageing
+europe_south:30,Italy,Colosseo 메트로역 엘리베이터 부재,0,200,6107,,,수치없음,https://www.ilpost.it/2024/01/16/metro-colosseo-persone-disabili/
+europe_south:31,Italy,휠체어 이용 불가 메트로역 비율(언론 추정),약 50,200,7451,50,50,전부,https://www.ilgiornale.it/news/roma/roma-stazione-metro-su-due-inaccessibile-ai-disabili-1751421.html
+europe_south:32,Portugal,장애 고용격차,13.1,401,0,13.1,,열람불가,https://easpd.eu/fileadmin/user_upload/Publications/European_Semester_Report_2024_EASPD_Summary.pdf
+europe_south:33,Portugal,장애인 고용률 vs 일반인구,59.8 vs 79.1,200,71000,59.8 79.1,,없음,https://www.edf-feph.org/publications/european-semester-spring-package-2023-how-well-does-it-reflect-the-issues-faced-by-persons-with-disabilities/
+europe_south:34,Portugal,민간 의무고용률(75-249인 1% / 250인+ 2%),1~2,200,226,,,수치없음,https://diariodarepublica.pt/dr/detalhe/lei/4-2019-117663335
+europe_south:35,Portugal,메트로 완전 접근 역 비율,77,200,21451,77,77,전부,https://www.metrolisboa.pt/institucional/?p=29680
+europe_south:36,Portugal,65세 이상 인구 비율,24.1,200,22464,24.1,,없음,https://ec.europa.eu/eurostat/statistics-explained/index.php/Population_structure_and_ageing
+europe_south:37,Portugal,EAA 국내법화 Decreto-Lei 82/2022,제정,200,226,,,수치없음,https://diariodarepublica.pt/
+europe_south:38,Greece,장애 고용격차,23.8,200,71000,23.8,23.8,전부,https://www.edf-feph.org/publications/european-semester-spring-package-2023-how-well-does-it-reflect-the-issues-faced-by-persons-with-disabilities/
+europe_south:39,Greece,장애인 고용률,32.6,200,15812,32.6,32.6,전부,https://www.edf-feph.org/majority-of-persons-with-disabilities-locked-out-of-quality-employment/
+europe_south:40,Greece,의무고용률(50인 초과 민간 8% / 공공 5%),8,429,0,,,열람불가,https://www.eurofound.europa.eu/en/publications/all/assessing-labour-market-access-people-disabilities
+europe_south:41,Greece,메트로 전 역 접근 가능(엘리베이터·장애인 화장실),100,200,15661,100,,없음,https://accessibleroutes.thisisathens.org/en/
+europe_south:42,Greece,65세 이상 인구 비율,23.3,200,22464,23.3,,없음,https://ec.europa.eu/eurostat/statistics-explained/index.php/Population_structure_and_ageing
+europe_south:43,Malta,장애 고용격차,30.1,401,0,30.1,,열람불가,https://easpd.eu/fileadmin/user_upload/Publications/European_Semester_Report_2024_EASPD_Summary.pdf
+europe_south:44,Malta,의무고용률(20인 이상 사업장),2,403,0,,,열람불가,https://www.maltatoday.com.mt/business/business_news/55757/86_of_companies_not_abiding_by_enforced_disability_quota
+europe_south:45,Malta,쿼터 준수 기업 비율(초기),13.7,403,0,13.7,,열람불가,https://www.maltatoday.com.mt/business/business_news/55757/86_of_companies_not_abiding_by_enforced_disability_quota
+europe_south:46,Malta,활동제약(GALI) 일부·심각 비율(16세+),14.2,200,38007,14.2,14.2,전부,https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Population_with_disability
+europe_south:47,Malta,65세 이상 인구 비율,18.4,200,41313,18.4,,없음,https://tradingeconomics.com/romania/proportion-of-population-aged-65-over-eurostat-data.html
+europe_south:48,Cyprus,장애 고용격차,25.7,200,60746,25.7,25.7,전부,https://www.edf-feph.org/publications/european-semester-outcomes-spring-package-2024-european-disability-forum/
+europe_south:49,Cyprus,장애 고용격차(여성·심각 제약),46.9,200,5608,46.9,,없음,https://www.cbn.com.cy/article/2025/5/30/839885/eurostat-records-employment-gaps-based-on-disability-gender-and-origin-in-cyprus-and-the-eu
+europe_south:50,Cyprus,65세 이상 인구 비율,18.3,200,22464,18.3,,없음,https://ec.europa.eu/eurostat/statistics-explained/index.php/Population_structure_and_ageing
+europe_south:51,Cyprus,공공부문 장애인 채용 쿼터(Law 146(I)/2009),확인필요,200,4469,,,수치없음,https://www.cylaw.org/
+europe_south:52,Spain,CRPD 비준(선택의정서 포함),2007-12-03,200,249470,12,12,전부,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+europe_south:53,Italy,CRPD 비준(선택의정서 포함),2009-05-15,200,249470,15,15,전부,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+europe_south:54,Portugal,CRPD 비준(선택의정서 포함),2009-09-23,200,249470,23,23,전부,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+europe_south:55,Greece,CRPD 비준(선택의정서 포함),2012-05-31,200,249470,31,31,전부,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+europe_south:56,Cyprus,CRPD 비준,2011-06-27,200,249470,27,27,전부,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+europe_south:57,Malta,CRPD 비준,2012-10-10,200,249470,10 10,10 10,전부,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+europe_west:1,EU(공통),"유럽접근성법(EAA, Directive (EU) 2019/882) 적용 개시",2025-06-28,200,66949,28,28,전부,https://connections.nortonrosefulbright.com/post/102mmcn/european-accessibility-act-not-a-nice-to-have-anymore
+europe_west:2,EU(공통),EU 장애인카드·EU 주차카드 지침(Directive (EU) 2024/2841) 국내법 전환 기한,2027-06-05,200,10933,,,수치없음,https://www.edf-feph.org/1-year-left-to-adopt-european-disability-card-national-law/
+europe_west:3,EU(공통),"웹접근성지침(WAD, Directive (EU) 2016/2102) 회원국 모니터링 보고 주기",3,200,6857,,,수치없음,https://digital-strategy.ec.europa.eu/en/library/web-accessibility-directive-monitoring-reports
+europe_west:4,EU(공통),"장애 출현율(GALI, 16세+ '일부 또는 심각한' 활동제한)",23.9,200,38007,23.9,23.9,전부,https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Population_with_disability
+europe_west:5,EU(공통),"장애 고용격차(20-64세, EU-SILC)",24.0,200,35244,24.0,24.0,전부,https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20250527-1
+europe_west:6,EU(공통),장애 고용격차(EU-SILC),21.4,403,0,21.4,,열람불가,https://www.etui.org/publications/narrowing-employment-gap-people-disabilities
+europe_west:7,EU(공통),Access City Award 2026 1위,사라고사(스페인),200,18420,,,수치없음,https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/access-city-award-aca/winners-access-city-award-2026-easy-read_en
+europe_west:8,영국,"평등법(Equality Act 2010) — 장애 포함 보호특성, 합리적 조정 의무",2010,200,63806,,,수치없음,https://www.legislation.gov.uk/ukpga/2010/15/contents
+europe_west:9,영국,UN CRPD 위원회 조사: '중대하거나 체계적인(grave or systematic) 위반' 판단,2016,202,0,,,열람불가,https://digitallibrary.un.org/record/1311200/files/CRPD_C_15_4-EN.pdf
+europe_west:10,영국,CRPD 위원회 후속평가: 2016 위반사항 '유의미한 진전 없음',2024,200,11603,,,수치없음,https://www.disabilityrightsuk.org/system/files/paragraphs/cw_file/2024-04/DDPO%20Coalition%20Press%20Release%20-%20UN%20report%20.docx
+europe_west:11,영국,공공부문 웹·앱 접근성 규정(PSBAR 2018) 시행,2018-09-23,200,20100,23,23,전부,https://www.gov.uk/guidance/public-sector-website-and-mobile-application-accessibility-monitoring
+europe_west:12,영국,GDS 모니터링: 접근성 성명(statement) 게시율,97,200,74726,97,97,전부,https://www.gov.uk/government/publications/accessibility-monitoring-of-public-sector-websites-and-mobile-apps-from-2022-to-2024/accessibility-monitoring-of-public-sector-websites-and-mobile-apps-from-2022-to-2024
+europe_west:13,영국,런던 지하철 무단차(step-free) 역 수,94,200,8145,94,94,전부,https://tfl-newsroom.prgloo.com/news/five-additional-tube-stations-to-be-assessed-for-step-free-access-feasibility-as-part-of-the-mayor-and-tfls-ongoing-work-to-improve-transport-network-accessibility
+europe_west:14,영국,런던 지하철 무단차역 목표(시장),50,200,32039,50,50,전부,https://www.railmagazine.com/news/2025/02/27/cost-pressures-set-to-curtail-plans-for-total-london-underground-step-free-access
+europe_west:15,영국,GB 철도역 무단차 접근 역 비율,61,200,22575,61,61,전부,https://www.orr.gov.uk/media/17408/download
+europe_west:16,영국,Access for All 프로그램 무단차 개선 완료 역 수,260+,404,0,260,,열람불가,https://www.aol.com/news/disabled-people-excluded-design-station-061317851.html
+europe_west:17,영국,무단차 역을 경유하는 철도 이용 비율(승객 가중),75+,200,17806,75,75,전부,https://www.southeasternrailway.co.uk/about-us/our-commitments/major-programmes/access-for-all
+europe_west:18,영국,런던 광역 본선 철도역 중 완전 무단차 역,138/335,200,8857,138 335,138 335,전부,https://westminsterbrief.co.uk/archive/pq/HL12329
+europe_west:19,영국,포용적 교통 전략(Inclusive Transport Strategy) — 2030년까지 장애인 동등 접근 목표,2018,200,18032,,,수치없음,https://www.gov.uk/government/publications/inclusive-transport-strategy
+europe_west:20,영국,블루배지(장애인 주차) 유효 보유 수,2.84,200,13791,2.84,2.84,전부,https://www.gov.uk/government/statistics/disability-accessibility-and-blue-badge-scheme-statistics-2023-to-2024
+europe_west:21,영국,블루배지 유효 보유 수,3.07,200,21490,3.07,3.07,전부,https://www.gov.uk/government/statistics/blue-badge-scheme-statistics-april-2024-to-march-2025/blue-badge-scheme-statistics-april-2024-to-march-2025
+europe_west:22,영국,건축규정 Part M(Approved Document M) — 신축 접근성 기준(M4(1)~(3) 주택 등급),2015,200,18718,,,수치없음,https://www.gov.uk/government/publications/access-to-and-use-of-buildings-approved-document-m
+europe_west:23,영국,"장애인 고용률(근로연령, 16-64)",52.8,200,111980,52.8,52.8,전부,https://www.gov.uk/government/statistics/the-employment-of-disabled-people-2025/the-employment-of-disabled-people-2025
+europe_west:24,영국,장애 고용격차,29.7,200,111980,29.7,29.7,전부,https://www.gov.uk/government/statistics/the-employment-of-disabled-people-2025/the-employment-of-disabled-people-2025
+europe_west:25,영국,장애 출현율(Family Resources Survey),24,200,50764,24,24,전부,https://www.gov.uk/government/statistics/disability-accessibility-and-blue-badge-scheme-statistics-2023-to-2024/disability-accessibility-and-blue-badge-statistics-england-2023-to-2024
+europe_west:26,영국,장애 출현율(FRS 2023/24) — '4명 중 1명',약 25,200,74162,25,25,전부,https://www.gov.uk/government/statistics/family-resources-survey-financial-year-2023-to-2024/family-resources-survey-financial-year-2023-to-2024
+europe_west:27,프랑스,장애인 권리·기회 평등법(Loi n° 2005-102) — 2015년까지 ERP·교통 접근성 의무,2005-02-11,403,0,11,,열람불가,https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000809647
+europe_west:28,프랑스,법정기한(2015-01-01) 시점 접근성 의무 이행 ERP 수,"<50,000",503,0,50000,,열람불가,https://www2.assemblee-nationale.fr/questions/detail/14/qe/13144/(vue)/pdf
+europe_west:29,프랑스,Ad'AP 제도 진입 ERP / 접근 가능 ERP,"1,000,000+ / 350,000",403,0,1000000 350000,,열람불가,https://www.hauts-de-seine.fr/fileadmin/user_upload/Mon_departement/01_Missions_et_actions/01.10_Initiatives_jeunes_solidaires/ClubIDEESMme_Thorin_DMA.pdf
+europe_west:30,프랑스,접근성 절차 미착수 ERP 비율(전체 약 200만 ERP 중),약 50,200,15372,50,50,전부,https://www.maire-info.com/mise-en-accessibilite-des-erp-le-temps-de-la-sanction-est-il-venu-article2-29851
+europe_west:31,프랑스,파리 지하철 휠체어 접근 가능 역 비율,3,200,13709,,,수치없음,https://informations.handicap.fr/a-metro-paris-2024-10792.php
+europe_west:32,프랑스,접근 가능 지하철역 수 및 추가 계획,29 (+68 by 2031),200,5716,29 68,29 68,전부,https://urban-mobility-observatory.transport.ec.europa.eu/news-events/news/paralympic-games-leave-lasting-accessibility-legacy-paris-2025-09-04_en
+europe_west:33,프랑스,파리 버스망 접근성,100,403,0,100,,열람불가,https://www.ratp.fr/registreaccessibilite
+europe_west:34,프랑스,휠체어 접근 택시(파리 2024 레거시),"1,000",200,12603,1000,1000,전부,https://www.linfodurable.fr/jo-2024-les-organisateurs-se-disent-prets-pour-gerer-les-deplacements-des-personnes-handicapees
+europe_west:35,프랑스,EAA 국내법 전환(Loi DDADUE n° 2023-171) 및 DGCCRF 감독,2023-03-09,200,66949,,,수치없음,https://connections.nortonrosefulbright.com/post/102mmcn/european-accessibility-act-not-a-nice-to-have-anymore
+europe_west:36,프랑스,"장애인 의무고용률(OETH, 20인 이상 사업체)",6,200,30889,,,수치없음,https://www.unea.fr/sites/default/files/dares_dr_oeth_2024.pdf
+europe_west:37,프랑스,OETH 직접고용률,3.6,200,27866,3.6,3.6,전부,https://www.unea.fr/sites/default/files/dares_dr_oeth_2023_241129_121447.pdf
+europe_west:38,프랑스,OETH 직접고용률,4.0,200,30889,4.0,4.0,전부,https://www.unea.fr/sites/default/files/dares_dr_oeth_2024.pdf
+europe_west:39,프랑스,장애 고용격차(EU-SILC),20.8,403,0,20.8,,열람불가,https://www.etui.org/sites/default/files/2023-11/Narrowing%20the%20employment%20gap%20for%20people%20with%20disabilities-The%20need%20for%20effective%20policy%20implementation_2023.pdf
+europe_west:40,프랑스,"장애 인구(15세+, 재가, 심각한 제한 또는 활동 제약)",7.6,307,0,7.6,,열람불가,https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse/etudes-et-resultats/en-france-une-personne-sur-sept-de-15-ans-ou
+europe_west:41,프랑스,Access City Award 2026 3위,렌(Rennes),200,18420,,,수치없음,https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/access-city-award-aca/winners-access-city-award-2026-easy-read_en
+europe_west:42,네덜란드,장애 고용격차(EU-SILC),25.2,200,60746,25.2,25.2,전부,https://www.edf-feph.org/publications/european-semester-outcomes-spring-package-2024-european-disability-forum/
+europe_west:43,네덜란드,일자리 협약(Banenafspraak) 추가 일자리 실적 vs 목표,"91,812 / 125,000",200,14536,91812 125000,91812 125000,전부,https://www.eerstekamer.nl/behandeling/20260909/brief_regering_resultaten/document3/f=/vn0wlh7ajqpi.pdf
+europe_west:44,네덜란드,CRPD 비준,2016,200,249470,,,수치없음,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+europe_west:45,벨기에,장애 고용격차(EU-SILC),35.3,200,122607,35.3,35.3,전부,https://www.euronews.com/2024/04/02/where-is-it-hardest-to-live-in-europe-as-a-person-with-a-disability
+europe_west:46,벨기에,장애 고용격차(EC 국가보고),33.6,200,93311,33.6,33.6,전부,https://ec.europa.eu/social/BlobServlet?docId=27971&langId=en
+europe_west:47,룩셈부르크,장애 고용격차(EU-SILC),8.5,403,0,8.5,,열람불가,https://www.etui.org/publications/narrowing-employment-gap-people-disabilities
+europe_west:48,룩셈부르크,장애 실업률 격차,0.4,200,42067,0.4,0.4,전부,https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Disability_statistics_-_unemployment_and_people_outside_the_labour_force
+europe_west:49,룩셈부르크,Access City Award 1위,룩셈부르크시,200,21841,,,수치없음,https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/access-city-award-aca_en
+europe_west:50,아일랜드,CRPD 선택의정서 발효,2024-11-30,200,18282,11 30,11 30,전부,https://pila.ie/resources/bulletin/2025/01/15/optional-protocol-to-the-convention-on-persons-with-disabilities-came-into-effect-in-ireland-on-30-november-2024
+europe_west:51,아일랜드,장애 고용격차(EU-SILC),37,200,60746,37,37,전부,https://www.edf-feph.org/publications/european-semester-outcomes-spring-package-2024-european-disability-forum/
+europe_west:52,아일랜드,공공부문 장애인 법정 고용목표(Disability Act 2005 Part 5),6 (2025~),200,27202,,,수치없음,https://nda.ie/monitoring/monitoring/employment-of-persons-with-disabilities-in-the-public-sector
+europe_west:53,아일랜드,WAD 모니터링(간이검토 웹사이트 수),232,200,150149,232,232,전부,https://nda.ie/uploads/publications/Irelands-Monitoring-Report-for-the-EU-Web-Accessibility-Directive-2024-Monitoring-Period-Final.pdf
+europe_west:54,스웨덴,디지털 공공서비스 접근성법(2018:1937) 시행,2019-01-01,200,7316,,,수치없음,https://www.w3.org/WAI/policies/sweden/
+europe_west:55,스웨덴,'불충분한 접근성(bristande tillgänglighet)'을 차별로 규정(차별금지법 2008:567 개정),2015,200,7796,,,수치없음,https://www.do.se/
+europe_west:56,스웨덴,장애 고용격차(EU-SILC),25.7,200,60746,25.7,25.7,전부,https://www.edf-feph.org/publications/european-semester-outcomes-spring-package-2024-european-disability-forum/
+europe_west:57,스웨덴,Access City Award 1위 수상 도시 수(2014·2021·2023),3,200,21841,,,수치없음,https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/access-city-award-aca_en
+europe_west:58,노르웨이,"공공 웹사이트 간이 모니터링 종합점수(255개, 시범)",91,502,0,91,,열람불가,https://www.uutilsynet.no/media/2393/download
+europe_west:59,노르웨이,국가 비전: 2025년까지 유니버설 디자인 사회,2025,403,0,,,열람불가,https://www.regjeringen.no/en/topics/equality-and-social-inclusion/likestilling-og-inkludering/funksjonsnedsetjingar/universal-design/id670423/
+europe_west:60,덴마크,장애 고용격차(EU-SILC),9.9,403,0,9.9,,열람불가,https://www.etui.org/publications/narrowing-employment-gap-people-disabilities
+europe_west:61,핀란드,"장애 출현율(GALI, 16세+)",34.9,403,0,34.9,,열람불가,https://www.consilium.europa.eu/en/infographics/disability-eu-facts-figures/
+europe_west:62,핀란드,장애 고용격차(EU-SILC),19.0,403,0,19.0,,열람불가,https://www.etui.org/sites/default/files/2023-11/Narrowing%20the%20employment%20gap%20for%20people%20with%20disabilities-The%20need%20for%20effective%20policy%20implementation_2023.pdf
+europe_west:63,핀란드·덴마크·네덜란드,기본활동(시각·청각·보행 등) 중등도 이상 어려움 16세+ 비율,50+,200,41852,50,,없음,https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Disability_statistics_-_population_with_difficulties_in_basic_activities
+middle_east_others:1,사우디아라비아,장애인권리법(Rights of Persons with Disabilities System) 공포,2023-08-27,200,56293,27,27,전부,https://saudipedia.com/en/the-rights-of-persons-with-disabilities-law-in-saudi-arabia
+middle_east_others:2,사우디아라비아,장애인권리법 조문 수,33,200,56293,33,,없음,https://saudipedia.com/en/the-rights-of-persons-with-disabilities-law-in-saudi-arabia
+middle_east_others:3,사우디아라비아,장애인돌봄청(APD) 설립,2018,200,28558,,,수치없음,https://saudipedia.com/en/does-saudi-arabia-protect-the-rights-of-persons-with-disabilities
+middle_east_others:4,사우디아라비아,CRPD 및 선택의정서 비준,2008-06-24,200,249470,24,24,전부,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en
+middle_east_others:5,사우디아라비아,CRPD 위원회 최종견해(CRPD/C/SAU/CO/1) 채택,2019-04-02,202,0,,,열람불가,https://digitallibrary.un.org/record/3848352
+middle_east_others:6,사우디아라비아,"장애 출현율(극심한 어려움, 사우디 국민)",2.9,403,0,2.9,,열람불가,https://stats.gov.sa/en/w/gastat-2.9-of-saudi-population-have-disability-with-extreme-difficulty
+middle_east_others:7,사우디아라비아,"장애 출현율(모든 정도, 사우디 국민)",7.1,403,0,7.1,,열람불가,https://stats.gov.sa/en/w/dis
+middle_east_others:8,사우디아라비아,단일장애 중 시각장애 비중,46.02,403,0,46.02,,열람불가,https://stats.gov.sa/en/w/gastat-2.9-of-saudi-population-have-disability-with-extreme-difficulty
+middle_east_others:9,사우디아라비아,고령화율(65세 이상),약 2.8,200,3638,2.8,,없음,https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS
+middle_east_others:10,사우디아라비아,장애인 노동시장 참여/고용 비율(국가변혁프로그램 지표),7.7,403,0,7.7,,열람불가,https://www.arabnews.pk/node/1831677
+middle_east_others:11,사우디아라비아,장애인 노동시장 참여/고용 비율,12,403,0,12,,열람불가,https://www.arabnews.pk/node/1831677
+middle_east_others:12,사우디아라비아,장애인 노동시장 참여/고용 비율,12.4,403,0,12.4,,열람불가,https://arabnews.com/node/2322221/
+middle_east_others:13,사우디아라비아,장애인 노동시장 참여/고용 비율,13.2,200,41335,13.2,13.2,전부,https://www.okaz.com.sa/local/na/2256672
+middle_east_others:14,사우디아라비아,장애인 고용률(2017 전국 장애조사 기반 연구 추정),18.5,403,0,18.5,,열람불가,https://journals.sagepub.com/doi/reader/10.1177/00469580261441064
+middle_east_others:15,사우디아라비아,니타캇(Nitaqat) 장애인 근로자 1인 산정 가중치,4,200,122049,,,수치없음,https://www.cipd.org/en/about/news/legal-update-disabilities-clydeandco/
+middle_east_others:16,사우디아라비아,Mowaamah(장애친화 사업장) 인증 획득 사업장,150,404,0,150,,열람불가,https://www.hrsd.gov.sa/en/media-center/news/201035
+middle_east_others:17,사우디아라비아,리야드 메트로 역 수,85,200,11966,85,85,전부,https://urbanrail.net/as/riyadh/riyadh.htm
+middle_east_others:18,사우디아라비아,리야드 메트로 연장,176,200,36969,176,176,전부,https://en.wikipedia.org/wiki/Riyadh_Metro
+middle_east_others:19,사우디아라비아,리야드 메트로 역 엘리베이터·점자블록·전용석,설계 반영(주장),403,0,,,열람불가,https://blog.wasalt.sa/en/riyadh-metro/
+middle_east_others:20,사우디아라비아,사우디 건축법 SBC 201 접근성 장 — ICC A117.1 준용,준용,410,0,,,열람불가,https://www.scribd.com/document/544940070/P-201E
+middle_east_others:21,사우디아라비아,예언자 모스크 휠체어·골프카트 이용자(1446H 하지 시즌),631267,200,11009,631267,,없음,https://alriyadhdaily.com/article/a4d4edd3340f43dab09cfdb1c2813c3d
+middle_east_others:22,사우디아라비아,예언자 모스크 대여 휠체어,4700,200,7933,4700,4700,전부,https://www.app.com.pk/?p=1212199
+middle_east_others:23,사우디아라비아,그랜드 모스크 전동카트(통합 모빌리티 플랫폼·Tawakkalna 예약),약 400,200,9739,400,,없음,https://gulfnews.com/amp/world/gulf/saudi/saudi-grand-mosque-enhances-accessibility-for-people-of-determination-with-new-facilities-1.102819030
+middle_east_others:24,사우디아라비아,NEOM/The Line 장애 접근성 기준 공개 여부,미공개,403,0,,,열람불가,https://www.arabnews.com/node/2129296/amp
+middle_east_others:25,사우디아라비아,정부 디지털 접근성 기준,WCAG 2.1 AA,200,28182,2.1,2.1,전부,https://www.deque.com/accessibility-compliance/mena/saudi-arabia/
+middle_east_others:26,아랍에미리트(UAE),"연방법 2006년 제29호(특수필요인 권리법), 2009년 제14호로 개정",2006/2009,error:URLError,0,,,열람불가,https://elaws.moj.gov.ae/UAE-MOJ_LC-En/00_SOCIAL%20WELFARE/UAE-LC-En_2006-08-13_00029_Kait.html
+middle_east_others:27,아랍에미리트(UAE),CRPD 비준,2010-03-19,200,249470,19,19,전부,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en
+middle_east_others:28,아랍에미리트(UAE),민간부문 장애인 고용 할당(각료결의 2018년 제43호),2,200,5866,,,수치없음,https://www.businessanddisability.org/node/554
+middle_east_others:29,아랍에미리트(UAE),두바이 정부기관 고용 장애인,326,400,0,326,,열람불가,https://www.zawya.com/en/press-release/government-news/dghr-reinforces-commitment-to-inclusive-employment-for-people-of-determination-across-dubais-government-entities-l1949xrg
+middle_east_others:30,아랍에미리트(UAE),두바이 유니버설디자인 코드 시행,2017,200,11640,,,수치없음,https://www.dm.gov.ae/municipality-business/dubai-universal-design-code/
+middle_east_others:31,아랍에미리트(UAE),UD 코드(결의의 사람들 범주) 준수 완공 건물,125,200,13532,125,125,전부,https://mediaoffice.ae/en/news/2023/December/14-12/DM-achieves-Guinness-World-in-Dubai-Frame
+middle_east_others:32,아랍에미리트(UAE),완전 접근 가능 공공해변 비율,90,200,7856,90,90,전부,https://gulfnews.com/uae/90-of-dubais-beaches-and-80-of-public-parks-now-fully-accessible-1.500294328
+middle_east_others:33,아랍에미리트(UAE),'2020년까지 장애친화 도시' 목표(My Community… A City for Everyone),2020,200,5067,,,수치없음,https://gulfnews.com/uae/rta-facilities-meet-needs-of-people-of-determination-1.69085529
+middle_east_others:34,아랍에미리트(UAE),두바이 메트로 전 열차 휠체어 공간·점자블록·대형 엘리베이터,제공,200,5123,,,수치없음,https://gulfnews.com/uae/transport/rta-makes-it-easy-for-people-of-determination-1.2195129
+middle_east_others:35,아랍에미리트(UAE),고령화율(65세 이상),약 2,200,3638,,,수치없음,https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS
+middle_east_others:36,카타르,도하 메트로 무단차·휠체어 접근 역,37,200,17783,37,37,전부,https://publications.fifa.com/fr/final-sustainability-report/social-pillar/accessibility/wider-accessibility-in-qatar/
+middle_east_others:37,카타르,2022 월드컵 감각실 운영 경기장,3,200,23852,,,수치없음,https://publications.fifa.com/de/final-sustainability-report/social-pillar/accessibility/accessibility-at-the-tournament
+middle_east_others:38,카타르,장애 관중 만족도(월드컵),4.5,200,23852,4.5,4.5,전부,https://publications.fifa.com/de/final-sustainability-report/social-pillar/accessibility/accessibility-at-the-tournament
+middle_east_others:39,카타르,CRPD 비준,2008-05-13,200,249470,13,13,전부,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en
+middle_east_others:40,캐나다,"접근성법(Accessible Canada Act, 2019) — 장벽 없는 캐나다 목표일",2040-01-01,200,24782,,,수치없음,https://accessible.canada.ca/2023-2024-departmental-results-report-glance
+middle_east_others:41,캐나다,CSA/ASC B651 건조환경 접근성 표준 2023판(무료 공개),2023,error:RemoteDisconnected,0,,,열람불가,https://www.canada.ca/en/accessibility-standards-canada/news/2023/02/accessibility-standards-canada-and-csa-group-collaborate-to-publish-three-new-accessibility-standards.html
+middle_east_others:42,캐나다,장애 출현율(15세 이상),27,200,16809,27,27,전부,https://www150.statcan.gc.ca/n1/daily-quotidien/231201/dq231201b-eng.htm
+middle_east_others:43,캐나다,장애인 고용률(25~64세),62,200,16809,62,62,전부,https://www150.statcan.gc.ca/n1/daily-quotidien/231201/dq231201b-eng.htm
+middle_east_others:44,캐나다,AODA '2025년 완전 접근' 법정 목표,미달성,200,16773,,,수치없음,https://www.aodaalliance.org/media/2025-has-arrived-where-is-the-barrier-free-society-that-the-ontario-legislature-unanimously-promised-ontarians-with-disabilities-twenty-years-ago/
+middle_east_others:45,캐나다,TTC 지하철 Easier Access 잔여역 완공 예정,2026,200,5622,,,수치없음,https://www.ttc.ca/accessibility/easier-access-program-schedule
+middle_east_others:46,캐나다,CRPD 선택의정서 가입,2018-12-03,200,249470,12,12,전부,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en
+middle_east_others:47,캐나다,고령화율(65세 이상),약 19,200,3638,19,,없음,https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS
+middle_east_others:48,뉴질랜드,장애 출현율(가구 거주자),17,200,24885,17,17,전부,https://www.whaikaha.govt.nz/news/news/17-percent-of-new-zealanders-are-disabled
+middle_east_others:49,뉴질랜드,장애인 고용률(15~64세),39.4,200,10823,39.4,39.4,전부,https://www.scoop.co.nz/stories/BU2308/S00203.htm
+middle_east_others:50,뉴질랜드,장애인 실업률(15~64세),10.7,200,10823,10.7,10.7,전부,https://www.scoop.co.nz/stories/BU2308/S00203.htm
+middle_east_others:51,뉴질랜드,접근성법안(Accessibility for New Zealanders Bill) 작업 중단,2024-08,200,85349,,,수치없음,https://www.whaikaha.govt.nz/assets/Cabinet-Papers/Hon-Louise-Upston/Coversheet-Confirming-the-status-of-the-Accessibility-for-New-Zealanders-Bill.docx
+middle_east_others:52,중국,무장애환경건설법(无障碍环境建设法) 시행,2023-09-01,200,5613,,,수치없음,https://subsites.chinadaily.com.cn/npc/2023-06/29/c_898568.htm
+middle_east_others:53,중국,장애인 수,"약 8,500만",200,5613,8500,,없음,https://subsites.chinadaily.com.cn/npc/2023-06/29/c_898568.htm
+middle_east_others:54,중국,취업 중인 등록 장애인,906만,200,15016,906,,없음,https://news.cgtn.com/news/2024-12-03/Empowering-lives-China-s-support-for-people-with-disabilities-1z2f9H6hsvm/share_amp.html
+middle_east_others:55,중국,장애인 가정 무장애 주택개조(14차 5개년 누계),128만,200,6087,128,,없음,https://regional.chinadaily.com.cn/CDPF/2025-07/23/c_1111695.htm
+middle_east_others:56,중국,CRPD 비준(선택의정서 미가입),2008-08-01,200,249470,,,수치없음,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en
+middle_east_others:57,인도,장애 출현율(인구센서스),2.21,200,431,2.21,,없음,https://ruralindiaonline.org/en/library/resource/persons-with-disabilities-divyangjan-in-india---a-statistical-profile-2021/
+middle_east_others:58,인도,AIC 목표: 철도역 50% 완전 접근(2018-03),미달성→2020-03 연기,200,50866,,,수치없음,https://www.drishtiias.com/daily-updates/daily-news-analysis/accessible-india-campaign
+middle_east_others:59,인도,AIC 목표: 수도·주도 정부건물 50% 완전 접근(2018-12),미달성→2020-03 연기,200,50866,,,수치없음,https://www.drishtiias.com/daily-updates/daily-news-analysis/accessible-india-campaign
+middle_east_others:60,인도,중앙정부 접근성 감사 실시 주·UT 정부건물,1671,200,1156,1671,,없음,https://rsdebate.nic.in/bitstream/123456789/757581/1/PQ_267_19032025_U2206_p389_p397.pdf
+middle_east_others:61,인도,"대법원 Rajive Raturi 판결 — RPwD 규칙 15조 '권고적', 의무 기준 제정 명령",2024-11-08,200,15617,11,,없음,https://www.verdictum.in/court-updates/supreme-court/rpwd-accessibility-standards-rajive-raturi-v-union-of-india-writ-petition-228-of-2006-1557349
+middle_east_others:62,브라질,장애 출현율(2세 이상),8.9,403,0,8.9,,열람불가,https://agenciadenoticias.ibge.gov.br/pt/agencia-noticias/37317-pessoas-com-deficiencia-tem-menor-acesso-a-educacao-ao-trabalho-e-a-renda.html?lang=pt-BR
+middle_east_others:63,브라질,장애인 취업률(taxa de ocupação),29,200,7671,29,29,전부,https://viva.com.br/carreira-e-educacao/so-29-das-pessoas-com-deficiencia-trabalhavam-no-brasil-em-2022.html
+middle_east_others:64,브라질,의무고용률(Lei 8.213/1991 제93조),2~5,200,9550,,,수치없음,https://www.vlf.adv.br/noticia_aberta.php?id=2741
+middle_east_others:65,브라질,"장애인포용법(LBI, Lei 13.146) 제정",2015,200,145063,,,수치없음,https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm
+middle_east_others:66,브라질,BRT 튜브역 레벨 탑승+휠체어 리프트,제공,200,3704,,,수치없음,https://www.independentliving.org/mobility/transit3.html
+middle_east_others:67,멕시코,장애·제약·정신질환 인구 비율,16.4,error:URLError,0,16.4,,열람불가,https://www.tlalpan.cdmx.gob.mx/wp-content/uploads/2023/06/Lineamientos-de-Operacion-AS-Apoyo-a-personas-con-discapacidad.pdf
+middle_east_others:68,멕시코,메트로 엘리베이터 설치역,56/195,error:URLError,0,56 195,,열람불가,https://turismo.cdmx.gob.mx/storage/app/media/Turismo%20Accesible/TURISMO%20ACCESIBLE%20ESPANOL%20CDMX.pdf
+middle_east_others:69,멕시코,"휠체어 이용자 vs 메트로 소송(연방법원 승소, 이행 지연)",1,200,24279,,,수치없음,https://politica.expansion.mx/cdmx/2025/01/18/persona-con-discapacidad-demanda-a-metro-cdmx
+middle_east_others:70,이스라엘,장애인평등권법,1998,409,0,,,열람불가,https://archive.dredf.org/legal-advocacy/international-disability-rights/international-laws/israel-equal-rights-for-people-with-disabilities-law/
+middle_east_others:71,이스라엘,접근 불가능한 공공건물 비율,약 60,200,30837,60,60,전부,https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2024/Shilton/EN/2024-Shilton-205-Accessibility-EN.pdf
+middle_east_others:72,이스라엘,접근성 법적 요건 완전 미준수 지방정부 비율,약 92,200,30837,92,92,전부,https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2024/Shilton/EN/2024-Shilton-205-Accessibility-EN.pdf
+middle_east_others:73,러시아,CRPD 비준(선택의정서 미가입),2012-09-25,200,249470,25,25,전부,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en
+middle_east_others:74,러시아,국가프로그램 '접근 가능한 환경(Доступная среда)',2011~2030,error:URLError,0,,,열람불가,http://government.ru/rugovclassifier/859/events/
+middle_east_others:75,남아프리카공화국,"장애 출현율(5세 이상, 워싱턴그룹)",7.5,403,0,7.5,,열람불가,https://www.statssa.gov.za/publications/Report-03-01-59/Report-03-01-592011.pdf
+middle_east_others:76,남아프리카공화국,공공부문 장애인 고용 목표,2,error:URLError,0,,,열람불가,https://www.dpsa.gov.za/
+middle_east_others:77,이집트,장애인권리법(2018년 법률 제10호),2018,200,22727,,,수치없음,https://ncpd.gov.eg/
+middle_east_others:78,이집트,카이로 메트로 1·2호선 무단차 접근,대부분 불가(추정),200,22727,,,수치없음,https://ncpd.gov.eg/
+middle_east_others:79,(기준),WHO 추정 세계 장애 출현율,16,200,15616,16,16,전부,https://www.who.int/publications/i/item/9789240063600
+sg_au:1,싱가포르,CRPD 비준,"비준(2013), 제12조·25(e)·29(a)(iii) 유보",200,249470,12 25 29,12 25 29,전부,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+sg_au:2,싱가포르,포괄적 장애차별금지법,없음,200,9538,,,수치없음,https://www.msf.gov.sg/media-room/article/enabling-masterplan-2030-update-new-plans-to-bolster-inclusive-employment-and-community-living-opportunities-for-persons-with-disabilities
+sg_au:3,싱가포르,Workplace Fairness Act — 장애·정신건강 보호특성,"포함(2025 제정, 2027년 말 시행 예정)",403,0,,,열람불가,https://www.hsfkramer.com/notes/employment/2025-posts/singapore-workplace-fairness-act-to-take-effect-end-of-2027
+sg_au:4,싱가포르,Workplace Fairness Act 적용 사업장 규모,25,200,17273,25,25,전부,https://www.dlapiper.com/en/insights/publications/2024/12/first-workplace-fairness-bill-introduced-in-singapore-to-protect-employees-against-discrimination
+sg_au:5,싱가포르,MRT·LRT 역 무장애 동선 확보율,100,200,29953,100,,없음,https://www.lta.gov.sg/content/ltagov/en/getting_around/public_transport/a_better_public_transport_experience/an_inclusive_public_transport_system.html
+sg_au:6,싱가포르,공공버스 휠체어 접근 가능 비율,100,200,24174,100,,없음,https://lta.gov.sg/content/ltagov/en/who_we_are/statistics_and_publications/Connect/Faces-of-LTA-Dr-Navin-Nair.html
+sg_au:7,싱가포르,버스정류장 무장애 비율,98,200,29953,98,98,전부,https://www.lta.gov.sg/content/ltagov/en/getting_around/public_transport/a_better_public_transport_experience/an_inclusive_public_transport_system.html
+sg_au:8,싱가포르,Green Man Plus 설치 횡단보도,1000,200,6811,1000,1000,전부,https://mot.gov.sg/what-we-do/motoring-road-network-and-infrastructure/inclusive-transport-infrastructure
+sg_au:9,싱가포르,건축 접근성 법정 기준,Code on Accessibility in the Built Environment 2025 (2025-11-01 시행),200,8658,11,,없음,https://www1.bca.gov.sg/docs/default-source/docs-corp-news-and-publications/media-releases/bca-media-factsheet---code-on-accessibility-in-the-built-environment-2025.pdf
+sg_au:10,싱가포르,Universal Design Mark 운영기간,2012–2021,200,9339,,,수치없음,https://isomer-user-content.by.gov.sg/338/0fbfb3e6-5f17-437e-9ec6-1837254c6a00/udea2025_annexb_bca-ud-factsheet.pdf
+sg_au:11,싱가포르,UDEA 수상 프로젝트 누적,9,200,9339,,,수치없음,https://isomer-user-content.by.gov.sg/338/0fbfb3e6-5f17-437e-9ec6-1837254c6a00/udea2025_annexb_bca-ud-factsheet.pdf
+sg_au:12,싱가포르,Friendly Streets 목표,2030년까지 모든 타운에 1곳 이상(24개 타운),200,6811,24,24,전부,https://mot.gov.sg/what-we-do/motoring-road-network-and-infrastructure/inclusive-transport-infrastructure
+sg_au:13,싱가포르,정부 디지털서비스 기준,Digital Service Standards — WCAG A/AA 기반,200,3959,,,수치없음,https://info.standards.tech.gov.sg/control-catalog/dss/
+sg_au:14,싱가포르,장애인 고용률(15–64세 거주자),33.6,403,0,33.6,,열람불가,https://stats.mom.gov.sg/iMAS_Tables1/LabourForce/LabourForce_2024/mrsd_2024Labourforce_survey_highlights.pdf
+sg_au:15,싱가포르,장애인 고용률 목표(EMP2030),40,200,9538,40,40,전부,https://www.msf.gov.sg/media-room/article/enabling-masterplan-2030-update-new-plans-to-bolster-inclusive-employment-and-community-living-opportunities-for-persons-with-disabilities
+sg_au:16,싱가포르,"장애인 수(5세 이상, 기본활동 곤란)",97600,200,4352,97600,,없음,https://www.msf.gov.sg/media-room/article/Total-number-of-persons-with-disabilities-in-Singapore
+sg_au:17,싱가포르,자가보고 장애 출현율(18–49세),3.4,200,4352,3.4,3.4,전부,https://www.msf.gov.sg/media-room/article/Total-number-of-persons-with-disabilities-in-Singapore
+sg_au:18,싱가포르,시민 65세 이상 비율,20.7,404,0,20.7,,열람불가,https://www.strategygroup.gov.sg/files/population_in_brief_2025.pdf
+sg_au:19,호주,CRPD·선택의정서 비준,"CRPD 2008, 선택의정서 2009",200,28360,,,수치없음,https://www.alrc.gov.au/publication/equality-capacity-and-disability-in-commonwealth-laws-dp-81/2-conceptual-landscape-the-context-for-reform/international-context-2/
+sg_au:20,호주,장애차별금지법,Disability Discrimination Act 1992 (+ 교통·건축·교육 Disability Standards),200,6508,,,수치없음,https://www.legislation.gov.au/C2004A04426/latest/versions
+sg_au:21,호주,AHRC 진정 중 DDA 비중,43,403,0,43,,열람불가,https://humanrights.gov.au/our-work/education/statistics-about-disability-rights
+sg_au:22,호주,장애 왕립위원회 권고 수,222,200,16450,222,222,전부,https://ndis.gov.au/news/10272-australian-government-releases-its-initial-response-disability-royal-commission-final-report
+sg_au:23,호주,DSAPT 2022 인프라 준수 시한,미달(NSW·VIC 등),error:URLError,0,,,열람불가,https://www.transport.nsw.gov.au/projects/programs/safe-accessible-transport-program
+sg_au:24,호주,독립 접근 가능 철도역 비율(Sydney Trains·Intercity·Regional),72.03,error:URLError,0,72.03,,열람불가,https://www.transport.nsw.gov.au/projects/programs/safe-accessible-transport-program
+sg_au:25,호주,Sydney Intercity 역 독립 접근 비율,49.61,403,0,49.61,,열람불가,https://www.parliament.nsw.gov.au/hp/housepaper/30393/QuestionsAndAnswers-LC-441-20250221-Proof.pdf
+sg_au:26,호주,멜버른 트램 접근 가능 운행 비율,18,200,91028,18,18,전부,https://www.audit.vic.gov.au/report/accessibility-tram-services-follow
+sg_au:27,호주,멜버른 트램 저상차량 비율,38,200,158159,38,38,전부,https://www.audit.vic.gov.au/report/accessibility-tram-services
+sg_au:28,호주,건축 접근성 기준,Disability (Access to Premises — Buildings) Standards 2010,200,3883,,,수치없음,https://www.legislation.gov.au/F2010L00668/latest/text
+sg_au:29,호주,정부 디지털 서비스 기준,Digital Service Standard v2.0 — 최신 WCAG(2.2) 준수,200,8893,2.0 2.2,2.0 2.2,전부,https://intopia.digital/articles/australias-digital-service-standard-gets-an-upgrade
+sg_au:30,호주,AHRC 디지털 접근성 지침 최소기준,WCAG 2.2 AA,200,33128,2.2,2.2,전부,https://www.deque.com/blog/accessibility-updates-in-australia-in-2026/
+sg_au:31,호주,장애인 경제활동참가율(15–64세),60.5,error:RemoteDisconnected,0,60.5,,열람불가,https://www.jobsandskills.gov.au/download/19932/employment-and-disability-australia/3943/employment-and-disability-australia/pdf
+sg_au:32,호주,장애인 실업률(15–64세),7.5,error:RemoteDisconnected,0,7.5,,열람불가,https://www.jobsandskills.gov.au/download/19932/employment-and-disability-australia/3943/employment-and-disability-australia/pdf
+sg_au:33,호주,"장애인 고용률(15–64세, 계산값)",약 56,error:RemoteDisconnected,0,56,,열람불가,https://www.jobsandskills.gov.au/download/19932/employment-and-disability-australia/3943/employment-and-disability-australia/pdf
+sg_au:34,호주,NDIS 참여자 수,717001,200,16988,717001,717001,전부,https://www.ndis.gov.au/news/10718-ndis-quarterly-report-march-2025-published
+sg_au:35,호주,접근성 수요 관광객 관련 지출,29.2,200,60107,29.2,29.2,전부,https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/2024-tra-accessible-tourism-report.pdf
+sg_au:36,호주,장애 출현율,21.4,200,6469,21.4,21.4,전부,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022/key-findings-plain-language
+sg_au:37,호주,65세 이상 인구 비율,18,403,0,18,,열람불가,https://www.aihw.gov.au/reports/australias-health/australias-health-2026
+sg_au:38,호주,국가 장애전략,Australia's Disability Strategy 2021–2031,error:RemoteDisconnected,0,,,열람불가,https://www.disabilitygateway.gov.au/ads
+usa:1,USA,ADA(미국장애인법) 제정,1990 제정(1990-07-26 서명),200,173935,26,26,전부,https://www.ada.gov/law-and-regs/ada/
+usa:2,USA,ADA 개정법(ADAAA) 시행,2009-01-01 시행(2008 제정),200,43780,,,수치없음,https://www.eeoc.gov/statutes/ada-amendments-act-2008
+usa:3,USA,UN 장애인권리협약(CRPD) 비준 여부,미비준(2009 서명),200,97554,,,수치없음,https://www.everycrsreport.com/files/20150121_R42749_f3ad9fa123adaed57198dc4b16f906902afe6f20.html
+usa:4,USA,CRPD 상원 비준동의 표결,61대 38(부결),403,0,61 38,,열람불가,https://www.americanbar.org/advocacy/governmental_legislative_work/publications/governmental_affairs_periodicals/washingtonletter/2012/december/disabilities/
+usa:5,USA,ADA Title III 연방소송 건수(전체),8667,200,21143,8667,8667,전부,https://www.mondaq.com/unitedstates/constitutional-administrative-law/1745806/ada-title-iii-federal-lawsuit-filings-fall-slightly-to-8667-in-2025
+usa:6,USA,ADA Title III 연방소송 중 웹 접근성 소송,3117,200,15224,3117,3117,전부,https://www.adatitleiii.com/2026/03/federal-court-website-accessibility-lawsuit-filings-bounce-back-in-2025/
+usa:7,USA,"디지털 접근성 소송(연방+주법원, 웹·앱·영상)","5000 이상(트래커 수치 4,928)",200,11331,5000 4928,,없음,https://www.newswire.com/news/digital-accessibility-lawsuits-surge-in-2025-22618502
+usa:8,USA,주정부 법(캘리포니아 Unruh법) 법정손해배상 하한,4000,200,6285,4000,4000,전부,https://www.jmbm.com/docs/munson_v_del_taco.pdf
+usa:9,USA,ADA 핵심역(key station) 접근성 원 기한,"1993-07-26(경전철·도시철도), 연장 최대 2020",200,9447,26,26,전부,https://www.law.cornell.edu/cfr/text/49/37.51
+usa:10,USA,FTA 지정 핵심역 중 기한 내 ADA 준수,437/547 (82%),200,6683,437 547 82,437 547 82,전부,https://www.fhwa.dot.gov/reports/htffy04/mda_06_09.htm
+usa:11,USA,FTA 전역 접근성 프로그램(ASAP) FY2026 선정액,232.83,200,17898,232.83,232.83,전부,https://www.railway.supply/all-stations-accessibility-program-awards-233m-after-686m-offer/
+usa:12,USA,항공사 휠체어·스쿠터 오취급률(분실·파손·지연),1.26,200,15922,1.26,1.26,전부,https://wheelchairtravel.org/ranking-best-worst-airlines-wheelchair-users-2024/
+usa:13,USA,DOT 아메리칸항공 ACAA 위반 과징금,50,200,11378,50,,없음,https://www.homecaremag.com/news/dot-rule-protecting-wheelchairs-airlines-take-effect
+usa:14,USA,2010 ADA 접근성 설계기준(2010 ADA Standards),2012-03-15부터 의무 적용,200,527954,15,15,전부,https://www.ada.gov/law-and-regs/design-standards/2010-stds/
+usa:15,USA,DOJ Title II 웹 접근성 규칙 기준,WCAG 2.1 AA,200,58213,2.1,2.1,전부,https://www.ada.gov/resources/2024-03-08-web-rule/
+usa:16,USA,Title II 규칙 준수기한(인구 5만 이상 정부),2027-04-26 (원래 2026-04-24),200,14482,26 24,26 24,전부,https://www.adatitleiii.com/2026/04/doj-extends-ada-title-ii-website-accessibility-deadlines-for-governmental-entities-but-litigation-and-compliance-risks-remain/
+usa:17,USA,Title II 규칙 준수기한(인구 5만 미만·특별구),2028-04-26 (원래 2027-04-26),200,12832,26 26,26 26,전부,https://www.ctas.tennessee.edu/news/doj-extends-wcag-21-aa-compliance-deadlines-local-governments
+usa:18,USA,재활법 Section 508 개정(Refresh) 기준,WCAG 2.0 AA (2018-01-18 시행),200,435570,2.0 18,2.0 18,전부,https://www.access-board.gov/ict/
+usa:19,USA,WebAIM Million 홈페이지 WCAG 오류 검출률,95.9,200,17531,95.9,95.9,전부,https://prioritypixels.co.uk/insights/web-accessibility-is-getting-worse-according-to-the-2026-webaim-million-report/
+usa:20,USA,"장애인 고용률(고용-인구비율, 16세+)",22.8,403,0,22.8,,열람불가,https://www.bls.gov/news.release/archives/disabl_03032026.htm
+usa:21,USA,장애인 고용률(16–64세),38.1,403,0,38.1,,열람불가,https://www.bls.gov/news.release/archives/disabl_03032026.htm
+usa:22,USA,장애인 실업률,8.3,403,0,8.3,,열람불가,https://www.bls.gov/opub/ted/2026/unemployment-rate-for-people-with-a-disability-rose-to-8-3-percent-in-2025.htm
+usa:23,USA,근로연령(21–64세) 장애인 고용률(ACS),46.8,200,64305,46.8,,없음,https://disabilitystatistics.org/report/2023/US
+usa:24,USA,의무고용(쿼터)제,없음(연방계약자 Section 503 7% 활용목표만),403,0,503,,열람불가,https://www.dol.gov/agencies/ofccp/section-503
+usa:25,USA,Medicaid HCBS 대기자 총수,606895,200,38603,606895,606895,전부,https://www.kff.org/medicaid/state-indicator/number-of-people-waiting-for-hcbs-by-target-population-and-whether-states-screen-for-eligibility/
+usa:26,USA,장애인 여행자 여행 지출,58.7,200,10588,58.7,58.7,전부,https://disabilityinsider.com/2020/11/02/travel/new-data-shows-economic-impact-of-disability-travel-reaches-58-7-billion/
+usa:27,USA,장애인 항공여행 지출,11,404,0,11,,열람불가,https://airportimprovement.com/news/economic-impact-disability-travel-reaches-587-billion
+usa:28,USA,성인 기능장애 출현율(BRFSS),28.7,403,0,28.7,,열람불가,https://www.cdc.gov/disability-and-health/articles-documents/disability-and-health-data-now.html
+usa:29,USA,65세 이상 장애 출현율(BRFSS),43.9,403,0,43.9,,열람불가,https://www.cdc.gov/disability-and-health/articles-documents/disability-and-health-data-now.html
+usa:30,USA,"장애 출현율(ACS, 전 연령)",13.5,200,18259,13.5,,없음,https://www.theglobalstatistics.com/united-states-disability-statistics/
+usa:31,USA,고령화율(65세+),약 18,200,62249,18,18,전부,https://www.census.gov/topics/health/disability.html
+usa:32,USA - New York (NYC MTA / NY State),지하철 완전 접근역(엘리베이터·경사로),160/472 (약 34%),403,0,160 472 34,,열람불가,https://governor.ny.gov/news/during-disability-pride-month-governor-hochul-announces-major-accessibility-improvements-now
+usa:33,USA - New York (NYC MTA / NY State),MTA 집단소송 합의 목표,2055년까지 미접근역 95% 접근화,403,0,95,,열람불가,https://www.governor.ny.gov/news/governor-hochul-announces-mta-and-accessibility-advocates-agree-historic-plan-expanding
+usa:34,USA - Washington DC (WMATA),Metrorail 엘리베이터 설치역,98/98 (100%),200,12902,98 98 100,98 98,일부,https://ggwash.org/tag/elevators
+usa:35,USA - SF Bay Area (BART),BART 엘리베이터 설치역,전 역(100%),200,40398,100,,없음,https://bart.gov/accesstech
+usa:36,USA - Chicago (CTA),CTA 철도역 접근 가능 역,110/146 (75%),200,43786,110 146 75,110 146 75,전부,https://www.transitchicago.com/ctas-austin-green-line-station-reopened-and-fully-accessible/
+usa:37,USA - Massachusetts / Boston (MBTA),MBTA 접근 가능 역 비율(전체),83,200,5736,83,83,전부,https://www.wbur.org/news/2026/05/13/mbta-green-line-accessibility-improvement-plan
+usa:38,USA - Philadelphia (SEPTA),SEPTA 철도·지하철역 접근 가능 비율,약 60,200,28783,60,60,전부,https://inquirer.com/transportation/septa-vision-big-potential-investment-legislature-funders-20260922.html
+usa:39,USA - Los Angeles (LA Metro),Metro Rail 역 접근성,"전 역 경사로/엘리베이터(100%, 3자 출처)",403,0,100,,열람불가,https://transitunlimited.org/LA_Metro_Rail
+usa:40,USA - South Dakota,장애인 고용률(근로연령),61.5,200,19857,61.5,61.5,전부,https://www.everway.com/research-insights/workplace-disability-inclusion-united-states/
+usa:41,USA - Colorado,장애인 고용률(근로연령),57.8,200,19857,57.8,57.8,전부,https://www.everway.com/research-insights/workplace-disability-inclusion-united-states/
+usa:42,USA - Minnesota,장애인 고용률(근로연령),55.5,200,19857,55.5,55.5,전부,https://www.everway.com/research-insights/workplace-disability-inclusion-united-states/
+usa:43,USA - California,장애인 고용률(근로연령),45.5,200,19857,45.5,45.5,전부,https://www.everway.com/research-insights/workplace-disability-inclusion-united-states/
+usa:44,USA - New York (NYC MTA / NY State),장애인 고용률(근로연령),41.4,200,19857,41.4,41.4,전부,https://www.everway.com/research-insights/workplace-disability-inclusion-united-states/
+usa:45,USA - Mississippi,장애인 고용률(근로연령),40.6,200,19857,40.6,40.6,전부,https://www.everway.com/research-insights/workplace-disability-inclusion-united-states/
+usa:46,USA - West Virginia,장애인 고용률(근로연령),36.4,200,19857,36.4,36.4,전부,https://www.everway.com/research-insights/workplace-disability-inclusion-united-states/
+usa:47,USA - Minnesota,AARP 장기요양(LTSS) 스코어카드 순위,1,200,138113,,,수치없음,https://www.aarp.org/press/releases/2023-09-28-new-aarp-scorecard-minnesota-and-washington-state-top-rankings-for-long-term-care-services-and-supports-for-older-americans-including-family-caregivers/
+usa:48,USA - Washington DC (WMATA),AARP LTSS 스코어카드 등급,Tier 1(상위 5),200,9254,,,수치없음,https://seniorhousingnews.com/2023/09/28/washington-minnesota-d-c-lead-list-of-top-states-for-long-term-services-supports/
+usa:49,USA - Massachusetts / Boston (MBTA),AARP LTSS 스코어카드 순위,4,200,6582,,,수치없음,https://mahealthyagingcollaborative.org/massachusetts-ranks-fourth-among-states-for-long-term-services-and-supports-according-to-new-aarp-scorecard/
+usa:50,USA - Colorado,AARP LTSS 스코어카드 등급,Tier 1(상위 5),200,9254,,,수치없음,https://seniorhousingnews.com/2023/09/28/washington-minnesota-d-c-lead-list-of-top-states-for-long-term-services-supports/
+usa:51,USA - West Virginia,AARP LTSS 스코어카드 순위,51,200,138113,51,51,전부,https://www.aarp.org/press/releases/2023-09-28-new-aarp-scorecard-minnesota-and-washington-state-top-rankings-for-long-term-care-services-and-supports-for-older-americans-including-family-caregivers/
+usa:52,USA - Mississippi,AARP LTSS 스코어카드 등급,Tier 5(하위 5),200,9254,,,수치없음,https://seniorhousingnews.com/2023/09/28/washington-minnesota-d-c-lead-list-of-top-states-for-long-term-services-supports/
+usa:53,USA - Mississippi,Case for Inclusion(발달장애 서비스) 순위,51,403,0,51,,열람불가,https://www.pressreader.com/usa/the-news-times-sunday/20190113/281552292018393
+usa:54,USA - Texas,Medicaid HCBS 대기자 수,181697,200,38603,181697,181697,전부,https://www.kff.org/medicaid/state-indicator/number-of-people-waiting-for-hcbs-by-target-population-and-whether-states-screen-for-eligibility/
+usa:55,USA - Texas,IDD 웨이버(HCS·CLASS) 대기 기간,15–18,200,52800,15 18,15 18,전부,https://www.tpr.org/news/2026-05-06/advocates-lawmakers-want-to-fix-long-waits-texans-with-disabilities-face-for-medicaid-services
+usa:56,USA - Florida,Medicaid HCBS 대기자 수,77123,200,27080,77123,,없음,https://www.kff.org/medicaid/a-look-at-waiting-lists-for-medicaid-home-and-community-based-services-from-2016-to-2025/
+usa:57,USA - Ohio,Medicaid HCBS 대기자 수(참고),1887,200,27080,1887,,없음,https://www.kff.org/medicaid/a-look-at-waiting-lists-for-medicaid-home-and-community-based-services-from-2016-to-2025/
+usa:58,USA - California,ADA Title III 연방소송 건수,3252,200,14276,3252,,없음,https://testparty.ai/blog/ada-website-lawsuits-by-state-risk-2026
+usa:59,USA - Florida,ADA Title III 연방소송 건수,1823,200,14276,1823,,없음,https://testparty.ai/blog/ada-website-lawsuits-by-state-risk-2026
+usa:60,USA - New York (NYC MTA / NY State),ADA Title III 연방소송 건수,1471,200,14276,1471,,없음,https://testparty.ai/blog/ada-website-lawsuits-by-state-risk-2026
+usa:61,USA - Minnesota,미네소타 인권법(MHRA) 적용범위,직원 1인 이상 사용자 전부(ADA는 15인+),200,4237,15,,없음,https://www.thehrspecialist.com/11900/know-minnesotas-disability-law-state-statute-has-lower-threshold-than-federal-ada
+usa:62,USA - Minnesota,WalletHub 장애인 친화 도시 순위(미니애폴리스),1(Disability Scoop 보도; 타 보도는 2위),200,15502,,,수치없음,https://www.disabilityscoop.com/2025/10/14/ranking-names-top-cities-for-disability-friendliness/31677/
+usa:63,USA - Mississippi,WalletHub 장애인 친화 도시 하위권,잭슨·걸프포트 하위권,200,15502,,,수치없음,https://www.disabilityscoop.com/2025/10/14/ranking-names-top-cities-for-disability-friendliness/31677/
