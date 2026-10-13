@@ -1,0 +1,3 @@
+cluster,country,LAW,TRANS,BUILT,DIGI,EMP,TOUR,overall,rationale
+동남아·오세아니아,싱가포르,중,상,상,중,하,중,중,"LAW: 포괄적 차별금지법 부재, CRPD 유보·선택의정서 미가입, WFA(2027 시행)는 고용·25인 이상 한정. TRANS: MRT 100% 무장애 동선, 버스 100%, 정류장 98%. BUILT: 법정 접근성 코드(2025 개정)·UD 인센티브. DIGI: 공공 DSS(WCAG AA) 있으나 민간 강제 없음. EMP: 고용률 33.6%(2024), 쿼터 없음. TOUR: 체계적 무장애관광 통계 부족. 종합: 하드웨어 상, 권리 기반 제도 약함"
+동남아·오세아니아,호주,상,중,중,상,중,상,상,"LAW: DDA 1992+분야별 표준, AHRC 진정(DDA 43%), 왕립위 222개 권고. TRANS: DSAPT 2022 시한 미달(NSW 철도 72%, 멜버른 트램 18%). BUILT: Premises Standards 2010 신축·개축만. DIGI: DSS v2 최신 WCAG, AHRC WCAG 2.2 AA 지침·판례. EMP: 참가율 60.5% vs 84.9% 격차, NDIS 71.7만 명. TOUR: TRA 무장애관광 통계(292억 AUD). 종합: 제도·데이터 상, 이행(교통) 지연"
