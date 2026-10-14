@@ -1,0 +1,367 @@
+iso3,dimension,indicator,value,unit,year,status,url
+JPN,LAW,UN 장애인권리협약(CRPD) 비준,비준(2014-01-20),날짜,2014,원문확인(자동),https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+JPN,LAW,장애인차별해소법(障害者差別解消法) 개정 - 민간사업자 합리적 배려 법적 의무화,시행(2024-04-01),날짜,2024,원문확인,https://www.cao.go.jp/press/new_wave/20240520.html
+JPN,LAW,배리어프리법(バリアフリー法) 제정·개정,"2006 제정, 2018·2020 개정",연도,2020,원문확인,https://www.mlit.go.jp/sogoseisaku/barrierfree/ ; https://laws.e-gov.go.jp/api/1/lawdata/418AC0000000091
+JPN,TRANS,여객시설(1일 3천명 이상 등) 단차해소율,94.3,%,2025,원문확인(자동),https://www.mlit.go.jp/report/press/sogo09_hh_000425.html
+JPN,TRANS,여객시설 단차해소율(전년도),94.0,%,2024,원문확인(자동),https://www.mlit.go.jp/report/press/sogo09_hh_000387.html
+JPN,TRANS,철도역 홈도어 설치 번선 수,2830,번선,2025,원문확인(자동),https://www.mlit.go.jp/report/press/sogo09_hh_000425.html
+JPN,TRANS,철도차량 이동원활화 기준 적합률,62.7,%,2025,원문확인(자동),https://www.mlit.go.jp/report/press/sogo09_hh_000425.html
+JPN,TRANS,논스텝(저상)버스 도입률(노선버스),72.1,%,2025,원문확인(자동),https://www.mlit.go.jp/report/press/sogo09_hh_000425.html
+JPN,TRANS,리프트 부착 버스 등 비율(적용제외 차량 중),6.2,%,2025,원문확인(자동),https://www.mlit.go.jp/report/press/sogo09_hh_000425.html
+JPN,TRANS,복지택시(UD택시 포함) 대수,59918,대,2025,원문확인(자동),https://www.mlit.go.jp/report/press/sogo09_hh_000425.html
+JPN,TRANS,UD택시 대수,33272,대,2023,원문확인,https://www.mlit.go.jp/sogoseisaku/barrierfree/content/001713417.pdf
+JPN,BUILT,호텔·료칸 휠체어 사용자용 객실 의무 비율,1,% 이상,2019,원문확인,https://www.mlit.go.jp/common/001257478.pdf
+JPN,BUILT,도쿄도 건축물 BF 조례 일반객실 기준,적용,제도,2019,원문확인,https://www.toshiseibi.metro.tokyo.lg.jp/kenchiku/bfree/gimu_04.htm
+JPN,DIGI,웹접근성 기준,JIS X 8341-3:2016(WCAG 2.0 일치),규격,2016,원문확인,https://www.digital.go.jp/accessibility-statement/test-result
+JPN,EMP,민간기업 법정고용률,2.5,%,2024,원문확인(자동),https://www.mhlw.go.jp/stf/newpage_47084.html
+JPN,EMP,민간기업 실고용률,2.41,%,2025,원문확인(자동),https://www.mhlw.go.jp/stf/newpage_67490.html
+JPN,EMP,법정고용률 달성기업 비율,46.0,%,2025,원문확인(자동),https://www.mhlw.go.jp/stf/newpage_67490.html
+JPN,EMP,국가기관 실고용률,3.07,%,2024,원문확인(자동),https://www.mhlw.go.jp/stf/newpage_47084.html
+JPN,TOUR,유니버설 투어리즘 정책,관광청 유니버설투어리즘 촉진사업(숙박시설 BF 보조 등),제도,2024,원문확인,https://www.mlit.go.jp/kankocho/kobo12_00020.html
+JPN,DATA,장애인 추계 총수 및 인구 비율,1164.6만명(약 9.3%),명/%,2022,원문확인(자동),https://www.mhlw.go.jp/toukei/list/seikatsu_chousa_b_r04.html
+JPN,DATA,고령화율(65세 이상),29.3,%,2024,원문확인(자동),https://www.stat.go.jp/data/topics/topi1420.html
+KOR,LAW,UN 장애인권리협약(CRPD) 비준,"비준(2008-12-11), 선택의정서 가입(2022)",날짜,2022,원문확인(자동),https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+KOR,LAW,장애인차별금지 및 권리구제 등에 관한 법률,"2007 제정, 2008-04-11 시행",날짜,2008,원문확인,https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=279699
+KOR,LAW,교통약자의 이동편의 증진법,"2005 제정, 2006 시행",날짜,2006,원문확인,https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=268757
+KOR,TRANS,시내버스 저상버스 보급률,44.4,%,2024,원문확인(자동),https://www.newsis.com/view/NISX20251126_0003417091
+KOR,TRANS,교통약자 수 및 인구 비율,1613만명(31.5%),명/%,2024,원문확인(자동),https://www.newsis.com/view/NISX20251126_0003417091
+KOR,TRANS,이동편의시설 기준적합 설치율(교통수단·여객시설·도로),79.3,%,2024,원문확인(자동),https://www.newsis.com/view/NISX20251126_0003417091
+KOR,TRANS,서울 지하철 '1역사 1동선' 엘리베이터 확보,338개 전 역사 완료,역,2025,원문확인(자동),https://www.sidae.com/article/2025122916381331295
+KOR,TRANS,서울교통공사 1~8호선 1역사 1동선 확보율,95.2,%,2024,2차확인,https://www.dailian.co.kr/news/view/1317071/
+KOR,TRANS,전장연 '출근길 지하철 탑니다' 시위 차수,62,차,2025,원문확인(자동),https://www.khan.co.kr/article/202504212054015
+KOR,BUILT,BF(장애물 없는 생활환경) 인증,"공공 신축 의무, 인증기관 10곳",제도,2026,원문수정,https://www.koddi.or.kr/bf/intro/agency.do
+KOR,DIGI,웹접근성 법적 의무 범위,"공공·민간 모두(장차법 제20·21조), KWCAG 2.2",제도,2022,원문확인,https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=279699
+KOR,DIGI,민간 웹사이트 접근성 실태조사 평균점수,70.4,점(100점),2025,원문확인,https://eiec.kdi.re.kr/policy/materialView.do?num=278528
+KOR,DIGI,무인정보단말기(키오스크) 접근성 의무,"시행령 2023-01-28 시행, 단계적 적용(최종 2026-01 본격화)",제도,2026,원문확인(자동),https://futurechosun.com/?p=74373
+KOR,EMP,의무고용률(민간/공공),3.1 / 3.8,%,2024,원문확인,https://www.kead.or.kr/bbs/bodo/bbsView.do?bbsCnId=206253&menuId=MENU0893
+KOR,EMP,민간기업 장애인 고용률,3.03,%,2024,원문확인,https://www.kead.or.kr/bbs/bodo/bbsView.do?bbsCnId=206253&menuId=MENU0893
+KOR,EMP,민간기업 장애인 고용률(2025),3.10,%,2025,원문확인(자동),https://www.newsis.com/view/NISX20260429_0003611069
+KOR,EMP,15세 이상 등록장애인 고용률,33.8,%,2024,원문수정,https://www.kead.or.kr/stats/menu1/sub-1.html ; https://www.kead.or.kr/stats/js/data/wvDataChart.js
+KOR,TOUR,열린관광지 누적 조성,162,개소,2024,원문확인(자동),https://www.mcst.go.kr/kor/s_open/realnmPolicy/realnmPolicyView.jsp?pSeq=235
+KOR,DATA,등록장애인 수 및 인구 비율,"2,631,356명(5.1%)",명/%,2024,원문확인,https://www.index.go.kr/unify/idx-info.do?idxCd=2768
+KOR,DATA,고령화율(65세 이상 주민등록인구),20.0,%,2024,원문확인(자동),https://www.heraldk.com/article/2025110216080135607
+DEU,DATA,중증장애인(GdB 50 이상) 비율,9.4,%,2025,원문확인(자동),https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/07/PD26_246_227.html
+DEU,DATA,중증장애인 비율,9.3,%,2023,원문확인(자동),https://www.aerzteblatt.de/news/93-prozent-der-deutschen-leben-mit-schwerer-behinderung-9468ba98-e249-4a61-9fbd-915a97dcee87
+DEU,LAW,장애인평등법(BGG) 제정,2002,연도,2002,원문확인,https://www.gesetze-im-internet.de/bgg/BJNR146800002.html
+DEU,LAW,일반평등대우법(AGG) 제정,2006,연도,2006,원문확인,https://www.gesetze-im-internet.de/agg/BJNR189710006.html
+DEU,LAW,접근성강화법(BFSG) 시행,2025-06-28,날짜,2025,원문확인,https://www.gesetze-im-internet.de/bfsg/BFSG.pdf
+DEU,LAW,BFSG 위반 과태료 상한,100000,EUR,2025,원문확인,https://www.gesetze-im-internet.de/bfsg/BFSG.pdf
+DEU,EMP,중증장애인 의무고용률,5,%,2024,원문확인,https://www.gesetze-im-internet.de/sgb_9_2018/__154.html
+DEU,EMP,고용부담금(Ausgleichsabgabe) 최고 단계(고용률 0%),720,EUR/미충원 1자리/월,2024,원문확인(자동),https://www.deutsche-handwerks-zeitung.de/?p=147528
+DEU,EMP,의무고용 완전 이행 사업주 비율,39,%,2024,원문확인(자동),https://www.deutsche-handwerks-zeitung.de/?p=147528
+DEU,TRANS,무단차(stufenfrei) 승강장 비율,87,%,2024,2차확인,https://www.l-iz.de/wirtschaft/mobilitaet/2024/03/nachgefragt-barrierefrei-leipzigs-bahnhofe-580478
+DEU,TRANS,무단차 역(Bahnhof) 비율,78,%,2020,원문확인(자동),https://www.aerzteblatt.de/themen/menschen-mit-behinderungen/mehr-als-1000-bahnhoefe-nicht-barrierefrei-fcf7da27-e04c-4458-94cf-57cdc44fe2b1
+AUT,LAW,연방장애인평등법(BGStG) 시행,2006,연도,2006,원문확인,https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20004228
+AUT,LAW,접근성법(BaFG; EAA 이행) 적용,2025-06-28,날짜,2025,원문확인(자동),https://www.sozialministerium.gv.at/Themen/Soziales/Menschen-mit-Behinderungen/Barrierefreiheitsgesetz.html
+AUT,EMP,의무고용(직원 25명당 1명),4,%,2025,원문확인,https://www.usp.gv.at/themen/mitarbeiter-und-gesundheit/einstellung-mitarbeiter-und-arten-der-beschaeftigung/weitere-informationen-zu-arbeit-und-behinderung/auflagen-fuer-arbeitgeber.html
+AUT,EMP,고용부담금(Ausgleichstaxe) 25~99인,335,EUR/미충원 1자리/월,2025,원문확인(자동),https://ris.bka.gv.at/Dokumente/BgblAuth/BGBLA_2024_II_385/BGBLA_2024_II_385.pdfsig
+AUT,DATA,장애 인구 비율(15~89세 민간가구),24.7,%,2024,원문확인,https://www.statistik.at/fileadmin/announcement/2026/01/20260122BETESTAT2024.pdf
+AUT,EMP,장애 고용격차(여성·심각 제약),40.5,%p,2024,원문확인(자동),https://db.nomics.world/Eurostat/tepsr_sp200
+AUT,TRANS,U-Bahn 무단차 접근 역 비율,100,%,2024,2차확인,https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/access-city-award-aca/winners-access-city-award-2025_en
+AUT,TRANS,고상(비접근) 트램 차량 수,85,대,2024,원문확인(자동),https://www.falter.at/morgen/20240305/wie-barrierefrei-sind-die-wiener-oeffis
+CHE,LAW,장애인평등법(BehiG) 시행,2004,연도,2004,원문확인,https://fedlex.data.admin.ch/eli/cc/2003/667
+CHE,TRANS,2023년 말 기한 내 미완료 역(SBB+지역사업자),499,개역,2023,원문확인(자동),https://www.iamexpat.ch/expat-info/swiss-expat-news/switzerland-misses-target-make-500-stations-fully-accessible
+CHE,EMP,장애인 취업률,60.3,%,2021,원문수정,https://www.bfs.admin.ch/bfs/de/home/statistiken/wirtschaftliche-soziale-situation-bevoelkerung/gleichstellung-menschen-behinderungen/erwerbstaetigkeit/erwerbsbeteiligung.html
+CHE,EMP,장애인 빈곤율(가처분소득 중위 60% 미만),16,%,2021,원문확인(자동),https://www.proinfirmis.ch/angebot/obwalden/aktuelles/detail/news/anhaltende-ungleichheit-menschen-mit-behinderungen-staerker-von-armut-betroffen.html
+POL,LAW,접근성 보장법(특별한 필요가 있는 사람) 제정,2019-07-19,날짜,2019,원문확인,https://eli.gov.pl/eli/DU/2019/1696/ogl/pol/pdf
+POL,LAW,Dostępność Plus 프로그램 예산,23.2,십억 PLN,2018,원문확인,https://www.gov.pl/web/popcwsparcie/program-dostepnosc-plus-2018-2025-a-cyfryzacja
+POL,DATA,장애 신고 인구(인구센서스 NSP 2021),14.3,%,2021,원문확인(자동),https://goldap.praca.gov.pl/documents/d/wojewodzki-urzad-pracy-w-bialymstoku/sytuacja-osob-z-niepelnosprawnosciami-na-rynku-pracy-w-woj-podlaskim-w-2024-roku
+POL,DATA,법적 장애판정 인구 비율(15~89세; BAEL),8.8,%,2024,원문확인(자동),https://goldap.praca.gov.pl/documents/d/wojewodzki-urzad-pracy-w-bialymstoku/sytuacja-osob-z-niepelnosprawnosciami-na-rynku-pracy-w-woj-podlaskim-w-2024-roku
+POL,EMP,장애인 고용률(16~89세; BAEL),17.7,%,2024,원문확인(자동),https://goldap.praca.gov.pl/documents/d/wojewodzki-urzad-pracy-w-bialymstoku/sytuacja-osob-z-niepelnosprawnosciami-na-rynku-pracy-w-woj-podlaskim-w-2024-roku
+POL,EMP,의무고용률(PFRON 부담금),6,%,2024,원문확인,https://www.gov.pl/web/uw-opolski/uprawnienia-pracodawcy
+CZE,DATA,장애 인구 비율(15세+ 민간가구),15,%,2024,원문확인(자동),https://csu.gov.cz/people-with-a-disability
+CZE,DATA,장애 인구 비율(15세+; VŠPO 표본조사),13,%,2018,원문확인(자동),https://csu.gov.cz/people-with-a-disability
+CZE,EMP,장애 고용격차(여성·심각 제약),41,%p,2024,원문확인(자동),https://db.nomics.world/Eurostat/tepsr_sp200
+CZE,EMP,의무고용률,4,%,2024,원문확인,https://www.zakonyprolidi.cz/cs/2004-435
+CZE,TRANS,지하철 무단차 접근 역,48/61,역,확인필요,원문확인(자동),https://spheresofinfluence.ca/?p=33971
+HUN,LAW,CRPD 조사절차 결과 '중대·체계적 위반' 판정,2020,연도,2020,원문확인,https://documents.un.org/api/symbol/access?s=CRPD/C/HUN/IR/1&l=en&t=pdf
+HUN,BUILT,사회복지시설 수용 인원(장애인 포함),"약 100,000명 (장애인 27,000명)",명,2020,원문확인(자동),https://enil.eu/un-finds-hungary-responsible-for-grave-and-systematic-violations-of-disability-rights-condemns-mass-institutionalisation-funded-by-the-eu/
+HUN,DATA,장애 자기신고 인구(센서스),"274,000명",명,2022,원문확인,https://www.ksh.hu/s/kiadvanyok/fogyatekossag-es-egeszsegi-okbol-fakado-korlatozottsag/assets/fogyatekossag-es-egeszsegi-okbol-fakado-korlatozottsag.pdf
+HUN,TRANS,M3 지하철 전 구간 무단차화,완료,상태,2023,원문확인,https://bkk.hu/hirek/2025/05/szuletesnap-a-fold-alatt-ket-eve-fejezodott-be-az-m3-as-metro-felujitasa.14360/
+ROU,DATA,장애 등록 인구,"980,873명",명,2025,원문확인(자동),https://newsweek.ro/social/1000000-de-romani-au-certificat-de-handicap-care-e-handicapul-pentru-care-se-emit-cele-mai-multe-incadrari
+ROU,BUILT,성인 장애인 거주시설 수용 인원,"15,903명 (1.62%)",명,2025,원문확인(자동),https://www.gandul.ro/?p=20970851
+ROU,BUILT,성인 장애인 공공 사회지원기관 수(그중 거주형),555 (496),개소,2022,원문확인(자동),https://www.ces.ro/newlib/PDF/proiecte/2023/NF-HG-PIN.pdf
+ROU,EMP,의무고용률,4,%,2024,2차확인,https://startupcafe.ro/obligatia-angajarii-persoanelor-cu-dizabilitati-cum-se-calculeaza-procentul-de-4-pentru-firmele-cu-peste-50-de-angajati-83821
+BGR,DATA,장애 출현율(GALI),12.7,%,2024,원문확인(자동),https://www.epr.eu/?p=9337
+BGR,EMP,장애 고용격차,29.5,%p,2022,원문확인(자동),https://www.edf-feph.org/content/uploads/2024/10/bulgaria-accessible_DATA_project.pdf
+BGR,EMP,의무고용(장애인법 2019),"50~99인: 1명, 100인 이상: 2%",규정,2019,원문확인(자동),https://mondaq.com/employment/800706/bulgaria-introduces-mandatory-quotas-for-hiring-permanently-disabled-persons
+LVA,DATA,장애 출현율(GALI),41.2,%,2024,원문확인(자동),https://www.epr.eu/?p=9337
+LTU,EMP,장애 고용격차,35,%p,2022,원문확인(자동),https://www.euronews.com/health/2024/04/02/where-is-it-hardest-to-live-in-europe-as-a-person-with-a-disability
+EST,DIGI,EAA 이행법(제품·서비스 접근성법 TTLS) 적용,2025-06-28,날짜,2025,원문확인(자동),https://www.qualibooth.com/accessibility/compliance/europe/estonia---product-and-service-accessibility-act
+EST,DIGI,공공 웹 접근성 의무 기한(신규 사이트),2019-09-23,날짜,2019,원문확인(자동),https://accesstive.com/compliance-hub/estonia-2019/
+UKR,LAW,국가 무장벽 공간 조성 전략 2030 승인,2021-04-14,날짜,2021,원문확인,https://zakon.rada.gov.ua/laws/show/366-2021-%D1%80
+UKR,DATA,장애인 수,3.4,백만 명,2025,원문확인(자동),https://ukrinform.net/rubric-society/4132988-war-increases-number-of-people-with-disabilities-in-ukraine-by-600000-ombudsman-representative-tells-un.html
+UKR,DATA,장애인 수(전쟁 전),2.7,백만 명,2021,원문확인(자동),https://www.undp.org/sites/g/files/zskgke326/files/2024-06/pwd-report-rescore.pdf
+UKR,DATA,전면침공 후 장애인 증가(정부),"300,000명",명,2024,원문확인(자동),https://global.espreso.tv/russia-ukraine-war-ukraine-sees-300000-rise-in-disability-cases-since-russias-invasion
+RUS,LAW,국가프로그램 '접근가능한 환경(Dostupnaya Sreda)' 기간·예산,2011~2020(2018 심의 기준; 이후 연장); 예산 75억 USD는 원문 미확인,기간/금액,2018,원문수정,https://www.ecoi.net/en/file/local/1439226/1930_1532593850_g1809688.pdf
+RUS,LAW,CRPD 비준,2012,연도,2012,원문확인,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+ESP,LAW,헌법 제49조 개정(‘disminuidos’→‘personas con discapacidad’),시행,개정,2024,원문확인,https://www.boe.es/boe/dias/2024/02/17/pdfs/BOE-A-2024-3099.pdf
+ESP,LAW,장애인권리일반법(RDL 1/2013) 기존 환경 접근성 의무 최종기한,2017-12-04,날짜,2013,원문확인(자동),https://www.boe.es/eli/es/rdlg/2013/11/29/1
+ESP,LAW,인지 접근성(쉬운 읽기 등) 법제화 - Ley 6/2022,제정,법령,2022,원문확인,https://www.boe.es/eli/es/l/2022/03/31/6
+ESP,LAW,EAA 국내법화 - Ley 11/2023,2025-06-28 적용,법령,2023,원문확인(자동),https://www.boe.es/eli/es/l/2023/05/08/11
+ESP,DIGI,공공부문 웹 접근성 - RD 1112/2018,시행(WAD 이행; EN 301 549/WCAG 2.1 AA),법령,2018,원문확인(자동),https://www.boe.es/eli/es/rd/2018/09/07/1112
+ESP,EMP,장애인 의무고용률(근로자 50인 이상 기업),2,%,2013,원문확인,https://www.boe.es/eli/es/rdlg/2013/11/29/1
+ESP,EMP,장애 고용격차,14.6,%p,2022,원문확인(자동),https://sid-inico.usal.es/wp-content/uploads/2025/07/ES_2024_Semester_final-for-web.pdf
+ESP,EMP,장애인 고용률(국가 통계 정의),34.3,%,2022,원문확인(자동),https://ec.europa.eu/social/BlobServlet?docId=27971&langId=en
+ESP,EMP,장애인 경제활동참가율(국가 통계 정의),35.3,%,2023,원문확인(자동),https://ec.europa.eu/social/BlobServlet?docId=27971&langId=en
+ESP,TRANS,메트로 접근가능 역 비율,94.5 (156/165역 엘리베이터),%,2026,원문수정,https://www.tmb.cat/en/get-to-know-tmb/universal-accessibility/accessible-public-transport
+ESP,TRANS,TMB 버스 저상·접근 차량 비율,100,%,2021,원문확인,https://www.tmb.cat/en/get-to-know-tmb/universal-accessibility/accessible-public-transport
+ESP,TRANS,메트로 완전 접근가능 역 비율,70,%,2024,원문확인(자동),https://www.eldebate.com/espana/madrid/20240308/seis-nuevas-estaciones-metro-contaran-ascensores-directos-anden_180470.html
+ESP,TRANS,접근성·포용 계획 2021-2028 투자 및 목표,"3억3200만 유로, 엘리베이터 103기, 목표 82%",유로/%,2021,원문확인,https://www.comunidad.madrid/node/60630
+ESP,DATA,65세 이상 인구 비율,20.4,%,2024,원문수정,https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?format=JSON&lang=en&indic_de=PC_Y65_MAX&geo=ES
+ITA,LAW,장애인 기본법 Legge 104/1992,시행,법령,1992,원문확인,https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-02-05;104~art24
+ITA,DIGI,웹 접근성법 Legge Stanca(L. 4/2004),시행,법령,2004,원문확인,https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2004-01-09;4
+ITA,LAW,EAA 국내법화 D.Lgs. 82/2022 시행일,2022-07-16,날짜,2022,원문확인(자동),https://www.normattiva.it/eli/id/2022/07/01/22G00089/CONSOLIDATED
+ITA,EMP,장애인 의무고용률(50인 초과 사업장),7,%,1999,원문확인,https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1999-03-12;68~art3
+ITA,EMP,장애 고용격차,14,%p,2022,원문확인(자동),https://www.edf-feph.org/publications/european-semester-outcomes-spring-package-2024-european-disability-forum/
+ITA,EMP,장애 고용격차(대안 수치),14.0,%p,2022,원문수정,https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tepsr_sp200?format=JSON&lang=en
+ITA,DATA,활동제약(GALI) 일부·심각 비율(16세+),14.5,%,2024,원문확인(자동),https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Population_with_disability
+ITA,DATA,65세 이상 인구 비율,24.3,%,2024,원문확인,https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?format=JSON&lang=en&indic_de=PC_Y65_MAX&geo=IT
+ITA,TRANS,Colosseo 메트로역 엘리베이터 부재,0,기,2024,2차확인,https://www.ilpost.it/2024/01/16/metro-colosseo-persone-disabili/
+ITA,TRANS,휠체어 이용 불가 메트로역 비율(언론 추정),약 50,%,확인필요,원문확인(자동),https://www.ilgiornale.it/news/roma/roma-stazione-metro-su-due-inaccessibile-ai-disabili-1751421.html
+PRT,EMP,장애 고용격차,13.1,%p,2022,원문확인,https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tepsr_sp200?format=JSON&lang=en
+PRT,EMP,장애인 고용률 vs 일반인구,59.8 vs 79.1,%,2020,2차확인,https://www.edf-feph.org/content/uploads/2024/10/portugal-accessible_DATA_project.pdf
+PRT,EMP,민간 의무고용률(75-249인 1% / 250인+ 2%),1~2,%,2019,2차확인,https://abreuadvogados.com/en/conhecimento/publicacoes/artigos/new-labor-obligations-employment-quotas-for-people-with-disabilities/
+PRT,TRANS,메트로 완전 접근 역 비율,77,%,2023,원문확인(자동),https://www.metrolisboa.pt/institucional/?p=29680
+PRT,DATA,65세 이상 인구 비율,24.1,%,2024,원문확인,https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?format=JSON&lang=en&indic_de=PC_Y65_MAX&geo=PT
+PRT,LAW,EAA 국내법화 Decreto-Lei 82/2022,제정,법령,2022,2차확인,https://informador.pt/legislacao/diploma/requisitos-de-acessibilidade-de-produtos-e-servicos-tendo-em-conta-pessoas-com-deficiencia
+GRC,EMP,장애 고용격차,23.8,%p,2021,원문확인(자동),https://www.edf-feph.org/publications/european-semester-spring-package-2023-how-well-does-it-reflect-the-issues-faced-by-persons-with-disabilities/
+GRC,EMP,장애인 고용률,32.6,%,확인필요,원문확인(자동),https://www.edf-feph.org/majority-of-persons-with-disabilities-locked-out-of-quality-employment/
+GRC,EMP,의무고용률(50인 초과 민간 8% / 공공 5%),8,%,1998,2차확인,https://www.antigone.gr/wp-content/uploads/Projects/able20/National-review-report-ANTIGONE_EN.pdf
+GRC,TRANS,메트로 전 역 접근 가능(엘리베이터·장애인 화장실),100,%,2021,원문확인,https://accessibleroutes.thisisathens.org/en/
+GRC,DATA,65세 이상 인구 비율,23.4,%,2024,원문수정,https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?format=JSON&lang=en&indic_de=PC_Y65_MAX&geo=EL
+MLT,EMP,장애 고용격차,30.1,%p,2022,원문확인,https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tepsr_sp200?format=JSON&lang=en
+MLT,EMP,의무고용률(20인 이상 사업장),2,%,2015,원문확인,https://jobsplus.gov.mt/find-candidates/employing-a-person-with-disability
+MLT,DATA,활동제약(GALI) 일부·심각 비율(16세+),14.2,%,2024,원문확인(자동),https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Population_with_disability
+MLT,DATA,65세 이상 인구 비율,18.4,%,2024,원문확인,https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?format=JSON&lang=en&indic_de=PC_Y65_MAX&geo=MT
+CYP,EMP,장애 고용격차,25.7,%p,2022,원문확인(자동),https://www.edf-feph.org/publications/european-semester-outcomes-spring-package-2024-european-disability-forum/
+CYP,EMP,장애 고용격차(여성·심각 제약),46.9,%p,2024,원문확인,https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tepsr_sp200?format=JSON&lang=en&geo=CY
+CYP,DATA,65세 이상 인구 비율,18.3,%,2025,원문확인,https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?format=JSON&lang=en&indic_de=PC_Y65_MAX&geo=CY
+CYP,EMP,공공부문 장애인 채용 쿼터(Law 146(I)/2009),10 (광의 공공부문 충원 공석의 10%),%,2009,원문수정,https://www.cylaw.org/nomoi/arith/2009_1_146.pdf
+ESP,LAW,CRPD 비준(선택의정서 포함),2007-12-03,날짜,2007,원문확인(자동),https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+ITA,LAW,CRPD 비준(선택의정서 포함),2009-05-15,날짜,2009,원문확인(자동),https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+PRT,LAW,CRPD 비준(선택의정서 포함),2009-09-23,날짜,2009,원문확인(자동),https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+GRC,LAW,CRPD 비준(선택의정서 포함),2012-05-31,날짜,2012,원문확인(자동),https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+CYP,LAW,CRPD 비준,2011-06-27,날짜,2011,원문확인(자동),https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+MLT,LAW,CRPD 비준,2012-10-10,날짜,2012,원문확인(자동),https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+GBR,LAW,"평등법(Equality Act 2010) — 장애 포함 보호특성, 합리적 조정 의무",2010,제정연도,2010,원문확인,https://www.legislation.gov.uk/ukpga/2010/15/section/20
+GBR,LAW,UN CRPD 위원회 조사: '중대하거나 체계적인(grave or systematic) 위반' 판단,2016,발표연도,2016,원문확인,https://docstore.ohchr.org/SelfServices/FilesHandler.ashx?enc=Bbok0XkTp3mlFCKXv76jA7hJpGHtk9H7swJTrfyJHKTMV5%2FhzFy%2FtZ2qsGt46hs61ctcI6Wutq7Jm2g593eZ%2Fw%3D%3D
+GBR,LAW,CRPD 위원회 후속평가: 2016 위반사항 '유의미한 진전 없음',2024,발표연도,2024,2차확인,https://www.disabilityrightsuk.org/system/files/paragraphs/cw_file/2024-04/DDPO%20Coalition%20Press%20Release%20-%20UN%20report%20.docx
+GBR,DIGI,공공부문 웹·앱 접근성 규정(PSBAR 2018) 시행,2018-09-23,날짜,2018,원문확인(자동),https://www.gov.uk/guidance/public-sector-website-and-mobile-application-accessibility-monitoring
+GBR,DIGI,GDS 모니터링: 접근성 성명(statement) 게시율,97,%,2024,원문확인(자동),https://www.gov.uk/government/publications/accessibility-monitoring-of-public-sector-websites-and-mobile-apps-from-2022-to-2024/accessibility-monitoring-of-public-sector-websites-and-mobile-apps-from-2022-to-2024
+GBR,TRANS,런던 지하철 무단차(step-free) 역 수,94,개,2025,원문확인(자동),https://tfl-newsroom.prgloo.com/news/five-additional-tube-stations-to-be-assessed-for-step-free-access-feasibility-as-part-of-the-mayor-and-tfls-ongoing-work-to-improve-transport-network-accessibility
+GBR,TRANS,런던 지하철 무단차역 목표(시장),50,%,2030,원문확인(자동),https://www.railmagazine.com/news/2025/02/27/cost-pressures-set-to-curtail-plans-for-total-london-underground-step-free-access
+GBR,TRANS,GB 철도역 무단차 접근 역 비율,61,%,2019,원문확인(자동),https://www.orr.gov.uk/media/17408/download
+GBR,TRANS,무단차 역을 경유하는 철도 이용 비율(승객 가중),75+,%,2024,원문확인(자동),https://www.southeasternrailway.co.uk/about-us/our-commitments/major-programmes/access-for-all
+GBR,TRANS,런던 광역 본선 철도역 중 완전 무단차 역,138/335,역 수,2023,원문확인(자동),https://westminsterbrief.co.uk/archive/pq/HL12329
+GBR,TRANS,포용적 교통 전략(Inclusive Transport Strategy) — 2030년까지 장애인 동등 접근 목표,2018,발표연도,2018,원문확인,https://www.gov.uk/government/publications/inclusive-transport-strategy/the-inclusive-transport-strategy-achieving-equal-access-for-disabled-people
+GBR,TRANS,블루배지(장애인 주차) 유효 보유 수,2.84,백만 장,2024,원문확인(자동),https://www.gov.uk/government/statistics/disability-accessibility-and-blue-badge-scheme-statistics-2023-to-2024
+GBR,TRANS,블루배지 유효 보유 수,3.07,백만 장,2025,원문확인(자동),https://www.gov.uk/government/statistics/blue-badge-scheme-statistics-april-2024-to-march-2025/blue-badge-scheme-statistics-april-2024-to-march-2025
+GBR,BUILT,건축규정 Part M(Approved Document M) — 신축 접근성 기준(M4(1)~(3) 주택 등급),2015,현행판 연도,2015,원문확인,https://www.gov.uk/government/publications/access-to-and-use-of-buildings-approved-document-m
+GBR,EMP,"장애인 고용률(근로연령, 16-64)",52.8,%,2025,원문확인(자동),https://www.gov.uk/government/statistics/the-employment-of-disabled-people-2025/the-employment-of-disabled-people-2025
+GBR,EMP,장애 고용격차,29.7,%p,2025,원문확인(자동),https://www.gov.uk/government/statistics/the-employment-of-disabled-people-2025/the-employment-of-disabled-people-2025
+GBR,DATA,장애 출현율(Family Resources Survey),24,%,2023,원문확인(자동),https://www.gov.uk/government/statistics/disability-accessibility-and-blue-badge-scheme-statistics-2023-to-2024/disability-accessibility-and-blue-badge-statistics-england-2023-to-2024
+GBR,DATA,장애 출현율(FRS 2023/24) — '4명 중 1명',약 25,%,2024,원문확인(자동),https://www.gov.uk/government/statistics/family-resources-survey-financial-year-2023-to-2024/family-resources-survey-financial-year-2023-to-2024
+FRA,LAW,장애인 권리·기회 평등법(Loi n° 2005-102) — 2015년까지 ERP·교통 접근성 의무,2005-02-11,날짜,2005,원문확인,https://www.assemblee-nationale.fr/dyn/14/questions/QANR5L14QE74865.pdf
+FRA,BUILT,법정기한(2015-01-01) 시점 접근성 의무 이행 ERP 수,"<50,000",개,2015,원문확인,https://www.assemblee-nationale.fr/dyn/15/questions/QANR5L15QE7532.pdf
+FRA,BUILT,Ad'AP 제도 진입 ERP / 접근 가능 ERP,"Ad'AP 진입 670,000+ / 프로세스 전체 1,000,000+ / 접근가능 350,000",개,2019,원문수정,https://www.assemblee-nationale.fr/dyn/15/questions/QANR5L15QE7532.pdf
+FRA,BUILT,접근성 절차 미착수 ERP 비율(전체 약 200만 ERP 중),약 50,%,2025,원문확인(자동),https://www.maire-info.com/mise-en-accessibilite-des-erp-le-temps-de-la-sanction-est-il-venu-article2-29851
+FRA,TRANS,파리 지하철 휠체어 접근 가능 역 비율,3 (14호선 9개역),%,2018,원문수정,https://informations.handicap.fr/a-metro-paris-2024-10792.php
+FRA,TRANS,접근 가능 지하철역 수 및 추가 계획,29 (+68 by 2031),역 수,2025,원문확인(자동),https://urban-mobility-observatory.transport.ec.europa.eu/news-events/news/paralympic-games-leave-lasting-accessibility-legacy-paris-2025-09-04_en
+FRA,TRANS,파리 버스망 접근성,100,%,2024,원문확인,https://www.paris.fr/pages/des-arrets-de-bus-rendus-accessibles-partout-ou-c-est-possible-26866
+FRA,TRANS,휠체어 접근 택시(파리 2024 레거시),"1,000",대,2024,원문확인(자동),https://www.linfodurable.fr/jo-2024-les-organisateurs-se-disent-prets-pour-gerer-les-deplacements-des-personnes-handicapees
+FRA,DIGI,EAA 국내법 전환(Loi DDADUE n° 2023-171) 및 DGCCRF 감독,2023-03-09,날짜,2023,2차확인,https://connections.nortonrosefulbright.com/post/102mmcn/european-accessibility-act-not-a-nice-to-have-anymore
+FRA,EMP,"장애인 의무고용률(OETH, 20인 이상 사업체)",6,%,2024,원문확인,https://www.unea.fr/sites/default/files/dares_dr_oeth_2024.pdf
+FRA,EMP,OETH 직접고용률,3.6,%,2023,원문확인(자동),https://www.unea.fr/sites/default/files/dares_dr_oeth_2023_241129_121447.pdf
+FRA,EMP,OETH 직접고용률,4.0,%,2024,원문확인(자동),https://www.unea.fr/sites/default/files/dares_dr_oeth_2024.pdf
+FRA,EMP,장애 고용격차(EU-SILC),20.8,%p,2022,원문확인,https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tepsr_sp200?format=JSON&lang=en
+FRA,DATA,"장애 인구(15세+, 재가, 심각한 제한 또는 활동 제약)",7.6,백만 명,2021,2차확인,https://www.santementale.fr/2023/03/une-personne-sur-sept-de-15-ans-ou-plus-est-handicapee/
+FRA,BUILT,Access City Award 2026 3위,렌(Rennes),도시,2025,원문확인,https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/access-city-award-aca/access-city-award-list-winners_en
+NLD,EMP,장애 고용격차(EU-SILC),25.2,%p,2022,원문확인(자동),https://www.edf-feph.org/publications/european-semester-outcomes-spring-package-2024-european-disability-forum/
+NLD,EMP,일자리 협약(Banenafspraak) 추가 일자리 실적 vs 목표,"91,812 / 125,000",개,2025,원문확인(자동),https://www.eerstekamer.nl/behandeling/20260909/brief_regering_resultaten/document3/f=/vn0wlh7ajqpi.pdf
+NLD,LAW,CRPD 비준,2016,연도,2016,원문확인,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en
+BEL,EMP,장애 고용격차(EU-SILC),35.3,%p,2022,원문확인(자동),https://www.euronews.com/2024/04/02/where-is-it-hardest-to-live-in-europe-as-a-person-with-a-disability
+BEL,EMP,장애 고용격차(EC 국가보고),33.6,%p,2023,원문확인(자동),https://ec.europa.eu/social/BlobServlet?docId=27971&langId=en
+LUX,EMP,장애 고용격차(EU-SILC),8.5,%p,2022,원문확인,https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tepsr_sp200?format=JSON&lang=en
+LUX,EMP,장애 실업률 격차,0.4,%p,2024,원문확인(자동),https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Disability_statistics_-_unemployment_and_people_outside_the_labour_force
+LUX,BUILT,Access City Award 1위,룩셈부르크시,도시,2022,원문확인,https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/access-city-award-aca/access-city-award-list-winners_en
+IRL,LAW,CRPD 선택의정서 발효,2024-11-30,날짜,2024,원문확인(자동),https://pila.ie/resources/bulletin/2025/01/15/optional-protocol-to-the-convention-on-persons-with-disabilities-came-into-effect-in-ireland-on-30-november-2024
+IRL,EMP,장애 고용격차(EU-SILC),37,%p,2022,원문확인(자동),https://www.edf-feph.org/publications/european-semester-outcomes-spring-package-2024-european-disability-forum/
+IRL,EMP,공공부문 장애인 법정 고용목표(Disability Act 2005 Part 5),6 (2025~),%,2025,원문확인,https://nda.ie/monitoring/monitoring/employment-of-persons-with-disabilities-in-the-public-sector
+IRL,DIGI,WAD 모니터링(간이검토 웹사이트 수),232,개,2024,원문확인(자동),https://nda.ie/uploads/publications/Irelands-Monitoring-Report-for-the-EU-Web-Accessibility-Directive-2024-Monitoring-Period-Final.pdf
+SWE,DIGI,디지털 공공서비스 접근성법(2018:1937) 시행,2019-01-01,날짜,2019,원문확인,https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20181937-om-tillganglighet-till-digital_sfs-2018-1937/
+SWE,LAW,'불충분한 접근성(bristande tillgänglighet)'을 차별로 규정(차별금지법 2008:567 개정),2015,시행연도,2015,원문확인,https://www.regeringen.se/rattsliga-dokument/proposition/2014/03/prop.-201314198
+SWE,EMP,장애 고용격차(EU-SILC),25.7,%p,2022,원문확인(자동),https://www.edf-feph.org/publications/european-semester-outcomes-spring-package-2024-european-disability-forum/
+SWE,BUILT,Access City Award 1위 수상 도시 수(2014·2021·2023),"4 (Gothenburg 2014, Borås 2015, Jönköping 2021, Skellefteå 2023)",회,2023,원문수정,https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/access-city-award-aca/access-city-award-list-winners_en
+NOR,DIGI,"공공 웹사이트 간이 모니터링 종합점수(255개, 시범)",91,점/100,2024,원문확인,https://www.uutilsynet.no/media/2393/download
+NOR,BUILT,국가 비전: 2025년까지 유니버설 디자인 사회,2025,목표연도,2025,2차확인,https://www.celotajs.lv/g/www/cms/c00926/KS-Christian-Hellevang-september-2023-compressed.pdf
+DNK,EMP,장애 고용격차(EU-SILC),9.9,%p,2022,2차확인,https://www.bollettinoadapt.it/wp-content/uploads/2024/01/Narrowing-the-employment-gap-for-people-with-disabilities-The-need-for-effective-policy-implementation_2023.pdf
+FIN,DATA,"장애 출현율(GALI, 16세+)",34.9,%,2024,원문확인,https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/hlth_silc_12?format=JSON&lang=en
+FIN,EMP,장애 고용격차(EU-SILC),19.0,%p,2022,원문확인,https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tepsr_sp200?format=JSON&lang=en
+SAU,LAW,장애인권리법(Rights of Persons with Disabilities System) 공포,2023-08-27,날짜,2023,원문확인(자동),https://saudipedia.com/en/the-rights-of-persons-with-disabilities-law-in-saudi-arabia
+SAU,LAW,장애인권리법 조문 수,33,개조,2023,2차확인,https://saudipedia.com/en/the-rights-of-persons-with-disabilities-law-in-saudi-arabia
+SAU,LAW,장애인돌봄청(APD) 설립,2018,연도,2018,원문확인,https://documents.un.org/api/symbol/access?s=CRPD/C/SAU/CO/1&l=en&t=pdf
+SAU,LAW,CRPD 및 선택의정서 비준,2008-06-24,날짜,2008,원문확인(자동),https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en
+SAU,LAW,CRPD 위원회 최종견해(CRPD/C/SAU/CO/1) 채택,2019-04-02,날짜,2019,원문확인,https://documents.un.org/api/symbol/access?s=CRPD/C/SAU/CO/1&l=en&t=pdf
+SAU,DATA,"장애 출현율(극심한 어려움, 사우디 국민)",2.9,%,2017,2차확인,https://www.al-madina.com/ampArticle/556415
+SAU,DATA,단일장애 중 시각장애 비중,46.02,%,2017,2차확인,https://www.al-madina.com/ampArticle/556415
+SAU,DATA,고령화율(65세 이상),약 2.8,%,2023,원문확인,"https://fred.stlouisfed.org/graph/fredgraph.csv?id=SPPOP65UPTOZSSAU,SPPOP65UPTOZSARE,SPPOP65UPTOZSCAN"
+SAU,EMP,장애인 노동시장 참여/고용 비율(국가변혁프로그램 지표),7.7,%,2017,2차확인,https://www.arabnews.com/node/1831677
+SAU,EMP,장애인 노동시장 참여/고용 비율,12,%,2020,2차확인,https://www.arabnews.com/node/1831677
+SAU,EMP,장애인 노동시장 참여/고용 비율,12.4,%,2022,2차확인,https://www.arabnews.com/node/2322221
+SAU,EMP,장애인 노동시장 참여/고용 비율,13.2,%,2023,원문확인(자동),https://www.okaz.com.sa/local/na/2256672
+SAU,EMP,장애인 고용률(2017 전국 장애조사 기반 연구 추정),18.5,%,2017,원문확인,https://api.crossref.org/works/10.1177/00469580261441064
+SAU,EMP,니타캇(Nitaqat) 장애인 근로자 1인 산정 가중치,4,명으로 산정,2022,원문확인,https://www.hrsd.gov.sa/sites/default/files/2023-02/156563_0.pdf
+SAU,TRANS,리야드 메트로 역 수,85,개역,2025,원문확인(자동),https://urbanrail.net/as/riyadh/riyadh.htm
+SAU,TRANS,리야드 메트로 연장,176,km,2025,원문확인(자동),https://en.wikipedia.org/wiki/Riyadh_Metro
+SAU,TRANS,리야드 메트로 역 엘리베이터·점자블록·전용석,설계 반영(주장),정성,2025,2차확인,https://italpress.com/webuild-opens-the-qasr-al-hokm-downtown-station-of-the-riyadh-metro
+SAU,TOUR,예언자 모스크 휠체어·골프카트 이용자(1446H 하지 시즌),631267,명,2025,2차확인,https://alriyadhdaily.com/article/73bebc0c4ae34da08a82a424f43aaeed
+SAU,TOUR,예언자 모스크 대여 휠체어,4700,대,2026,원문확인(자동),https://www.app.com.pk/?p=1212199
+SAU,TOUR,그랜드 모스크 전동카트(통합 모빌리티 플랫폼·Tawakkalna 예약),약 400,대,2026,2차확인,https://gulfnews.com/world/gulf/saudi/saudi-arabia-57000-worshippers-use-electric-carts-on-27th-night-of-ramadan-at-grand-mosque-1.500076634
+SAU,BUILT,NEOM/The Line 장애 접근성 기준 공개 여부,미공개,정성,2022,2차확인,https://www.arabnews.com/node/2129296
+SAU,DIGI,정부 디지털 접근성 기준,WCAG 2.1 AA,기준,2022,원문확인(자동),https://www.deque.com/accessibility-compliance/mena/saudi-arabia/
+ARE,LAW,"연방법 2006년 제29호(특수필요인 권리법), 2009년 제14호로 개정",2006/2009,연도,2009,2차확인,https://www.uaeu.ac.ae/en/news/2015/april/legal_aspects.shtml
+ARE,LAW,CRPD 비준,2010-03-19,날짜,2010,원문확인(자동),https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en
+ARE,BUILT,두바이 유니버설디자인 코드 시행,2017,연도,2017,2차확인,https://gulfnews.com/uae/government/dubai-aims-to-be-disabled-friendly-by-2020-1.2061779
+ARE,BUILT,UD 코드(결의의 사람들 범주) 준수 완공 건물,125,동,2023,원문확인(자동),https://mediaoffice.ae/en/news/2023/December/14-12/DM-achieves-Guinness-World-in-Dubai-Frame
+ARE,TOUR,완전 접근 가능 공공해변 비율,90,%,2025,원문확인(자동),https://gulfnews.com/uae/90-of-dubais-beaches-and-80-of-public-parks-now-fully-accessible-1.500294328
+ARE,LAW,'2020년까지 장애친화 도시' 목표(My Community… A City for Everyone),2020,목표연도,2013,2차확인,https://gulfnews.com/uae/rta-facilities-meet-needs-of-people-of-determination-1.69085529
+ARE,TRANS,두바이 메트로 전 열차 휠체어 공간·점자블록·대형 엘리베이터,제공,정성,2018,2차확인,https://gulfnews.com/uae/transport/rta-makes-it-easy-for-people-of-determination-1.2195129
+ARE,DATA,고령화율(65세 이상),1.7,%,2023,원문수정,"https://fred.stlouisfed.org/graph/fredgraph.csv?id=SPPOP65UPTOZSSAU,SPPOP65UPTOZSARE,SPPOP65UPTOZSCAN"
+QAT,TRANS,도하 메트로 무단차·휠체어 접근 역,37,개역(전체),2023,원문확인(자동),https://publications.fifa.com/fr/final-sustainability-report/social-pillar/accessibility/wider-accessibility-in-qatar/
+QAT,TOUR,2022 월드컵 감각실 운영 경기장,3,개,2022,원문확인,https://publications.fifa.com/de/final-sustainability-report/social-pillar/accessibility/accessibility-at-the-tournament
+QAT,TOUR,장애 관중 만족도(월드컵),4.5,점/5,2022,원문확인(자동),https://publications.fifa.com/de/final-sustainability-report/social-pillar/accessibility/accessibility-at-the-tournament
+QAT,LAW,CRPD 비준,2008-05-13,날짜,2008,원문확인(자동),https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en
+CAN,LAW,"접근성법(Accessible Canada Act, 2019) — 장벽 없는 캐나다 목표일",2040-01-01,목표일,2019,원문확인,https://accessible.canada.ca/2023-2024-departmental-results-report-glance
+CAN,BUILT,CSA/ASC B651 건조환경 접근성 표준 2023판(무료 공개),2023,판,2023,원문확인,https://accessible.canada.ca/creating-accessibility-standards/csa-asc-b651-accessible-design-built-environment
+CAN,DATA,장애 출현율(15세 이상),27,%,2022,원문확인(자동),https://www150.statcan.gc.ca/n1/daily-quotidien/231201/dq231201b-eng.htm
+CAN,EMP,장애인 고용률(25~64세),62,%,2022,원문확인(자동),https://www150.statcan.gc.ca/n1/daily-quotidien/231201/dq231201b-eng.htm
+CAN,LAW,AODA '2025년 완전 접근' 법정 목표,미달성,정성,2025,2차확인,https://www.aodaalliance.org/media/2025-has-arrived-where-is-the-barrier-free-society-that-the-ontario-legislature-unanimously-promised-ontarians-with-disabilities-twenty-years-ago/
+CAN,TRANS,TTC 지하철 Easier Access 잔여역 완공 예정,2028,연도,2028,원문수정,https://www.ttc.ca/accessibility/easier-access-program-schedule
+CAN,LAW,CRPD 선택의정서 가입,2018-12-03,날짜,2018,원문확인(자동),https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en
+CAN,DATA,고령화율(65세 이상),약 19,%,2023,원문확인,"https://fred.stlouisfed.org/graph/fredgraph.csv?id=SPPOP65UPTOZSSAU,SPPOP65UPTOZSARE,SPPOP65UPTOZSCAN"
+NZL,DATA,장애 출현율(가구 거주자),17,%,2023,원문확인(자동),https://www.whaikaha.govt.nz/news/news/17-percent-of-new-zealanders-are-disabled
+NZL,EMP,장애인 고용률(15~64세),39.4,%,2023,원문확인(자동),https://www.scoop.co.nz/stories/BU2308/S00203.htm
+NZL,EMP,장애인 실업률(15~64세),10.7,%,2023,원문확인(자동),https://www.scoop.co.nz/stories/BU2308/S00203.htm
+NZL,LAW,접근성법안(Accessibility for New Zealanders Bill) 작업 중단,2024-08,날짜,2024,원문확인,https://www.whaikaha.govt.nz/assets/Cabinet-Papers/Hon-Louise-Upston/Coversheet-Confirming-the-status-of-the-Accessibility-for-New-Zealanders-Bill.docx
+CHN,LAW,무장애환경건설법(无障碍环境建设法) 시행,2023-09-01,날짜,2023,2차확인,https://subsites.chinadaily.com.cn/npc/2023-06/29/c_898568.htm
+CHN,DATA,장애인 수,"약 8,500만",명,2021,2차확인,https://subsites.chinadaily.com.cn/npc/2023-06/29/c_898568.htm
+CHN,EMP,취업 중인 등록 장애인,906만,명,2023,2차확인,https://news.cgtn.com/news/2024-12-03/Empowering-lives-China-s-support-for-people-with-disabilities-1z2f9H6hsvm/share_amp.html
+CHN,BUILT,장애인 가정 무장애 주택개조(14차 5개년 누계),128만,가구,2025,2차확인,https://regional.chinadaily.com.cn/CDPF/2025-07/23/c_1111695.htm
+CHN,LAW,CRPD 비준(선택의정서 미가입),2008-08-01,날짜,2008,원문확인,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en
+IND,DATA,장애 출현율(인구센서스),2.21,%,2011,원문확인,https://www.mospi.gov.in/sites/default/files/publication_reports/Persons_Disabilities_31mar21.pdf
+IND,TRANS,AIC 목표: 철도역 50% 완전 접근(2018-03),미달성→2020-03 연기,정성,2019,2차확인,https://www.drishtiias.com/daily-updates/daily-news-analysis/accessible-india-campaign
+IND,BUILT,AIC 목표: 수도·주도 정부건물 50% 완전 접근(2018-12),미달성→2020-03 연기,정성,2019,2차확인,https://www.drishtiias.com/daily-updates/daily-news-analysis/accessible-india-campaign
+IND,LAW,"대법원 Rajive Raturi 판결 — RPwD 규칙 15조 '권고적', 의무 기준 제정 명령",2024-11-08,날짜,2024,2차확인,https://www.verdictum.in/court-updates/supreme-court/rpwd-accessibility-standards-rajive-raturi-v-union-of-india-writ-petition-228-of-2006-1557349
+BRA,DATA,장애 출현율(2세 이상),8.9,%,2022,원문확인,"https://apisidra.ibge.gov.br/values/t/9324/n1/all/v/12785,12791/p/2022/c2/6794"
+BRA,EMP,장애인 취업률(taxa de ocupação),29,%,2022,원문확인(자동),https://viva.com.br/carreira-e-educacao/so-29-das-pessoas-com-deficiencia-trabalhavam-no-brasil-em-2022.html
+BRA,EMP,의무고용률(Lei 8.213/1991 제93조),2~5,%,1991,원문확인,https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm
+BRA,LAW,"장애인포용법(LBI, Lei 13.146) 제정",2015,연도,2015,원문확인,https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm
+BRA,TRANS,BRT 튜브역 레벨 탑승+휠체어 리프트,제공,정성,확인필요,2차확인,https://www.independentliving.org/mobility/transit3.html
+MEX,DATA,장애·제약·정신질환 인구 비율,16.5,%,2020,원문수정,https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2021/EstSociodemo/ResultCenso2020_Nal.pdf
+MEX,TRANS,"휠체어 이용자 vs 메트로 소송(연방법원 승소, 이행 지연)",1,건,2025,2차확인,https://politica.expansion.mx/cdmx/2025/01/18/persona-con-discapacidad-demanda-a-metro-cdmx
+ISR,LAW,장애인평등권법,1998,연도,1998,원문확인,https://www.gov.il/BlobFolder/legalinfo/equality_law/en/sitedocs_equal_rights_for_persons_with_disabilities_law.pdf
+ISR,BUILT,접근 불가능한 공공건물 비율,약 60,%,2020,원문확인(자동),https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2024/Shilton/EN/2024-Shilton-205-Accessibility-EN.pdf
+ISR,BUILT,접근성 법적 요건 완전 미준수 지방정부 비율,약 92,%,2020,원문확인(자동),https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2024/Shilton/EN/2024-Shilton-205-Accessibility-EN.pdf
+RUS,LAW,CRPD 비준(선택의정서 미가입),2012-09-25,날짜,2012,원문확인(자동),https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en
+RUS,BUILT,국가프로그램 '접근 가능한 환경(Доступная среда)',2011~2030,기간,2011,원문확인,https://mintrud.gov.ru/ministry/programms/3/0
+ZAF,DATA,"장애 출현율(5세 이상, 워싱턴그룹)",7.5,%,2011,원문확인,https://www.statssa.gov.za/publications/Report-03-01-59/Report-03-01-592011.pdf
+ZAF,EMP,공공부문 장애인 고용 목표,"2%(2000년 각료회의)→3%(2024-25), 2030년 7% 목표",%,2000,원문수정,https://sanews.gov.za/node/14474
+EGY,LAW,장애인권리법(2018년 법률 제10호),2018,연도,2018,2차확인,https://eg.andersen.com/tax-benefits-for-hiring-people-with-disabilities/
+EGY,TRANS,카이로 메트로 1·2호선 무단차 접근,대부분 불가(추정),정성,확인필요,2차확인,https://wheelchairtravel.org/cairo-public-transportation/
+SGP,LAW,CRPD 비준,"비준(2013), 제12조·25(e)·29(a)(iii) 유보",-,2013,원문확인(자동),https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+SGP,LAW,포괄적 장애차별금지법,없음,-,2025,원문확인,https://www.ecoi.net/en/file/local/2080547/G2251464.pdf
+SGP,LAW,Workplace Fairness Act — 장애·정신건강 보호특성,"포함(2025 제정, 2027년 말 시행 예정)",-,2025,원문확인,https://www.mom.gov.sg/newsroom/press-releases/2025/workplace-fairness--dispute-resolution----bill-press-release
+SGP,LAW,Workplace Fairness Act 적용 사업장 규모,25,명 이상,2024,원문확인(자동),https://www.dlapiper.com/en/insights/publications/2024/12/first-workplace-fairness-bill-introduced-in-singapore-to-protect-employees-against-discrimination
+SGP,TRANS,MRT·LRT 역 무장애 동선 확보율,100,%,2023,원문확인,https://www.lta.gov.sg/content/ltagov/en/getting_around/public_transport/a_better_public_transport_experience/an_inclusive_public_transport_system.html
+SGP,TRANS,공공버스 휠체어 접근 가능 비율,100,%,2020,원문확인,https://lta.gov.sg/content/ltagov/en/who_we_are/statistics_and_publications/Connect/Faces-of-LTA-Dr-Navin-Nair.html
+SGP,TRANS,버스정류장 무장애 비율,98,%,2023,원문확인(자동),https://www.lta.gov.sg/content/ltagov/en/getting_around/public_transport/a_better_public_transport_experience/an_inclusive_public_transport_system.html
+SGP,TRANS,Green Man Plus 설치 횡단보도,1000,개소 이상,2024,원문확인(자동),https://mot.gov.sg/what-we-do/motoring-road-network-and-infrastructure/inclusive-transport-infrastructure
+SGP,BUILT,건축 접근성 법정 기준,Code on Accessibility in the Built Environment 2025 (2025-11-01 시행),-,2025,원문확인,https://isomer-user-content.by.gov.sg/338/0fbfb3e6-5f17-437e-9ec6-1837254c6a00/udea2025_annexb_bca-ud-factsheet.pdf
+SGP,BUILT,Universal Design Mark 운영기간,2012–2021,-,2025,원문확인,https://isomer-user-content.by.gov.sg/338/0fbfb3e6-5f17-437e-9ec6-1837254c6a00/udea2025_annexb_bca-ud-factsheet.pdf
+SGP,BUILT,UDEA 수상 프로젝트 누적,9,건,2025,원문확인,https://isomer-user-content.by.gov.sg/338/0fbfb3e6-5f17-437e-9ec6-1837254c6a00/udea2025_annexb_bca-ud-factsheet.pdf
+SGP,BUILT,Friendly Streets 목표,2030년까지 모든 타운에 1곳 이상(24개 타운),-,2025,원문확인(자동),https://mot.gov.sg/what-we-do/motoring-road-network-and-infrastructure/inclusive-transport-infrastructure
+SGP,DIGI,정부 디지털서비스 기준,Digital Service Standards — WCAG A/AA 기반,-,2025,원문확인,https://info.standards.tech.gov.sg/control-catalog/dss/
+SGP,EMP,장애인 고용률(15–64세 거주자),33.6,%,2024,원문확인,https://stats.mom.gov.sg/iMAS_Tables1/LabourForce/LabourForce_2024/mrsd_2024Labourforce_survey_highlights.pdf
+SGP,EMP,장애인 고용률 목표(EMP2030),40,%,2030,원문확인(자동),https://www.msf.gov.sg/media-room/article/enabling-masterplan-2030-update-new-plans-to-bolster-inclusive-employment-and-community-living-opportunities-for-persons-with-disabilities
+SGP,DATA,"장애인 수(5세 이상, 기본활동 곤란)",97600,명,2020,원문확인,https://www.singstat.gov.sg/files/3f020790-d185-4894-979b-21b6fa2c41ad.pdf
+SGP,DATA,자가보고 장애 출현율(18–49세),3.4,%,2015,원문확인(자동),https://www.msf.gov.sg/media-room/article/Total-number-of-persons-with-disabilities-in-Singapore
+SGP,DATA,시민 65세 이상 비율,20.7,%,2025,원문확인,https://isomer-user-content.by.gov.sg/520/e93d841f-a313-4ca9-b61c-d48079ed7f8c/Population_in_Brief_2025.pdf
+AUS,LAW,CRPD·선택의정서 비준,"CRPD 2008, 선택의정서 2009",-,2009,원문확인,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4&clang=_en
+AUS,LAW,장애차별금지법,Disability Discrimination Act 1992 (+ 교통·건축·교육 Disability Standards),-,1992,원문확인,https://www.legislation.gov.au/C2004A04426/latest/versions
+AUS,LAW,장애 왕립위원회 권고 수,222,건,2023,원문확인(자동),https://ndis.gov.au/news/10272-australian-government-releases-its-initial-response-disability-royal-commission-final-report
+AUS,TRANS,DSAPT 2022 인프라 준수 시한,미달(NSW·VIC 등),-,2025,원문확인,https://www.transport.nsw.gov.au/projects/programs/safe-accessible-transport-program
+AUS,TRANS,독립 접근 가능 철도역 비율(Sydney Trains·Intercity·Regional),72.32,%,2026,원문수정,https://www.transport.nsw.gov.au/projects/programs/safe-accessible-transport-program
+AUS,TRANS,멜버른 트램 접근 가능 운행 비율,18,%,2024,원문확인(자동),https://www.audit.vic.gov.au/report/accessibility-tram-services-follow
+AUS,TRANS,멜버른 트램 저상차량 비율,38,%,2020,원문확인(자동),https://www.audit.vic.gov.au/report/accessibility-tram-services
+AUS,BUILT,건축 접근성 기준,Disability (Access to Premises — Buildings) Standards 2010,-,2011,원문확인,https://www.legislation.gov.au/F2010L00668/asmade/2010-03-15/text/original/epub/OEBPS/document_1/document_1.html
+AUS,DIGI,정부 디지털 서비스 기준,Digital Service Standard v2.0 — 최신 WCAG(2.2) 준수,-,2023,원문확인(자동),https://intopia.digital/articles/australias-digital-service-standard-gets-an-upgrade
+AUS,DIGI,AHRC 디지털 접근성 지침 최소기준,WCAG 2.2 AA,-,2025,원문확인(자동),https://www.deque.com/blog/accessibility-updates-in-australia-in-2026/
+AUS,EMP,장애인 경제활동참가율(15–64세),60.5,%,2022,원문확인,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/latest-release
+AUS,EMP,장애인 실업률(15–64세),7.5,%,2022,원문확인,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/latest-release
+AUS,EMP,"장애인 고용률(15–64세, 계산값)",56.1,%,2022,원문수정,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/latest-release
+AUS,EMP,NDIS 참여자 수,717001,명,2025,원문확인(자동),https://www.ndis.gov.au/news/10718-ndis-quarterly-report-march-2025-published
+AUS,TOUR,접근성 수요 관광객 관련 지출,29.2,십억 AUD,2024,원문확인(자동),https://www.tra.gov.au/content/dam/austrade-assets/global/wip/tra/documents/2024-tra-accessible-tourism-report.pdf
+AUS,DATA,장애 출현율,21.4,%,2022,원문확인(자동),https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022/key-findings-plain-language
+AUS,DATA,65세 이상 인구 비율,18,%,2025,원문확인,https://api.worldbank.org/v2/country/all/indicator/SP.POP.65UP.TO.ZS?format=json&per_page=20000&mrnev=1
+AUS,LAW,국가 장애전략,Australia's Disability Strategy 2021–2031,-,2021,2차확인,https://www.daru.org.au/resource/australias-disability-strategy-2021-2031
+USA,LAW,ADA(미국장애인법) 제정,1990 제정(1990-07-26 서명),연도,1990,원문확인(자동),https://www.ada.gov/law-and-regs/ada/
+USA,LAW,ADA 개정법(ADAAA) 시행,2009-01-01 시행(2008 제정),연도,2008,원문확인,https://www.eeoc.gov/statutes/notice-concerning-americans-disabilities-act-ada-amendments-act-2008
+USA,LAW,UN 장애인권리협약(CRPD) 비준 여부,미비준(2009 서명),상태,2026,원문확인,https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-15&chapter=4
+USA,LAW,CRPD 상원 비준동의 표결,61대 38(부결),표,2012,원문확인,https://www.senate.gov/legislative/LIS/roll_call_votes/vote1122/vote_112_2_00219.htm
+USA,LAW,ADA Title III 연방소송 건수(전체),8667,건,2025,원문확인(자동),https://www.mondaq.com/unitedstates/constitutional-administrative-law/1745806/ada-title-iii-federal-lawsuit-filings-fall-slightly-to-8667-in-2025
+USA,LAW,ADA Title III 연방소송 중 웹 접근성 소송,3117,건,2025,원문확인(자동),https://www.adatitleiii.com/2026/03/federal-court-website-accessibility-lawsuit-filings-bounce-back-in-2025/
+USA,DIGI,"디지털 접근성 소송(연방+주법원, 웹·앱·영상)","5000 이상(트래커 수치 4,928)",건,2025,원문확인,https://info.usablenet.com/ada-website-compliance-lawsuit-tracker
+USA,LAW,주정부 법(캘리포니아 Unruh법) 법정손해배상 하한,4000,USD/위반 1건,2026,원문확인(자동),https://www.jmbm.com/docs/munson_v_del_taco.pdf
+USA,TRANS,ADA 핵심역(key station) 접근성 원 기한,"1993-07-26(경전철·도시철도), 연장 최대 2020",기한,1990,원문확인(자동),https://www.law.cornell.edu/cfr/text/49/37.51
+USA,TRANS,FTA 지정 핵심역 중 기한 내 ADA 준수,437/547 (82%),역(%),2004,원문확인(자동),https://www.fhwa.dot.gov/reports/htffy04/mda_06_09.htm
+USA,TRANS,FTA 전역 접근성 프로그램(ASAP) FY2026 선정액,232.83,백만 USD,2026,원문확인(자동),https://www.railway.supply/all-stations-accessibility-program-awards-233m-after-686m-offer/
+USA,TRANS,항공사 휠체어·스쿠터 오취급률(분실·파손·지연),1.26,%,2024,원문확인(자동),https://wheelchairtravel.org/ranking-best-worst-airlines-wheelchair-users-2024/
+USA,TRANS,DOT 아메리칸항공 ACAA 위반 과징금,50,백만 USD,2024,원문확인,https://downloads.regulations.gov/DOT-OST-2024-0001-0008/attachment_1.pdf
+USA,BUILT,2010 ADA 접근성 설계기준(2010 ADA Standards),2012-03-15부터 의무 적용,기준,2010,원문확인(자동),https://www.ada.gov/law-and-regs/design-standards/2010-stds/
+USA,DIGI,DOJ Title II 웹 접근성 규칙 기준,WCAG 2.1 AA,기준,2024,원문확인(자동),https://www.ada.gov/resources/2024-03-08-web-rule/
+USA,DIGI,Title II 규칙 준수기한(인구 5만 이상 정부),2027-04-26 (원래 2026-04-24),기한,2026,원문확인(자동),https://www.adatitleiii.com/2026/04/doj-extends-ada-title-ii-website-accessibility-deadlines-for-governmental-entities-but-litigation-and-compliance-risks-remain/
+USA,DIGI,Title II 규칙 준수기한(인구 5만 미만·특별구),2028-04-26 (원래 2027-04-26),기한,2026,원문확인(자동),https://www.ctas.tennessee.edu/news/doj-extends-wcag-21-aa-compliance-deadlines-local-governments
+USA,DIGI,재활법 Section 508 개정(Refresh) 기준,WCAG 2.0 AA (2018-01-18 시행),기준,2017,원문확인(자동),https://www.access-board.gov/ict/
+USA,DIGI,WebAIM Million 홈페이지 WCAG 오류 검출률,95.9,%,2026,원문확인(자동),https://prioritypixels.co.uk/insights/web-accessibility-is-getting-worse-according-to-the-2026-webaim-million-report/
+USA,EMP,"장애인 고용률(고용-인구비율, 16세+)",22.8,%,2025,원문확인,https://api.bls.gov/publicAPI/v1/timeseries/data/LNU02374597
+USA,EMP,장애인 실업률,8.3,%,2025,원문확인,https://api.bls.gov/publicAPI/v1/timeseries/data/LNU04074597
+USA,EMP,근로연령(21–64세) 장애인 고용률(ACS),46.8,%,2023,원문확인,https://disabilitystatistics.org/report/2023/US/query
+USA,EMP,의무고용(쿼터)제,없음(연방계약자 Section 503 7% 활용목표만),제도,2014,원문확인,https://www.ecfr.gov/api/versioner/v1/full/2024-01-01/title-41.xml?part=60-741&section=60-741.45
+USA,EMP,Medicaid HCBS 대기자 총수,606895,명,2025,원문확인(자동),https://www.kff.org/medicaid/state-indicator/number-of-people-waiting-for-hcbs-by-target-population-and-whether-states-screen-for-eligibility/
+USA,TOUR,장애인 여행자 여행 지출,58.7,십억 USD,2019,원문확인(자동),https://disabilityinsider.com/2020/11/02/travel/new-data-shows-economic-impact-of-disability-travel-reaches-58-7-billion/
+USA,TOUR,장애인 항공여행 지출,11,십억 USD,2019,2차확인,https://airportimprovement.com/article/economic-impact-of-disability-travel-reaches-58-7-billion/
+USA,DATA,성인 기능장애 출현율(BRFSS),28.7,%,2022,원문확인,https://data.cdc.gov/resource/s2qv-b27b.json
+USA,DATA,65세 이상 장애 출현율(BRFSS),43.9,%,2022,2차확인,https://www.highlandcountypress.com/headlines/cdc-data-shows-over-70-million-us-adults-reported-having-disability
+USA,DATA,"장애 출현율(ACS, 전 연령)",13.6,%,2023,원문수정,https://www.census.gov/newsroom/facts-for-features/2025/disabilities-act.html
+USA,DATA,고령화율(65세+),약 18,%,2024,원문확인(자동),https://www.census.gov/topics/health/disability.html
+USA,TRANS,지하철 완전 접근역(엘리베이터·경사로),160/472 (약 34%),역(%),2026,원문확인,https://data.ny.gov/resource/39hk-dx4f.json
+USA,TRANS,MTA 집단소송 합의 목표,2055년까지 미접근역 95% 접근화,목표,2022,2차확인,https://www.progressiverailroading.com/passenger_rail/news/MTA-settles-classaction-lawsuits-on-accessibility-issues--66876
+USA,TRANS,Metrorail 엘리베이터 설치역,98/98 (100%),역(%),2024,원문확인,https://www.wmata.com/service/accessibility/metro-access/
+USA,TRANS,BART 엘리베이터 설치역,전 역(100%),역(%),2024,원문확인,https://bart.gov/accesstech
+USA,TRANS,CTA 철도역 접근 가능 역,110/146 (75%),역(%),2026,원문확인(자동),https://www.transitchicago.com/ctas-austin-green-line-station-reopened-and-fully-accessible/
+USA,TRANS,MBTA 접근 가능 역 비율(전체),83,%,2026,원문확인(자동),https://www.wbur.org/news/2026/05/13/mbta-green-line-accessibility-improvement-plan
+USA,TRANS,SEPTA 철도·지하철역 접근 가능 비율,약 60,%,2026,원문확인(자동),https://inquirer.com/transportation/septa-vision-big-potential-investment-legislature-funders-20260922.html
+USA,TRANS,Metro Rail 역 접근성,"전 역 경사로/엘리베이터(100%, 3자 출처)",역(%),2024,원문확인,https://www.metro.net/riding/accessibility-guide/
+USA,EMP,장애인 고용률(근로연령),61.5,%,2023,원문확인(자동),https://www.everway.com/research-insights/workplace-disability-inclusion-united-states/
+USA,EMP,장애인 고용률(근로연령),57.8,%,2023,원문확인(자동),https://www.everway.com/research-insights/workplace-disability-inclusion-united-states/
+USA,EMP,장애인 고용률(근로연령),55.5,%,2023,원문확인(자동),https://www.everway.com/research-insights/workplace-disability-inclusion-united-states/
+USA,EMP,장애인 고용률(근로연령),45.5,%,2023,원문확인(자동),https://www.everway.com/research-insights/workplace-disability-inclusion-united-states/
+USA,EMP,장애인 고용률(근로연령),41.4,%,2023,원문확인(자동),https://www.everway.com/research-insights/workplace-disability-inclusion-united-states/
+USA,EMP,장애인 고용률(근로연령),40.6,%,2023,원문확인(자동),https://www.everway.com/research-insights/workplace-disability-inclusion-united-states/
+USA,EMP,장애인 고용률(근로연령),36.4,%,2023,원문확인(자동),https://www.everway.com/research-insights/workplace-disability-inclusion-united-states/
+USA,EMP,AARP 장기요양(LTSS) 스코어카드 순위,1,위/51,2023,원문확인,https://www.aarp.org/press/releases/2023-09-28-new-aarp-scorecard-minnesota-and-washington-state-top-rankings-for-long-term-care-services-and-supports-for-older-americans-including-family-caregivers/
+USA,EMP,AARP LTSS 스코어카드 등급,Tier 1(상위 5),등급,2023,원문확인,https://www.aarp.org/press/releases/2023-09-28-new-aarp-scorecard-minnesota-and-washington-state-top-rankings-for-long-term-care-services-and-supports-for-older-americans-including-family-caregivers/
+USA,EMP,AARP LTSS 스코어카드 순위,4,위/51,2023,원문확인,https://www.aarp.org/press/releases/2023-09-28-new-aarp-scorecard-minnesota-and-washington-state-top-rankings-for-long-term-care-services-and-supports-for-older-americans-including-family-caregivers/
+USA,EMP,AARP LTSS 스코어카드 등급,Tier 1(상위 5),등급,2023,원문확인,https://www.aarp.org/press/releases/2023-09-28-new-aarp-scorecard-minnesota-and-washington-state-top-rankings-for-long-term-care-services-and-supports-for-older-americans-including-family-caregivers/
+USA,EMP,AARP LTSS 스코어카드 순위,51,위/51,2023,원문확인(자동),https://www.aarp.org/press/releases/2023-09-28-new-aarp-scorecard-minnesota-and-washington-state-top-rankings-for-long-term-care-services-and-supports-for-older-americans-including-family-caregivers/
+USA,EMP,AARP LTSS 스코어카드 등급,Tier 5(하위 5),등급,2023,원문확인,https://www.aarp.org/press/releases/2023-09-28-new-aarp-scorecard-minnesota-and-washington-state-top-rankings-for-long-term-care-services-and-supports-for-older-americans-including-family-caregivers/
+USA,EMP,Case for Inclusion(발달장애 서비스) 순위,51,위/51,2019,원문확인,https://www.ancor.org/?p=6073
+USA,EMP,Medicaid HCBS 대기자 수,181697,명,2025,원문확인(자동),https://www.kff.org/medicaid/state-indicator/number-of-people-waiting-for-hcbs-by-target-population-and-whether-states-screen-for-eligibility/
+USA,EMP,IDD 웨이버(HCS·CLASS) 대기 기간,15–18,년,2026,원문확인(자동),https://www.tpr.org/news/2026-05-06/advocates-lawmakers-want-to-fix-long-waits-texans-with-disabilities-face-for-medicaid-services
+USA,LAW,ADA Title III 연방소송 건수,3252,건,2025,원문확인,https://www.adatitleiii.com/2026/02/ada-title-iii-federal-lawsuit-filings-fall-slightly-to-8667-in-2025/
+USA,LAW,ADA Title III 연방소송 건수,1823,건,2025,원문확인,https://www.adatitleiii.com/2026/02/ada-title-iii-federal-lawsuit-filings-fall-slightly-to-8667-in-2025/
+USA,LAW,ADA Title III 연방소송 건수,1471,건,2025,원문확인,https://www.adatitleiii.com/2026/02/ada-title-iii-federal-lawsuit-filings-fall-slightly-to-8667-in-2025/
+USA,LAW,미네소타 인권법(MHRA) 적용범위,직원 1인 이상 사용자 전부(ADA는 15인+),범위,2026,원문확인,https://www.revisor.mn.gov/statutes/cite/363A.03
+USA,TOUR,WalletHub 장애인 친화 도시 순위(미니애폴리스),1(Disability Scoop 보도; 타 보도는 2위),위/182,2025,2차확인,https://www.disabilityscoop.com/2025/10/14/ranking-names-top-cities-for-disability-friendliness/31677/
+USA,TOUR,WalletHub 장애인 친화 도시 하위권,잭슨·걸프포트 하위권,순위,2025,2차확인,https://www.disabilityscoop.com/2025/10/14/ranking-names-top-cities-for-disability-friendliness/31677/
