@@ -1,0 +1,330 @@
+<style>
+  .ic { display: grid; gap: var(--cds-gap-lg); font-family: var(--font-anthropic-sans); }
+  .ic-head h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+  .ic-head p { margin: var(--cds-gap-xs) 0 0; color: var(--color-fg-muted); max-width: 72ch; }
+  .ic-take { color: var(--color-fg) !important; }
+  .ic-take b { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .ic-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; position: relative; }
+  .ic-card h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+  .ic-card h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: var(--cds-gap-md) 0 var(--cds-gap-xs); }
+  .ic-note { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); margin: var(--cds-gap-xs) 0 var(--cds-gap-md); max-width: 85ch; }
+  .ic-tabs { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); margin-bottom: var(--cds-gap-sm); }
+  .ic-tabs button { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-radius: 999px; border: 1px solid var(--color-border-line); background: transparent; color: var(--color-fg); cursor: pointer; }
+  .ic-tabs button[aria-pressed="true"] { background: var(--color-fg); color: var(--color-bg); border-color: var(--color-fg); }
+  .ic-tabs button:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+  .ic-map { position: relative; min-height: 12rem; }
+  .ic-map svg { display: block; width: 100%; height: auto; }
+  .ic-map path { cursor: pointer; }
+  .ic-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); align-items: center; margin-top: var(--cds-gap-sm); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .ic-legend .sw { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); }
+  .ic-legend i { display: inline-block; width: 0.9rem; height: 0.9rem; border-radius: 3px; border: 1px solid var(--color-border-line); }
+  .ic-legend .ramp { width: 6rem; height: 0.6rem; border-radius: 3px; display: inline-block; }
+  .ic-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); max-width: 18rem; z-index: 2; }
+  .ic-tip .t { color: var(--cds-text-secondary); }
+  .ic-tip .v { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .ic-grid { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); }
+  .ic-bars { position: relative; min-height: 8rem; }
+  .ic-bars svg { display: block; width: 100%; }
+  .ic-facts { display: grid; grid-template-columns: max-content 1fr; gap: var(--cds-gap-xs) var(--cds-gap-md); font-size: var(--cds-font-size-caption); margin: 0; }
+  .ic-facts dt { color: var(--color-fg-muted); }
+  .ic-facts dd { margin: 0; font-variant-numeric: tabular-nums; }
+  .ic-country { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; }
+  .ic-pill { display: inline-block; font-size: var(--cds-font-size-caption); padding: 0 var(--cds-pad-sm); border-radius: 999px; border: 1px solid var(--color-border-line); margin-left: var(--cds-gap-xs); vertical-align: middle; }
+  .ic-tablewrap { max-height: 24rem; overflow: auto; }
+  .ic-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+  .ic-table th { position: sticky; top: 0; background: var(--color-panel); text-align: left; font-weight: var(--cds-font-weight-medium); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); }
+  .ic-table td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+  @media (max-width: 40rem) { .ic-hide-narrow { display: none; } }
+  .ic-empty { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .ic-defs { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); display: grid; gap: var(--cds-gap-xs); max-width: 85ch; }
+  .ic-defs b { color: var(--color-fg); font-weight: 600; }
+  [data-dash-source-state=empty] { color: transparent; }
+  [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+  .ic-fail { display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-xs); min-height: 8rem; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .ic-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+</style>
+
+<div class="ic">
+  <header class="ic-head" id="top">
+    <h1>장애 포용 지도</h1>
+    <p>장애인이 사회에 포함되는 정도를 법적 약속(UN 장애인권리협약)과 결과(고용격차)로 본다. 물리적 배리어 프리는 <i>배리어 프리 지도</i>에 있다.</p>
+    <p class="ic-take">
+      <b data-source="crpd_summary" data-field="parties" data-row="0">—</b>개국이 협약을 비준했고, 그중
+      <b data-source="crpd_summary" data-field="op" data-row="0">—</b>개국은 개인 진정을 허용하는 선택의정서까지 비준했다.
+      공식 통계로 잰 고용격차는 <b data-source="gap_summary" data-field="countries" data-row="0">—</b>개국 중
+      <b data-source="gap_summary" data-field="max_country" data-row="0">—</b>(<b data-source="gap_summary" data-field="max_gap" data-row="0">—</b>%p)가 가장 크고
+      <b data-source="gap_summary" data-field="min_country" data-row="0">—</b>(<b data-source="gap_summary" data-field="min_gap" data-row="0">—</b>%p)가 가장 작다.
+    </p>
+  </header>
+
+  <section class="ic-card" id="map-card">
+    <h2 id="map-title">세계 지도</h2>
+    <p class="ic-note" id="map-note"></p>
+    <div class="ic-tabs" role="group" aria-label="지도 레이어">
+      <button type="button" data-layer="crpd" id="layer-crpd">장애인권리협약 비준</button>
+      <button type="button" data-layer="gap" id="layer-gap">고용격차 · 공식 통계</button>
+      <button type="button" data-layer="ddi" id="layer-ddi">고용격차 · 저·중소득국(DDI)</button>
+    </div>
+    <div class="ic-map dash-skeleton" id="map" data-source="world crpd emp_gap ddi cases"></div>
+    <div class="ic-legend" id="map-legend" aria-label="범례"></div>
+  </section>
+
+  <div class="ic-grid">
+    <section class="ic-card" id="country-card">
+      <h2>사례국 살펴보기</h2>
+      <p class="ic-note">지도에서 굵은 테두리의 나라(사례 47개국)를 누르면 원문 검증을 거친 지표와 인식 비교 결과가 보인다.</p>
+      <div id="country-panel"><p class="ic-empty" id="country-empty">아직 고른 나라가 없다.</p></div>
+    </section>
+    <section class="ic-card" id="gap-card">
+      <h2>고용격차 · 공식 통계</h2>
+      <p class="ic-note">장애가 없는 사람의 고용률에서 장애가 있는 사람의 고용률을 뺀 값(%p). EU·EEA는 Eurostat(20–64세), 그 밖의 나라는 각국 통계로 연령대가 조금씩 다르다.</p>
+      <div class="ic-bars dash-skeleton" id="gap-bars" data-source="emp_gap"></div>
+    </section>
+  </div>
+
+  <section class="ic-card" id="defs">
+    <h2>읽는 법과 한계</h2>
+    <div class="ic-defs">
+      <p><b>협약 비준은 약속이지 이행이 아니다.</b> 196개 참여국 거의 모두가 비준해 변별력이 낮다. 선택의정서(개인이 UN에 직접 진정할 수 있는 절차) 비준 여부가 더 많이 갈린다. 미국은 서명만 하고 비준하지 않았다.</p>
+      <p><b>고용격차는 배리어 프리의 결과일 뿐이다.</b> 경기, 복지제도, 교육, 고령화의 영향도 받는다. 장애 정의가 통계마다 달라서 공식 통계 레이어와 DDI 레이어를 섞지 않았다.</p>
+      <p><b>DDI</b>(Disability Data Initiative, 포덤대)는 65개 저·중소득국에 같은 장애 문항(Washington Group)을 적용한 추정치라 나라 간 비교가 가장 공정하지만, 한국·일본·서유럽 등은 없다.</p>
+      <p><b>사례국 종합 등급은 표시하지 않는다.</b> 수치 규칙으로 다시 채점하면 47개국 중 45개국이 자료부족이었다.</p>
+    </div>
+  </section>
+</div>
+
+<script>
+dash.calc('crpd_summary', {
+  inputs: ['crpd'],
+  title: '협약 비준 요약',
+  description: '장애인권리협약을 비준한 나라 수와 선택의정서까지 비준한 나라 수.',
+  fn: (crpd) => [{
+    parties: crpd.filter((r) => Number(r.rank) >= 2).length,
+    op: crpd.filter((r) => Number(r.rank) === 3).length,
+  }],
+});
+dash.calc('gap_summary', {
+  inputs: ['emp_gap', 'cases', 'world'],
+  title: '고용격차 요약',
+  description: '공식 통계 고용격차가 있는 나라 수와 가장 큰·작은 나라(이름은 사례국 한국어명, 없으면 지도 영문명).',
+  fn: (emp_gap, cases, world) => {
+    const name = (iso) => (cases.find((c) => c.iso3 === iso) || {}).country || (world.find((w) => w.iso3 === iso) || {}).name || iso;
+    const rows = emp_gap.map((r) => ({ ...r, g: Number(r.gap_pp) }));
+    const max = rows.reduce((a, b) => (b.g > a.g ? b : a));
+    const min = rows.reduce((a, b) => (b.g < a.g ? b : a));
+    return [{ countries: rows.length, max_country: name(max.iso3), max_gap: max.g, min_country: name(min.iso3), min_gap: min.g }];
+  },
+});
+
+(() => {
+  const root = document.getElementById('dash-root') || document.body;
+  const resolve = (c) => { const s = document.createElement('span'); s.style.color = c; root.appendChild(s); const v = getComputedStyle(s).color; s.remove(); return v; };
+  const nf = d3.format('.1f');
+  const LAYERS = {
+    crpd: { title: '장애인권리협약 비준 상태', note: 'UN 조약 사무국 원표(IV-15, IV-15-a) 기준. 진할수록 국제 인권 감시를 더 많이 받아들였다는 뜻이다.' },
+    gap: { title: '장애인 고용격차 · 공식 통계', note: '진할수록 장애가 있는 사람과 없는 사람의 고용률 차이가 크다. 회색은 같은 정의의 공식 통계가 없는 나라다.' },
+    ddi: { title: '장애인 고용격차 · 저·중소득국 (DDI)', note: '15세 이상, Washington Group 문항 기준 추정치. 공식 통계 레이어와 정의가 달라 직접 비교하지 않는다.' },
+  };
+
+  let isoName = new Map();
+
+  function tipFor(box) {
+    let tip = box.querySelector('.ic-tip');
+    if (!tip) { tip = document.createElement('div'); tip.className = 'ic-tip'; tip.hidden = true; box.appendChild(tip); }
+    return {
+      show(ev, lines) {
+        tip.replaceChildren(...lines.filter((l) => l[1]).map(([cls, text]) => { const d = document.createElement('div'); d.className = cls; d.textContent = text; return d; }));
+        tip.hidden = false;
+        const r = box.getBoundingClientRect();
+        const x = ev.clientX - r.left, y = ev.clientY - r.top, w = tip.offsetWidth, h = tip.offsetHeight;
+        tip.style.left = Math.max(0, Math.min(r.width - w, x + 12)) + 'px';
+        tip.style.top = (y + 12 + h > r.height ? Math.max(0, y - h - 12) : y + 12) + 'px';
+      },
+      hide() { tip.hidden = true; },
+    };
+  }
+  function fail(el, d) {
+    el.replaceChildren();
+    if (['error', 'connect', 'declined'].includes(d.status)) { el.classList.remove('dash-skeleton'); const f = document.createElement('div'); f.className = 'ic-fail'; f.textContent = 'Failed to load'; el.appendChild(f); }
+    else el.classList.add('dash-skeleton');
+  }
+
+  document.querySelectorAll('.ic-tabs button').forEach((b) => b.addEventListener('click', () => { dash.setParams({ layer: b.dataset.layer }); dash.setLink(b.id); }));
+
+  function drawMap() {
+    const box = document.getElementById('map');
+    const ids = ['world', 'crpd', 'emp_gap', 'ddi', 'cases'];
+    const ds = Object.fromEntries(ids.map((i) => [i, dash.data(i)]));
+    const bad = ids.find((i) => ds[i].status !== 'ok');
+    if (bad) { fail(box, ds[bad]); return; }
+    box.classList.remove('dash-skeleton');
+    box.replaceChildren();
+    const layer = dash.params().layer || 'crpd';
+    const selected = dash.params().country || null;
+    document.querySelectorAll('.ic-tabs button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.layer === layer)));
+    document.getElementById('map-title').textContent = LAYERS[layer].title;
+    document.getElementById('map-note').textContent = LAYERS[layer].note;
+
+    const panel = resolve('var(--color-panel)'), line = resolve('var(--color-border-line)'), fg = resolve('var(--color-fg)');
+    const blue = resolve(dash.colors[0]), orange = resolve(dash.colors[1]);
+    const none = d3.interpolateRgb(panel, line)(0.55);
+    const crpd = new Map(ds.crpd.data.map((r) => [r.iso3, r]));
+    const gap = new Map(ds.emp_gap.data.map((r) => [r.iso3, r]));
+    const ddi = new Map(ds.ddi.data.map((r) => [r.iso3, r]));
+    const cases = new Set(ds.cases.data.map((r) => r.iso3));
+    const caseName = new Map(ds.cases.data.map((r) => [r.iso3, r.country]));
+    isoName = new Map(ds.world.data.map((r) => [r.iso3, caseName.get(r.iso3) || r.name]));
+    const crpdColor = [none, d3.interpolateRgb(panel, blue)(0.3), d3.interpolateRgb(panel, blue)(0.6), blue];
+    const gapScale = d3.scaleLinear([0, 45], [d3.interpolateRgb(panel, orange)(0.15), orange]).interpolate(d3.interpolateRgb).clamp(true);
+
+    const fill = (iso) => {
+      if (layer === 'crpd') { const r = crpd.get(iso); return r ? crpdColor[Number(r.rank)] : none; }
+      const r = (layer === 'gap' ? gap : ddi).get(iso);
+      return r ? gapScale(Number(r.gap_pp)) : none;
+    };
+    const tipLines = (r) => {
+      const name = isoName.get(r.iso3) || r.name;
+      if (layer === 'crpd') {
+        const c = crpd.get(r.iso3);
+        if (!c) return [['t', name], ['', '자료 없음']];
+        return [['t', name], ['v', c.status], ['', c.crpd_ratification ? `협약 ${c.crpd_ratification}` : ''], ['', c.op_ratification ? `선택의정서 ${c.op_ratification}` : ''], ['t', cases.has(r.iso3) ? '사례국 · 눌러서 자세히' : '']];
+      }
+      const g = (layer === 'gap' ? gap : ddi).get(r.iso3);
+      if (!g) return [['t', name], ['', '같은 정의의 통계 없음'], ['t', cases.has(r.iso3) ? '사례국 · 눌러서 자세히' : '']];
+      return [['t', name], ['v', `${nf(g.gap_pp)}%p`], ['', layer === 'ddi' ? `장애 있음 ${nf(g.emp_disability)}% · 없음 ${nf(g.emp_no_disability)}%` : `${g.year} · ${g.source}`], ['t', g.definition], ['t', cases.has(r.iso3) ? '사례국 · 눌러서 자세히' : '']];
+    };
+
+    const svg = d3.select(box).append('svg').attr('viewBox', '0 0 960 470').attr('width', '100%').attr('role', 'img').attr('aria-label', LAYERS[layer].title);
+    const tip = tipFor(box);
+    const shapes = ds.world.data.filter((r) => r.path);
+    svg.append('g').selectAll('path').data(shapes).join('path')
+      .attr('d', (r) => r.path).attr('fill', (r) => fill(r.iso3)).attr('stroke', panel).attr('stroke-width', 0.4)
+      .on('mousemove', (ev, r) => tip.show(ev, tipLines(r))).on('mouseleave', () => tip.hide())
+      .on('click', (ev, r) => { if (cases.has(r.iso3)) { dash.setParams({ country: r.iso3 }); dash.setLink('country-card'); } });
+    svg.append('g').attr('pointer-events', 'none').selectAll('path').data(shapes.filter((r) => cases.has(r.iso3))).join('path')
+      .attr('d', (r) => r.path).attr('fill', 'none').attr('stroke', fg).attr('stroke-width', (r) => (r.iso3 === selected ? 2 : 0.9));
+    // Small case-study countries get a ring so they stay visible and clickable at world scale.
+    const small = shapes.filter((r) => cases.has(r.iso3) && ['SGP', 'MLT', 'LUX', 'QAT', 'CYP'].includes(r.iso3));
+    svg.append('g').selectAll('circle').data(small).join('circle')
+      .attr('cx', (r) => r.cx).attr('cy', (r) => r.cy).attr('r', 4).attr('fill', (r) => fill(r.iso3)).attr('stroke', fg).attr('stroke-width', (r) => (r.iso3 === selected ? 2 : 1)).style('cursor', 'pointer')
+      .on('mousemove', (ev, r) => tip.show(ev, tipLines(r))).on('mouseleave', () => tip.hide())
+      .on('click', (ev, r) => { dash.setParams({ country: r.iso3 }); dash.setLink('country-card'); });
+
+    const lg = document.getElementById('map-legend');
+    const sw = (color, text) => { const s = document.createElement('span'); s.className = 'sw'; const i = document.createElement('i'); i.style.background = color; s.append(i, document.createTextNode(text)); return s; };
+    if (layer === 'crpd') {
+      lg.replaceChildren(sw(crpdColor[3], '협약 + 선택의정서'), sw(crpdColor[2], '협약만 비준'), sw(crpdColor[1], '서명만'), sw(none, '미참여·자료 없음'));
+    } else {
+      const s = document.createElement('span'); s.className = 'sw';
+      const ramp = document.createElement('span'); ramp.className = 'ramp'; ramp.style.background = `linear-gradient(90deg, ${gapScale(0)}, ${gapScale(45)})`;
+      s.append(document.createTextNode('0%p'), ramp, document.createTextNode('45%p 이상'));
+      lg.replaceChildren(s, sw(none, '자료 없음'));
+    }
+    const ring = document.createElement('span'); ring.className = 'sw';
+    const ri = document.createElement('i'); ri.style.background = 'transparent'; ri.style.borderColor = fg; ri.style.borderWidth = '2px';
+    ring.append(ri, document.createTextNode('사례국 (누르면 자세히)'));
+    lg.append(ring);
+  }
+
+  function drawGapBars() {
+    const box = document.getElementById('gap-bars');
+    const d = dash.data('emp_gap');
+    if (d.status !== 'ok') { fail(box, d); return; }
+    box.classList.remove('dash-skeleton');
+    box.replaceChildren();
+    const selected = dash.params().country;
+    const rows = d.data.map((r) => ({ ...r, g: Number(r.gap_pp), name: isoName.get(r.iso3) || r.iso3 })).sort((a, b) => b.g - a.g);
+    const W = Math.max(260, box.clientWidth), rowH = 20, top = 2;
+    const svg = d3.select(box).append('svg').attr('viewBox', `0 0 ${W} ${rows.length * rowH + top + 20}`).attr('width', '100%');
+    const meas = svg.append('text').attr('font-size', 11);
+    const labW = d3.max(rows, (r) => { meas.text(r.name); return meas.node().getComputedTextLength(); }) + 10;
+    meas.remove();
+    const x = d3.scaleLinear([0, d3.max(rows, (r) => r.g)], [labW, W - 44]).nice();
+    const orange = resolve(dash.colors[1]), muted = resolve('var(--cds-chart-muted)');
+    const tip = tipFor(box);
+    svg.append('g').selectAll('line').data(x.ticks(4)).join('line').attr('x1', (t) => x(t)).attr('x2', (t) => x(t)).attr('y1', top).attr('y2', rows.length * rowH + top).attr('stroke', 'var(--cds-chart-grid)');
+    svg.append('g').selectAll('text').data(x.ticks(4)).join('text').attr('x', (t) => x(t)).attr('y', rows.length * rowH + top + 14).attr('text-anchor', 'middle').attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').text((t) => t + '%p');
+    const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (r, i) => `translate(0,${top + i * rowH})`);
+    g.append('text').attr('x', labW - 6).attr('y', rowH / 2 + 4).attr('text-anchor', 'end').attr('font-size', 11).attr('fill', 'var(--color-fg)').attr('font-weight', (r) => (r.iso3 === selected ? 600 : 400)).text((r) => r.name);
+    g.append('rect').attr('x', x(0)).attr('y', 4).attr('height', rowH - 8).attr('rx', 4).attr('width', (r) => Math.max(2, x(r.g) - x(0)))
+      .attr('fill', (r) => (!selected || r.iso3 === selected ? orange : muted));
+    g.append('text').attr('x', (r) => x(r.g) + 4).attr('y', rowH / 2 + 4).attr('font-size', 11).attr('fill', 'var(--color-fg)').style('font-variant-numeric', 'tabular-nums').text((r) => nf(r.g));
+    g.append('rect').attr('width', W).attr('height', rowH).attr('fill', 'transparent')
+      .on('mousemove', (ev, r) => tip.show(ev, [['t', `${r.name} · ${r.year}`], ['v', `${nf(r.g)}%p`], ['', r.source], ['t', r.definition]]))
+      .on('mouseleave', () => tip.hide());
+  }
+
+  function fact(dl, label, text, source, field, iso) {
+    const dt = document.createElement('dt'); dt.textContent = label;
+    const dd = document.createElement('dd'); dd.textContent = text;
+    if (source) { dd.dataset.source = source; dd.dataset.field = field; dd.dataset.where = `iso3=${iso}`; }
+    dl.append(dt, dd);
+  }
+
+  function drawCountry() {
+    const host = document.getElementById('country-panel');
+    const iso = dash.params().country;
+    if (!iso) { host.replaceChildren(Object.assign(document.createElement('p'), { className: 'ic-empty', textContent: '아직 고른 나라가 없다. 지도에서 굵은 테두리의 나라를 눌러 보자.' })); return; }
+    const ids = ['cases', 'crpd', 'emp_gap', 'perception', 'panel'];
+    const ds = Object.fromEntries(ids.map((i) => [i, dash.data(i)]));
+    if (ids.some((i) => ds[i].status !== 'ok')) { host.replaceChildren(); host.classList.add('dash-skeleton'); return; }
+    host.classList.remove('dash-skeleton');
+    const c = ds.cases.data.find((r) => r.iso3 === iso);
+    if (!c) { host.replaceChildren(); return; }
+    const h = document.createElement('p'); h.className = 'ic-country'; h.textContent = c.country;
+    h.dataset.source = 'cases'; h.dataset.field = 'country'; h.dataset.where = `iso3=${iso}`;
+    const close = document.createElement('button'); close.type = 'button'; close.className = 'ic-pill'; close.textContent = '선택 해제 ×';
+    close.addEventListener('click', () => dash.setParams({ country: null }));
+    const head = document.createElement('div'); head.append(h, close);
+    const dl = document.createElement('dl'); dl.className = 'ic-facts';
+    const cr = ds.crpd.data.find((r) => r.iso3 === iso);
+    if (cr) fact(dl, '협약', cr.status, 'crpd', 'status', iso);
+    const gp = ds.emp_gap.data.find((r) => r.iso3 === iso);
+    if (gp) fact(dl, '고용격차', gp.gap_pp, 'emp_gap', 'gap_pp', iso);
+    fact(dl, '원문 확인 지표 비율', c.primary_verified_pct, 'cases', 'primary_verified_pct', iso);
+    const pv = ds.perception.data.find((r) => r.iso3 === iso);
+    const parts = [head, dl];
+    if (pv) {
+      const h3 = document.createElement('h3'); h3.textContent = '자국 인식 vs 해외 인식';
+      const dl2 = document.createElement('dl'); dl2.className = 'ic-facts';
+      fact(dl2, '판정', pv.verdict, 'perception', 'verdict', iso);
+      fact(dl2, '자국', pv.self_view, 'perception', 'self_view', iso);
+      fact(dl2, '해외', pv.foreign_view, 'perception', 'foreign_view', iso);
+      fact(dl2, '요점', pv.note, 'perception', 'note', iso);
+      parts.push(h3, dl2);
+    }
+    const h3b = document.createElement('h3'); h3b.textContent = '검증된 지표';
+    const wrap = document.createElement('div'); wrap.className = 'ic-tablewrap';
+    const t = document.createElement('table'); t.className = 'ic-table'; t.dataset.source = 'panel'; t.dataset.rowKey = 'id';
+    const hr = document.createElement('tr');
+    [['dimension', '차원'], ['indicator', '지표'], ['value', '값'], ['year', '연도'], ['status', '검증', 'ic-hide-narrow']].forEach(([f, label, cls]) => {
+      const th = document.createElement('th'); th.dataset.field = f; th.textContent = label; if (cls) th.className = cls; hr.appendChild(th);
+    });
+    const thead = document.createElement('thead'); thead.appendChild(hr);
+    const tb = document.createElement('tbody');
+    ds.panel.data.filter((r) => r.iso3 === iso).forEach((r) => {
+      const tr = document.createElement('tr'); tr.dataset.key = r.id;
+      [r.dimension, r.indicator, r.value, r.year, r.status].forEach((v, i) => { const td = document.createElement('td'); td.textContent = v; if (i === 4) td.className = 'ic-hide-narrow'; tr.appendChild(td); });
+      tb.appendChild(tr);
+    });
+    t.append(thead, tb); wrap.appendChild(t);
+    parts.push(h3b, wrap);
+    host.replaceChildren(...parts);
+  }
+
+  dash.onData(() => {
+    for (const id of ['crpd_summary', 'gap_summary']) {
+      const s = dash.data(id);
+      document.querySelectorAll(`[data-source="${id}"][data-field]`).forEach((el) => {
+        el.textContent = String(s.status === 'ok' && s.data[0] ? s.data[0][el.dataset.field] : '—');
+      });
+    }
+    drawMap();
+    drawGapBars();
+    drawCountry();
+  });
+
+  const named = document.getElementById(location.hash.slice(1));
+  if (named) named.scrollIntoView();
+})();
+</script>

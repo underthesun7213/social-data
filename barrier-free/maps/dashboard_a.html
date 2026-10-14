@@ -1,0 +1,253 @@
+<style>
+  .bf { display: grid; gap: var(--cds-gap-lg); font-family: var(--font-anthropic-sans); }
+  .bf-head h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+  .bf-head p { margin: var(--cds-gap-xs) 0 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-body); max-width: 70ch; }
+  .bf-take { color: var(--color-fg); }
+  .bf-take b { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .bf-grid { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
+  .bf-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; position: relative; }
+  .bf-card h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+  .bf-note { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); margin: var(--cds-gap-xs) 0 var(--cds-gap-md); max-width: 80ch; }
+  .bf-map { position: relative; min-height: 12rem; }
+  .bf-map svg { display: block; width: 100%; height: auto; }
+  .bf-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); align-items: center; margin-top: var(--cds-gap-sm); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .bf-legend .sw { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); }
+  .bf-legend i { display: inline-block; width: 0.9rem; height: 0.9rem; border-radius: 3px; border: 1px solid var(--color-border-line); }
+  .bf-legend .ramp { width: 6rem; height: 0.6rem; border-radius: 3px; display: inline-block; }
+  .bf-legend .dot { border-radius: 50%; }
+  .bf-bars { position: relative; min-height: 8rem; }
+  .bf-bars svg { display: block; width: 100%; }
+  .bf-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); max-width: 18rem; z-index: 2; }
+  .bf-tip .t { color: var(--cds-text-secondary); }
+  .bf-tip .v { font-variant-numeric: tabular-nums; font-weight: 600; }
+  .bf-tablewrap { max-height: 28rem; overflow: auto; }
+  .bf-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+  .bf-table th { position: sticky; top: 0; background: var(--color-panel); text-align: left; font-weight: var(--cds-font-weight-medium); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); }
+  .bf-table td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+  .bf-table td.n { text-align: right; }
+  @media (max-width: 40rem) { .bf-hide-narrow { display: none; } }
+  .bf-defs { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); display: grid; gap: var(--cds-gap-xs); max-width: 85ch; }
+  .bf-defs b { color: var(--color-fg); font-weight: 600; }
+  [data-dash-source-state=empty] { color: transparent; }
+  [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+  .bf-fail { display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-xs); min-height: 8rem; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .bf-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+  .bf-country { cursor: default; }
+  .bf-city { cursor: pointer; }
+  .bf-city:focus-visible { outline: none; stroke-width: 3; }
+</style>
+
+<div class="bf">
+  <header class="bf-head" id="top">
+    <h1>배리어 프리 지도</h1>
+    <p>좁은 의미의 배리어 프리, 곧 물리적 이동 환경과 정보 접근성의 장벽 제거만 다룬다. 고용·인식 같은 사회참여 지표는 <i>장애 포용 지도</i>에 따로 있다.</p>
+    <p class="bf-take" data-source="metro_summary">
+      도시철도 <b data-source="metro_summary" data-field="cities" data-row="0">—</b>곳 중
+      <b data-source="metro_summary" data-field="high" data-row="0">—</b>곳은 무단차 접근 역이 90% 이상이다.
+      가장 낮은 곳은 <b data-source="metro_summary" data-field="low_city" data-row="0">—</b>
+      (<b data-source="metro_summary" data-field="low_value" data-row="0">—</b>%)다.
+    </p>
+  </header>
+
+  <section class="bf-card" id="map-card">
+    <h2>도시철도 무단차 역 비율과 접근성 법적 의무</h2>
+    <p class="bf-note">점은 도시별 지하철·도시철도 역 중 휠체어로 거리에서 승강장까지 갈 수 있는 역의 비율이다. 나라 색은 사례 47개국에서 두 채점자가 모두 확인한 접근성 법적 의무 수(0–4: 기술기준법, 신축 건물, 공공 웹, 민간 디지털)다. 회색은 사례국이 아닌 나라다. 점이나 나라에 마우스를 올리면 출처와 연도가 보인다.</p>
+    <div class="bf-map dash-skeleton" id="map" data-source="world legal transport"></div>
+    <div class="bf-legend" id="map-legend" aria-label="범례"></div>
+  </section>
+
+  <div class="bf-grid">
+    <section class="bf-card" id="metro-card">
+      <h2>도시철도 무단차 역 비율</h2>
+      <p class="bf-note">역 수 기준. 런던·파리는 접근 역 수를 전체 역 수로 나눠 계산했다.</p>
+      <div class="bf-bars dash-skeleton" id="metro-bars" data-source="transport"></div>
+    </section>
+    <section class="bf-card" id="rail-card">
+      <h2>국가·광역 철도역 무단차 비율</h2>
+      <p class="bf-note">분모 정의가 서로 다르다. 일본은 하루 이용자 3천 명 이상 시설만, 영국은 기준에 따라 20%(완전)~61%로 달라진다.</p>
+      <div class="bf-bars dash-skeleton" id="rail-bars" data-source="transport"></div>
+    </section>
+    <section class="bf-card" id="bus-card">
+      <h2>저상·휠체어 접근 버스(트램) 비율</h2>
+      <p class="bf-note">전체 차량 또는 운행 기준. 일본은 적용 제외 차량을 분모에서 뺀 값이다.</p>
+      <div class="bf-bars dash-skeleton" id="bus-bars" data-source="transport"></div>
+    </section>
+  </div>
+
+  <section class="bf-card" id="legal-card">
+    <h2>나라별 접근성 법적 의무</h2>
+    <p class="bf-note">두 채점자가 독립적으로 판정해 일치한 항목만 '확인'으로 셌다. 판정이 갈렸거나 근거가 없는 항목은 '미확정'에 남겼다. 법 조문 기준이며 실제 이행률은 아니다.</p>
+    <div class="bf-tablewrap">
+      <table class="bf-table" id="legal-table" data-source="legal" data-row-key="iso3">
+        <thead><tr>
+          <th data-field="country">나라</th>
+          <th data-field="duties_confirmed">확인된 의무 (4개 중)</th>
+          <th data-field="duties">확인된 항목</th>
+          <th data-field="unresolved" class="bf-hide-narrow">미확정 항목</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="bf-card" id="defs">
+    <h2>읽는 법과 한계</h2>
+    <div class="bf-defs">
+      <p><b>범위.</b> UN 장애인권리협약 제9조의 접근성 가운데 교통·건축·정보만 다룬다. 고용률은 장벽 제거의 결과일 뿐 배리어 프리 자체가 아니어서 넣지 않았다.</p>
+      <p><b>도시 단위.</b> 좁은 의미의 배리어 프리를 나라 전체로 같은 기준에서 잰 자료는 사실상 없다. 그래서 수치는 도시 점으로만 표시하고 나라 전체 등급으로 합치지 않았다.</p>
+      <p><b>검증.</b> 모든 값은 원문과 대조했다. 빈 U-Bahn처럼 운영사 사이트가 막혀 2차 출처로만 확인한 값은 툴팁에 '2차확인'으로 표시했다.</p>
+      <p><b>정의 차이.</b> '엘리베이터 설치 역', '무단차 역', '완전 접근 역'은 같은 뜻이 아니다. 서울은 1역사 1동선(엘리베이터로 지상에서 승강장까지 한 경로)을 기준으로 한다.</p>
+    </div>
+  </section>
+</div>
+
+<script>
+dash.calc('metro_summary', {
+  inputs: ['transport'],
+  title: '도시철도 요약',
+  description: '도시철도 점 가운데 90% 이상인 도시 수와 가장 낮은 도시.',
+  fn: (transport) => {
+    const metro = transport.filter((r) => r.layer === 'metro');
+    const low = metro.reduce((a, b) => (Number(b.value_pct) < Number(a.value_pct) ? b : a));
+    return [{ cities: metro.length, high: metro.filter((r) => Number(r.value_pct) >= 90).length, low_city: low.place, low_value: Number(low.value_pct) }];
+  },
+});
+
+(() => {
+  const root = document.getElementById('dash-root') || document.body;
+  const resolve = (c) => { const s = document.createElement('span'); s.style.color = c; root.appendChild(s); const v = getComputedStyle(s).color; s.remove(); return v; };
+  const pct = d3.format('.1f');
+  const fmtPct = (v) => (Number.isInteger(+v) ? String(+v) : pct(+v)) + '%';
+
+  function tipFor(box) {
+    let tip = box.querySelector('.bf-tip');
+    if (!tip) { tip = document.createElement('div'); tip.className = 'bf-tip'; tip.hidden = true; box.appendChild(tip); }
+    return {
+      show(ev, lines) {
+        tip.replaceChildren(...lines.map(([cls, text]) => { const d = document.createElement('div'); d.className = cls; d.textContent = text; return d; }));
+        tip.hidden = false;
+        const r = box.getBoundingClientRect();
+        const x = ev.clientX - r.left, y = ev.clientY - r.top;
+        const w = tip.offsetWidth, h = tip.offsetHeight;
+        tip.style.left = Math.max(0, Math.min(r.width - w, x + 12)) + 'px';
+        tip.style.top = (y + 12 + h > r.height ? Math.max(0, y - h - 12) : y + 12) + 'px';
+      },
+      hide() { tip.hidden = true; },
+    };
+  }
+
+  function fail(el, d) {
+    el.classList.remove('dash-skeleton');
+    el.replaceChildren();
+    if (d.status === 'error' || d.status === 'connect' || d.status === 'declined') {
+      const f = document.createElement('div'); f.className = 'bf-fail'; f.textContent = 'Failed to load'; el.appendChild(f);
+    } else el.classList.add('dash-skeleton');
+  }
+
+  function drawMap() {
+    const box = document.getElementById('map');
+    const world = dash.data('world'), legal = dash.data('legal'), tr = dash.data('transport');
+    if (world.status !== 'ok' || legal.status !== 'ok' || tr.status !== 'ok') { fail(box, [world, legal, tr].find((d) => d.status !== 'ok')); return; }
+    box.classList.remove('dash-skeleton');
+    box.replaceChildren();
+    const blue = resolve(dash.colors[0]), orange = resolve(dash.colors[1]);
+    const base = resolve('var(--color-border-line)'), panel = resolve('var(--color-panel)');
+    const other = d3.interpolateRgb(panel, base)(0.55);
+    const dutyColor = d3.scaleLinear([0, 4], [d3.interpolateRgb(panel, blue)(0.18), blue]).interpolate(d3.interpolateRgb);
+    const ptColor = d3.scaleLinear([0, 100], [d3.interpolateRgb(panel, orange)(0.25), orange]).interpolate(d3.interpolateRgb);
+    const byIso = new Map(legal.data.map((r) => [r.iso3, r]));
+    const svg = d3.select(box).append('svg').attr('viewBox', '0 0 960 470').attr('width', '100%').attr('role', 'img')
+      .attr('aria-label', '세계 지도: 도시철도 무단차 역 비율과 나라별 접근성 법적 의무');
+    const tip = tipFor(box);
+    svg.append('g').selectAll('path').data(world.data.filter((r) => r.path)).join('path')
+      .attr('class', 'bf-country').attr('d', (r) => r.path)
+      .attr('fill', (r) => { const l = byIso.get(r.iso3); if (!l) return other; return Number(l.items_agreed) === 0 ? panel : dutyColor(Number(l.duties_confirmed)); })
+      .attr('stroke', (r) => (byIso.get(r.iso3) && Number(byIso.get(r.iso3).items_agreed) === 0 ? blue : panel))
+      .attr('stroke-width', (r) => (byIso.get(r.iso3) && Number(byIso.get(r.iso3).items_agreed) === 0 ? 0.8 : 0.4))
+      .attr('stroke-dasharray', (r) => (byIso.get(r.iso3) && Number(byIso.get(r.iso3).items_agreed) === 0 ? '2 2' : null))
+      .on('mousemove', (ev, r) => {
+        const l = byIso.get(r.iso3);
+        if (!l) { tip.show(ev, [['t', r.name], ['', '사례국 아님']]); return; }
+        tip.show(ev, [['t', l.country], ['v', Number(l.items_agreed) === 0 ? '판정 불가 (근거 부족)' : `확인된 의무 ${l.duties_confirmed}/4`], ['', l.duties === '없음' ? '' : l.duties], ['t', l.unresolved === '없음' ? '' : '미확정: ' + l.unresolved]].filter((x) => x[1]));
+      })
+      .on('mouseleave', () => tip.hide());
+    const metro = tr.data.filter((r) => r.layer === 'metro' && r.x !== '');
+    svg.append('g').selectAll('circle').data(metro.sort((a, b) => Number(b.value_pct) - Number(a.value_pct))).join('circle')
+      .attr('class', 'bf-city').attr('tabindex', 0).attr('cx', (r) => +r.x).attr('cy', (r) => +r.y).attr('r', 5.5)
+      .attr('fill', (r) => ptColor(Number(r.value_pct))).attr('stroke', panel).attr('stroke-width', 1.5)
+      .attr('aria-label', (r) => `${r.place} ${fmtPct(r.value_pct)}`)
+      .on('mousemove focus', (ev, r) => {
+        const e = ev.type === 'focus' ? { clientX: box.getBoundingClientRect().left + (+r.x / 960) * box.clientWidth, clientY: box.getBoundingClientRect().top + (+r.y / 470) * box.clientWidth * (470 / 960) } : ev;
+        tip.show(e, [['t', `${r.place} · ${r.year}`], ['v', `${fmtPct(r.value_pct)}${r.numerator ? ` (${r.numerator}/${r.denominator}역)` : ''}`], ['', r.measure], ['t', `검증: ${r.verify_status}`], ['t', r.note]].filter((x) => x[1]));
+      })
+      .on('mouseleave blur', () => tip.hide());
+
+    const lg = document.getElementById('map-legend');
+    lg.replaceChildren();
+    const sw = (color, text, extra) => { const s = document.createElement('span'); s.className = 'sw'; const i = document.createElement('i'); i.style.background = color; if (extra) Object.assign(i.style, extra); s.append(i, document.createTextNode(text)); return s; };
+    const lbl = document.createElement('span'); lbl.textContent = '법적 의무';
+    lg.append(lbl, ...[0, 1, 2, 3, 4].map((n) => sw(dutyColor(n), String(n))), sw(panel, '판정 불가', { borderStyle: 'dashed', borderColor: blue }), sw(other, '사례국 아님'));
+    const r = document.createElement('span'); r.className = 'sw';
+    const ramp = document.createElement('span'); ramp.className = 'ramp'; ramp.style.background = `linear-gradient(90deg, ${ptColor(0)}, ${ptColor(100)})`;
+    r.append(document.createTextNode('도시 점 0%'), ramp, document.createTextNode('100%'));
+    lg.append(r);
+  }
+
+  function drawBars(id, layer) {
+    const box = document.getElementById(id);
+    const tr = dash.data('transport');
+    if (tr.status !== 'ok') { fail(box, tr); return; }
+    box.classList.remove('dash-skeleton');
+    box.replaceChildren();
+    const rows = tr.data.filter((r) => r.layer === layer).map((r) => ({ ...r, v: Number(r.value_pct) })).sort((a, b) => b.v - a.v);
+    const W = Math.max(260, box.clientWidth), rowH = 26, top = 4;
+    const svg = d3.select(box).append('svg').attr('viewBox', `0 0 ${W} ${rows.length * rowH + top + 22}`).attr('width', '100%');
+    const meas = svg.append('text').attr('font-size', 12).style('font-family', 'var(--font-anthropic-sans)');
+    const labW = d3.max(rows, (r) => { meas.text(r.place); return meas.node().getComputedTextLength(); }) + 10;
+    meas.remove();
+    const x = d3.scaleLinear([0, 100], [labW, W - 46]);
+    const color = resolve(dash.colors[1]);
+    const tip = tipFor(box);
+    svg.append('g').selectAll('line').data([0, 50, 90, 100]).join('line')
+      .attr('x1', (d) => x(d)).attr('x2', (d) => x(d)).attr('y1', top).attr('y2', rows.length * rowH + top)
+      .attr('stroke', (d) => (d === 90 ? 'var(--cds-chart-reference)' : 'var(--cds-chart-grid)')).attr('stroke-dasharray', (d) => (d === 90 ? '3 3' : null));
+    svg.append('g').selectAll('text').data([0, 50, 90, 100]).join('text')
+      .attr('x', (d) => x(d)).attr('y', rows.length * rowH + top + 15).attr('text-anchor', 'middle').attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').text((d) => d + '%');
+    const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (r, i) => `translate(0,${top + i * rowH})`);
+    g.append('text').attr('x', labW - 8).attr('y', rowH / 2 + 4).attr('text-anchor', 'end').attr('font-size', 12).attr('fill', 'var(--color-fg)').text((r) => r.place);
+    g.append('rect').attr('x', x(0)).attr('y', 5).attr('height', rowH - 10).attr('rx', 4)
+      .attr('width', (r) => Math.max(2, x(r.v) - x(0))).attr('fill', color)
+      .attr('opacity', (r) => (/2차|불일치/.test(r.verify_status) ? 0.55 : 1));
+    g.append('text').attr('x', (r) => x(r.v) + 5).attr('y', rowH / 2 + 4).attr('font-size', 12).attr('fill', 'var(--color-fg)')
+      .style('font-variant-numeric', 'tabular-nums').text((r) => fmtPct(r.v));
+    g.append('rect').attr('x', 0).attr('y', 0).attr('width', W).attr('height', rowH).attr('fill', 'transparent')
+      .on('mousemove', (ev, r) => tip.show(ev, [['t', `${r.place} · ${r.year}`], ['v', `${fmtPct(r.v)}${r.numerator ? ` (${r.numerator}/${r.denominator})` : ''}`], ['', r.measure], ['t', `검증: ${r.verify_status}`], ['t', r.note]].filter((z) => z[1])))
+      .on('mouseleave', () => tip.hide());
+  }
+
+  function drawTable() {
+    const t = document.getElementById('legal-table'), body = t.querySelector('tbody');
+    const legal = dash.data('legal');
+    if (legal.status !== 'ok') { body.replaceChildren(); return; }
+    const rows = [...legal.data].sort((a, b) => Number(b.duties_confirmed) - Number(a.duties_confirmed) || a.country.localeCompare(b.country, 'ko'));
+    body.replaceChildren(...rows.map((r) => {
+      const tr = document.createElement('tr'); tr.dataset.key = r.iso3;
+      const cells = [r.country, r.duties_confirmed, r.duties, r.unresolved];
+      cells.forEach((c, i) => { const td = document.createElement('td'); td.textContent = c; if (i === 1) td.className = 'n'; if (i === 3) td.className = 'bf-hide-narrow'; tr.appendChild(td); });
+      return tr;
+    }));
+  }
+
+  dash.onData(() => {
+    const s = dash.data('metro_summary');
+    document.querySelectorAll('[data-source="metro_summary"][data-field]').forEach((el) => {
+      el.textContent = s.status === 'ok' && s.data[0] ? String(s.data[0][el.dataset.field]) : '—';
+    });
+    drawMap();
+    drawBars('metro-bars', 'metro');
+    drawBars('rail-bars', 'rail');
+    drawBars('bus-bars', 'bus');
+    drawTable();
+  });
+})();
+</script>

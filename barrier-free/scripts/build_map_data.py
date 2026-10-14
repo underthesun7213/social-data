@@ -149,7 +149,7 @@ def legal_and_cases():
 
 
 def panel():
-    out = [{"iso3": r["iso3"], "dimension": r["dimension"], "indicator": r["indicator"],
+    out = [{"id": r["row_id"], "iso3": r["iso3"], "dimension": r["dimension"], "indicator": r["indicator"],
             "value": r["value_final"], "unit": r["unit"], "year": r["year_final"],
             "status": r["verify_status"], "url": r["verify_url"] or r["source_url"]}
            for r in rows("all_indicators_verified.csv")
