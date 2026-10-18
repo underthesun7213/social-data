@@ -261,7 +261,12 @@ def report(tx, r, monthly, covid, a, am):
     w("- **Transactions:** a transaction is one item row in transactions_train.csv; repurchase metrics use "
       "customer-days instead.")
     w("- The dataset is a sample released for a Kaggle competition and may not represent all H&M markets or sales.")
-    OUT.write_text("\n".join(L) + "\n", encoding="utf-8")
+    text = "\n".join(L) + "\n"
+    # Print first so the numbers are not lost if the file cannot be written.
+    print(text)
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(text, encoding="utf-8")
+    print(f"saved {OUT}")
 
 
 def main():
@@ -272,7 +277,6 @@ def main():
     monthly, covid = channel(tx)
     a, am = age(tx, cust)
     report(tx, r, monthly, covid, a, am)
-    print(OUT.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":
