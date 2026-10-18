@@ -130,9 +130,9 @@ def channel(tx):
         "online_value_share": g["pon"].sum() / g["p"].sum() * 100,
     })
 
-    def window(year):
-        months = [pd.Period(f"{year}-{m:02d}", "M") for m in (3, 4, 5)]
-        sel = month.isin(months)
+    def window(year, months=(3, 4, 5)):
+        periods = [pd.Period(f"{year}-{m:02d}", "M") for m in months]
+        sel = month.isin(periods)
         return online[sel].mean() * 100
 
     covid = {
@@ -142,6 +142,9 @@ def channel(tx):
                      for m in (3, 4, 5)],
         "mar_may_2019": window(2019),
         "mar_may_2020": window(2020),
+        # After stores reopened.
+        "jun_aug_2019": window(2019, (6, 7, 8)),
+        "jun_aug_2020": window(2020, (6, 7, 8)),
     }
     return monthly, covid
 
@@ -214,7 +217,9 @@ def report(tx, r, monthly, covid, a, am):
     for m, a19, a20 in covid["by_month"]:
         w(f"| {m} | {pct(a19)} | {pct(a20)} | {a20 - a19:+.1f} |")
     w(f"| Mar-May combined | {pct(covid['mar_may_2019'])} | {pct(covid['mar_may_2020'])} | "
-      f"{covid['mar_may_2020'] - covid['mar_may_2019']:+.1f} |\n")
+      f"{covid['mar_may_2020'] - covid['mar_may_2019']:+.1f} |")
+    w(f"| Jun-Aug combined (after reopening) | {pct(covid['jun_aug_2019'])} | {pct(covid['jun_aug_2020'])} | "
+      f"{covid['jun_aug_2020'] - covid['jun_aug_2019']:+.1f} |\n")
 
     w("### [3] Age (customers.csv `age`)\n")
     w("| Age band | Share of registered customers | Share of purchasing customers | Share of transactions | Share of value | Transactions per purchasing customer |\n|---|---|---|---|---|---|")
@@ -226,8 +231,7 @@ def report(tx, r, monthly, covid, a, am):
       f"from the shares. Median registered age: {am['median_age_registered']:.0f}.\n")
 
     young = a.loc[["16-24", "25-34"]].sum()
-    on18 = monthly.loc[pd.Period("2018-10", "M"), "online_tx_share"]
-    on20 = monthly.loc[pd.Period("2020-08", "M"), "online_tx_share"]
+    on_apr20 = monthly.loc[pd.Period("2020-04", "M"), "online_tx_share"]
 
     w("## 2. Evidence sentences for the proposal\n")
     w("**Issue 1. Stagnant Sales and Weak Customer Retention**\n")
@@ -240,14 +244,18 @@ def report(tx, r, monthly, covid, a, am):
     w(f"- In H&M's transaction data, the share of transactions made through the online channel was "
       f"{pct(covid['mar_may_2020'])} in March to May 2020, compared with {pct(covid['mar_may_2019'])} in "
       f"the same months of 2019.")
-    w(f"- The online share of monthly transactions moved from {pct(on18)} in October 2018 to {pct(on20)} in "
-      f"August 2020.\n")
+    w(f"- In April 2020, {pct(on_apr20)} of transactions were online. After stores reopened, the online share "
+      f"was {pct(covid['jun_aug_2020'])} in June to August 2020, compared with {pct(covid['jun_aug_2019'])} in "
+      f"the same months of 2019, so the shift to online in this data did not persist beyond the closure period.\n")
     w("**Issue 3. Customer Age Concentration**\n")
-    w(f"- In H&M's customer data, customers aged 16 to 34 account for {pct(young['buyer_share'])} of "
-      f"purchasing customers and {pct(young['value_share'])} of purchase value.")
+    w(f"- In H&M's customer data, the median registered age is {am['median_age_registered']:.0f}, and customers "
+      f"aged 16 to 34 account for {pct(young['buyer_share'])} of purchasing customers and "
+      f"{pct(young['value_share'])} of purchase value.")
     top = a["tx_per_buyer"].idxmax()
-    w(f"- The {top} age group has the highest purchase frequency, at {a.loc[top, 'tx_per_buyer']:.1f} "
-      f"transactions per customer over the two years.\n")
+    w(f"- The {top} age group makes up {pct(a.loc[top, 'buyer_share'])} of purchasing customers but "
+      f"{pct(a.loc[top, 'value_share'])} of purchase value, with the highest purchase frequency at "
+      f"{a.loc[top, 'tx_per_buyer']:.1f} transactions per customer over the two years. Customers aged 16 to 24 "
+      f"buy less often, at {a.loc['16-24', 'tx_per_buyer']:.1f} transactions per customer.\n")
 
     w("## 3. Limitations\n")
     w("- **Channel:** `sales_channel_id` has no official definition. Following the common community "
