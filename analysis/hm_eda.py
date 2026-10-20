@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "hm"
 OUT_JSON = ROOT / "analysis" / "hm_eda_results.json"
 OUT_MD = ROOT / "analysis" / "hm_eda_results.md"
+CHARTS = ROOT / "analysis" / "eda_charts"
 
 QUANTILES = [0.5, 0.75, 0.9, 0.99, 0.999]
 ITEM_BINS = [1, 2, 6, 11, 21, 51, 101, 201, 501, np.inf]
@@ -195,6 +196,19 @@ def articles(tx, art):
     }
 
 
+# ---------------------------------------------------------------- chart data
+
+def write_chart_csvs(r):
+    """CSVs uploaded to the exploration docs for the daily, age and price charts."""
+    CHARTS.mkdir(parents=True, exist_ok=True)
+    d = pd.DataFrame(r["daily"]["series"])
+    med = d["n"].rolling(29, center=True, min_periods=8).median()
+    d["ratio"] = (d["n"] / med).round(2)
+    d.to_csv(CHARTS / "daily.csv", index=False)
+    pd.DataFrame(r["customer_fields"]["age_hist"]).to_csv(CHARTS / "age_hist.csv", index=False)
+    pd.DataFrame(r["price"]["hist"]).to_csv(CHARTS / "price_hist.csv", index=False)
+
+
 # ---------------------------------------------------------------- report
 
 def report(r):
@@ -262,6 +276,7 @@ def main():
         "articles": articles(tx, art),
     }
     OUT_JSON.write_text(json.dumps(r, ensure_ascii=False, indent=1), encoding="utf-8")
+    write_chart_csvs(r)
     report(r)
     print(f"saved {OUT_JSON} and {OUT_MD}")
 
