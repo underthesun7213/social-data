@@ -21,7 +21,7 @@ Competition: `h-and-m-personalized-fashion-recommendations`. Images were not dow
 
 There is no store, country or customer gender column.
 
-## 2. H&M Group investor reports (31 PDFs, ~97 MB)
+## 2. H&M Group investor reports (43 PDFs, ~115 MB)
 
 Source: https://hmgroup.com/investors/reports/. H&M's fiscal year runs **1 December to 30 November**,
 so "2019" means 1 Dec 2018 to 30 Nov 2019.
@@ -46,10 +46,14 @@ so "2019" means 1 Dec 2018 to 30 Nov 2019.
 | 2018-3m / 6m / 9m | 1 Dec 2017 to 28 Feb / 31 May / 31 Aug 2018 | 17 / 19 / 19 |
 | 2019-3m / 6m / 9m | 1 Dec 2018 to 28 Feb / 31 May / 31 Aug 2019 | 19 / 21 / 21 |
 | 2020-3m / 6m / 9m | 1 Dec 2019 to 29 Feb / 31 May / 31 Aug 2020 | 20 / 25 / 22 |
+| 2021-3m / 6m / 9m | FY2021 Q1 / Q2 / Q3 | 21 / 24 / 24 |
+| 2022-3m / 6m / 9m | FY2022 Q1 / Q2 / Q3 | 22 / 23 / 24 |
+| 2023-3m / 6m / 9m | FY2023 Q1 / Q2 / Q3 | 22 / 23 / 23 |
+| 2024-3m / 6m / 9m | FY2024 Q1 / Q2 / Q3 | 28 / 28 / 32 |
 | 2025-3m / 6m / 9m | FY2025 Q1 / Q2 / Q3 | 30 / 34 / 32 |
 | 2026-3m / 6m / 9m | FY2026 Q1 / Q2 / Q3 | 28 / 32 / 30 |
 
-Not downloaded: 2021 to 2024 interim reports. The FY2026 full-year report is not published yet.
+The FY2026 full-year report is not published yet.
 
 ### Annual (and sustainability) reports (`reports/annual/`)
 
