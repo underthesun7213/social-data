@@ -252,7 +252,9 @@ LIMITS = [
 
 def fill(tables):
     """Fill text that depends on numbers computed at run time."""
-    fill_main(tables, 'The 365-day rate went from {va:.1f}% for {a} first purchases to {vb:.1f}% for {b} (the last cohort observable for 365 days).')
+    fill_main(tables, 'The 365-day rate went from {va:.1f}% for {a} first purchases to {vb:.1f}% for {b} (the last cohort observable for 365 days).',
+              'Share buying after reopening (2020-06 to 09): store-only customers before the closures {s20:.1f}% (same months a year earlier: {s19:.1f}%), '
+              'online only {o20:.1f}% ({o19:.1f}%), omni {m20:.1f}% ({m19:.1f}%). There is no sign that store customers left because of the closures.')
     ys = tables["c2.y_split"].set_index("part")
     y1, old, new, y2 = (ys.loc[k] for k in ["Y1 total", "Y2 from Y1 customers", "Y2 from customers new in Y2", "Y2 total"])
     hv = tables["c2.heavy"].set_index("decile")
@@ -328,10 +330,10 @@ MAIN = {
                 "stores": "Stores (period end)", "members": "Loyalty members (million)"},
     "data_label": "Chart source data (used by the charts above)",
     "sections": [
-        {"heading": "Questions", "header": ["Type", "Question", "Link", "Draft RQ"], "rows": [
-            ["Main question", "Why is the repurchase rate of H&M's new customers after their first purchase falling, and which first-purchase experiences lead to a second purchase?", "Issue 1 + Q3 → U2", "RQ1-1, RQ1-2, RQ1-3"],
-            ["Sub-question 1", "Among which customers and product lines did the number of items per purchase fall?", "Issue 1 + Q1 → U1", "Not in the draft (new; links to the basket measure in RQ2-2)"],
-            ["Sub-question 2", "Is the repurchase decline concentrated by age, channel or sign-up status?", "U5, U4 and U8 used as segments", "RQ2-2, RQ2-3"],
+        {"heading": "Questions", "header": ["Type", "Question", "Link", "Phase 2 RQ"], "rows": [
+            ["Main question", "Why is the repurchase rate of H&M's new customers after their first purchase falling, and which first-purchase experiences lead to a second purchase?", "Issue 1 + Q3 → U2", "RQ1.1, RQ1.2"],
+            ["Sub-question 1", "Among which customers and product lines did the number of items per purchase fall?", "Issue 1 + Q1 → U1", "Not in Phase 2 (new; links to first-basket size in RQ1.2)"],
+            ["Sub-question 2", "Is the repurchase decline concentrated by age, channel or sign-up status?", "U5, U4 and U8 used as segments", "RQ2.2, RQ2.3"],
         ]},
         {"heading": "Narrative (4 steps)", "header": ["Step", "Message", "Evidence (figures)", "Source"], "rows": [
             ["1. The problem today",
@@ -347,7 +349,8 @@ MAIN = {
             ["3. Loyalty expansion at the same time",
              "H&M grew its loyalty programme fast in this period. Sign-ups rose while new customers' conversion to a second purchase fell.",
              "Loyalty members 35 million (FY2019 Q1) → 65 million (FY2019) → 107 million (FY2020) → 130 million (FY2021 Q2) → more than 200 million (FY2024 Q1). "
-             "92.7% of registered Kaggle customers are ACTIVE members. 90-day repurchase of new customers who did not complete sign-up (PRE-CREATE) 19.8% vs ACTIVE 37.6%.",
+             "92.7% of registered Kaggle customers are ACTIVE members. 90-day repurchase of new customers who did not complete sign-up (PRE-CREATE) 19.8% vs ACTIVE 37.6%. "
+             "Sign-up status is the value at the end of the data (a snapshot), so customers who never came back may simply have stayed unregistered. Read it as a related measure, not a cause.",
              "Reports (chart 4), C1_09, C2_U8"],
             ["4. Limits of the reading",
              "Kaggle is a sample, not the whole group. So we say 'the sample's customers bought less', not 'group sales fell'.",
@@ -367,54 +370,59 @@ MAIN = {
             {"table": "rp.members", "type": "column", "cols": ["Loyalty members (million)"],
              "title": {"en": "Chart 4. Loyalty members (million), quarters where the reports give a number"}},
         ]},
-        {"heading": "Answers to the draft's research questions (RQ)", "header": ["RQ", "Draft question (short)", "Our answer", "Sheet · status"], "rows": [
-            ["RQ1-1", "30-, 90- and 365-day repurchase of new customers, and differences by first-purchase month",
-             "90 days 43.4% (2019-03) → 29.8% (2020-02); 30 days 24.3% → 17.9%. {rep365} The decline across first-purchase months is larger than the seasonal differences.",
-             "C2_U2 · answered"],
-            ["RQ1-2", "Days between first and second purchase, and when the chance of returning drops",
-             "20.2% of repeat buyers return within 7 days, 41.0% within 30, 66.7% within 90. After 90 days repurchases are spread thin (91-180 days 16.9%, 181-365 days 13.2%).",
-             "C2_U2 · partly. Survival analysis (handbook 5-8) needed to pin down the point"],
-            ["RQ1-3", "Which first-purchase product categories turn customers into repeat buyers",
-             "90-day repurchase by main line of the first basket ranges only from 33.3% (Sport) to 38.1% (Baby/Children). First-basket size (1 item 32.4% vs 7+ items 40.7%) and sign-up status (PRE-CREATE 19.8% vs ACTIVE 37.6%) matter more.",
-             "C2_U2, C2_U8 · partly. Needs product_group level"],
-            ["RQ2-1", "Online share before, during and after the 2020 closures, and whether it stayed higher",
-             "Online 85.4% in 2020-03 to 05 (70.1% a year earlier), 100% in April. After reopening, 2020-06 to 08 was 64.7%, below the year before (68.8%), so it did not stay higher. Of store-only customers before the closures, 19.8% bought online during them.",
-             "C1_01, C2_U4 · answered"],
-            ["RQ2-2", "Basket and spend of store-only, online-only and omni customers",
-             "Value per customer: omni 1.24 vs online only 0.37 vs store only 0.20. Items per occasion online 4.09 vs store 2.55. About half of single-channel customers did not buy the following year (omni 11.4%).",
-             "C1_06, C1_07, C2_U4 · answered (causality needs an experiment)"],
-            ["RQ2-3", "Store dependence by age",
+        {"heading": "Answers to the Phase 2 research questions (RQ1.1 to RQ2.4)", "header": ["RQ", "Phase 2 question (short)", "Our answer", "Sheet · status"], "rows": [
+            ["RQ1.1", "30-, 90- and 365-day repurchase of new customers, and differences by first-purchase month",
+             "90 days 43.4% (2019-03) → 29.8% (2020-02); 30 days 24.3% → 17.9%. {rep365} The decline across first-purchase months is larger than the seasonal differences. "
+             "However, the 2020-03 to 06 cohorts (the COVID period) rise again to 32.4% to 36.3%, so the decline stops at 2020-02. "
+             "20.2% of repeat buyers return within 7 days, 41.0% within 30, 66.7% within 90.",
+             "C2_U2 · answered. Confirm with survival curves (Phase 3 method)"],
+            ["RQ1.2", "Which first-purchase features (channel, line, items, price, age, newsletter) go with returning",
+             "90-day repurchase by main line of the first basket ranges only from 33.3% (Sport) to 38.1% (Baby/Children). First-basket size matters more (1 item 32.4% vs 7+ items 40.7%). "
+             "Newsletter (Regularly 42.9% vs NONE 33.6%) and sign-up status (PRE-CREATE 19.8% vs ACTIVE 37.6%) are end-of-data values, so they cannot be used as first-purchase features.",
+             "C2_U2, C2_U8 · partly. Leave the snapshot variables out of the regression or flag them"],
+            ["RQ1.3", "Sales share of repeat vs one-time customers, and concentration among top buyers",
+             "The 32.9% of customers who bought on one day only bring 4.8% of value. The 7.8% who bought on 20+ occasions bring 38.5%. Repeat customers make the sales.",
+             "C1_05 · answered"],
+            ["RQ1.4", "How the FY2018 to FY2025 reports describe loyalty and membership (qualitative)",
+             "Member counts only, as a series: 35 million (FY2019 Q1) → 107 million (FY2020) → more than 200 million (FY2024 Q1). Thematic coding of the strategy text not done yet.",
+             "Chart 4, hm_report_quarterly.csv · not done"],
+            ["RQ2.1", "Online share before, during and after the 2020 closures, and whether it stayed higher",
+             "Online 85.4% in 2020-03 to 05 (70.1% a year earlier), 100% in April. After reopening, 2020-06 to 08 was 64.7%, below the year before (68.8%), so it did not stay higher.",
+             "C1_01 · answered"],
+            ["RQ2.2", "Did store-reliant customers keep buying after the closures, compared with online-reliant ones",
+             "{reopen} Of store-only customers before the closures, 19.8% bought online during them.",
+             "C2_U4 · answered (baseline comparison)"],
+            ["RQ2.3", "Which product lines and age groups rely most on stores",
              "Store share of transactions is lowest for 25-34 (25.2%) and highest for 65+ (36.6%). 65+ pay 18.8% more per item than 16-24 but spend the least per customer (0.41 vs 0.83 for 25-34).",
-             "C1_08 · answered. Draft's 'highest-spending' wording needs fixing"],
-            ["Phase 1 next step", "Does Kaggle reflect the group's sales trend? Compare with the reports",
-             "It does not. 2019-09 to 11: group +5% vs Kaggle (Oct-Nov) -5.9%; 2019-12 to 2020-02: group +5% vs Kaggle -8.8%.",
-             "Narrative step 4 · answered"],
+             "C1_08 · answered for age. This workbook has no table of online share by line (the Phase 2 figures such as Menswear 55.0% were computed separately)"],
+            ["RQ2.4", "Reported store counts and online share vs the transaction data (secondary data)",
+             "In the same quarters group sales grew while Kaggle value fell (2019-09 to 11: group +5% vs Kaggle Oct-Nov -5.9%; 2019-12 to 2020-02: +5% vs -8.8%). Online share is about 70% in Kaggle vs 26-30% officially. The sample does not represent the whole group.",
+             "Narrative step 4, charts 1-2 · answered"],
         ]},
-        {"heading": "Check of the draft's figures (full data)", "header": ["Draft wording (where)", "Full-data result", "Fix", "Verdict"], "order": [3, 0, 1, 2], "rows": [
-            ["22.0% of 214,936 customers bought a single item and never returned (Phase 2 Issue 1)",
-             "1,362,281 purchasing customers. 9.7% bought one item; 32.9% bought on one occasion (day) only; 23.5% among customers observable for at least a year.",
-             "Use full-data figures and one definition (one purchase occasion)", "Fix"],
-            ["Online is 66.3% of transactions and 70.4% of revenue (Phase 1 visuals, Phase 2 Issue 2)",
-             "70.4% of transactions (rows), 75.6% of value.", "Replace the figures and the measure names", "Fix"],
-            ["Up to 44.2% of transactions of shoppers 55+ in stores (Phase 2 Issue 2, RQ2-3)",
-             "Store share of transactions 55-64: 32.5%; 65+: 36.6%.", "Replace with full-data figures", "Fix"],
-            ["Shoppers 55+ are the highest-spending group (Phase 2 Issue 2, RQ2-3)",
-             "They pay more per item (65+ +18.8%) but 65+ spend the least per customer, and 55-64 spend less than 25-34 (0.61 vs 0.83).",
-             "Call them 'higher price per item' and rebuild the churn-risk argument", "Fix"],
-            ["Over 70% of 25-34 purchases are online (Phase 1 visuals)", "74.8%.", "Keep", "Match"],
+        {"heading": "Check of the Phase 1 to 3 document (current Google Doc)", "header": ["Document wording (where)", "Full-data result", "Fix", "Verdict"], "order": [3, 0, 1, 2], "rows": [
+            ["23.5% of customers observable for a year never bought again (Phase 2-3 Issue 1)",
+             "23.5% on the same definition. Among all purchasing customers, 32.9% bought on one day only.", "Keep", "Match"],
+            ["Online 70.1% → 85.4% in the closures, 64.7% after reopening vs 68.8% a year earlier (Phase 2 Issue 2)",
+             "Same values.", "Keep", "Match"],
             ["H&M brand 3,579 stores vs group 4,801 → 4,101 stores (Phase 1)",
              "Both are report figures but on different bases (brand vs group).", "Use the group basis throughout", "Tidy"],
-            ["Sales growth 12% → 6% → -1% → 1% → 2%, first nine months of 2026, stores 4,801 → 4,101 (Phase 1)",
+            ["Sales growth 12% → 6% → -1% → 1% → 2%, first nine months of 2026 (Phase 1)",
              "Match the reports.", "Keep", "Match"],
+            ["First purchase date = earliest purchase in the data (Phase 3 variables)",
+             "Customers who shopped before 2018-09 are counted as new (left censoring). The workbook counts only first purchases from 2019-03-01 as new.", "Add a six-month buffer to the new-customer definition", "Fix"],
+            ["RQ1.2 includes newsletter subscription as a first-purchase feature (Phase 2-3)",
+             "Newsletter and sign-up status in customers.csv are end-of-data values, not values at the first purchase.", "Report them separately as related measures; leave them out of the regression", "Fix"],
+            ["Alternative data 'None' for RQ1.2, 1.3 and 2.2 (Phase 3 table)",
+             "The rubric asks for viable alternatives.", "E.g. Google mobility reports and the quarterly reports' reopening notes for RQ2.2", "Add"],
         ]},
         {"heading": "Solution directions (hypotheses)", "header": ["Direction", "Evidence", "Measure"], "rows": [
             ["First-30-day onboarding", "Personalised recommendations within 7 days of the first purchase, a second-purchase offer. 41% of repeat buyers return within 30 days, 20% within 7.", "New-customer 90-day repurchase rate"],
-            ["Complete sign-up", "Prompt full sign-up and newsletter opt-in at first purchase. PRE-CREATE 19.8% vs ACTIVE 37.6%; newsletter Regularly 42.9% vs NONE 33.6%.", "Sign-up completion rate; that group's 90-day repurchase"],
+            ["Complete sign-up", "Prompt full sign-up and newsletter opt-in at first purchase. PRE-CREATE 19.8% vs ACTIVE 37.6%; newsletter Regularly 42.9% vs NONE 33.6% (end-of-data values, so the direction of cause is unknown).", "Sign-up completion rate; that group's 90-day repurchase"],
             ["Bigger first basket", "Outfit and bundle recommendations. First basket of 1 item 32.4% vs 7+ items 40.7%.", "Items in the first purchase"],
             ["How to test", "All these gaps are correlations: customers who already buy more may be the ones who sign up or subscribe. Confirm effects with A/B tests.", "Test vs control repurchase rate"],
         ]},
         {"heading": "Next analyses and limits", "header": ["Item", "Description", "Reference"], "rows": [
-            ["Next analyses", "Survival analysis to confirm the decline and the drop-off point (RQ1-2), first purchase by product_group (RQ1-3), repurchase of customers whose first purchase was discounted (RQ1-1 hypothesis), cohort cumulative value in money terms.", "Excel handbook 5-8, 5-3, 5-7"],
+            ["Next analyses", "Survival analysis to confirm the decline and the drop-off point (RQ1.1), first purchase by product_group and a regression without snapshot variables (RQ1.2), repurchase of customers whose first purchase was discounted, thematic coding of the reports (RQ1.4), cohort cumulative value in money terms.", "Excel handbook 5-8, 5-3, 5-7"],
             ["Limit: sample", "Kaggle is a sample with no market column, and price is transformed. It is not the same measure as group sales.", "Z_Limitations"],
             ["Limit: causality", "Nothing proves that the 2019-2020 change in sample customers' behaviour caused the group's stagnation from 2022. It is a hypothesis: a weakness that came earlier.", ""],
             ["Limit: reports", "The reports do not publish repurchase rates. After 2020 they give member counts only in FY2021 Q2 and FY2024 Q1.", "hm_report_quarterly.csv"],
@@ -423,12 +431,19 @@ MAIN = {
 }
 
 
-def fill_main(tables, text):
-    """Put the 365-day repurchase figures into MAIN's "{rep365}" slots."""
+def fill_main(tables, rep365, reopen):
+    """Put run-time figures into MAIN's "{rep365}" and "{reopen}" slots."""
     r = tables["c2.rep_by_month"].dropna(subset=["repurchase_365d_pct"])
     a, b = r.iloc[0], r.iloc[-1]
-    value = text.format(a=a["segment"], va=a["repurchase_365d_pct"], b=b["segment"], vb=b["repurchase_365d_pct"])
+    cs = tables["c2.covid_store"].set_index("group")
+    slots = {
+        "{rep365}": rep365.format(a=a["segment"], va=a["repurchase_365d_pct"], b=b["segment"], vb=b["repurchase_365d_pct"]),
+        "{reopen}": reopen.format(**{f"{k}{y}": cs.loc[g, col] for k, g in [("s", "store only before"), ("o", "online only before"), ("m", "omni before")]
+                                     for y, col in [("20", "bought_after_reopen_pct"), ("19", "same_months_2019_pct")]}),
+    }
     for sec in MAIN["sections"]:
         for row in sec.get("rows", []):
             for j, cell in enumerate(row):
-                row[j] = cell.replace("{rep365}", value)
+                for k, v in slots.items():
+                    cell = cell.replace(k, v)
+                row[j] = cell

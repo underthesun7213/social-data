@@ -163,15 +163,24 @@ def channel_migration(occ):
     return mat, s
 
 
-def covid_store_customers(occ):
-    """Customers who used only stores before the closures: what did they do during and after?"""
-    pre = occ[(occ["t_dat"] >= "2019-09-20") & (occ["t_dat"] < "2020-03-01")]
+def channel_groups(occ, start, end):
+    pre = occ[(occ["t_dat"] >= start) & (occ["t_dat"] < end)]
     g = pre.groupby("c").agg(on=("on", "max"), store=("store", "max"))
-    groups = {"store only before": g.index[~g["on"] & g["store"]],
-              "online only before": g.index[g["on"] & ~g["store"]],
-              "omni before": g.index[g["on"] & g["store"]]}
+    return {"store only before": g.index[~g["on"] & g["store"]],
+            "online only before": g.index[g["on"] & ~g["store"]],
+            "omni before": g.index[g["on"] & g["store"]]}
+
+
+def covid_store_customers(occ):
+    """Customers who used only stores before the closures: what did they do during and after?
+
+    The baseline repeats the same windows one year earlier (groups from 2018-09-20 to 2019-02-28,
+    buying in 2019-06-01 to 09-22), so the reopening rate can be read against a normal summer."""
+    groups = channel_groups(occ, "2019-09-20", "2020-03-01")
+    base = channel_groups(occ, "2018-09-20", "2019-03-01")
     clo = occ[(occ["t_dat"] >= "2020-03-15") & (occ["t_dat"] < "2020-06-01")]
     aft = occ[(occ["t_dat"] >= "2020-06-01")]
+    aft19 = occ[(occ["t_dat"] >= "2019-06-01") & (occ["t_dat"] <= "2019-09-22")]
     rows = []
     for name, ids in groups.items():
         c1 = clo[clo["c"].isin(ids)]
@@ -181,6 +190,7 @@ def covid_store_customers(occ):
             "bought_during_closure_pct": c1["c"].nunique() / len(ids) * 100,
             "bought_online_during_closure_pct": c1.loc[c1["on"], "c"].nunique() / len(ids) * 100,
             "bought_after_reopen_pct": c2["c"].nunique() / len(ids) * 100,
+            "same_months_2019_pct": aft19.loc[aft19["c"].isin(base[name]), "c"].nunique() / len(base[name]) * 100,
             "after_reopen_online_occ_share_pct": c2["on"].mean() * 100 if len(c2) else np.nan,
         })
     return pd.DataFrame(rows)

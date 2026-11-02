@@ -111,6 +111,9 @@ CHARTS = {
         {"table": 2, "type": "column", "cols": ["bought_during_closure_pct", "bought_online_during_closure_pct", "bought_after_reopen_pct"],
          "title": t("휴업 전 유형별: 휴업기 구매, 휴업기 온라인 구매, 재개장 후 구매(%)",
                     "By pre-closure type: bought in closures, bought online in closures, bought after reopening (%)")},
+        {"table": 2, "type": "column", "cols": ["bought_after_reopen_pct", "same_months_2019_pct"],
+         "title": t("재개장 후(2020-06 ~ 09) 구매 vs 1년 전 같은 달 기준선(%)",
+                    "Bought after reopening (2020-06 to 09) vs same months a year earlier (%)")},
     ],
     "C2_U5": [
         {"table": 0, "type": "column", "cols": ["value_share_pct_Y1", "value_share_pct_Y2"],
