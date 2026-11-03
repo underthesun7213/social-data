@@ -97,6 +97,12 @@ CHARTS = {
         {"table": 3, "type": "column", "cols": ["repurchase_90d_pct"], "title": t("첫 장바구니 상품 수별 90일 재구매율(%)", "90-day repurchase by first-basket items (%)")},
         {"table": 4, "type": "column", "cols": ["repurchase_90d_pct"], "title": t("첫 장바구니 라인별 90일 재구매율(%)", "90-day repurchase by first-basket line (%)")},
         {"table": 5, "type": "column", "cols": ["repurchase_90d_pct"], "title": t("연령대별 90일 재구매율(%)", "90-day repurchase by age band (%)")},
+        {"table": 7, "type": "line", "cols": ["returned_pct"], "ymax": 100,
+         "title": t("d일까지 재구매한 신규 고객 비율(%), Kaplan–Meier", "New customers returned by day d (%), Kaplan–Meier")},
+        {"table": 7, "type": "column", "cols": ["next_30d_pct"],
+         "title": t("d일까지 안 돌아온 고객이 다음 30일 안에 재구매할 확률(%)", "Chance of returning in the next 30 days if not back by day d (%)")},
+        {"table": 8, "type": "bar", "cols": ["repurchase_90d_pct"],
+         "title": t("첫 장바구니 상품군별 90일 재구매율(%)", "90-day repurchase by first-basket product group (%)")},
     ],
     "C2_U3": [
         {"type": "column", "cols": ["new_customers"], "title": t("월별 신규 고객 수", "New customers per month")},

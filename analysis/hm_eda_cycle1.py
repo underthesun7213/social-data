@@ -96,10 +96,13 @@ def frequency(occ):
 def channel_mix(occ):
     """Customers by the channels they ever used."""
     g = occ.groupby("c").agg(on=("on", "max"), store=("store", "max"),
-                             occ=("t_dat", "size"), value=("value", "sum"))
+                             occ=("t_dat", "size"), value=("value", "sum"), items=("items", "sum"))
     g["type"] = np.select([g["on"] & g["store"], g["on"]], ["omni", "online only"], "store only")
     out = g.groupby("type").agg(customers=("occ", "size"), avg_occasions=("occ", "mean"),
-                                avg_value=("value", "mean"), value=("value", "sum"))
+                                avg_value=("value", "mean"), median_value=("value", "median"),
+                                value=("value", "sum"), items=("items", "sum"), occasions=("occ", "sum"))
+    out["items_per_occasion"] = out["items"] / out["occasions"]
+    out = out.drop(columns=["items", "occasions"])
     out["customer_share_pct"] = out["customers"] / out["customers"].sum() * 100
     out["value_share_pct"] = out["value"] / out["value"].sum() * 100
     return out.reset_index(names="channel_type"), g["type"]

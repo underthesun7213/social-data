@@ -78,10 +78,11 @@ def first_purchase(tx, occ, cust, art):
     sel = tx["c"].isin(first.index).to_numpy()
     t = tx.loc[sel, ["c", "t_dat", "article_id"]]
     t = t[t["t_dat"].to_numpy() == first.reindex(t["c"]).to_numpy()]
-    grp = art.set_index("article_id")["index_group_name"].reindex(t["article_id"]).to_numpy()
-    main = pd.DataFrame({"c": t["c"].to_numpy(), "g": grp}).groupby(["c", "g"]).size()
-    main = main.reset_index().sort_values(0, ascending=False).drop_duplicates("c").set_index("c")["g"]
-    df["first_line"] = main
+    a = art.set_index("article_id")
+    for col, name in [("index_group_name", "first_line"), ("product_group_name", "first_group")]:
+        grp = a[col].reindex(t["article_id"]).to_numpy()
+        main = pd.DataFrame({"c": t["c"].to_numpy(), "g": grp}).groupby(["c", "g"]).size()
+        df[name] = main.reset_index().sort_values(0, ascending=False).drop_duplicates("c").set_index("c")["g"]
     c = cust.set_index("c")
     df["age_band"] = c["age_band"]
     df["club"] = c["club_member_status"].fillna("(missing)")
@@ -111,8 +112,11 @@ def repurchase_tables(df):
                    basket=pd.cut(df["items"], [1, 2, 4, 7, np.inf], right=False, labels=["1", "2-3", "4-6", "7+"]))
     out = {}
     for key, col in [("by_month", "first_month"), ("by_channel", "channel"), ("by_age", "age_band"),
-                     ("by_basket", "basket"), ("by_line", "first_line"), ("by_club", "club"), ("by_news", "news")]:
+                     ("by_basket", "basket"), ("by_line", "first_line"), ("by_group", "first_group"),
+                     ("by_club", "club"), ("by_news", "news")]:
         out[key] = repurchase_rate(df, col).rename(columns={col: "segment"})
+    # Product groups with too few first buyers give noisy rates; keep groups with 1,000+ at 90 days.
+    out["by_group"] = out["by_group"][out["by_group"]["n_90d"] >= 1000].sort_values("repurchase_90d_pct", ascending=False)
     gap = df["days_to_2nd"].dropna()
     bins = [1, 8, 15, 31, 61, 91, 181, 366, np.inf]
     labels = ["1-7", "8-14", "15-30", "31-60", "61-90", "91-180", "181-365", "366+"]
@@ -120,7 +124,43 @@ def repurchase_tables(df):
     g["share_pct"] = g["customers"] / g["customers"].sum() * 100
     g["cum_pct"] = g["share_pct"].cumsum()
     out["gap"] = g.reset_index(names="days_to_2nd")
+    out["gap_pct"] = gap_percentiles(df)
+    out["km"] = time_to_second(df)
     return out
+
+
+def gap_percentiles(df):
+    """Percentiles of days from the first to the second purchase, among new customers who returned.
+
+    Restricting to customers observable for a full year keeps late starters, who can only show
+    short gaps, from pulling the percentiles down."""
+    rows = []
+    for name, sub in [("returned (all new customers)", df), ("returned, observable 365 days", df[df["horizon"] >= 365])]:
+        g = sub["days_to_2nd"].dropna()
+        rows.append({"group": name, "customers": len(g),
+                     **{f"p{q}_days": g.quantile(q / 100) for q in (25, 50, 75, 80, 90)}})
+    return pd.DataFrame(rows)
+
+
+def time_to_second(df, days=tuple(range(15, 361, 15)) + (365,)):
+    """Kaplan-Meier estimate of the share of new customers who have made a second purchase by day d.
+
+    Customers who have not returned by the end of the data are censored at their horizon rather
+    than counted as lost. next_30d_pct is the chance of returning in the next 30 days for those
+    still waiting at day d, which shows where the likelihood of returning drops."""
+    dur = df["days_to_2nd"].fillna(df["horizon"]).astype(int).to_numpy()
+    event = df["days_to_2nd"].notna().to_numpy()
+    top = int(dur.max()) + 31
+    deaths = np.bincount(dur[event], minlength=top + 1)
+    exits = np.bincount(dur, minlength=top + 1)
+    at_risk = len(dur) - np.concatenate([[0], np.cumsum(exits)[:-1]])
+    surv = np.cumprod(1 - np.divide(deaths, at_risk, out=np.zeros(top + 1), where=at_risk > 0))
+    rows = []
+    for d in days:
+        nxt = 1 - surv[d + 30] / surv[d]
+        rows.append({"day": d, "returned_pct": (1 - surv[d]) * 100, "still_waiting": int(at_risk[d]),
+                     "next_30d_pct": nxt * 100})
+    return pd.DataFrame(rows)
 
 
 def new_customer_mix(df):
