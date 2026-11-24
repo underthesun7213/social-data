@@ -294,14 +294,15 @@ def write_local_html(cols, bins, local, overview):
          "Keep it in data/ (gitignored) and do not upload or share it.</p>",
          "<h2>Files</h2><div class='scroll'><table><tr><th>file</th><th>grain</th><th>rows</th><th>columns</th></tr>"]
     for o in overview:
-        h.append(f"<tr><td>{o['file']}</td><td>{o['grain']}</td><td class='n'>{o['rows']:,}</td><td class='n'>{o['columns']}</td></tr>")
+        h.append(f"<tr><td>{html.escape(o['file'])}</td><td>{html.escape(o['grain'])}</td><td class='n'>{o['rows']:,}</td><td class='n'>{o['columns']}</td></tr>")
     h.append("</table></div>")
     for file, df in samples.items():
-        h.append(f"<h2>{file}</h2><h3>Sample rows</h3><div class='scroll'>{df.to_html(index=False, border=0)}</div>")
+        h.append(f"<h2>{html.escape(file)}</h2><h3>Sample rows</h3><div class='scroll'>{df.to_html(index=False, border=0, escape=True)}</div>")
         for c in [c for c in cols if c["file"] == file]:
             stats = {k: v for k, v in c.items() if k not in ("file", "column", "description_en", "description_ko",
                                                                "row_unit", "used_in_analysis", "in_dictionary", "type")}
-            st = "".join(f"<tr><td>{k}</td><td class='n'>{(f'{v:,}' if isinstance(v, int) else v)}</td></tr>" for k, v in stats.items())
+            st = "".join(f"<tr><td>{html.escape(str(k))}</td><td class='n'>{html.escape(f'{v:,}' if isinstance(v, int) else str(v))}</td></tr>"
+                         for k, v in stats.items())
             extra = local.get((file, c["column"]))
             ex = ""
             if extra and c["kind"] in ("id", "category"):
@@ -310,7 +311,7 @@ def write_local_html(cols, bins, local, overview):
             elif extra and c["kind"] == "text":
                 ex = "<h3>Random examples</h3>" + "".join(f"<p class='mut'>{html.escape(t)}</p>" for t in extra)
             desc = html.escape(str(c.get("description_en") or ""))
-            h.append(f"<div class='col'><h3><code>{c['column']}</code> <span class='mut'>{c['kind']} · {desc}</span></h3>"
+            h.append(f"<div class='col'><h3><code>{html.escape(c['column'])}</code> <span class='mut'>{html.escape(c['kind'])} · {desc}</span></h3>"
                      f"<div class='grid'><div><table>{st}</table>{ex}</div><div>{bar_rows(by_key.get(file + ':' + c['column'], []))}</div></div></div>")
     with open(OUT / "hm_profile.html", "w", encoding="utf-8") as f:
         f.write("".join(h))
