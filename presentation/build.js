@@ -275,7 +275,7 @@ divider("PART 2", T("발견: 어디서 새는가", "Findings: where customers le
   });
 }
 {
-  const s = content(T("2 · 발견 1 — 신규 고객이 덜 돌아온다 (RQ1.1)", "2 · FINDING 1 — NEW CUSTOMERS COME BACK LESS (RQ1.1)"), T("재구매 약화는 코로나 전, 그룹 매출이 늘던 때 시작됐다", "Repurchase fell before COVID, while group sales grew"), T("365일 기준도 66.2% (2019-03) → 57.3% (2019-09) · 하락 폭은 민감도 분석상 6–14%p · C2_U2_Repurchase", "365-day rate also fell: 66.2% (2019-03) → 57.3% (2019-09) · size of drop 6–14 pp after sensitivity check · C2_U2_Repurchase"), "f1");
+  const s = content(T("2 · 발견 1 — 신규 고객이 덜 돌아온다 (RQ1.1)", "2 · FINDING 1 — NEW CUSTOMERS COME BACK LESS (RQ1.1)"), T("재구매 약화는 코로나 전, 그룹 매출이 늘던 때 시작됐다", "Repurchase fell before COVID, while group sales grew"), T("365일 기준도 66.2% (2019-03) → 57.3% (2019-09) · 하락 폭은 민감도 분석상 6–14%p · C2_U2_Repurchase · 계산: 부록 H", "365-day rate also fell: 66.2% (2019-03) → 57.3% (2019-09) · size of drop 6–14 pp after sensitivity check · C2_U2_Repurchase · method: Appendix H"), "f1");
   tags(s, ["data"]);
   const labels = ["19-03", "19-04", "19-05", "19-06", "19-07", "19-08", "19-09", "19-10", "19-11", "19-12", "20-01", "20-02", "20-03", "20-04", "20-05", "20-06"];
   const v = [43.4, 43.3, 42.5, 38.4, 35.0, 34.8, 35.8, 32.5, 31.0, 29.8, 30.8, 29.8, 32.8, 32.4, 36.3, 35.2];
@@ -285,7 +285,7 @@ divider("PART 2", T("발견: 어디서 새는가", "Findings: where customers le
   txt(s, [{ text: "■ ", options: { color: G2 } }, { text: T("코로나 전 첫 구매   ", "First purchase before COVID   ") }, { text: "■ ", options: { color: RED } }, { text: T("비교 끝점 (2019-03, 2020-02)   ", "Compared endpoints (2019-03, 2020-02)   ") }, { text: "■ ", options: { color: "C4C4C6" } }, { text: T("2020-03 이후 첫 구매 (매장 폐쇄, 비교 제외)", "First purchase from 2020-03 (closures, not compared)") }], { x: MX, y: 6.35, w: CW, h: 0.35, fontSize: 11, color: G1 });
 }
 {
-  const s = content(T("2 · 발견 2 — 기회는 첫 90일 (RQ1.2)", "2 · FINDING 2 — THE WINDOW IS THE FIRST 90 DAYS (RQ1.2)"), T("90일이 지나면 돌아올 확률이 급격히 줄어든다", "After day 90 the chance of coming back drops sharply"), T("Kaplan–Meier, 2019-03 이후 신규 고객, 15일 간격, 미복귀 고객은 관측 끝에서 절단 · C2_U2_Repurchase", "Kaplan–Meier, new customers from 2019-03, 15-day grid, customers not yet back censored at end of data · C2_U2_Repurchase"), "f2");
+  const s = content(T("2 · 발견 2 — 기회는 첫 90일 (RQ1.2)", "2 · FINDING 2 — THE WINDOW IS THE FIRST 90 DAYS (RQ1.2)"), T("90일이 지나면 돌아올 확률이 급격히 줄어든다", "After day 90 the chance of coming back drops sharply"), T("Kaplan–Meier, 2019-03 이후 신규 고객, 15일 간격, 미복귀 고객은 관측 끝에서 절단 · C2_U2_Repurchase · 계산: 부록 H", "Kaplan–Meier, new customers from 2019-03, 15-day grid, customers not yet back censored at end of data · C2_U2_Repurchase · method: Appendix H"), "f2");
   tags(s, ["data"]);
   const days = [15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255, 270, 285, 300, 315, 330, 345, 360, 365].map(String);
   const ret = [15.5, 21.5, 26.1, 29.8, 33.0, 35.8, 38.2, 40.2, 42.0, 43.7, 45.1, 46.5, 47.8, 49.0, 50.1, 51.1, 52.0, 52.9, 53.8, 54.6, 55.4, 56.2, 57.0, 57.8, 58.1];
@@ -298,7 +298,7 @@ divider("PART 2", T("발견: 어디서 새는가", "Findings: where customers le
   txt(s, [{ text: T("의미: ", "Meaning: "), options: { bold: true } }, { text: T("재구매 유도는 첫 90일 안에 해야 한다. 돌아온 고객의 중앙값은 47일, 80%가 154일 안에 왔다. ", "the prompt has to land inside the first 90 days. Returning customers came back after a median of 47 days; 80% within 154 days. ") }, { text: T("이 곡선은 언제 돌아오는지를 보여 줄 뿐, 언제 영구히 떠났는지는 알려 주지 않는다.", "The curve shows when customers return, not when they are lost for good."), options: { color: G1 } }], { x: MX, y: 6.0, w: CW, h: 0.75, fontSize: 14 });
 }
 {
-  const s = content(T("2 · 발견 3 — 레버는 첫 장바구니 (RQ1.3)", "2 · FINDING 3 — THE LEVER IS THE FIRST BASKET (RQ1.3)"), T("첫 장바구니 크기는 일관되고, 품목군은 기간에 따라 흔들린다", "First-basket size is consistent; product group is not"), T("2019-03 이후 신규 고객 · 품목군은 90일 관측 가능 1,000명 이상 · 수영복: 90일 1위(38.1%) → 365일 중간(61.8%) · C2_U2_Repurchase", "New customers from 2019-03 · product groups with 1,000+ observable at 90 days · Swimwear: 1st at 90 days (38.1%) → mid-table at 365 (61.8%) · C2_U2_Repurchase"), "f3");
+  const s = content(T("2 · 발견 3 — 레버는 첫 장바구니 (RQ1.3)", "2 · FINDING 3 — THE LEVER IS THE FIRST BASKET (RQ1.3)"), T("첫 장바구니 크기는 일관되고, 품목군은 기간에 따라 흔들린다", "First-basket size is consistent; product group is not"), T("2019-03 이후 신규 고객 · 품목군은 90일 관측 가능 1,000명 이상 · 수영복: 90일 1위(38.1%) → 365일 중간(61.8%) · C2_U2_Repurchase · 계산: 부록 H", "New customers from 2019-03 · product groups with 1,000+ observable at 90 days · Swimwear: 1st at 90 days (38.1%) → mid-table at 365 (61.8%) · C2_U2_Repurchase · method: Appendix H"), "f3");
   tags(s, ["data"]);
   const cats = [T("1개", "1 item"), T("2–3개", "2–3"), T("4–6개", "4–6"), T("7개 이상", "7+")];
   s.addChart(pres.charts.BAR, hiBars(cats, [32.4, 35.9, 38.2, 40.7], [3]), chartBase({ x: MX, y: 1.85, w: 5.3, h: 3.9, barDir: "col", barOverlapPct: 100, barGapWidthPct: 55, chartColors: [G2, RED], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0.0;;;", valAxisHidden: true, valGridLine: { style: "none" }, valAxisMinVal: 0, valAxisMaxVal: 48, showTitle: true, title: T("첫 장바구니 상품 수별 90일 재구매율 (%)", "90-day repurchase by first-basket size (%)") }));
@@ -312,7 +312,7 @@ divider("PART 2", T("발견: 어디서 새는가", "Findings: where customers le
   txt(s, [{ text: T("해석: ", "Reading: "), options: { bold: true } }, { text: T("순서가 지켜지는 유일한 요인이라 실행 레버로 쓰기 좋다. 다만 큰 장바구니가 원인인지, 원래 관심 많은 고객의 표시인지는 이 데이터로 가를 수 없다.", "the only factor whose order holds at every step, so it makes a good lever. But this data cannot tell whether a big basket causes return visits or marks a keen customer.") }], { x: 6.2, y: 5.55, w: 6.53, h: 1.1, fontSize: 13 });
 }
 {
-  const s = content(T("2 · 발견 4 — 2020년 일시 폐쇄 때의 채널 이동 (RQ2.1)", "2 · FINDING 4 — CHANNEL MOVES IN THE 2020 SHUTDOWN (RQ2.1)"), T("일시 폐쇄 때 매장 고객은 온라인으로 옮기지 않고 기다렸다", "In the 2020 shutdown, store customers did not go online"), T("재개장 후 = 2020-06-01 ~ 09-22 · 기준선 = 1년 앞당겨 같은 방식으로 정의한 그룹의 2019-06-01 ~ 09-22 · C2_U4_ChannelShift", "After reopening = 2020-06-01 to 09-22 · baseline = groups defined the same way a year earlier, buying 2019-06-01 to 09-22 · C2_U4_ChannelShift"), "f5");
+  const s = content(T("2 · 발견 4 — 2020년 일시 폐쇄 때의 채널 이동 (RQ2.1)", "2 · FINDING 4 — CHANNEL MOVES IN THE 2020 SHUTDOWN (RQ2.1)"), T("일시 폐쇄 때 매장 고객은 온라인으로 옮기지 않고 기다렸다", "In the 2020 shutdown, store customers did not go online"), T("재개장 후 = 2020-06-01 ~ 09-22 · 기준선 = 1년 앞당겨 같은 방식으로 정의한 그룹의 2019-06-01 ~ 09-22 · C2_U4_ChannelShift · 계산: 부록 H", "After reopening = 2020-06-01 to 09-22 · baseline = groups defined the same way a year earlier, buying 2019-06-01 to 09-22 · C2_U4_ChannelShift · method: Appendix H"), "f5");
   tags(s, ["data", "asm"]);
   card(s, MX, 1.95, 3.9, 2.0);
   txt(s, "19.8%", { x: MX + 0.3, y: 2.1, w: 3.3, h: 0.85, fontSize: 44, bold: true, color: RED, fontFace: "+mn-lt" });
@@ -325,7 +325,7 @@ divider("PART 2", T("발견: 어디서 새는가", "Findings: where customers le
   txt(s, [{ text: T("시사점: ", "Implication: "), options: { bold: true } }, { text: T("매장 전용 고객은 온라인으로 가지 않고 재개장을 기다렸다(전년보다 8.1%p 더 돌아옴). ", "store-only customers did not go online; they waited for reopening (8.1 pp more came back than a year earlier)."), options: { breakLine: true } }, mk("asm"), { text: T("데이터에는 개별 매장 폐점이 없다. 재개장이 예정된 전면 폐쇄였으므로, 영구 폐점에서도 같다는 것은 가정이다.", "the data have no individual store closures. This was a temporary, chain-wide shutdown, so assuming the same for permanent closures is an assumption."), options: { color: G1 } }], { x: 4.85, y: 5.85, w: 7.88, h: 0.95, fontSize: 12.5 });
 }
 {
-  const s = content(T("2 · 보조 A — 한 채널 고객의 휴면 (RQ2.2)", "2 · SUPPORTING A — SINGLE-CHANNEL CUSTOMERS LAPSE (RQ2.2)"), T("한 채널만 쓰는 고객의 절반은 이듬해 한 번도 사지 않았다", "Half of single-channel customers bought nothing the next year"), T("휴면 = 관측 첫해 채널 유형별로 둘째 해 구매 없음 · 가치 = 전 기간 채널 유형 기준 · C1_06_ChannelType · C2_U4_ChannelShift", "Lapsed = no purchase in year 2, by year-1 channel type · value = channel type over the full period · C1_06_ChannelType · C2_U4_ChannelShift"), "f4");
+  const s = content(T("2 · 보조 A — 한 채널 고객의 휴면 (RQ2.2)", "2 · SUPPORTING A — SINGLE-CHANNEL CUSTOMERS LAPSE (RQ2.2)"), T("한 채널만 쓰는 고객의 절반은 이듬해 한 번도 사지 않았다", "Half of single-channel customers bought nothing the next year"), T("휴면 = 관측 첫해 채널 유형별로 둘째 해 구매 없음 · 가치 = 전 기간 채널 유형 기준 · C1_06_ChannelType · C2_U4_ChannelShift · 계산: 부록 H", "Lapsed = no purchase in year 2, by year-1 channel type · value = channel type over the full period · C1_06_ChannelType · C2_U4_ChannelShift · method: Appendix H"), "f4");
   tags(s, ["data"]);
   const cards = [
     [T("매장 전용", "Store only"), "47.4%", "0.20", RED],
@@ -344,10 +344,10 @@ divider("PART 2", T("발견: 어디서 새는가", "Findings: where customers le
   txt(s, T("주의: ① 휴면이지 영구 이탈이 아니다. 데이터가 끝난 뒤 돌아왔을 수 있다. ② 상관관계다. 원래 활발한 고객이 채널을 늘렸을 수 있다 → 제안 ③은 A/B 테스트로 확인한다.", "Caution: ① lapsed, not lost for good; they may have returned after the data ends. ② Correlation only: already-active customers may be the ones who added a channel → proposal ③ is tested with an A/B test."), { x: MX, y: 5.9, w: CW, h: 0.75, fontSize: 13, color: G1 });
 }
 {
-  const s = content(T("2 · 보조 B — 누구를 먼저 지킬 것인가 (RQ2.3)", "2 · SUPPORTING B — WHOM TO PROTECT FIRST (RQ2.3)"), T("매장 의존은 U자형이고, 뚜렷한 건 65세 이상뿐이다", "Store reliance is U-shaped: only the 65+ group stands out"), T("전체 3,179만 행, 나이 결측 1.2% 제외 · 거래 행 기준 · C1_08_Age", "All 31.8M rows, excluding the 1.2% with no age · by transaction row · C1_08_Age"), "f6");
+  const s = content(T("2 · 보조 B — 누구를 먼저 지킬 것인가 (RQ2.3)", "2 · SUPPORTING B — WHOM TO PROTECT FIRST (RQ2.3)"), T("매장 의존은 U자형이고, 뚜렷한 건 65세 이상뿐이다", "Store reliance is U-shaped: only the 65+ group stands out"), T("거래 행 기준, 나이 없는 행(0.4%) 제외 · 고객별 평균으로 내면 25–34세 31.4% · analysis/hm_profile.py · 계산: 부록 H", "By transaction row, excluding rows with no age (0.4%) · averaged per customer, 25–34 is 31.4% · analysis/hm_profile.py · method: Appendix H"), "f6");
   tags(s, ["data"]);
   const ages = ["16–24", "25–34", "35–44", "45–54", "55–64", "65+"];
-  s.addChart(pres.charts.BAR, hiBars(ages, [33.2, 25.2, 27.8, 33.3, 32.5, 36.6], [5]), chartBase({ x: MX, y: 1.85, w: 7.0, h: 4.6, barDir: "col", barOverlapPct: 100, barGapWidthPct: 50, chartColors: [G3, RED], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0.0;;;", valAxisHidden: true, valGridLine: { style: "none" }, valAxisMinVal: 0, valAxisMaxVal: 42, showTitle: true, title: T("연령대별 매장 구매 비중 (%)", "In-store share of purchases by age band (%)") }));
+  s.addChart(pres.charts.BAR, hiBars(ages, [33.2, 25.2, 27.8, 33.3, 32.5, 36.6], [5]), chartBase({ x: MX, y: 1.85, w: 7.0, h: 4.6, barDir: "col", barOverlapPct: 100, barGapWidthPct: 50, chartColors: [G3, RED], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0.0;;;", valAxisHidden: true, valGridLine: { style: "none" }, valAxisMinVal: 0, valAxisMaxVal: 42, showTitle: true, title: T("연령대별 매장 구매 비중 (거래 행 기준, %)", "In-store share by age band (transaction rows, %)") }));
   const pts = [
     ["65+", T("매장 비중 36.6%로 최고. 품목당 18.8% 더 비싸게 사지만, 고객당 가치는 0.41로 25–34세(0.83)의 절반", "highest in-store share at 36.6%; pays 18.8% more per item, yet value per customer is 0.41, half of 25–34 (0.83)"), RED],
     ["55–64", T("32.5%로 16–24세(33.2%), 45–54세(33.3%)보다 낮다. “55세 이상이 매장에 의존”은 지지되지 않는다", "32.5%, below 16–24 (33.2%) and 45–54 (33.3%). “Shoppers 55+ rely on stores” is not supported"), INK],
@@ -642,16 +642,29 @@ sec(T("부록", "Appendix"));
     [T("세분화", "Segmentation"), T("RFM, 군집분석", "RFM, clustering"), T("사전 정의 그룹 비교", "Predefined group comparisons"), T("연구 질문에 직접 대응", "Maps to the RQs")],
     [T("폐쇄의 영향", "Effect of closures"), T("이중차분(DiD), 대조군", "Difference-in-differences"), T("전년 같은 달 기준선과 비교", "Prior-year same-month baseline"), T("무작위 배정 불가, 계절성 통제", "No randomisation; controls season")],
     [T("매출 변화 원인", "Cause of sales change"), T("요인 분해", "Factor decomposition"), T("고객 × 빈도 × 장바구니 × 단가", "customers × frequency × basket × price"), T("어느 요인이 하락을 이끄는지", "Shows which factor drives it")],
-  ], { colW: [2.2, 3.2, 3.6, 3.133], fontSize: 12, rowH: 0.62 });
+    [T("재구매 요인", "Drivers of repurchase"), T("로지스틱 회귀 (요인 통제)", "Logistic regression (controls)"), T("요인별 구간 비교", "Comparison by segment"), T("상관관계로만 표시", "Reported as correlation only")],
+  ], { colW: [2.2, 3.2, 3.6, 3.133], fontSize: 12, rowH: 0.58 });
 }
 {
-  const s = content(T("부록 H · 분석 절차", "APPENDIX H · ANALYSIS PROCESS"), T("두 번의 사이클: 넓게 훑고, 질문을 좁혀 깊게 판다", "Two cycles: scan widely, then narrow the question and dig deep"), "Tukey (1977) · Chapman et al. (2000) CRISP-DM · Peng & Matsui (2015) · Gelman & Loken (2013) · Kerr (1998)", "process");
-  const st = [[T("읽기", "Read"), T("스키마, 딕셔너리, 품질", "Schema, dictionary, quality")], [T("정의", "Define"), T("구매 기회, 신규, 재구매, 채널", "Occasion, new, repurchase, channel")], [T("사이클 1", "Cycle 1"), T("기초 표 14개", "14 base tables")], [T("질문 통합", "Merge"), T("이상 신호 → 심화 9개", "Signals → 9 topics")], [T("사이클 2", "Cycle 2"), T("심화 분석 U1–U9", "Deep dives U1–U9")], [T("검증", "Verify"), T("재계산, 보고서 대조, 계보표", "Recompute, check, lineage")]];
+  const s = content(T("부록 H · 숫자별 계산 방법", "APPENDIX H · HOW EACH NUMBER WAS COMPUTED"), T("발견마다 누구를, 어떤 공식으로, 왜 그렇게 셌나", "For each finding: who was counted, with what formula, and why"), T("같은 고객의 같은 날 거래 = 구매 1회 · 신규 = 첫 구매 2019-03-01 이후 · 데이터 끝 2020-09-22 · 코드: analysis/hm_eda_cycle2.py, hm_profile.py", "Same customer, same day = one purchase · new = first purchase on or after 2019-03-01 · data end 2020-09-22 · code: analysis/hm_eda_cycle2.py, hm_profile.py"), "calc");
+  table(s, [
+    [T("발견", "Finding"), T("누구를 셌나", "Who was counted"), T("공식", "Formula"), T("왜 이 방법 · 쓰지 않은 대안", "Why this method · alternatives not used")],
+    [T("1 재구매율", "1 Repurchase"), T("신규 고객 중 첫 구매 후 N일이 데이터 안에 드는 고객 (2019-03 코호트 90일: 51,185명)", "New customers whose first N days fall inside the data (2019-03 cohort, 90 days: 51,185)"), T("N일 안에 두 번째 구매가 있는 고객 ÷ 관측 가능 고객", "customers with a 2nd purchase within N days ÷ observable customers"), T("아직 안 온 최근 고객을 이탈로 세지 않음. 1차의 달력 월 코호트(M+k)는 관측 기간이 고르지 않아 N일 기준으로 바꿈", "Recent customers not yet back are not counted as lost. Calendar-month cohorts (M+k) give uneven windows, so we switched to N days")],
+    [T("2 생존곡선", "2 Survival"), T("같은 신규 고객 전원. 안 돌아온 고객은 2020-09-22에서 절단", "All the same new customers; those not back are censored at 2020-09-22"), T("S(t) = Π(1 − dᵢ ÷ nᵢ)\n다음 30일 복귀 = 1 − S(t+30) ÷ S(t)", "S(t) = Π(1 − dᵢ ÷ nᵢ)\nnext 30 days = 1 − S(t+30) ÷ S(t)"), T("Kaplan–Meier: 최근 고객도 버리지 않음. Cox 회귀·BG/NBD는 쓰지 않음 (목적이 예측이 아닌 진단)", "Kaplan–Meier keeps recent customers. Cox and BG/NBD not used: the aim is diagnosis, not forecasting")],
+    [T("3 첫 장바구니", "3 First basket"), T("같은 신규 고객, 첫 구매일 상품 수 1 / 2–3 / 4–6 / 7+", "Same new customers, items on the first day: 1 / 2–3 / 4–6 / 7+"), T("구간별 90일 재구매율", "90-day repurchase by band"), T("다른 요인을 회귀로 통제하지 않아 상관관계로 표시", "No regression controls, so reported as correlation")],
+    [T("4 일시 폐쇄", "4 Shutdown"), T("2019-09-20 ~ 2020-02-29 채널로 나눈 고객 (매장만 191,328명)", "Customers grouped by channel, 2019-09-20 to 2020-02-29 (store only: 191,328)"), T("폐쇄(03-15 ~ 05-31) 중 온라인 구매율 · 재개장 후(06-01 ~ 09-22) 구매율 vs 1년 전 같은 방식", "online buying in closures (03-15 to 05-31) · buying after reopening (06-01 to 09-22) vs the same a year earlier"), T("전년 동기 비교 = 단순화한 이중차분. 대조 시장이 없어 인과 추정은 아님", "Prior-year comparison = simplified DiD. No control market, so not causal")],
+    [T("A 휴면", "A Lapse"), T("첫해(2018-09-20 ~ 2019-09-19) 채널 유형별 고객", "Customers by year-1 channel type (2018-09-20 to 2019-09-19)"), T("둘째 해 구매가 없는 고객 ÷ 첫해 고객", "no purchase in year 2 ÷ year-1 customers"), T("영구 이탈은 관측할 수 없어 ‘휴면’으로 정의. 상관관계", "Permanent loss cannot be observed, hence ‘lapsed’. Correlation")],
+    [T("B 매장 비중", "B Store share"), T("전체 거래 행, 나이 없는 행(0.4%) 제외", "All transaction rows, excluding rows with no age (0.4%)"), T("연령대별 채널 1 행 ÷ 그 연령대 전체 행", "channel-1 rows ÷ all rows, by age band"), T("행 기준이라 많이 사는 고객의 비중이 큼. 고객별 평균이면 25–34세 31.4% (행 기준 25.2%). 65세 이상이 가장 높은 것은 같음", "Row-based, so heavy buyers weigh more. Averaged per customer, 25–34 is 31.4% (25.2% by row); 65+ is highest either way")],
+  ], { colW: [1.45, 3.1, 3.3, 4.283], fontSize: 10, rowH: 0.7 });
+}
+{
+  const s = content(T("부록 I · 분석 절차", "APPENDIX I · ANALYSIS PROCESS"), T("두 번의 사이클: 넓게 훑고, 질문을 좁혀 깊게 판다", "Two cycles: scan widely, then narrow the question and dig deep"), "Tukey (1977) · Chapman et al. (2000) CRISP-DM · Peng & Matsui (2015) · Gelman & Loken (2013) · Kerr (1998)", "process");
+  const st = [[T("읽기", "Read"), T("스키마, 딕셔너리, 품질", "Schema, dictionary, quality")], [T("정의", "Define"), T("구매 기회, 신규, 재구매, 채널", "Occasion, new, repurchase, channel")], [T("사이클 1", "Cycle 1"), T("기초 표 14개", "14 base tables")], [T("질문 통합", "Merge"), T("이상 신호 → 심화 9개", "Signals → 9 topics")], [T("사이클 2", "Cycle 2"), T("심화 분석 U1–U9", "Deep dives U1–U9")], [T("좁히기", "Narrow"), T("핵심 4 + 보조 2만 남김", "Keep 4 core + 2 supporting")], [T("검증", "Verify"), T("재계산, 보고서 대조, 계보표", "Recompute, check, lineage")]];
   st.forEach((p, i) => {
-    const x = MX + i * 2.04, hl = i === 2 || i === 4;
-    card(s, x, 1.95, 1.88, 1.75, hl ? { fill: WHITE, line: i === 4 ? RED : INK, lineW: 1.5 } : {});
-    txt(s, `${i + 1}  ${p[0]}`, { x: x + 0.15, y: 2.1, w: 1.6, h: 0.4, fontSize: 14, bold: true, color: i === 4 ? RED : INK });
-    txt(s, p[1], { x: x + 0.15, y: 2.55, w: 1.6, h: 1.05, fontSize: 12, color: G1 });
+    const x = MX + i * 1.745, hl = i === 2 || i === 4;
+    card(s, x, 1.95, 1.62, 1.75, hl ? { fill: WHITE, line: i === 4 ? RED : INK, lineW: 1.5 } : {});
+    txt(s, `${i + 1}  ${p[0]}`, { x: x + 0.13, y: 2.1, w: 1.4, h: 0.4, fontSize: 13, bold: true, color: i === 4 ? RED : INK });
+    txt(s, p[1], { x: x + 0.13, y: 2.55, w: 1.4, h: 1.05, fontSize: 11, color: G1 });
   });
   const B = [
     [T("왜 두 사이클인가", "Why two cycles"), T("Tukey의 탐색적 자료분석, CRISP-DM의 반복 루프, Peng & Matsui의 ‘에피사이클’은 모두 같은 구조다: 기대를 세우고, 데이터와 비교하고, 기대를 고친다.", "Tukey’s exploratory analysis, the CRISP-DM loop and Peng & Matsui’s “epicycles” share one structure: set expectations, compare with data, revise.")],
@@ -664,7 +677,7 @@ sec(T("부록", "Appendix"));
   });
 }
 {
-  const s = content(T("부록 I · 출처", "APPENDIX I · REFERENCES"), T("데이터, 방법론, 저작권, 재현 경로", "Data, methods, rights and how to reproduce"), T("H&M 상표는 H&M의 자산이며, 이 자료는 H&M과 무관한 비상업적 학생 과제입니다.", "H&M is a trademark of H&M. This is non-commercial student coursework, not affiliated with H&M."), "refs");
+  const s = content(T("부록 J · 출처", "APPENDIX J · REFERENCES"), T("데이터, 방법론, 저작권, 재현 경로", "Data, methods, rights and how to reproduce"), T("H&M 상표는 H&M의 자산이며, 이 자료는 H&M과 무관한 비상업적 학생 과제입니다.", "H&M is a trademark of H&M. This is non-commercial student coursework, not affiliated with H&M."), "refs");
   txt(s, T("데이터", "Data"), { x: MX, y: 1.9, w: 5.6, h: 0.35, fontSize: 15, bold: true, color: RED });
   txt(s, T("H&M Group (2022). H&M Personalized Fashion Recommendations. Kaggle. 이용 조건: 비상업적 학술·교육 목적, 원자료 재배포 금지.\nH&M Group. 연차보고서 FY2018–25, 연간실적 FY2018–25, 분기보고서 FY2018 3M – FY2026 9M.", "H&M Group (2022). H&M Personalized Fashion Recommendations. Kaggle. Terms: non-commercial academic and education use; no redistribution.\nH&M Group. Annual reports FY2018–25, full-year reports FY2018–25, quarterly reports FY2018 3M to FY2026 9M."), { x: MX, y: 2.3, w: 5.6, h: 1.8, fontSize: 12, paraSpaceAfter: 6 });
   txt(s, T("재현과 저작권", "Reproduce and rights"), { x: MX, y: 4.2, w: 5.6, h: 0.35, fontSize: 15, bold: true, color: RED });
