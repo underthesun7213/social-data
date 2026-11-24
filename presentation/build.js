@@ -122,6 +122,12 @@ function tags(s, kinds) {
   let x = MX + CW;
   [...kinds].reverse().forEach((k) => { x -= TAG[k].w; pill(s, k, x, 0.39); x -= 0.08; });
 }
+// method line under the title: names the analysis so the audience knows what the chart is
+function method(s, body) {
+  const lw = T(0.88, 0.82);
+  s.addText(T("분석 방법", "METHOD"), { shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.13, x: MX, y: 1.34, w: lw, h: 0.26, fill: { color: WHITE }, line: { color: INK, width: 1 }, fontSize: 9, bold: true, color: INK, align: "center", valign: "middle", margin: 0, charSpacing: 1, objectName: "method-label" });
+  txt(s, body, { x: MX + lw + 0.14, y: 1.32, w: CW - lw - 0.14, h: 0.48, fontSize: 12, color: G1, objectName: "method-text" });
+}
 // inline label for a sentence: [가정] ...
 const mk = (kind) => ({ text: `[${TAG[kind].t}] `, options: { bold: true, color: TAG[kind].color === WHITE ? INK : TAG[kind].color } });
 function txt(s, text, o) { s.addText(text, Object.assign({ isTextBox: true, margin: 0, fontSize: 14, color: INK, valign: "top" }, o)); }
@@ -277,6 +283,7 @@ divider("PART 2", T("발견: 어디서 새는가", "Findings: where customers le
 {
   const s = content(T("2 · 발견 1 — 신규 고객이 덜 돌아온다 (RQ1.1)", "2 · FINDING 1 — NEW CUSTOMERS COME BACK LESS (RQ1.1)"), T("재구매 약화는 코로나 전, 그룹 매출이 늘던 때 시작됐다", "Repurchase fell before COVID, while group sales grew"), T("365일 기준도 66.2% (2019-03) → 57.3% (2019-09) · 하락 폭은 민감도 분석상 6–14%p · C2_U2_Repurchase · 계산: 부록 H", "365-day rate also fell: 66.2% (2019-03) → 57.3% (2019-09) · size of drop 6–14 pp after sensitivity check · C2_U2_Repurchase · method: Appendix H"), "f1");
   tags(s, ["data"]);
+  method(s, T("코호트 재구매율 분석: 첫 구매 월별로 고객을 묶고, 90일 안에 다시 산 고객 ÷ 첫 구매 후 90일을 다 지켜볼 수 있는 고객", "Cohort analysis: customers grouped by first-purchase month; bought again within 90 days ÷ customers observable for 90 days"));
   const labels = ["19-03", "19-04", "19-05", "19-06", "19-07", "19-08", "19-09", "19-10", "19-11", "19-12", "20-01", "20-02", "20-03", "20-04", "20-05", "20-06"];
   const v = [43.4, 43.3, 42.5, 38.4, 35.0, 34.8, 35.8, 32.5, 31.0, 29.8, 30.8, 29.8, 32.8, 32.4, 36.3, 35.2];
   const pre = v.map((x, i) => (i > 0 && i < 11 ? x : 0)), end = v.map((x, i) => (i === 0 || i === 11 ? x : 0)), cov = v.map((x, i) => (i >= 12 ? x : 0));
@@ -287,6 +294,7 @@ divider("PART 2", T("발견: 어디서 새는가", "Findings: where customers le
 {
   const s = content(T("2 · 발견 2 — 기회는 첫 90일 (RQ1.2)", "2 · FINDING 2 — THE WINDOW IS THE FIRST 90 DAYS (RQ1.2)"), T("90일이 지나면 돌아올 확률이 급격히 줄어든다", "After day 90 the chance of coming back drops sharply"), T("Kaplan–Meier, 2019-03 이후 신규 고객, 15일 간격, 미복귀 고객은 관측 끝에서 절단 · C2_U2_Repurchase · 계산: 부록 H", "Kaplan–Meier, new customers from 2019-03, 15-day grid, customers not yet back censored at end of data · C2_U2_Repurchase · method: Appendix H"), "f2");
   tags(s, ["data"]);
+  method(s, T("생존분석(Kaplan–Meier): 아직 안 돌아온 고객도 빼지 않고 셈. 오른쪽 선 = d일까지 안 온 고객이 다음 30일 안에 돌아올 조건부 확률, 1 − S(d+30) ÷ S(d)", "Survival analysis (Kaplan–Meier): customers not back yet are kept, not dropped. Right line = chance that a customer not back by day d returns in the next 30 days, 1 − S(d+30) ÷ S(d)"));
   const days = [15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255, 270, 285, 300, 315, 330, 345, 360, 365].map(String);
   const ret = [15.5, 21.5, 26.1, 29.8, 33.0, 35.8, 38.2, 40.2, 42.0, 43.7, 45.1, 46.5, 47.8, 49.0, 50.1, 51.1, 52.0, 52.9, 53.8, 54.6, 55.4, 56.2, 57.0, 57.8, 58.1];
   const nxt = [12.6, 10.6, 9.4, 8.5, 7.7, 6.8, 6.2, 5.8, 5.4, 5.1, 4.9, 4.7, 4.4, 4.0, 3.9, 3.7, 3.6, 3.6, 3.6, 3.6, 3.6, 3.7, 3.7, 3.6, 3.4];
@@ -300,6 +308,7 @@ divider("PART 2", T("발견: 어디서 새는가", "Findings: where customers le
 {
   const s = content(T("2 · 발견 3 — 레버는 첫 장바구니 (RQ1.3)", "2 · FINDING 3 — THE LEVER IS THE FIRST BASKET (RQ1.3)"), T("첫 장바구니 크기는 일관되고, 품목군은 기간에 따라 흔들린다", "First-basket size is consistent; product group is not"), T("2019-03 이후 신규 고객 · 품목군은 90일 관측 가능 1,000명 이상 · 수영복: 90일 1위(38.1%) → 365일 중간(61.8%) · C2_U2_Repurchase · 계산: 부록 H", "New customers from 2019-03 · product groups with 1,000+ observable at 90 days · Swimwear: 1st at 90 days (38.1%) → mid-table at 365 (61.8%) · C2_U2_Repurchase · method: Appendix H"), "f3");
   tags(s, ["data"]);
+  method(s, T("세그먼트 비교: 첫 구매일에 산 상품 수로 신규 고객을 나눠 90일 재구매율을 비교. 다른 요인은 통제하지 않아 상관관계", "Segment comparison: new customers split by items bought on the first day, 90-day repurchase compared. No other factors controlled, so correlation"));
   const cats = [T("1개", "1 item"), T("2–3개", "2–3"), T("4–6개", "4–6"), T("7개 이상", "7+")];
   s.addChart(pres.charts.BAR, hiBars(cats, [32.4, 35.9, 38.2, 40.7], [3]), chartBase({ x: MX, y: 1.85, w: 5.3, h: 3.9, barDir: "col", barOverlapPct: 100, barGapWidthPct: 55, chartColors: [G2, RED], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0.0;;;", valAxisHidden: true, valGridLine: { style: "none" }, valAxisMinVal: 0, valAxisMaxVal: 48, showTitle: true, title: T("첫 장바구니 상품 수별 90일 재구매율 (%)", "90-day repurchase by first-basket size (%)") }));
   table(s, [
@@ -314,6 +323,7 @@ divider("PART 2", T("발견: 어디서 새는가", "Findings: where customers le
 {
   const s = content(T("2 · 발견 4 — 2020년 일시 폐쇄 때의 채널 이동 (RQ2.1)", "2 · FINDING 4 — CHANNEL MOVES IN THE 2020 SHUTDOWN (RQ2.1)"), T("일시 폐쇄 때 매장 고객은 온라인으로 옮기지 않고 기다렸다", "In the 2020 shutdown, store customers did not go online"), T("재개장 후 = 2020-06-01 ~ 09-22 · 기준선 = 1년 앞당겨 같은 방식으로 정의한 그룹의 2019-06-01 ~ 09-22 · C2_U4_ChannelShift · 계산: 부록 H", "After reopening = 2020-06-01 to 09-22 · baseline = groups defined the same way a year earlier, buying 2019-06-01 to 09-22 · C2_U4_ChannelShift · method: Appendix H"), "f5");
   tags(s, ["data", "asm"]);
+  method(s, T("전년 동기 비교(단순화한 이중차분): 폐쇄 전 채널 유형별 고객의 폐쇄 중·재개장 후 구매율을, 1년 앞당겨 같은 방식으로 정의한 그룹과 비교", "Prior-year comparison (simplified difference-in-differences): buying during closures and after reopening, by channel type before closures, against groups defined the same way a year earlier"));
   card(s, MX, 1.95, 3.9, 2.0);
   txt(s, "19.8%", { x: MX + 0.3, y: 2.1, w: 3.3, h: 0.85, fontSize: 44, bold: true, color: RED, fontFace: "+mn-lt" });
   txt(s, T("폐쇄 전 매장 전용 고객 중 폐쇄 기간에 온라인으로 산 비율", "of pre-closure store-only customers bought online during the closures"), { x: MX + 0.3, y: 3.0, w: 3.3, h: 0.8, fontSize: 13 });
@@ -327,6 +337,7 @@ divider("PART 2", T("발견: 어디서 새는가", "Findings: where customers le
 {
   const s = content(T("2 · 보조 A — 한 채널 고객의 휴면 (RQ2.2)", "2 · SUPPORTING A — SINGLE-CHANNEL CUSTOMERS LAPSE (RQ2.2)"), T("한 채널만 쓰는 고객의 절반은 이듬해 한 번도 사지 않았다", "Half of single-channel customers bought nothing the next year"), T("휴면 = 관측 첫해 채널 유형별로 둘째 해 구매 없음 · 가치 = 전 기간 채널 유형 기준 · C1_06_ChannelType · C2_U4_ChannelShift · 계산: 부록 H", "Lapsed = no purchase in year 2, by year-1 channel type · value = channel type over the full period · C1_06_ChannelType · C2_U4_ChannelShift · method: Appendix H"), "f4");
   tags(s, ["data"]);
+  method(s, T("고객 이동 분석: 같은 고객을 첫해 채널 유형(매장만·온라인만·옴니)으로 나누고, 둘째 해에 한 번도 사지 않은 비율을 셈", "Customer flow analysis: the same customers grouped by year-1 channel type (store only, online only, omni); share who bought nothing in year 2"));
   const cards = [
     [T("매장 전용", "Store only"), "47.4%", "0.20", RED],
     [T("온라인 전용", "Online only"), "48.2%", "0.37", RED],
@@ -346,6 +357,7 @@ divider("PART 2", T("발견: 어디서 새는가", "Findings: where customers le
 {
   const s = content(T("2 · 보조 B — 누구를 먼저 지킬 것인가 (RQ2.3)", "2 · SUPPORTING B — WHOM TO PROTECT FIRST (RQ2.3)"), T("매장 의존은 U자형이고, 뚜렷한 건 65세 이상뿐이다", "Store reliance is U-shaped: only the 65+ group stands out"), T("거래 행 기준, 나이 없는 행(0.4%) 제외 · 고객별 평균으로 내면 25–34세 31.4% · analysis/hm_profile.py · 계산: 부록 H", "By transaction row, excluding rows with no age (0.4%) · averaged per customer, 25–34 is 31.4% · analysis/hm_profile.py · method: Appendix H"), "f6");
   tags(s, ["data"]);
+  method(s, T("비중 분석: 연령대별 거래 행 중 매장(채널 1) 행의 비율. 거래 행 기준이라 많이 사는 고객의 비중이 큼", "Share analysis: in-store (channel 1) rows as a share of all rows, by age band. Row-based, so heavy buyers weigh more"));
   const ages = ["16–24", "25–34", "35–44", "45–54", "55–64", "65+"];
   s.addChart(pres.charts.BAR, hiBars(ages, [33.2, 25.2, 27.8, 33.3, 32.5, 36.6], [5]), chartBase({ x: MX, y: 1.85, w: 7.0, h: 4.6, barDir: "col", barOverlapPct: 100, barGapWidthPct: 50, chartColors: [G3, RED], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0.0;;;", valAxisHidden: true, valGridLine: { style: "none" }, valAxisMinVal: 0, valAxisMaxVal: 42, showTitle: true, title: T("연령대별 매장 구매 비중 (거래 행 기준, %)", "In-store share by age band (transaction rows, %)") }));
   const pts = [
