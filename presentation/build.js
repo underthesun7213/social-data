@@ -230,16 +230,19 @@ divider("PART 1", T("회사와 문제", "The company and its problem"), T("H&M�
   T("첫 번째 파트는 회사와 문제입니다. H&M이 어떤 회사인지, 그리고 회사가 공식 보고서에서 스스로 무엇을 걱정하는지부터 보겠습니다.", "Part one is the company and its problem: who H&M is, and what it worries about in its own reports."));
 STEP = "회사";
 {
-  const s = content(T("1 · H&M", "1 · H&M"), T("H&M, 얼마나 알고 있나요?", "How well do you know H&M?"), T("출처: H&M 연간보고서 FY2025 p.4·5 · 분기보고서 FY2024 Q1 p.4 · 분기 말 매장 수 analysis/hm_report_quarterly.csv", "Sources: H&M annual report FY2025 pp.4–5 · interim report FY2024 Q1 p.4 · quarter-end store counts analysis/hm_report_quarterly.csv"), "intro");
+  const s = content(T("1 · H&M", "1 · H&M"), T("H&M, 얼마나 알고 있나요?", "How well do you know H&M?"), T("출처: H&M 연간보고서 FY2025 p.4·5·10·12 · 분기보고서 FY2024 Q1 p.4 · 분기 말 매장 수 analysis/hm_report_quarterly.csv", "Sources: H&M annual report FY2025 pp.4, 5, 10, 12 · interim report FY2024 Q1 p.4 · quarter-end store counts analysis/hm_report_quarterly.csv"), "intro");
   tags(s, ["data"]);
-  card(s, MX, 1.95, 5.6, 4.75, { fill: INK });
-  txt(s, T("먼저 세 가지만 물어볼게요", "Three quick questions first"), { x: MX + 0.35, y: 2.2, w: 5, h: 0.4, fontSize: 14, bold: true, color: "C9C9CB" });
+  const lw = T(0.88, 0.95);
+  s.addText(T("회사 소개", "COMPANY"), { shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.13, x: MX, y: 1.34, w: lw, h: 0.26, fill: { color: WHITE }, line: { color: INK, width: 1 }, fontSize: 9, bold: true, color: INK, align: "center", valign: "middle", margin: 0, charSpacing: 1 });
+  txt(s, [{ text: T("세계 최대 패션 기업 중 하나. ", "One of the world’s largest fashion houses. "), options: { bold: true } }, { text: T("‘패션을 모두에게(Liberating fashion for the many)’를 내걸고 H&M, COS, Weekday, & Other Stories, ARKET, Sellpy 등을 운영한다. FY2025 매출 SEK 2,283억, 직원 약 13만 2천 명.", "Under the purpose ‘Liberating fashion for the many’ it runs H&M, COS, Weekday, & Other Stories, ARKET, Sellpy and more. FY2025 net sales SEK 228bn, about 132,000 employees.") }], { x: MX + lw + 0.14, y: 1.31, w: CW - lw - 0.14, h: 0.6, fontSize: 12.5, color: G1 });
+  card(s, MX, 2.15, 5.6, 4.55, { fill: INK });
+  txt(s, T("먼저 세 가지만 물어볼게요", "Three quick questions first"), { x: MX + 0.35, y: 2.4, w: 5, h: 0.4, fontSize: 14, bold: true, color: "C9C9CB" });
   const qs = [T("최근 1년 안에 H&M에서 옷을 산 적이 있나요?", "Have you bought from H&M in the past year?"), T("매장이었나요, 앱이나 웹이었나요?", "Was it in a store, or in the app or online?"), T("그 뒤에 또 샀나요?", "Did you buy again after that?")];
   qs.forEach((q, i) => {
-    txt(s, String(i + 1), { x: MX + 0.35, y: 2.8 + i * 1.0, w: 0.5, h: 0.6, fontSize: 28, bold: true, color: RED, fontFace: "+mn-lt" });
-    txt(s, q, { x: MX + 0.95, y: 2.9 + i * 1.0, w: 4.4, h: 0.8, fontSize: 17, bold: i === 2, color: WHITE });
+    txt(s, String(i + 1), { x: MX + 0.35, y: 2.95 + i * 0.95, w: 0.5, h: 0.6, fontSize: 28, bold: true, color: RED, fontFace: "+mn-lt" });
+    txt(s, q, { x: MX + 0.95, y: 3.05 + i * 0.95, w: 4.4, h: 0.8, fontSize: 17, bold: i === 2, color: WHITE });
   });
-  txt(s, T("세 번째 질문이 오늘의 주제입니다.", "The third question is today’s topic."), { x: MX + 0.35, y: 6.0, w: 5, h: 0.4, fontSize: 14, color: RED, bold: true });
+  txt(s, T("세 번째 질문이 오늘의 주제입니다.", "The third question is today’s topic."), { x: MX + 0.35, y: 6.05, w: 5, h: 0.4, fontSize: 14, color: RED, bold: true });
   const st = [
     ["81", T("개 시장, 매장 약 4,100개 (FY2025)", "markets and about 4,100 stores (FY2025)"), INK],
     [T("30%+", "30%+"), T("온라인 매출 비중, ‘30% 남짓’ (FY2025)", "of sales online, ‘just over 30%’ (FY2025)"), INK],
@@ -247,10 +250,10 @@ STEP = "회사";
     ["5,076 → 4,023", T("분기 말 매장 수: FY2019 Q4 → FY2026 Q3", "stores at quarter end: FY2019 Q4 → FY2026 Q3"), RED],
   ];
   st.forEach((v, i) => {
-    const x = 6.55 + (i % 2) * 3.14, y = 1.95 + Math.floor(i / 2) * 2.45;
-    card(s, x, y, 2.98, 2.3);
+    const x = 6.55 + (i % 2) * 3.14, y = 2.15 + Math.floor(i / 2) * 2.33;
+    card(s, x, y, 2.98, 2.22);
     txt(s, v[0], { x: x + 0.25, y: y + 0.3, w: 2.6, h: 0.8, fontSize: i === 3 ? 23 : 34, bold: true, color: v[2], fontFace: "+mn-lt" });
-    txt(s, v[1], { x: x + 0.25, y: y + 1.2, w: 2.5, h: 0.9, fontSize: 13, color: G1 });
+    txt(s, v[1], { x: x + 0.25, y: y + 1.15, w: 2.5, h: 0.9, fontSize: 13, color: G1 });
   });
 }
 STEP = "문제";
@@ -272,7 +275,7 @@ STEP = "문제";
   tags(s, ["data"]);
   const Q = [
     [true, "Consumers are now more price-conscious and inclined to change", T("소비자는 가격에 더 민감해졌고 쉽게 갈아탄다", "Consumers have become more price-sensitive and switch easily"), "annual/2025.pdf p.9"],
-    [true, "", T("매장을 닫으면 단기 매출이 준다. 2025 Q2 매장 4% 감소, 폐점 영향을 빼면 +3%였을 매출이 +1%", "Closing stores cuts short-term sales. 2025 Q2: 4% fewer stores; sales +1%, or +3% without the closures"), "quarterly/2025-6m.pdf p.3, 5"],
+    [true, "Excluding these closures, sales increased by 3 percent", T("매장을 닫으면 단기 매출이 준다. 2025 Q2 매장 4% 감소, 폐점 영향을 빼면 +3%였을 매출이 +1%", "Closing stores cuts short-term sales. 2025 Q2: 4% fewer stores; sales +1%, or +3% without the closures"), "quarterly/2025-6m.pdf p.3, 5"],
     [false, "the physical store is becoming more important than ever", T("디지털이 커져도 매장은 그 어느 때보다 중요하다", "As digital grows, the store matters more than ever"), "annual/2025.pdf p.13"],
     [false, "more returning customers", T("2018년 CEO: 재방문 고객이 늘었다. 하지만 숫자는 없다", "CEO, 2018: more returning customers, but no figure"), "annual/2018.pdf p.6"],
   ];
