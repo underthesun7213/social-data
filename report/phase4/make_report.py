@@ -186,10 +186,11 @@ bullets([
     ("New customer: ", "first purchase on or after 2019-03-01. Customers first seen earlier may have shopped before the data starts (left censoring), so the first six months act as a buffer; a 12-month buffer is used as a sensitivity check."),
     ("Repurchase within N days: ", "counted only for customers who can be observed for N days after their first purchase, so late joiners are not counted as non-returners (right censoring)."),
     ("Clean cohorts: ", "for comparisons labelled \"before COVID\", only cohorts whose 90-day window ends before the 2020 closures (first purchase up to November 2019)."),
+    ("Analysis tables: ", "from the 9.08 million purchases we built one table per question: 646,685 new customers (451,476 observable for 90 days) for RQ 1.1–1.3; 675,387 customers grouped by their channel before the closures for RQ 2.1; 1,005,899 year-1 customers for RQ 2.2; and 1,346,520 buyers with a known age for RQ 2.3."),
 ])
 doc.add_heading("3.3 Methods", level=2)
 p("For each question we followed the course's method-selection steps: name the outcome and its type, decide what one row is, pick the starting method, and name the main trap. "
-  "With hundreds of thousands of customers almost every p-value is near zero, so results are read by effect size (percentage points, odds ratios, Cramér's V, η²) and confidence intervals.")
+  "With hundreds of thousands of customers almost every p-value is near zero, so results are read by effect size (percentage points, odds ratios, Cramér's V, η²) and confidence intervals. The need for controls shows in the data: under-25s rose from 23.7% to 30.9% of new customers between March and November 2019, so a falling repurchase rate could simply reflect a younger mix. Model checks: the maximum VIF is 2.1 in both logistic models; robust (HC1) standard errors change no standard error by more than 2.3%; the ANOVA's equal-variance assumption fails (Levene p < 0.001), so a Kruskal–Wallis test was run as well; and because the repurchase model's explanatory power is low (AUC 0.59), we read the size of differences, not individual predictions.")
 table([
     ["RQ", "Outcome (type) · row", "Method", "Main trap and how we handled it"],
     ["1.1", "Bought again within 90 days (yes/no) · one new customer", "Cohort rates; chi-square; binary logistic regression with first month, basket, channel, age, line", "Left censoring → 6- and 12-month buffers; COVID → clean cohorts only"],
@@ -217,9 +218,9 @@ p("Python 3 for all transaction work: pandas and numpy (including the Kaplan–M
 
 # ------------------------------------------------------------------ 4 findings
 doc.add_heading("4. Findings", level=1)
-p("Before the research questions, two descriptive results set the scene. A third of customers (32.9%) bought only once in two years and made 4.8% of value, while the 7.8% who bought 20 or more times made 38.5%. "
+p("Each subsection answers one of four questions that the presentation follows in order: how much less new customers return (RQ 1.1), until when there is a chance (RQ 1.2), what separates those who return (RQ 1.3), and whether store customers move online when stores close (RQ 2.1); RQ 2.2 and 2.3 support the recommendations. Before the questions, the descriptive statistics set the scene. Two thirds of transaction rows are womenswear (64.2%), 70.4% are online (channel 2), the median customer is 32 years old, and value peaks in June. A third of customers (32.9%) bought only once in two years and made 4.8% of value, while the 7.8% who bought 20 or more times made 38.5%. "
   "And from October 2019 to February 2020 the sample's value fell 7.5% year on year while group sales grew about 5%: buying customers fell 4.3% and items per visit fell 6.5%, while price per item rose 4.1% and visits per customer barely moved. "
-  "Fewer customers and smaller baskets pointed us to the first questions below.")
+  "Fewer customers and smaller baskets pointed us to the first questions below. New customers per month also appear to halve (from about 51,000 in March 2019 to 25,000 in February 2020), but much of that is left censoring: spring 2019 \"new\" customers can include existing customers returning after a long gap. From September 2019, with more than 12 months of history, next-month repurchase still falls from 16.0% to 12.7% (January 2020), which is why the questions focus on repurchase.")
 
 doc.add_heading("RQ 1.1 New-customer repurchase by first-purchase month", level=2)
 p("New customers' 90-day repurchase rate fell from 43.4% (first purchase March 2019) to 31.0% (November 2019). The 30-day rate fell from 24.3% to 19.9%, and the 365-day rate from 66.2% (March 2019) to 57.3% (September 2019, the last cohort with a full year).", bold_lead="Result. ")
@@ -278,7 +279,7 @@ p("The issues are about 2023–2025, but the transaction data ends in 2020, so w
 
 # ------------------------------------------------------------------ 5 recommendations
 doc.add_heading("5. Recommendations", level=1)
-p("Each recommendation is tied to a finding, ranked by expected impact relative to cost, and starts as a randomised test, because every gap above is correlational.")
+p("Each recommendation is tied to a finding, ranked by expected impact relative to cost (which here also runs from lowest to highest cost), and starts as a randomised test, because every gap above is correlational.")
 table([
     ["Rank", "Action", "Evidence", "Cost and doability", "Primary metric", "Test"],
     ["1", "Second-purchase prompt (app/email) between day 30 and 60: personalised picks, time-limited offer", "RQ 1.1, 1.2: return chance halves between day 30 and 270; repurchase falling across cohorts", "Low: existing CRM and member contacts; cost = discount on redeemed offers", "90-day repurchase", "Random holdout of new members"],
