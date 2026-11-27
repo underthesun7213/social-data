@@ -164,7 +164,16 @@ table([
     ["", "2.2", "How do store-only, online-only and omni customers differ in basket, value and lapse?"],
     ["", "2.3", "Which age groups rely most on stores?"],
 ], widths=[4.2, 1.0, 11.3], caption="Issues and research questions (unchanged from Phase 3)")
-p("What changed since Phase 3 is how some questions are measured: all figures were recomputed on the full data, the definition of a new customer and the cohort endpoint were tightened, and formal tests were added. Section 3.4 lists each change with its reason.")
+p("The questions are unchanged; the answers are not. Section 2.3 summarises what changed since Phase 3, and Section 3.4 lists each method change with its reason.")
+doc.add_heading("2.3 What changed since Phase 3", level=2)
+p("The questions stayed the same, but the answers and the recommendations moved. Three of the five outcomes we expected in Phase 3 were not supported, and the centre of the recommendations shifted from protecting channels and older shoppers to winning new customers' second purchase.")
+bullets([
+    ("Not supported. ", "Everyday basics as the best first purchase: product-group rankings change between 90 and 365 days, and only first-basket size keeps its order. Omni customers buying more per trip: online-only customers buy more per trip (3.98 vs 3.45 items); omni value comes from visiting more often, and after controlling purchase frequency only about 5 of the 36 points of the lapse gap stay with the channel. Shoppers aged 55+ relying on stores: 55–64 is below 16–24, only 65+ is higher, and age explains 0.2% of the variation."),
+    ("Narrowed. ", "Phases 1–3 described weak retention across H&M's customers (23.5% of customers observed for a year never returned). The all-customer repeat rate held level with the year before; what weakened was new customers' second purchase (43.4% → 31.0%, a drop of 5–12 points), so we present it as an early signal rather than the cause of today's stagnation."),
+    ("Confirmed and strengthened. ", "Store customers did not follow the closures online: only 19.8% of store-only customers bought online during the 2020 closures, and they came back after reopening."),
+    ("Recommendations. ", "The re-engagement prompt is kept and now timed at days 30–60. Advertising everyday basics is replaced by growing the first basket. The closure response becomes converting store-only customers to two channels before a store closes, sized small. The in-store app pilot is folded into it, and keeping stores in older neighbourhoods is dropped."),
+    ("Measurement. ", "All figures were recomputed on the full data, with a six-month new-customer buffer, observable-only denominators, a pre-shutdown cohort endpoint and formal tests (Section 3.4)."),
+])
 
 # ------------------------------------------------------------------ 3 methodology
 doc.add_heading("3. Methodology", level=1)
