@@ -313,19 +313,32 @@ STEP = "데이터";
   txt(s, T("상태와 처리", "State and handling"), { x: MX, y: 4.58, w: 5.9, h: 0.35, fontSize: 15, bold: true });
   const st = [
     ["data", T("결측은 거의 없다: 거래 0%, 나이 1.2%", "Almost no missing values: transactions 0%, age 1.2%")],
+    ["asm", T("FN·Active는 65%가 빈칸 → 값이 1뿐이라 빈칸 = 0으로 읽음", "FN, Active 65% blank → only value is 1, so blank = 0")],
     ["data", T("영수증 번호가 없다 → 같은 고객의 같은 날 = 구매 1회 (908만 회)", "No receipt ID → same customer, same day = one purchase")],
     ["asm", T("채널 1·2의 공식 정의가 없다 → 2 = 온라인으로 가정", "Channels 1 and 2 are undefined → 2 is assumed online")],
     ["asm", T("가격은 변환값이다 → 금액이 아니라 비율로만 읽음", "Prices are transformed → read only as ratios")],
   ];
   st.forEach((r, i) => {
-    pill(s, r[0], MX, 5.03 + i * 0.41);
-    txt(s, r[1], { x: MX + T(0.85, 1.3), y: 5.01 + i * 0.41, w: T(5.05, 4.6), h: 0.35, fontSize: 12 });
+    pill(s, r[0], MX, 5.0 + i * 0.36);
+    txt(s, r[1], { x: MX + T(0.85, 1.3), y: 4.98 + i * 0.36, w: T(5.05, 4.6), h: 0.35, fontSize: 12 });
   });
   txt(s, T("없는 것", "What is missing"), { x: 6.83, y: 4.58, w: 5.9, h: 0.35, fontSize: 15, bold: true });
   txt(s, T("매장·국가 (→ 개별 매장 폐점을 볼 수 없음) · 성별 · 실제 가격과 원가 (→ 마진은 판단 불가) · 마케팅 노출 · 2020-09 이후의 행동. 표본이라 온라인 비중(행의 70%)이 그룹 전체(약 30%)와 반대다.", "Store and country (→ no individual store closures) · gender · real prices and costs (→ no view of margins) · marketing exposure · behaviour after 2020-09. Being a sample, its online share (70% of rows) is the reverse of the group’s (about 30%)."), { x: 6.83, y: 5.0, w: 5.9, h: 1.7, fontSize: 12.5 });
 }
 {
-  const s = content(T("2 · 데이터 둘러보기 ① 누가 얼마나 사나", "2 · BROWSING THE DATA ① WHO BUYS HOW OFTEN"), T("고객의 3분의 1은 한 번만 샀고, 가치의 39%는 8%의 고객에게서 나온다", "A third bought once; 8% of customers make 39% of value"), T("2년간 구매 횟수 (구매 = 고객×날짜) · 가치 = 변환 가격의 합 · C1_05_Frequency · 고객당 행 수: hm_profile.py", "Purchases over two years (purchase = customer × day) · value = sum of transformed price · C1_05_Frequency · rows per customer: hm_profile.py"), "browse1");
+  const s = content(T("2 · 데이터 둘러보기 ① 한눈에 보는 기술통계", "2 · BROWSING THE DATA ① DESCRIPTIVE STATISTICS AT A GLANCE"), T("여성복·온라인·35세 미만이 중심이고, 6월에 가장 많이 산다", "Womenswear, online and under-35s lead; June peaks"), T("가치 = 변환 가격의 합 (비율로만 읽음) · 2018-09, 2020-09는 일부 월이라 제외 · 나이 = customers.csv 등록 나이 · 상품군 = articles.csv index_group_name · hm_profile.py", "Value = sum of transformed price (ratios only) · 2018-09 and 2020-09 are partial months, left out · age = registered age in customers.csv · product group = index_group_name · hm_profile.py"), "browse0");
+  tags(s, ["data"]);
+  steps(s, T("기술통계: 열마다 분포를 그려 중심과 치우침을 먼저 본다", "Descriptive statistics: plot each column’s distribution to see its centre and skew"), [T("날짜 → 월별로 가치 합", "Date → value summed by month"), T("나이 → 구간별 고객 비중", "Age → share of customers by band"), T("채널 → 1·2별 거래 행 비중", "Channel → share of rows for 1 and 2"), T("상품 → 상품군별 거래 행 비중", "Article → share of rows by product group")]);
+  const mo = ["18-10", "18-11", "18-12", "19-01", "19-02", "19-03", "19-04", "19-05", "19-06", "19-07", "19-08", "19-09", "19-10", "19-11", "19-12", "20-01", "20-02", "20-03", "20-04", "20-05", "20-06", "20-07", "20-08"];
+  const val = [41.6, 39.0, 32.5, 33.4, 31.4, 37.5, 42.8, 43.4, 48.6, 40.4, 30.5, 40.3, 37.0, 38.9, 31.3, 28.8, 28.8, 30.3, 37.8, 37.1, 43.1, 32.4, 33.1];
+  const W = 5.95, H = 2.15, X2 = MX + 6.18, Y1 = 2.42, Y2 = 4.67;
+  s.addChart(pres.charts.LINE, [{ name: "value", labels: mo, values: val }], chartBase({ x: MX, y: Y1, w: W, h: H, chartColors: [INK], lineSize: 2, lineDataSymbol: "none", valAxisMinVal: 0, valAxisMaxVal: 55, valAxisLabelFontSize: 8, catAxisLabelFontSize: 8, showTitle: true, title: T("① 월별 가치 (천): 6월 정점, 2020-03 폐쇄 때 하락", "① Monthly value (k): June peaks, 2020-03 dip") }));
+  s.addChart(pres.charts.BAR, [{ name: "age", labels: ["16–24", "25–34", "35–44", "45–54", "55–64", "65+"], values: [26.0, 28.7, 12.3, 18.5, 10.1, 3.2] }], chartBase({ x: X2, y: Y1, w: W, h: H, barDir: "col", barGapWidthPct: 50, chartColors: [G3], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0.0", dataLabelFontSize: 9, valAxisHidden: true, valGridLine: { style: "none" }, valAxisMinVal: 0, valAxisMaxVal: 35, showTitle: true, title: T("② 연령대별 고객 비중 (%): 중앙값 32세, 두 봉우리", "② Customers by age band (%): median 32, two peaks") }));
+  s.addChart(pres.charts.BAR, [{ name: "channel", labels: [T("2 = 온라인(가정)", "2 = online (assumed)"), T("1 = 매장(가정)", "1 = store (assumed)")], values: [70.4, 29.6] }], chartBase({ x: MX, y: Y2, w: W, h: H, barDir: "bar", barGapWidthPct: 45, chartColors: [RED], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0.0", dataLabelFontSize: 10, valAxisHidden: true, valGridLine: { style: "none" }, valAxisMinVal: 0, valAxisMaxVal: 85, catAxisOrientation: "maxMin", showTitle: true, title: T("③ 채널별 거래 행 비중 (%): 그룹 전체(온라인 약 30%)와 반대", "③ Rows by channel (%): reverse of the group’s ~30% online") }));
+  s.addChart(pres.charts.BAR, [{ name: "group", labels: ["Ladieswear", "Divided", "Menswear", "Sport", "Baby/Children"], values: [64.2, 22.5, 5.6, 3.9, 3.8] }], chartBase({ x: X2, y: Y2, w: W, h: H, barDir: "bar", barGapWidthPct: 40, chartColors: [G1], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0.0", dataLabelFontSize: 9, valAxisHidden: true, valGridLine: { style: "none" }, valAxisMinVal: 0, valAxisMaxVal: 78, catAxisOrientation: "maxMin", showTitle: true, title: T("④ 상품군별 거래 행 비중 (%): 여성복이 3분의 2", "④ Rows by product group (%): womenswear is two thirds") }));
+}
+{
+  const s = content(T("2 · 데이터 둘러보기 ② 누가 얼마나 사나", "2 · BROWSING THE DATA ② WHO BUYS HOW OFTEN"), T("고객의 3분의 1은 한 번만 샀고, 가치의 39%는 8%의 고객에게서 나온다", "A third bought once; 8% of customers make 39% of value"), T("2년간 구매 횟수 (구매 = 고객×날짜) · 가치 = 변환 가격의 합 · C1_05_Frequency · 고객당 행 수: hm_profile.py", "Purchases over two years (purchase = customer × day) · value = sum of transformed price · C1_05_Frequency · rows per customer: hm_profile.py"), "browse1");
   tags(s, ["data"]);
   steps(s, T("기술통계 · 빈도 분포: 평균 대신 분포를 본다", "Descriptive statistics: the distribution, not the average"), [T("거래 3,179만 행을 구매 908만 회로 묶기", "Group 31.8M rows into 9.08M purchases"), T("고객마다 2년간 구매 횟수 세기", "Count each customer’s purchases over two years"), T("횟수 구간별로 고객 수와 가치(가격 합) 더하기", "Per count band, add up customers and value"), T("전체로 나눠 고객 비중과 가치 비중을 나란히", "Divide by totals; customer and value shares side by side")]);
   const bands = ["1", "2", "3–4", "5–9", "10–19", "20–49", "50+"];
@@ -344,7 +357,7 @@ STEP = "데이터";
   txt(s, [{ text: T("단서: ", "Clue: "), options: { bold: true } }, { text: T("한 번 오고 끝나는 고객이 많다. 그럼 처음 온 고객은 얼마나 다시 올까?", "many customers come once and never return. So how many first-time customers come back?"), options: { color: RED, bold: true } }], { x: 8.55, y: 6.2, w: 4.2, h: 0.6, fontSize: 13 });
 }
 {
-  const s = content(T("2 · 데이터 둘러보기 ② 첫 단서", "2 · BROWSING THE DATA ② THE FIRST CLUE"), T("처음 온 고객이 다음 달에 다시 오는 비율이 1년 새 19.5%에서 11.8%로", "New customers buying again next month: 19.5% → 11.8%"), T("2018-09 ~ 2019-02 첫 구매는 기존 고객이 섞여 제외 · 다음 달 = 첫 구매 다음 달력 월 · C1_03_NewCustomers · C1_04_Cohorts", "First purchases in 2018-09 to 2019-02 mix in existing customers, so excluded · next month = the calendar month after the first purchase · C1_03_NewCustomers · C1_04_Cohorts"), "browse2");
+  const s = content(T("2 · 데이터 둘러보기 ③ 첫 단서", "2 · BROWSING THE DATA ③ THE FIRST CLUE"), T("처음 온 고객이 다음 달에 다시 오는 비율이 1년 새 19.5%에서 11.8%로", "New customers buying again next month: 19.5% → 11.8%"), T("2018-09 ~ 2019-02 첫 구매는 기존 고객이 섞여 제외 · 다음 달 = 첫 구매 다음 달력 월 · C1_03_NewCustomers · C1_04_Cohorts", "First purchases in 2018-09 to 2019-02 mix in existing customers, so excluded · next month = the calendar month after the first purchase · C1_03_NewCustomers · C1_04_Cohorts"), "browse2");
   tags(s, ["data"]);
   steps(s, T("코호트 표: 같은 달에 처음 온 고객끼리 묶어 달마다 비교한다 (첫 번째로 해 본 거친 지표)", "Cohort table: customers who first bought in the same month, compared month by month (a rough first pass)"), [T("고객마다 첫 구매 날짜 찾기", "Find each customer’s first purchase date"), T("첫 구매 월로 묶기 (2018-09 ~ 2019-02는 제외)", "Group by that month (2018-09 to 2019-02 left out)"), T("다음 달력 월에 한 번이라도 산 고객 세기", "Count those who buy again the next calendar month"), T("÷ 그 달 신규 고객 = 다음 달 재구매율", "÷ that month’s new customers = next-month rate")]);
   const m = ["19-03", "19-04", "19-05", "19-06", "19-07", "19-08", "19-09", "19-10", "19-11", "19-12", "20-01", "20-02"];
