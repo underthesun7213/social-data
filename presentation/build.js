@@ -411,6 +411,55 @@ divider("PART 3", T("방법과 분석", "Method and analysis"), T("질문마다 
   T("세 번째 파트는 방법과 분석입니다. 단서를 질문으로 바꾸고, 질문마다 결과 변수의 종류에 맞는 방법을 골랐습니다. 그다음 발견을 하나씩 같이 보겠습니다.", "Part three is method and analysis. We turned the clue into questions, chose a method for each from the type of outcome, and then walk through the findings together."), "6E6E70");
 STEP = "방법";
 {
+  const s = content(T("3 · 분석 표 만들기", "3 · BUILDING THE ANALYSIS TABLES"), T("원자료를 질문별 분석 표 넷으로 바꿨다: 무엇을 세고 무엇을 뺐나", "Raw rows became four analysis tables"), T("고객 수: analysis/hm_eda_cycle2.py, hm_tests.py (hm_tests_results.json) · 정의 전체: 부록 K · 절단 점검: 부록 L", "Customer counts: analysis/hm_eda_cycle2.py, hm_tests.py (hm_tests_results.json) · full definitions: Appendix K · censoring checks: Appendix L"), "tables");
+  tags(s, ["data", "asm"]);
+  const top = 1.9, H = 1.6;
+  [[T("거래", "Transactions"), "31,788,324", T("1행 = 상품 1개", "1 row = 1 item")], [T("구매", "Purchases"), "9,080,179", T("고객 × 날짜로 묶음", "customer × day")]].forEach((b, i) => {
+    const x = MX + i * 2.55;
+    card(s, x, top, 2.25, H, { fill: INK });
+    txt(s, b[0], { x: x + 0.2, y: top + 0.15, w: 1.9, h: 0.3, fontSize: 11, bold: true, color: "C9C9CB" });
+    txt(s, b[1], { x: x + 0.2, y: top + 0.5, w: 1.95, h: 0.5, fontSize: 21, bold: true, color: WHITE, fontFace: "+mn-lt" });
+    txt(s, b[2], { x: x + 0.2, y: top + 1.1, w: 1.9, h: 0.3, fontSize: 10.5, color: "C9C9CB" });
+    txt(s, "›", { x: x + 2.25, y: top + 0.5, w: 0.3, h: 0.5, fontSize: 22, color: G2, align: "center" });
+  });
+  const TB = [
+    [T("신규 고객", "New customers"), "646,685", T("2019-03 이후 첫 구매 · 90일 관측 가능 451,476명", "first purchase from 2019-03 · 451,476 observable for 90 days"), T("발견 1–3", "Findings 1–3")],
+    [T("첫해 고객", "Year-1 customers"), "1,005,899", T("2018-09-20 ~ 2019-09-19에 구매", "bought 2018-09-20 to 2019-09-19"), T("보조 A", "Supporting A")],
+    [T("폐쇄 전 채널 그룹", "Pre-closure groups"), "675,387", T("2019-09-20 ~ 2020-02-29에 구매", "bought 2019-09-20 to 2020-02-29"), T("발견 4", "Finding 4")],
+    [T("고객별 매장 비중", "In-store share"), "1,346,520", T("나이가 있는 구매 고객", "buyers with a known age"), T("보조 B", "Supporting B")],
+  ];
+  TB.forEach((t, i) => {
+    const x = 5.72 + i * 1.78;
+    card(s, x, top, 1.66, H, { fill: WHITE, line: i === 0 ? RED : LINE, lineW: i === 0 ? 1.5 : 0.75 });
+    txt(s, t[0], { x: x + 0.12, y: top + 0.1, w: 1.45, h: 0.3, fontSize: 10, bold: true, color: G1 });
+    txt(s, t[1], { x: x + 0.12, y: top + 0.38, w: 1.45, h: 0.4, fontSize: 15, bold: true, fontFace: "+mn-lt" });
+    txt(s, t[2], { x: x + 0.12, y: top + 0.8, w: 1.45, h: 0.5, fontSize: 8.5, color: G1 });
+    txt(s, t[3], { x: x + 0.12, y: top + 1.28, w: 1.45, h: 0.25, fontSize: 9.5, bold: true, color: RED });
+  });
+  txt(s, T("변수의 종류 → 다음 장의 방법을 정한다", "Variable types → decide the method on the next slide"), { x: MX, y: 3.75, w: 5.95, h: 0.35, fontSize: 14, bold: true });
+  table(s, [
+    [T("종류", "Type"), T("변수", "Variables"), T("쓰인 곳", "Used in")],
+    [T("이진 결과", "Binary outcome"), T("90일 재구매 · 이듬해 구매 없음 · 폐쇄 중 온라인 구매", "90-day repurchase · no purchase in year 2 · online in closures"), T("발견 1·3·4, 보조 A", "Findings 1, 3, 4; A")],
+    [T("기간 결과 (잘림)", "Time to event (censored)"), T("첫 구매 → 두 번째 구매까지 일수", "days from first to second purchase"), T("발견 2", "Finding 2")],
+    [T("수치 결과", "Numeric outcome"), T("고객별 매장 구매 비중", "each customer’s in-store share"), T("보조 B", "Supporting B")],
+    [T("범주 설명 변수", "Categorical predictors"), T("첫 구매 월(12) · 장바구니(4구간) · 첫 채널(3) · 연령대(6 + 미상) · 주 상품군", "first month (12) · basket (4 bands) · first channel (3) · age (6 + unknown) · main line"), T("통제 변수", "Controls")],
+    [T("수치 설명 변수", "Numeric predictors"), T("첫해 구매 횟수(로그) · 첫해 관측 개월", "year-1 purchases (log) · months observed in year 1"), T("보조 A 통제", "Controls in A")],
+  ], { x: MX, y: 4.15, w: 5.95, colW: [1.55, 3.0, 1.4], fontSize: 9.5, rowH: 0.43 });
+  txt(s, T("데이터 상태 → 이렇게 처리했다", "Data state → how we handled it"), { x: 6.78, y: 3.75, w: 5.95, h: 0.35, fontSize: 14, bold: true });
+  const RU = [
+    ["data", T("왼쪽 절단: 2019-03 전 첫 구매는 신규에서 뺌 (6개월 버퍼, 12개월로 재확인)", "Left censoring: first buys before 2019-03 not new (6-mo buffer, 12-mo check)")],
+    ["data", T("오른쪽 절단: N일을 다 지켜볼 수 있는 고객만 분모에", "Right censoring: only customers observable for N days count")],
+    ["data", T("코로나: 90일 창이 폐쇄와 겹치는 코호트(2019-12 이후)는 비교 제외", "COVID: cohorts whose window overlaps closures (2019-12 on) left out")],
+    ["data", T("나이 결측 1.2%: 빼지 않고 ‘미상’ 범주로 둠", "Missing age (1.2%): kept as an ‘unknown’ category")],
+    ["asm", T("채널 2 = 온라인 (2020년 4월 100%)", "Channel 2 = online (100% in April 2020)")],
+    ["asm", T("가격은 변환값 → 금액이 아니라 비율로만", "Prices are transformed → ratios only")],
+  ];
+  RU.forEach((r, i) => {
+    pill(s, r[0], 6.78, 4.2 + i * 0.42);
+    txt(s, r[1], { x: 6.78 + T(0.85, 1.3), y: 4.18 + i * 0.42, w: T(5.1, 4.65), h: 0.36, fontSize: 10.5 });
+  });
+}
+{
   const s = content(T("3 · 방법 선택", "3 · CHOOSING THE METHOD"), T("질문마다 결과 변수의 종류와 관측 구조를 보고 방법을 골랐다", "Outcome type and data structure decided each method"), T("기준: Altin, ‘Choosing and Interpreting Analytical Methods’ 방법 선택 가이드 · 표본이 커서 p값은 거의 0이므로 효과 크기와 95% 신뢰구간으로 읽는다", "Guide: Altin, ‘Choosing and Interpreting Analytical Methods’ · with samples this large p values are near zero, so we read effect sizes and 95% CIs"), "methodsel");
   table(s, [
     [T("질문", "Question"), T("한 행 =", "One row ="), T("결과 변수 (종류)", "Outcome (type)"), T("설명 변수 · 통제", "Predictors · controls"), T("시작 방법", "Starting method"), T("짚을 함정", "Trap to name")],
