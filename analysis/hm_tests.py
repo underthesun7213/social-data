@@ -133,6 +133,10 @@ def main():
         "adjusted_pct_channel": adjusted_prob(m1, d, "channel", ["online", "store"]),
         "adjusted_pct_month": adjusted_prob(m1, d, "first_month", ["2019-03", "2020-02"]),
         "raw_pct_month": {m: float(d.loc[d["first_month"] == m, "y"].mean() * 100) for m in ["2019-03", "2020-02"]},
+        # 2019-11 is the last cohort whose 90-day window ends (2020-02-28) before the 2020 store closures
+        "odds_ratios_month_all": or_table(m1, ["first_month"]),
+        "adjusted_pct_month_all": adjusted_prob(m1, d, "first_month", list(d["first_month"].cat.categories)),
+        "raw_pct_month_all": {m: float(d.loc[d["first_month"] == m, "y"].mean() * 100) for m in d["first_month"].cat.categories},
         "max_vif": vif_from_fit(m1),
         "robust_se_max_ratio": float((m1r.bse / m1.bse).max()),
     }
@@ -146,6 +150,15 @@ def main():
     diff = ci_prop_diff(a.sum(), len(a), b.sum(), len(b))
     RES["T1"] = {"chi2": chi2, "dof": dof, "p": p, "cramers_v": v,
                  "diff_2019_03_minus_2020_02_pp": diff}
+    # clean cohorts only: 90-day window closes before the 2020 closures (2019-03 to 2019-11)
+    dc = d[d["first_month"].astype(str) <= "2019-11"]
+    tabc = pd.crosstab(dc["first_month"].astype(str), dc["y"])
+    chi2c, pc, dofc, vc = cramers_v(tabc)
+    c11 = dc[dc["first_month"].astype(str) == "2019-11"]["y"]
+    c09 = dc[dc["first_month"].astype(str) == "2019-09"]["y"]
+    RES["T1_clean"] = {"cohorts": "2019-03 to 2019-11", "chi2": chi2c, "dof": dofc, "p": pc, "cramers_v": vc,
+                       "diff_2019_03_minus_2019_11_pp": ci_prop_diff(a.sum(), len(a), c11.sum(), len(c11)),
+                       "diff_2019_09_minus_2019_11_pp": ci_prop_diff(c09.sum(), len(c09), c11.sum(), len(c11))}
 
     # ---------------- M2: no purchase in year 2 (supporting A) ----------------
     y1 = c2.year_profile(occ, c2.Y1)

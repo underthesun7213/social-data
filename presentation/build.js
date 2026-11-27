@@ -357,17 +357,18 @@ STEP = "데이터";
   txt(s, [{ text: T("단서: ", "Clue: "), options: { bold: true } }, { text: T("한 번 오고 끝나는 고객이 많다. 그럼 처음 온 고객은 얼마나 다시 올까?", "many customers come once and never return. So how many first-time customers come back?"), options: { color: RED, bold: true } }], { x: 8.55, y: 6.2, w: 4.2, h: 0.6, fontSize: 13 });
 }
 {
-  const s = content(T("2 · 데이터 둘러보기 ③ 첫 단서", "2 · BROWSING THE DATA ③ THE FIRST CLUE"), T("처음 온 고객이 다음 달에 다시 오는 비율이 1년 새 19.5%에서 11.8%로", "New customers buying again next month: 19.5% → 11.8%"), T("2018-09 ~ 2019-02 첫 구매는 기존 고객이 섞여 제외 · 다음 달 = 첫 구매 다음 달력 월 · C1_03_NewCustomers · C1_04_Cohorts", "First purchases in 2018-09 to 2019-02 mix in existing customers, so excluded · next month = the calendar month after the first purchase · C1_03_NewCustomers · C1_04_Cohorts"), "browse2");
+  const s = content(T("2 · 데이터 둘러보기 ③ 첫 단서", "2 · BROWSING THE DATA ③ THE FIRST CLUE"), T("처음 온 고객이 다음 달에 다시 오는 비율이 19.5%에서 12.7%로", "New customers buying again next month: 19.5% → 12.7%"), T("2018-09 ~ 2019-02 첫 구매는 기존 고객이 섞여 제외 · 다음 달 = 첫 구매 다음 달력 월 · C1_03_NewCustomers · C1_04_Cohorts", "First purchases in 2018-09 to 2019-02 mix in existing customers, so excluded · next month = the calendar month after the first purchase · C1_03_NewCustomers · C1_04_Cohorts"), "browse2");
   tags(s, ["data"]);
   steps(s, T("코호트 표: 같은 달에 처음 온 고객끼리 묶어 달마다 비교한다 (첫 번째로 해 본 거친 지표)", "Cohort table: customers who first bought in the same month, compared month by month (a rough first pass)"), [T("고객마다 첫 구매 날짜 찾기", "Find each customer’s first purchase date"), T("첫 구매 월로 묶기 (2018-09 ~ 2019-02는 제외)", "Group by that month (2018-09 to 2019-02 left out)"), T("다음 달력 월에 한 번이라도 산 고객 세기", "Count those who buy again the next calendar month"), T("÷ 그 달 신규 고객 = 다음 달 재구매율", "÷ that month’s new customers = next-month rate")]);
   const m = ["19-03", "19-04", "19-05", "19-06", "19-07", "19-08", "19-09", "19-10", "19-11", "19-12", "20-01", "20-02"];
-  s.addChart(pres.charts.BAR, [{ name: "new", labels: m, values: [51.2, 49.9, 48.6, 52.1, 43.4, 27.9, 29.0, 31.6, 37.0, 30.6, 25.1, 25.1] }], chartBase({ x: MX, y: 2.4, w: 5.9, h: 3.5, barDir: "col", barGapWidthPct: 45, chartColors: [G3], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0", dataLabelFontSize: 9, valAxisHidden: true, valGridLine: { style: "none" }, valAxisMinVal: 0, valAxisMaxVal: 60, showTitle: true, title: T("월별 신규 고객 수 (천 명)", "New customers per month (thousands)") }));
-  s.addChart(pres.charts.LINE, [{ name: "m1", labels: m, values: [19.5, 19.2, 20.5, 19.5, 13.5, 13.9, 16.0, 14.9, 14.2, 12.3, 12.7, 11.8] }], chartBase({ x: 6.83, y: 2.4, w: 5.9, h: 3.5, chartColors: [RED], lineSize: 2.5, lineDataSymbol: "circle", lineDataSymbolSize: 5, showValue: true, dataLabelPosition: "t", dataLabelFormatCode: "0.0", dataLabelFontSize: 9, valAxisMinVal: 0, valAxisMaxVal: 25, valAxisHidden: true, valGridLine: { style: "none" }, showTitle: true, title: T("다음 달에 다시 산 비율 (%)", "Bought again the next month (%)") }));
-  txt(s, [{ text: T("단서 둘: ", "Two clues: "), options: { bold: true } }, { text: T("새로 오는 고객도 줄었지만(월 5.1만 → 2.5만 명), 더 걱정스러운 것은 온 고객이 다시 오지 않는다는 것이다. ", "fewer customers arrive (51k → 25k a month), but the bigger worry is that those who come do not come back. ") }, { text: T("이 거친 지표를 질문으로 바꾸고, 맞는 방법으로 다시 잰다 → 방법 파트", "We turn this rough measure into questions and measure them properly → method part"), options: { color: RED, bold: true } }], { x: MX, y: 6.0, w: CW, h: 0.8, fontSize: 14 });
+  s.addChart(pres.charts.BAR, hiBars(m, [51.2, 49.9, 48.6, 52.1, 43.4, 27.9, 29.0, 31.6, 37.0, 30.6, 25.1, 25.1], [6, 7, 8, 9, 10, 11]), chartBase({ x: MX, y: 2.4, w: 5.9, h: 3.35, barDir: "col", barOverlapPct: 100, barGapWidthPct: 45, chartColors: ["DEDEDF", G2], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0;-0;;", dataLabelFontSize: 9, valAxisHidden: true, valGridLine: { style: "none" }, valAxisMinVal: 0, valAxisMaxVal: 60, showTitle: true, title: T("월별 신규 고객 수 (천 명)", "New customers per month (thousands)") }));
+  s.addChart(pres.charts.LINE, [{ name: "m1", labels: m.slice(0, 11), values: [19.5, 19.2, 20.5, 19.5, 13.5, 13.9, 16.0, 14.9, 14.2, 12.3, 12.7] }], chartBase({ x: 6.83, y: 2.4, w: 5.9, h: 3.35, chartColors: [RED], lineSize: 2.5, lineDataSymbol: "circle", lineDataSymbolSize: 5, showValue: true, dataLabelPosition: "t", dataLabelFormatCode: "0.0", dataLabelFontSize: 9, valAxisMinVal: 0, valAxisMaxVal: 25, valAxisHidden: true, valGridLine: { style: "none" }, showTitle: true, title: T("다음 달에 다시 산 비율 (%) · 2020-02 제외 (다음 달 폐쇄)", "Bought again next month (%) · 2020-02 out (next month = shutdown)") }));
+  txt(s, [{ text: "■ ", options: { color: "DEDEDF" } }, { text: T("2019-03 ~ 08: 첫 구매 전 관측이 12개월 미만이라, 오래 쉬다 돌아온 기존 고객이 신규로 섞였을 수 있음   ", "2019-03 to 08: under 12 months of history, so lapsed customers may count as new   ") }, { text: "■ ", options: { color: G2 } }, { text: T("2019-09 이후: 12개월 이상", "2019-09 on: 12+ months") }], { x: MX, y: 5.78, w: CW, h: 0.28, fontSize: 10, color: G1 });
+  txt(s, [{ text: T("단서: ", "Clue: "), options: { bold: true } }, { text: T("신규 고객 반토막(5.1만 → 2.5만)의 상당 부분은 착시다. 착시가 적은 2019-09 이후에도 다음 달 재구매율은 16.0% → 12.7%(2020-01)로 낮아진다. ", "much of the halving of new customers (51k → 25k) is an artefact. Even from 2019-09, next-month repurchase falls 16.0% → 12.7% (2020-01). ") }, { text: T("재구매가 약해지는 신호 → 맞는 방법으로 다시 잰다", "A signal that repurchase is weakening → measure it properly"), options: { color: RED, bold: true } }], { x: MX, y: 6.12, w: CW, h: 0.7, fontSize: 13 });
 }
 STEP = "단서";
 {
-  const s = content(T("2 · 단서에서 문제로", "2 · FROM CLUE TO PROBLEM"), T("매출을 쪼개 내려가니, 새는 곳은 ‘돌아오는 고객’이었다", "Breaking sales down shows the leak is in returning customers"), T("가치 = 고객 수 × 고객당 방문 × 방문당 상품 수 × 상품당 가격 · 빈도는 나머지에서 역산 · C2_U1_SalesDecomp · 그룹: FY19 Q4, FY20 Q1", "Value = customers × visits per customer × items per visit × price per item · visits derived · C2_U1_SalesDecomp · group: FY19 Q4, FY20 Q1"), "diagnosis");
+  const s = content(T("2 · 단서에서 문제로", "2 · FROM CLUE TO PROBLEM"), T("매출을 쪼개 보니, 줄어든 것은 사는 고객 수와 장바구니였다", "Breaking sales down: fewer buying customers, smaller baskets"), T("가치 = 고객 수 × 고객당 방문 × 방문당 상품 수 × 상품당 가격 · 빈도는 나머지에서 역산 · C2_U1_SalesDecomp · 그룹: FY19 Q4, FY20 Q1", "Value = customers × visits per customer × items per visit × price per item · visits derived · C2_U1_SalesDecomp · group: FY19 Q4, FY20 Q1"), "diagnosis");
   tags(s, ["data"]);
   steps(s, T("매출 분해: 가치를 네 요인의 곱으로 쪼개 1년 전 같은 달과 비교했다", "Sales decomposition: value as the product of four factors, against a year earlier"), [T("코로나 전 5개월 vs 1년 전 같은 달", "Five pre-COVID months vs the same months a year earlier"), T("가치 = 고객 수 × 방문 빈도 × 방문당 상품 수 × 상품당 가격", "Value = customers × visits × items per visit × price"), T("요인마다 전년 대비 변화율 (빈도는 나머지로 역산)", "Change in each factor (visits derived from the rest)"), T("가장 크게 떨어진 요인 = 새는 곳", "The factor that fell most = the leak")]);
   card(s, MX, 2.4, 3.3, 2.74, { fill: INK });
@@ -388,10 +389,22 @@ STEP = "단서";
     txt(s, b[1], { x: x + 0.25, y: y + 0.4, w: 3.5, h: 0.5, fontSize: 26, bold: true, color: b[3] ? RED : INK });
     txt(s, b[2], { x: x + 0.25, y: y + 0.9, w: 3.5, h: 0.3, fontSize: 12, color: b[3] ? INK : G2 });
   });
-  card(s, MX, 5.32, 5.95, 1.25);
-  card(s, 6.78, 5.32, 5.95, 1.25);
-  txt(s, [{ text: T("고객 수 → ", "Customers → "), options: { bold: true } }, { text: T("신규 고객이 두 번째로 오지 않는다 (발견 1, 2), 한 채널 고객은 이듬해 더 휴면한다 (부록 보조 A)", "new customers do not make a second purchase (findings 1, 2); single-channel customers lapse more the next year (appendix, supporting A)") }], { x: MX + 0.25, y: 5.47, w: 5.45, h: 1.0, fontSize: 14 });
-  txt(s, [{ text: T("장바구니 → ", "Basket → "), options: { bold: true } }, { text: T("첫 장바구니가 큰 고객이 더 잘 돌아온다 (발견 3)", "customers with a bigger first basket come back more often (finding 3)") }], { x: 7.03, y: 5.47, w: 5.45, h: 1.0, fontSize: 14 });
+  card(s, MX, 5.32, 3.95, 1.3, { fill: INK });
+  txt(s, T("문제 정의", "THE PROBLEM"), { x: MX + 0.25, y: 5.42, w: 3.5, h: 0.28, fontSize: 10, bold: true, color: "C9C9CB", charSpacing: 1 });
+  txt(s, T("처음 온 고객의 재구매가 약해지는 신호가 있다. 와도 덜 산다.", "Signs that first-time customers return less, and buy less when they do."), { x: MX + 0.25, y: 5.72, w: 3.5, h: 0.8, fontSize: 14, bold: true, color: WHITE });
+  const QS = [
+    [T("얼마나 덜 돌아오나?", "How much less do they return?"), T("발견 1 · 코호트", "Finding 1 · cohorts")],
+    [T("언제까지가 기회인가?", "Until when is there a chance?"), T("발견 2 · 생존분석", "Finding 2 · survival")],
+    [T("누가 다시 오나?", "What separates those who return?"), T("발견 3 · 첫 장바구니", "Finding 3 · first basket")],
+    [T("매장이 닫히면 온라인으로 오나?", "Do store customers move online?"), T("발견 4 · 폐쇄 비교", "Finding 4 · shutdown")],
+  ];
+  QS.forEach((q, k) => {
+    const qx = 4.75 + k * 2.02;
+    card(s, qx, 5.32, 1.9, 1.3, { fill: WHITE, line: LINE, lineW: 0.75 });
+    txt(s, `Q${k + 1}`, { x: qx + 0.15, y: 5.4, w: 1.6, h: 0.3, fontSize: 12, bold: true, color: RED });
+    txt(s, q[0], { x: qx + 0.15, y: 5.68, w: 1.65, h: 0.55, fontSize: 11, bold: true });
+    txt(s, q[1], { x: qx + 0.15, y: 6.25, w: 1.65, h: 0.28, fontSize: 9.5, color: G1 });
+  });
 }
 sec(T("Part 3 방법과 분석", "Part 3 Method and analysis"));
 divider("PART 3", T("방법과 분석", "Method and analysis"), T("질문마다 맞는 방법을 고르고, 핵심 발견 넷을 하나씩 함께 확인한다. 보조 분석 둘은 부록에.", "We choose a method for each question and check the four core findings one by one; two supporting analyses are in the appendix."), "part3",
@@ -438,16 +451,16 @@ STEP = "방법";
 }
 STEP = "분석";
 {
-  const s = content(T("3 · 발견 1 — 신규 고객이 덜 돌아온다 (RQ1.1)", "3 · FINDING 1 — NEW CUSTOMERS COME BACK LESS (RQ1.1)"), T("재구매 약화는 코로나 전, 그룹 매출이 늘던 때 시작됐다", "Repurchase fell before COVID, while group sales grew"), T("365일 기준도 66.2% (2019-03) → 57.3% (2019-09) · 하락 폭은 민감도 분석상 6–14%p · C2_U2_Repurchase · 계산: 부록 H", "365-day rate also fell: 66.2% (2019-03) → 57.3% (2019-09) · size of drop 6–14 pp after sensitivity check · C2_U2_Repurchase · method: Appendix H"), "f1");
+  const s = content(T("3 · 발견 1 — 신규 고객이 덜 돌아온다 (RQ1.1)", "3 · FINDING 1 — NEW CUSTOMERS COME BACK LESS (RQ1.1)"), T("코로나 전, 그룹 매출이 늘던 때도 신규 고객 재구매는 낮아졌다", "New-customer repurchase fell before COVID"), T("끝점 2019-11 = 90일 창이 2020-02-28에 끝나는 마지막 코호트 · 하락 폭 5–12%p (12개월 버퍼면 2019-09 → 11, −4.8%p) · 깨끗한 코호트가 1년뿐이라 계절 효과는 배제 못 함 · 계산: 부록 H", "Endpoint 2019-11 = last cohort whose 90-day window ends 2020-02-28 · drop 5–12 pp (12-month buffer: 2019-09 → 11, −4.8 pp) · one clean year, so seasonality is not ruled out · method: Appendix H"), "f1");
   tags(s, ["data"]);
   method(s, T("코호트 재구매율 분석: 첫 구매 월별로 고객을 묶고, 90일 안에 다시 산 고객 ÷ 첫 구매 후 90일을 다 지켜볼 수 있는 고객", "Cohort analysis: customers grouped by first-purchase month; bought again within 90 days ÷ customers observable for 90 days"));
   const labels = ["19-03", "19-04", "19-05", "19-06", "19-07", "19-08", "19-09", "19-10", "19-11", "19-12", "20-01", "20-02", "20-03", "20-04", "20-05", "20-06"];
   const v = [43.4, 43.3, 42.5, 38.4, 35.0, 34.8, 35.8, 32.5, 31.0, 29.8, 30.8, 29.8, 32.8, 32.4, 36.3, 35.2];
-  const pre = v.map((x, i) => (i > 0 && i < 11 ? x : 0)), end = v.map((x, i) => (i === 0 || i === 11 ? x : 0)), cov = v.map((x, i) => (i >= 12 ? x : 0));
+  const pre = v.map((x, i) => (i > 0 && i < 8 ? x : 0)), end = v.map((x, i) => (i === 0 || i === 8 ? x : 0)), cov = v.map((x, i) => (i >= 9 ? x : 0));
   s.addChart(pres.charts.BAR, [{ name: "pre", labels, values: pre }, { name: "end", labels, values: end }, { name: "covid", labels, values: cov }], chartBase({ x: MX, y: 2.2, w: CW, h: 3.75, barDir: "col", barOverlapPct: 100, barGapWidthPct: 45, chartColors: [G2, RED, "D9D9DB"], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0.0;;;", dataLabelFontSize: 9, valAxisHidden: true, valGridLine: { style: "none" }, valAxisMinVal: 0, valAxisMaxVal: 50 }));
   txt(s, T("첫 구매 월 코호트별 90일 재구매율 (%) · 같은 기간 그룹 분기 매출 현지통화 +4 ~ +8%", "90-day repurchase rate by first-purchase month cohort (%) · group quarterly sales over the same period: +4 to +8% (local currencies)"), { x: MX, y: 1.8, w: CW, h: 0.35, fontSize: 13, color: G1 });
-  txt(s, [{ text: "■ ", options: { color: G2 } }, { text: T("코로나 전 첫 구매   ", "First purchase before COVID   ") }, { text: "■ ", options: { color: RED } }, { text: T("비교 끝점 (2019-03, 2020-02)   ", "Compared endpoints (2019-03, 2020-02)   ") }, { text: "■ ", options: { color: "C4C4C6" } }, { text: T("2020-03 이후 첫 구매 (매장 폐쇄, 비교 제외)", "First purchase from 2020-03 (closures, not compared)") }], { x: MX, y: 6.0, w: CW, h: 0.35, fontSize: 11, color: G1 });
-  testline(s, MX, 6.4, CW, 0.5, T("카이제곱: 12개 코호트의 재구매율 차이 χ²(11) = 5,050, Cramér’s V = 0.11 · 로지스틱 회귀로 장바구니·채널·나이·라인 구성을 통제해도 43.0% → 29.8% (2020-02 vs 2019-03 오즈비 0.56, 95% CI 0.54–0.58). 고객 구성이 바뀐 탓만은 아니다", "Chi-square across 12 cohorts: χ²(11) = 5,050, Cramér’s V = 0.11 · logistic regression controlling basket, channel, age and line still gives 43.0% → 29.8% (2020-02 vs 2019-03 OR 0.56, 95% CI 0.54–0.58). Not just a change in customer mix"));
+  txt(s, [{ text: "■ ", options: { color: G2 } }, { text: T("90일 창이 폐쇄 전에 끝남   ", "90-day window ends before closures   ") }, { text: "■ ", options: { color: RED } }, { text: T("비교 끝점 (2019-03, 2019-11)   ", "Compared endpoints (2019-03, 2019-11)   ") }, { text: "■ ", options: { color: "C4C4C6" } }, { text: T("90일 창이 2020년 폐쇄와 겹침 (비교 제외)", "90-day window overlaps the 2020 closures (not compared)") }], { x: MX, y: 6.0, w: CW, h: 0.35, fontSize: 11, color: G1 });
+  testline(s, MX, 6.4, CW, 0.5, T("카이제곱: 깨끗한 9개 코호트 χ²(8) = 3,143, Cramér’s V = 0.09 · 로지스틱 회귀로 장바구니·채널·나이·라인을 통제해도 43.0% → 31.6% (2019-11 vs 2019-03 오즈비 0.61, 95% CI 0.59–0.63). 고객 구성이 바뀐 탓만은 아니다", "Chi-square across 9 clean cohorts: χ²(8) = 3,143, V = 0.09 · logistic regression controlling basket, channel, age and line still gives 43.0% → 31.6% (2019-11 vs 2019-03 OR 0.61, 95% CI 0.59–0.63). Not just a change in customer mix"));
 }
 {
   const s = content(T("3 · 발견 2 — 기회는 첫 90일 (RQ1.2)", "3 · FINDING 2 — THE WINDOW IS THE FIRST 90 DAYS (RQ1.2)"), T("90일이 지나면 돌아올 확률이 급격히 줄어든다", "After day 90 the chance of coming back drops sharply"), T("Kaplan–Meier, 2019-03 이후 신규 고객, 15일 간격, 미복귀 고객은 관측 끝에서 절단 · C2_U2_Repurchase · 계산: 부록 H", "Kaplan–Meier, new customers from 2019-03, 15-day grid, customers not yet back censored at end of data · C2_U2_Repurchase · method: Appendix H"), "f2");
@@ -542,10 +555,10 @@ STEP = "해결";
   txt(s, [mk("asm"), { text: T("상한 추정: ", "Upper bound: "), options: { bold: true } }, { text: T("혜택으로 돌아온 고객은 스스로 온 고객보다 덜 살 수 있고, 표본 비율을 그룹에 적용하는 것도 가정이다. 실제 크기는 A/B 테스트로 잰다.", "customers brought back by an offer may buy less than those who return on their own, and applying sample ratios to the group is an assumption. An A/B test measures the real size.") }], { x: 6.3, y: 5.6, w: 6.43, h: 0.95, fontSize: 12, color: G1 });
 }
 {
-  const s = content(T("4 · 결론 한 장", "4 · CONCLUSION ON ONE PAGE"), T("문제는 유입이 아니라 유지다", "The problem is keeping customers, not finding them"), T("효과는 표본 기준 상한 추정 · 출처: H&M FY2021–25 연간실적, Kaggle 거래 전체", "Impact is an upper-bound estimate on the sample · Sources: H&M FY2021–25 full-year reports; all Kaggle transactions"), "exec");
+  const s = content(T("4 · 결론 한 장", "4 · CONCLUSION ON ONE PAGE"), T("가장 뚜렷한 신호는 신규 고객이 두 번째로 덜 온다는 것이다", "The clearest signal: new customers come back less"), T("효과는 표본 기준 상한 추정 · 출처: H&M FY2021–25 연간실적, Kaggle 거래 전체", "Impact is an upper-bound estimate on the sample · Sources: H&M FY2021–25 full-year reports; all Kaggle transactions"), "exec");
   const rows = [
     [T("상황", "Situation"), T("H&M 매출은 3년째 정체(−1%, 1%, 2%)인데 매장은 700곳 줄었고 2026년에 약 160곳을 더 닫는다.", "H&M sales have been flat for three years (−1%, 1%, 2%), it has 700 fewer stores, and it will close about 160 more in 2026.")],
-    [T("문제", "Problem"), T("코로나 전부터 돌아오는 고객이 줄었다. 신규 고객 90일 재구매 43% → 30%, 2020년 일시 폐쇄 때 매장 고객의 80%는 온라인에서 사지 않았다.", "Returning customers fell before COVID: new-customer 90-day repurchase 43% → 30%, and 80% of store customers did not buy online during the 2020 shutdown.")],
+    [T("문제", "Problem"), T("코로나 전에도 신규 고객 90일 재구매가 43% → 31%로 낮아졌다(보수적으로 −5%p). 2020년 일시 폐쇄 때 매장 고객의 80%는 온라인에서 사지 않았다.", "Before COVID, new-customer 90-day repurchase fell 43% → 31% (conservatively −5 pp), and 80% of store customers did not buy online in the 2020 shutdown.")],
     [T("제안", "Proposal"), T("① 첫 구매 후 30–60일 두 번째 구매 유도  ② 첫 장바구니 키우기  ③ 폐점 전 매장 고객을 두 채널 고객으로 전환. 효과는 아직 가설이라 모두 A/B 테스트로 시작.", "① Prompt a second purchase 30–60 days after the first  ② Grow the first basket  ③ Convert store customers to two channels before closing. The effects are hypotheses, so each starts as an A/B test.")],
     [T("효과", "Impact"), T("90일 재구매 +3%p → 신규 고객 첫해 가치 +3%, 표본 전체 가치 약 +0.9% (상한). 금액과 비용은 A/B 테스트로 잰다.", "+3 pp on 90-day repurchase → +3% first-year value from new customers, about +0.9% of sample value (upper bound). Money and cost are measured in an A/B test.")],
   ];
@@ -566,13 +579,15 @@ STEP = "해결";
     [T("2020-09 이후 데이터 없음", "Nothing after 2020-09"), T("지금도 같은 메커니즘인지 확인되지 않았다", "Not confirmed that the mechanism still holds"), T("최신 코호트로 재검증", "Re-test on recent cohorts")],
     [T("가격이 변환값", "Prices are transformed"), T("금액 단위 ROI를 바로 계산할 수 없다", "No ROI in currency directly"), T("보고서 수치로 환산 (가정)", "Convert with report figures (assumption)")],
     [T("상관관계 결과", "Correlational results"), T("옴니, 장바구니, 뉴스레터 효과를 인과로 말할 수 없다", "No causal claims on omni, basket or newsletter"), T("A/B 테스트", "A/B tests")],
+    [T("계절 효과를 배제 못 함", "Seasonality not ruled out"), T("깨끗한 신규 코호트가 2019-03 ~ 11 한 해뿐이라, 하락이 추세인지 계절인지 가를 수 없다", "Clean new cohorts cover one year (2019-03 to 11), so trend and season cannot be separated"), T("다음 해 같은 달 코호트와 비교", "Compare with the same months a year later")],
+    [T("전체 고객 재방문은 그대로", "All-customer repeat held"), T("전체 고객의 90일 재구매는 10–12월 기준 전년과 비슷하다(73–75%). 약해진 것은 신규 고객이다", "All-customer 90-day repeat matched the prior year in Oct–Dec (73–75%); the weakness is in new customers"), T("유입과 유지의 크기를 내부 데이터로 분해", "Split acquisition vs retention with internal data")],
   ];
   L.forEach((l, i) => {
-    const x = MX + (i % 2) * 6.17, y = 1.95 + Math.floor(i / 2) * 2.4;
-    card(s, x, y, 5.96, 2.2);
-    txt(s, l[0], { x: x + 0.3, y: y + 0.25, w: 5.4, h: 0.45, fontSize: 18, bold: true });
-    txt(s, l[1], { x: x + 0.3, y: y + 0.8, w: 5.4, h: 0.6, fontSize: 14, color: G1 });
-    txt(s, [{ text: T("보완  ", "Close it  "), options: { bold: true, color: RED } }, { text: l[2] }], { x: x + 0.3, y: y + 1.5, w: 5.4, h: 0.45, fontSize: 13 });
+    const x = MX + (i % 3) * 4.1, y = 1.9 + Math.floor(i / 3) * 2.45;
+    card(s, x, y, 3.93, 2.3);
+    txt(s, l[0], { x: x + 0.25, y: y + 0.2, w: 3.45, h: 0.4, fontSize: 15, bold: true });
+    txt(s, l[1], { x: x + 0.25, y: y + 0.68, w: 3.45, h: 0.95, fontSize: 12, color: G1 });
+    txt(s, [{ text: T("보완  ", "Close it  "), options: { bold: true, color: RED } }, { text: l[2] }], { x: x + 0.25, y: y + 1.68, w: 3.45, h: 0.5, fontSize: 11.5 });
   });
 }
 STEP = null;
@@ -610,7 +625,7 @@ sec(T("부록", "Appendix"));
   const s = content(T("부록 A · RQ별 답", "APPENDIX A · ANSWERS BY RQ"), T("여섯 개 연구 질문과 데이터가 준 답", "Six research questions and what the data answered"), T("출처: Kaggle H&M Personalized Fashion Recommendations 거래 전체 (2018-09-20 ~ 2020-09-22), analysis/hm_eda_results.xlsx", "Source: all Kaggle H&M Personalized Fashion Recommendations transactions (2018-09-20 to 2020-09-22), analysis/hm_eda_results.xlsx"), "summary");
   table(s, [
     ["RQ", T("질문", "Question"), T("답 (전체 데이터)", "Answer (full data)")],
-    ["1.1", T("신규 고객이 다시 사는가", "Do new customers buy again?"), T("90일 재구매 43.4% (2019-03) → 29.8% (2020-02), 코로나 전부터 하락", "90-day repurchase 43.4% (2019-03) → 29.8% (2020-02), falling before COVID")],
+    ["1.1", T("신규 고객이 다시 사는가", "Do new customers buy again?"), T("90일 재구매 43.4% (2019-03) → 31.0% (2019-11), 코로나 전부터 하락", "90-day repurchase 43.4% (2019-03) → 31.0% (2019-11), falling before COVID")],
     ["1.2", T("언제 돌아오는가", "When do they come back?"), T("90일 안에 35.8% 복귀, 이후 다음 30일 복귀 확률 10.6% → 3.5%", "35.8% return within 90 days; next-30-day chance then falls 10.6% → 3.5%")],
     ["1.3", T("무엇이 재구매를 가르는가", "What separates those who return?"), T("첫 장바구니가 클수록 꾸준히 높음 (1개 32.4% → 7개 이상 40.7%), 품목군 순위는 바뀜", "Bigger first basket, steadily higher (1 item 32.4% → 7+ 40.7%); product-group ranking shifts")],
     ["2.1", T("매장이 닫히면 온라인으로 가는가", "Do customers move online when stores close?"), T("매장 전용 고객 중 19.8%만 온라인 구매, 재개장 후 55.4% 재구매 (전년 47.3%)", "Only 19.8% of store-only customers bought online; 55.4% bought after reopening (47.3% a year earlier)")],
@@ -774,15 +789,15 @@ sec(T("부록", "Appendix"));
   });
 }
 {
-  const s = content(T("부록 L · 방법 점검: 절단·민감도·타당성", "APPENDIX L · METHOD CHECK: CENSORING, SENSITIVITY, VALIDITY"), T("하락은 버퍼를 늘려도 남지만 크기는 6–14%p 범위다", "The drop survives a longer buffer, but its size is 6–14 pp"), T("민감도 분석은 이번 발표를 위해 전체 거래로 재계산 · 코호트 n = 25,060 ~ 51,185 · 타당성 유형: Shadish, Cook & Campbell (2002)", "Sensitivity recomputed on all transactions for this deck · cohort n = 25,060 to 51,185 · validity types: Shadish, Cook & Campbell (2002)"), ["censoring", "validity"]);
+  const s = content(T("부록 L · 방법 점검: 절단·민감도·타당성", "APPENDIX L · METHOD CHECK: CENSORING, SENSITIVITY, VALIDITY"), T("하락은 버퍼를 늘려도 남지만 크기는 5–12%p 범위다", "The drop survives a longer buffer, but its size is 5–12 pp"), T("민감도 분석은 이번 발표를 위해 전체 거래로 재계산 · 코호트 n = 25,060 ~ 51,185 · 타당성 유형: Shadish, Cook & Campbell (2002)", "Sensitivity recomputed on all transactions for this deck · cohort n = 25,060 to 51,185 · validity types: Shadish, Cook & Campbell (2002)"), ["censoring", "validity"]);
   tags(s, ["data", "est"]);
   txt(s, T("신규 고객 버퍼에 따른 90일 재구매 하락", "90-day repurchase drop by new-customer buffer"), { x: MX, y: 1.9, w: 5.6, h: 0.35, fontSize: 14, bold: true });
   table(s, [
-    [T("버퍼 (첫 코호트)", "Buffer (first cohort)"), T("첫 코호트", "First cohort"), "2020-02", T("변화", "Change")],
-    [T("6개월 (2019-03, 기본)", "6 months (2019-03, default)"), "43.4%", "29.8%", T("−13.6%p", "−13.6 pp")],
-    [T("12개월 (2019-09, 민감도)", "12 months (2019-09, sensitivity)"), "35.8%", "29.8%", { text: T("−6.0%p", "−6.0 pp"), options: { bold: true, color: RED } }],
+    [T("버퍼 (첫 코호트)", "Buffer (first cohort)"), T("첫 코호트", "First cohort"), "2019-11", T("변화", "Change")],
+    [T("6개월 (2019-03, 기본)", "6 months (2019-03, default)"), "43.4%", "31.0%", T("−12.4%p", "−12.4 pp")],
+    [T("12개월 (2019-09, 민감도)", "12 months (2019-09, sensitivity)"), "35.8%", "31.0%", { text: T("−4.8%p", "−4.8 pp"), options: { bold: true, color: RED } }],
   ], { x: MX, y: 2.35, w: 5.6, colW: [2.3, 1.1, 1.1, 1.1], fontSize: 12, rowH: 0.5 });
-  txt(s, T("왼쪽 절단(오래 쉬던 기존 고객이 신규로 보임)은 6개월 버퍼로, 오른쪽 절단(아직 안 왔을 뿐)은 관측 가능 고객 제한과 Kaplan–Meier로 다뤘다. 2019년 봄 코호트는 6월 세일 효과도 받을 수 있어, 보수적 추정은 −6%p다.", "Left censoring (lapsed customers looking new) is handled by the six-month buffer; right censoring (not back yet) by observable-only populations and Kaplan–Meier. Spring 2019 cohorts may also catch the June sale, so the conservative estimate is −6 pp."), { x: MX, y: 4.05, w: 5.6, h: 1.9, fontSize: 12, color: G1 });
+  txt(s, T("왼쪽 절단(오래 쉬던 기존 고객이 신규로 보임)은 6개월 버퍼로, 오른쪽 절단(아직 안 왔을 뿐)은 관측 가능 고객 제한과 Kaplan–Meier로 다뤘다. 2019년 봄 코호트는 6월 세일 효과도 받을 수 있어, 보수적 추정은 −5%p다. 끝점은 90일 창이 폐쇄 전에 끝나는 2019-11 코호트다.", "Left censoring (lapsed customers looking new) is handled by the six-month buffer; right censoring (not back yet) by observable-only populations and Kaplan–Meier. Spring 2019 cohorts may also catch the June sale, so the conservative estimate is −5 pp. The endpoint is 2019-11, the last cohort whose window ends before the closures."), { x: MX, y: 4.05, w: 5.6, h: 1.9, fontSize: 12, color: G1 });
   table(s, [
     [T("타당성", "Validity"), T("처리", "What we did"), T("남은 위험", "Remaining risk")],
     [T("외적", "External"), T("수준 대신 방향, 크기는 보고서", "Direction, not level; size from reports"), { text: T("높음: 온라인 쏠림", "High: online skew"), options: { bold: true, color: RED } }],
