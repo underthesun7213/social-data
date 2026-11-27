@@ -368,13 +368,13 @@ STEP = "데이터";
 }
 STEP = "단서";
 {
-  const s = content(T("2 · 단서에서 문제로", "2 · FROM CLUE TO PROBLEM"), T("매출을 쪼개 보니, 줄어든 것은 사는 고객 수와 장바구니였다", "Breaking sales down: fewer buying customers, smaller baskets"), T("가치 = 고객 수 × 고객당 방문 × 방문당 상품 수 × 상품당 가격 · 빈도는 나머지에서 역산 · C2_U1_SalesDecomp · 그룹: FY19 Q4, FY20 Q1", "Value = customers × visits per customer × items per visit × price per item · visits derived · C2_U1_SalesDecomp · group: FY19 Q4, FY20 Q1"), "diagnosis");
+  const s = content(T("2 · 단서에서 문제로", "2 · FROM CLUE TO PROBLEM"), T("매출을 쪼개 보니, 줄어든 것은 사는 고객 수와 장바구니였다", "Breaking sales down: fewer buying customers, smaller baskets"), T("가치 = 고객 수 × 고객당 방문 × 방문당 상품 수 × 상품당 가격 · 빈도는 나머지에서 역산 · C2_U1_SalesDecomp · 맥락: 같은 기간 그룹 매출 +5%는 표본과 직접 비교하지 않음", "Value = customers × visits per customer × items per visit × price per item · visits derived · C2_U1_SalesDecomp · context: group sales +5% in the same months, not compared with the sample"), "diagnosis");
   tags(s, ["data"]);
   steps(s, T("매출 분해: 가치를 네 요인의 곱으로 쪼개 1년 전 같은 달과 비교했다", "Sales decomposition: value as the product of four factors, against a year earlier"), [T("코로나 전 5개월 vs 1년 전 같은 달", "Five pre-COVID months vs the same months a year earlier"), T("가치 = 고객 수 × 방문 빈도 × 방문당 상품 수 × 상품당 가격", "Value = customers × visits × items per visit × price"), T("요인마다 전년 대비 변화율 (빈도는 나머지로 역산)", "Change in each factor (visits derived from the rest)"), T("가장 크게 떨어진 요인 = 새는 곳", "The factor that fell most = the leak")]);
   card(s, MX, 2.4, 3.3, 2.74, { fill: INK });
   txt(s, T("Kaggle 표본, 코로나 전 5개월\n(2019-10 ~ 2020-02)", "Kaggle sample, five months before COVID (2019-10 to 2020-02)"), { x: MX + 0.3, y: 2.6, w: 2.7, h: 0.7, fontSize: 12, color: "C9C9CB" });
   txt(s, "−7.5%", { x: MX + 0.3, y: 3.28, w: 2.7, h: 0.9, fontSize: 48, bold: true, color: WHITE, fontFace: "+mn-lt" });
-  txt(s, T("가치, 전년 같은 달 대비\n같은 기간 그룹 매출은 +5%", "value vs a year earlier;\ngroup sales +5% in the same months"), { x: MX + 0.3, y: 4.22, w: 2.7, h: 0.8, fontSize: 12, color: "C9C9CB" });
+  txt(s, T("가치, 표본 안에서\n전년 같은 달 대비", "value inside the sample,\nvs a year earlier"), { x: MX + 0.3, y: 4.22, w: 2.7, h: 0.8, fontSize: 12, color: "C9C9CB" });
   txt(s, "=", { x: 4.05, y: 3.45, w: 0.4, h: 0.6, fontSize: 30, color: G2, align: "center" });
   const boxes = [
     [T("구매 고객 수", "Buying customers"), "−4.3%", T("→ 누가 안 돌아오나?", "→ who stopped coming back?"), true],
@@ -503,14 +503,14 @@ STEP = "방법";
 }
 STEP = "분석";
 {
-  const s = content(T("3 · Q1 얼마나 덜 돌아오나 → 발견 1", "3 · Q1 HOW MUCH LESS DO THEY RETURN? → FINDING 1"), T("코로나 전, 그룹 매출이 늘던 때도 신규 고객 재구매는 낮아졌다", "New-customer repurchase fell before COVID"), T("끝점 2019-11 = 90일 창이 2020-02-28에 끝나는 마지막 코호트 · 하락 폭 5–12%p (12개월 버퍼면 2019-09 → 11, −4.8%p) · 깨끗한 코호트가 1년뿐이라 계절 효과는 배제 못 함 · 계산: 부록 H", "Endpoint 2019-11 = last cohort whose 90-day window ends 2020-02-28 · drop 5–12 pp (12-month buffer: 2019-09 → 11, −4.8 pp) · one clean year, so seasonality is not ruled out · method: Appendix H"), "f1");
+  const s = content(T("3 · Q1 얼마나 덜 돌아오나 → 발견 1", "3 · Q1 HOW MUCH LESS DO THEY RETURN? → FINDING 1"), T("코로나 전에 신규 고객 재구매가 낮아졌다", "New-customer repurchase fell before COVID"), T("끝점 2019-11 = 90일 창이 2020-02-28에 끝나는 마지막 코호트 · 하락 폭 5–12%p (12개월 버퍼면 2019-09 → 11, −4.8%p) · 깨끗한 코호트가 1년뿐이라 계절 효과는 배제 못 함 · 맥락: 같은 기간 그룹 매출은 분기 +4~8% (표본과 직접 비교하지 않음) · 계산: 부록 H", "Endpoint 2019-11 = last cohort whose 90-day window ends 2020-02-28 · drop 5–12 pp (12-month buffer: 2019-09 → 11, −4.8 pp) · one clean year, so seasonality is not ruled out · context: group sales +4–8% a quarter (not compared with the sample) · method: Appendix H"), "f1");
   tags(s, ["data"]);
   steps(s, T("코호트 재구매율 분석: 같은 달에 처음 온 고객끼리 90일 재구매율을 비교", "Cohort repurchase: compare the 90-day rate of customers who first bought in the same month"), [T("고객마다 첫 구매일 (2019-03 이후 = 신규)", "First purchase date (from 2019-03 = new)"), T("첫 구매 월로 묶기", "Group by first-purchase month"), T("90일 안에 다시 산 고객 ÷ 90일을 다 볼 수 있는 고객", "Back within 90 days ÷ customers observable for 90 days"), T("끝점 비교, 로지스틱 회귀로 통제", "Compare endpoints; control with logistic regression")]);
   const labels = ["19-03", "19-04", "19-05", "19-06", "19-07", "19-08", "19-09", "19-10", "19-11", "19-12", "20-01", "20-02", "20-03", "20-04", "20-05", "20-06"];
   const v = [43.4, 43.3, 42.5, 38.4, 35.0, 34.8, 35.8, 32.5, 31.0, 29.8, 30.8, 29.8, 32.8, 32.4, 36.3, 35.2];
   const pre = v.map((x, i) => (i > 0 && i < 8 ? x : 0)), end = v.map((x, i) => (i === 0 || i === 8 ? x : 0)), cov = v.map((x, i) => (i >= 9 ? x : 0));
   s.addChart(pres.charts.BAR, [{ name: "pre", labels, values: pre }, { name: "end", labels, values: end }, { name: "covid", labels, values: cov }], chartBase({ x: MX, y: 2.68, w: CW, h: 3.0, barDir: "col", barOverlapPct: 100, barGapWidthPct: 45, chartColors: [G2, RED, "D9D9DB"], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0.0;;;", dataLabelFontSize: 9, valAxisHidden: true, valGridLine: { style: "none" }, valAxisMinVal: 0, valAxisMaxVal: 50 }));
-  txt(s, T("첫 구매 월 코호트별 90일 재구매율 (%) · 같은 기간 그룹 분기 매출 현지통화 +4 ~ +8%", "90-day repurchase rate by first-purchase month cohort (%) · group quarterly sales over the same period: +4 to +8% (local currencies)"), { x: MX, y: 2.38, w: CW, h: 0.3, fontSize: 12, color: G1 });
+  txt(s, T("첫 구매 월 코호트별 90일 재구매율 (%)", "90-day repurchase rate by first-purchase month cohort (%)"), { x: MX, y: 2.38, w: CW, h: 0.3, fontSize: 12, color: G1 });
   txt(s, [{ text: "■ ", options: { color: G2 } }, { text: T("90일 창이 폐쇄 전에 끝남   ", "90-day window ends before closures   ") }, { text: "■ ", options: { color: RED } }, { text: T("비교 끝점 (2019-03, 2019-11)   ", "Compared endpoints (2019-03, 2019-11)   ") }, { text: "■ ", options: { color: "C4C4C6" } }, { text: T("90일 창이 2020년 폐쇄와 겹침 (비교 제외)", "90-day window overlaps the 2020 closures (not compared)") }], { x: MX, y: 5.7, w: CW, h: 0.3, fontSize: 10.5, color: G1 });
   testline(s, MX, 6.05, CW, 0.5, T("카이제곱: 깨끗한 9개 코호트 χ²(8) = 3,143, Cramér’s V = 0.09 · 로지스틱 회귀로 장바구니·채널·나이·라인을 통제해도 43.0% → 31.6% (2019-11 vs 2019-03 오즈비 0.61, 95% CI 0.59–0.63). 고객 구성이 바뀐 탓만은 아니다", "Chi-square across 9 clean cohorts: χ²(8) = 3,143, V = 0.09 · logistic regression controlling basket, channel, age and line still gives 43.0% → 31.6% (2019-11 vs 2019-03 OR 0.61, 95% CI 0.59–0.63). Not just a change in customer mix"));
   txt(s, T("다음 질문 Q2: 그럼 언제까지가 기회인가? →", "Next, Q2: until when is there a chance? →"), { x: MX, y: 6.56, w: CW, h: 0.28, fontSize: 11, bold: true, color: RED, align: "right", objectName: "bridge" });
@@ -632,7 +632,7 @@ STEP = "해결";
   const s = content(T("4 · 한계", "4 · LIMITS"), T("이 분석이 말할 수 없는 것", "What this analysis cannot say"), T("전체 목록: analysis/hm_eda_results.xlsx Z_Limitations 시트 · 부록 참고", "Full list: analysis/hm_eda_results.xlsx, Z_Limitations sheet · see appendix"), "limits");
   const L = [
     [T("표본이 온라인에 쏠림", "Sample leans online"), T("수준 수치를 H&M 전체로 일반화할 수 없다", "Levels cannot be generalised to all of H&M"), T("H&M 내부 전체 데이터", "H&M internal full data")],
-    [T("2020-09 이후 데이터 없음", "Nothing after 2020-09"), T("지금도 같은 메커니즘인지 확인되지 않았다", "Not confirmed that the mechanism still holds"), T("최신 코호트로 재검증", "Re-test on recent cohorts")],
+    [T("데이터는 2020년까지", "Data end in 2020"), T("문제는 2023년부터. 2019년의 신호와 오늘의 정체를 잇는 것은 작업 가설이다", "The problem starts in 2023; linking the 2019 signal to it is a working hypothesis"), T("최신 코호트로 재검증, 회복했다면 기각", "Re-test on recent cohorts; reject if they recovered")],
     [T("가격이 변환값", "Prices are transformed"), T("금액 단위 ROI를 바로 계산할 수 없다", "No ROI in currency directly"), T("보고서 수치로 환산 (가정)", "Convert with report figures (assumption)")],
     [T("상관관계 결과", "Correlational results"), T("옴니, 장바구니, 뉴스레터 효과를 인과로 말할 수 없다", "No causal claims on omni, basket or newsletter"), T("A/B 테스트", "A/B tests")],
     [T("계절 효과를 배제 못 함", "Seasonality not ruled out"), T("깨끗한 신규 코호트가 2019-03 ~ 11 한 해뿐이라, 하락이 추세인지 계절인지 가를 수 없다", "Clean new cohorts cover one year (2019-03 to 11), so trend and season cannot be separated"), T("다음 해 같은 달 코호트와 비교", "Compare with the same months a year later")],
@@ -674,7 +674,7 @@ sec(T("부록", "Appendix"));
   const s = pres.addSlide({ masterName: "SECTION", sectionTitle: section });
   s.addText(T("부록", "Appendix"), { placeholder: "num" });
   s.addText(T("데이터와 방법론 상세", "Data and method details"), { placeholder: "title" });
-  s.addText(T("A RQ별 답 · B 정정 사항 · C 데이터 출처 · D 스키마 · E 데이터 딕셔너리 · F 데이터 품질 · G 주류 방법론과 사용한 방법 · H 숫자별 계산 방법 · I 분석 절차 · J 출처 · K–Q 본편에서 뺀 슬라이드 (정의, 방법 점검, 보조 A·B, 실행 순서, 피드백 반영, 시간 차)", "A Answers by RQ · B Corrections · C Data sources · D Schema · E Data dictionary · F Data quality · G Standard methods vs ours · H How each number was computed · I Analysis process · J References"), { placeholder: "desc" });
+  s.addText(T("A RQ별 답 · B 정정 사항 · C 데이터 출처 · D 스키마 · E 데이터 딕셔너리 · F 데이터 품질 · G 주류 방법론과 사용한 방법 · H 숫자별 계산 방법 · I 분석 절차 · J 출처 · K–P 본편에서 뺀 슬라이드 (정의, 방법 점검, 보조 A·B, 실행 순서, 시간 차)", "A Answers by RQ · B Corrections · C Data sources · D Schema · E Data dictionary · F Data quality · G Standard methods vs ours · H How each number was computed · I Analysis process · J References · K–P Slides moved out of the main talk (definitions, method check, supporting A and B, next steps, time gap)"), { placeholder: "desc" });
   notes(s, "appendix");
 }
 {
@@ -924,27 +924,7 @@ sec(T("부록", "Appendix"));
   txt(s, T("지금 단계의 결론은 실행 결정이 아니라 실험 결정이다. 데이터가 말해 주는 것은 어디에 실험을 걸어야 하는지다.", "Today’s conclusion is a decision to test, not to roll out. The data tells us where to place the experiments."), { x: MX + 0.3, y: 6.1, w: CW - 0.6, h: 0.5, fontSize: 14, bold: true });
 }
 {
-  const s = content(T("부록 P · Phase 3 피드백 반영", "APPENDIX P · ACTING ON THE PHASE 3 FEEDBACK"), T("피드백의 지적과 제안을 하나씩 이렇게 반영했다", "How we acted on each point of the feedback"), T("출처: Phase 1–3 평가 의견 (45/50) · 표시 규칙은 본편 모든 분석 슬라이드 오른쪽 위에 적용", "Source: Phase 1–3 assessment (45/50) · labels appear top right on every analysis slide"), "feedback");
-  table(s, [
-    [T("지적", "Feedback"), T("반영", "What we changed"), T("어디서", "Where")],
-    [T("표본의 온라인 비중은 H&M 전체가 아니다", "Sample online share is not H&M’s"), T("수준이 아닌 방향만 비교. 효과는 ‘표본 기준’으로 쓰고 그룹 성장률과의 직접 비교를 뺐다", "Compare direction, not level. Impact is stated ‘in the sample’; the direct comparison with group growth is removed"), T("기대 효과, 시간 차", "Impact, time gap")],
-    [T("높은 단가가 높은 마진은 아니다", "Higher price is not higher margin"), T("가치 = price 합(상대값)이며 이익이 아니라고 정의. 비용·ROI는 A/B 테스트에서 측정", "Value = sum of price (relative), not profit. Cost and ROI are measured in the A/B test"), T("정의, 실행 순서", "Definitions, next steps")],
-    [T("2018–20 데이터 vs 2025–26 문제", "2018–20 data vs 2025–26 problem"), T("연결은 작업 가설로 두고, 최신 코호트에서 회복했다면 기각하는 조건을 명시", "The link is a working hypothesis, rejected if recent cohorts have recovered"), T("시간 차", "Time gap")],
-    [T("구매 간격으로 영구 이탈을 알 수 없다", "Purchase gaps do not show permanent loss"), T("‘이탈’ 대신 ‘휴면(이듬해 구매 없음)’. KM은 복귀 시점만 해석", "‘Lapsed’ (no purchase next year) instead of ‘churn’; KM read only as time to return"), T("정의, 발견 2, 보조 A", "Definitions, finding 2, supporting A")],
-    [T("개별 매장 폐점은 식별되지 않는다", "Individual closures are not identified"), T("2020년 일시·전면 폐쇄만 분석. 영구 폐점 적용은 가정으로 표시", "Only the temporary 2020 shutdown is analysed; applying it to permanent closures is marked as an assumption"), T("발견 4, 제안 ③", "Finding 4, proposal ③")],
-    [T("신규·재구매·장바구니 정의", "Define new, repurchase, basket"), T("부록에서 본편 정의 슬라이드로 올림", "Moved from the appendix to a main definitions slide"), T("Part 2 첫 장", "Start of Part 2")],
-    [T("적게, 확실하게", "Fewer, well-executed analyses"), T("핵심 발견 4개 + 보조 분석 2개로 정리", "Four core findings plus two supporting analyses"), "Part 2"],
-  ], { y: 1.85, colW: [3.3, 6.2, 2.633], fontSize: 11.5, rowH: 0.56 });
-  txt(s, T("주장마다 근거 수준을 표시했다:", "Every claim carries its level of evidence:"), { x: MX, y: 6.42, w: 4.6, h: 0.3, fontSize: 12, bold: true, valign: "middle" });
-  let x = MX + T(3.0, 3.35);
-  [["data", T("데이터가 보여 준 것", "what the data show")], ["est", T("데이터로 계산한 추정", "estimated from the data")], ["asm", T("검증 안 된 가정", "untested assumption")]].forEach(([k, l]) => {
-    pill(s, k, x, 6.44);
-    txt(s, l, { x: x + TAG[k].w + 0.1, y: 6.42, w: 1.8, h: 0.3, fontSize: 11, color: G1, valign: "middle" });
-    x += TAG[k].w + 1.95;
-  });
-}
-{
-  const s = content(T("부록 Q · 왜 믿을 수 있나: 시간 차", "APPENDIX Q · WHY TRUST IT: THE TIME GAP"), T("행동 데이터는 2020년에 끝나고, 문제는 2023년부터 보인다", "Behaviour data ends in 2020; the problem shows from 2023"), T("회계연도 = 전년 12월 ~ 11월 · 출처: H&M 연간실적·분기보고서 (analysis/hm_report_quarterly.csv), Kaggle 데이터 날짜 범위", "Fiscal year = December to November · Sources: H&M full-year and quarterly reports (analysis/hm_report_quarterly.csv), Kaggle date range"), ["timeline", "timeuse"]);
+  const s = content(T("부록 P · 왜 믿을 수 있나: 시간 차", "APPENDIX P · WHY TRUST IT: THE TIME GAP"), T("행동 데이터는 2020년에 끝나고, 문제는 2023년부터 보인다", "Behaviour data ends in 2020; the problem shows from 2023"), T("회계연도 = 전년 12월 ~ 11월 · 출처: H&M 연간실적·분기보고서 (analysis/hm_report_quarterly.csv), Kaggle 데이터 날짜 범위", "Fiscal year = December to November · Sources: H&M full-year and quarterly reports (analysis/hm_report_quarterly.csv), Kaggle date range"), ["timeline", "timeuse"]);
   tags(s, ["data", "asm"]);
   const fy = ["FY18", "FY19", "FY20", "FY21", "FY22", "FY23", "FY24", "FY25", "FY26"], bw = CW / 9;
   fy.forEach((f, i) => {

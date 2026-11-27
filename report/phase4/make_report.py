@@ -130,7 +130,7 @@ p("H&M's sales have been flat for three years (local-currency growth of −1%, 1
 p("", bold_lead="Key findings")
 bullets([
     ("New customers were already coming back less before COVID. ", "The 90-day repurchase rate fell from 43.4% for customers who first bought in March 2019 to 31.0% for November 2019, the last cohort whose 90-day window closes before the 2020 store closures. "
-     "Group sales were still growing 4–8% a quarter. The drop holds after controlling for basket, channel, age and product line (43.0% → 31.6%), but its size is 5–12 points depending on how strictly new customers are defined, and with one clean year we cannot rule out seasonality."),
+     "H&M's reported sales were still growing at the time, which we use as context, not as a like-for-like comparison. The drop holds after controlling for basket, channel, age and product line (43.0% → 31.6%), but its size is 5–12 points depending on how strictly new customers are defined, and with one clean year we cannot rule out seasonality."),
     ("The window to win a second purchase is the first 90 days. ", "Of customers not yet back, 10.6% return in the next 30 days at day 30, 6.8% at day 90 and about 3.6% by day 270."),
     ("The first basket is the most consistent lever. ", "Repurchase rises steadily with the number of items in the first purchase (32.4% for one item to 40.7% for seven or more at 90 days), at every horizon and after controls; the product group a customer starts with does not hold its ranking."),
     ("Store customers waited rather than moving online in the 2020 shutdown. ", "Only 19.8% of store-only customers bought online during the closures, but 55.4% bought after reopening, 8.1 points more than in the same months a year earlier."),
@@ -191,11 +191,13 @@ doc.add_heading("3.2 Preparation and definitions", level=2)
 bullets([
     ("Purchase occasion: ", "there is no receipt ID, so all items one customer bought on one day form one purchase (31.8 million rows → 9,080,179 occasions)."),
     ("Online: ", "channel 2 is treated as online. This is an assumption with support: channel 2 is 100% of rows in April 2020, when stores were closed."),
-    ("Value: ", "the sum of transformed prices. Prices are rescaled by H&M, so we compare only shares, ratios and changes, never currency amounts."),
+    ("Value: ", "the sum of transformed prices. Prices are rescaled by H&M, so we compare only shares, ratios and changes, never currency amounts. Value is not profit or margin."),
     ("New customer: ", "first purchase on or after 2019-03-01. Customers first seen earlier may have shopped before the data starts (left censoring), so the first six months act as a buffer; a 12-month buffer is used as a sensitivity check."),
     ("Repurchase within N days: ", "counted only for customers who can be observed for N days after their first purchase, so late joiners are not counted as non-returners (right censoring)."),
     ("Clean cohorts: ", "for comparisons labelled \"before COVID\", only cohorts whose 90-day window ends before the 2020 closures (first purchase up to November 2019)."),
     ("Analysis tables: ", "from the 9.08 million purchases we built one table per question: 646,685 new customers (451,476 observable for 90 days) for RQ 1.1–1.3; 675,387 customers grouped by their channel before the closures for RQ 2.1; 1,005,899 year-1 customers for RQ 2.2; and 1,346,520 buyers with a known age for RQ 2.3."),
+    ("First basket: ", "the number of items in a customer's first purchase occasion, grouped as 1, 2–3, 4–6 and 7+."),
+    ("Lapsed: ", "bought in the first year of the data (2018-09-20 to 2019-09-19) and made no purchase in the second year; it is not permanent churn."),
 ])
 doc.add_heading("3.3 Methods", level=2)
 p("For each question we followed the course's method-selection steps: name the outcome and its type, decide what one row is, pick the starting method, and name the main trap. "
@@ -235,7 +237,7 @@ doc.add_heading("RQ 1.1 New-customer repurchase by first-purchase month", level=
 p("New customers' 90-day repurchase rate fell from 43.4% (first purchase March 2019) to 31.0% (November 2019). The 30-day rate fell from 24.3% to 19.9%, and the 365-day rate from 66.2% (March 2019) to 57.3% (September 2019, the last cohort with a full year).", bold_lead="Result. ")
 figure("fig2_cohort.png", "90-day repurchase rate by first-purchase month. Red bars are the compared endpoints; light bars are cohorts whose window overlaps the 2020 closures. n = 25,060 to 52,127 per cohort.")
 p("The nine clean cohorts differ significantly (χ²(8) = 3,143, Cramér's V = 0.09). A logistic regression on 451,476 new customers controlling first-basket size, first channel, age and product line gives 43.0% → 31.6% (November vs March 2019, odds ratio 0.61, 95% CI 0.59–0.63), so the decline is not just a change in who the new customers were.", bold_lead="Test. ")
-p("While H&M was still growing 4–8% a quarter, new customers in the sample were becoming less likely to make a second purchase. This is an early signal for the retention issue H&M faces today.", bold_lead="Meaning. ")
+p("Before COVID, new customers in the sample were becoming less likely to make a second purchase, while H&M's reported sales were still growing (context only, not a like-for-like comparison). This is an early signal consistent with, but not proof of, the retention concern in H&M's recent reports.", bold_lead="Meaning. ")
 p("Early 2019 cohorts may still contain lapsed existing customers; with a 12-month buffer the drop is 35.8% → 31.0% (−4.8 points, 95% CI 4.0–5.5), so we state the size as 5–12 points. With one clean year, the fall could partly be seasonal. "
   "And the all-customer 90-day repeat rate in October–December 2019 was close to the year before (73.9% → 74.8%, 73.3% → 73.6%, 73.6% → 72.3%): the weakness is specific to new customers.", bold_lead="Caveats. ")
 
@@ -273,7 +275,7 @@ p("Most of the single-channel lapse gap, about 31 of 36 points, is explained by 
   "Store-only customers who became omni gained 79% in value, while those who stayed store-only lost 19%, but this is correlation.", bold_lead="Meaning. ")
 
 doc.add_heading("RQ 2.3 Store dependence by age", level=2)
-p("The in-store share of transaction rows is lowest at 25–34 (25.2%) and highest at 65+ (36.6%), in a U shape: 55–64 (32.5%) is below 16–24 (33.2%) and 45–54 (33.3%). Customers aged 65+ pay 18.8% more per item but have half the value per customer of 25–34 (0.41 vs 0.83), and customers aged 16–34 are 55.3% of buyers with a known age.", bold_lead="Result. ")
+p("The in-store share of transaction rows is lowest at 25–34 (25.2%) and highest at 65+ (36.6%), in a U shape: 55–64 (32.5%) is below 16–24 (33.2%) and 45–54 (33.3%). Customers aged 65+ pay 18.8% more per item (a price, not a margin) but have half the value per customer of 25–34 (0.41 vs 0.83), and customers aged 16–34 are 55.3% of buyers with a known age.", bold_lead="Result. ")
 figure("fig8_age.png", "In-store share of transaction rows by age band (rows with no age, 0.4%, excluded).")
 p("A one-way ANOVA of each customer's in-store share across age bands is significant (F = 657) but age explains only 0.2% of the variation (η² = 0.002); Kruskal–Wallis agrees.", bold_lead="Test. ")
 p("Only 65+ supports the Phase 2–3 claim that older shoppers rely on stores, and the effect is small. Age is a reasonable way to order a store-closure programme, not a reason to keep stores.", bold_lead="Meaning. ")
@@ -342,6 +344,18 @@ p("Three lessons carry to future analytics work. First, define the observation w
   "Third, keep official statements and our own data apart: we extracted 952 statements from H&M's reports, checked each summary against its source page, and labelled every number in the presentation as data, estimate or assumption.")
 p("Code and drafts were produced with an AI assistant (Claude). Several of its errors were caught in review, including a wrong observation window, partial months in a comparison and a mislabelled survival-curve value; "
   "every figure in this report was re-derived from the scripts and checked against the aggregate outputs before use.")
+doc.add_heading("6.3 Response to the Phase 1–3 feedback", level=2)
+p("The instructor's feedback on Phases 1–3 raised eight points. Each is answered in this report as follows.")
+bullets([
+    ("Higher item prices are not higher margins. ", "Value is a sum of transformed prices, relative only and never profit or margin; the 65+ price premium is stated as a price, and ROI is left to the A/B tests (Sections 3.2, 5.1, RQ 2.3)."),
+    ("The sample's online share is not H&M's. ", "We compare direction inside the sample, not levels against the group; group sales growth appears only as context (Sections 3.1, 4.7, 6.1)."),
+    ("2018–2020 data vs 2025–2026 issues. ", "The link is a working hypothesis with a rejection rule: if 2023–2025 cohorts have recovered, it is rejected (Sections 4.7, 5.2)."),
+    ("Purchase gaps do not show when a customer is lost for good. ", "We use \"lapsed\" (no purchase in the next year) instead of churn, and read the survival curve only as time to return (RQ 1.2, RQ 2.2)."),
+    ("Individual store closures are not in the data. ", "Only the temporary 2020 shutdown is analysed; carrying the result to permanent closures is stated as an assumption (RQ 2.1, Section 5)."),
+    ("Define first-time customers, retention and baskets. ", "Section 3.2 defines each, together with the analysis tables they produce."),
+    ("Focus on a few well-executed analyses. ", "Four questions carry the argument (RQ 1.1–1.3, 2.1); RQ 2.2 and 2.3 only support the recommendations (Section 4)."),
+    ("Keep data, estimates and assumptions apart. ", "The presentation labels every analysis slide; in this report estimates and assumptions are named where they occur (impact scenarios in Section 5.1; channel and price assumptions in Section 3.2)."),
+])
 
 # ------------------------------------------------------------------ 7 conclusion
 doc.add_heading("7. Conclusion and Next Steps", level=1)
