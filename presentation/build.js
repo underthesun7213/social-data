@@ -430,7 +430,7 @@ STEP = "방법";
       T("예: 2019-03 첫 구매 고객 100명 중 43명이 90일 안에 다시 샀다 → 43%", "e.g. of 100 first-time buyers in 2019-03, 43 bought again within 90 days → 43%")],
     [T("생존분석 (Kaplan–Meier)", "Survival analysis (Kaplan–Meier)"), T("‘돌아오기’를 사건으로 보고, 아직 안 돌아온 고객의 비율 S(t)를 날마다 갱신한다. 관측이 끝난 고객도 끝난 날까지는 분모에 넣는다(중도 절단). 그래서 고객마다 관측 기간이 달라도 된다.", "Treat coming back as the event and update S(t), the share not back yet, day by day. Customers whose follow-up ends stay in the denominator until it ends (censoring)."),
       T("S(t) = Π (1 − 그날 돌아온 고객 ÷ 그날까지 안 돌아온 고객)\n다음 30일 복귀 확률 = 1 − S(t+30) ÷ S(t)", "S(t) = Π (1 − returned that day ÷ not back by that day)\nnext-30-day chance = 1 − S(t+30) ÷ S(t)"),
-      T("예: 90일째까지 안 온 고객 100명 중 다음 30일에 돌아오는 사람은 약 11명 (10.6%)", "e.g. of 100 not back by day 90, about 11 return in 30 days (10.6%)")],
+      T("예: 30일째까지 안 온 고객 100명 중 다음 30일에 약 11명(10.6%)이 오고, 90일째면 약 7명(6.8%)이다", "e.g. of 100 not back by day 30, about 11 return in 30 days (10.6%); by day 90, about 7 (6.8%)")],
     [T("오즈비와 조정 확률 (로지스틱 회귀 읽기)", "Odds ratios and adjusted rates (reading a logit)"), T("오즈 = 일어날 확률 ÷ 안 일어날 확률. 오즈비 1.37은 다른 조건이 같을 때 오즈가 1.37배라는 뜻이다. 퍼센트로 읽기 쉽게, 모든 고객을 그 그룹이라고 놓고 예측해 평균 낸 값이 조정 확률이다.", "Odds = p ÷ (1 − p). An odds ratio of 1.37 means 1.37 times the odds, all else equal. The adjusted rate predicts every customer as if in that group and averages."),
       T("오즈비 = [p₁ ÷ (1 − p₁)] ÷ [p₀ ÷ (1 − p₀)]\n조정 확률 = 모든 고객을 그 그룹으로 놓은 예측 확률의 평균", "odds ratio = [p₁ ÷ (1 − p₁)] ÷ [p₀ ÷ (1 − p₀)]\nadjusted rate = mean prediction with everyone set to that group"),
       T("예: 첫 장바구니 7개 이상 40.8% vs 1개 33.5% (다른 조건이 같을 때)", "e.g. first basket of 7+ items 40.8% vs 1 item 33.5%, all else equal")],
@@ -517,7 +517,7 @@ STEP = "해결";
 {
   const s = content(T("4 · 제안", "4 · PROPOSALS"), T("발견마다 하나씩, 대상과 시점까지 정한 세 가지 제안", "Three proposals, one per finding, each with a target and timing"), T("괄호 = 근거가 된 발견 (A, B = 부록의 보조 분석) · 지표 기준선은 2019–20 표본", "Brackets = supporting findings (A, B = supporting analyses in the appendix) · metric baselines come from the 2019–20 sample"), "proposal");
   const P = [
-    [T("두 번째 구매 유도", "Prompt a second purchase"), T("개인화 추천, 기한 있는 혜택", "Personalised picks, time-limited offer"), T("아직 안 돌아온 신규 고객", "New customers not yet back"), T("첫 구매 후 30–60일", "Days 30–60 after first purchase"), T("90일이 지나면 30일 내 복귀 확률 10.6% → 6.8% → 3.6% (1, 2)", "After day 90 the 30-day return chance falls 10.6% → 6.8% → 3.6% (1, 2)"), T("90일 재구매율", "90-day repurchase rate")],
+    [T("두 번째 구매 유도", "Prompt a second purchase"), T("개인화 추천, 기한 있는 혜택", "Personalised picks, time-limited offer"), T("아직 안 돌아온 신규 고객", "New customers not yet back"), T("첫 구매 후 30–60일", "Days 30–60 after first purchase"), T("다음 30일 복귀 확률: 30일째 10.6% → 90일째 6.8% → 270일째 3.6% (1, 2)", "Chance of returning in the next 30 days: 10.6% at day 30 → 6.8% at day 90 → 3.6% at day 270 (1, 2)"), T("90일 재구매율", "90-day repurchase rate")],
     [T("첫 장바구니 키우기", "Grow the first basket"), T("코디 번들, 무료배송 기준", "Outfit bundles, free-shipping threshold"), T("첫 구매 고객", "First-time buyers"), T("첫 구매 시점", "At the first purchase"), T("1개 32.4% → 7개 이상 40.7%, 90·365일 모두 순서 유지 (3)", "1 item 32.4% → 7+ items 40.7%; order holds at 90 and 365 days (3)"), T("첫 장바구니 상품 수, 90일 재구매율", "First-basket items; 90-day rate")],
     [T("폐점 전 두 채널 전환", "Convert to two channels before closing"), T("앱 가입, 클릭앤콜렉트, 매장 반품", "App sign-up, click-and-collect, in-store returns"), T("폐점 예정 매장의 매장 전용 고객, 65세 이상 우선", "Store-only customers of stores due to close; 65+ first"), T("폐점 3–6개월 전", "3–6 months before closing"), T("일시 폐쇄 때 19.8%만 온라인 구매 (4) · 한 채널 고객은 구매 횟수를 통제해도 휴면율이 약 5%p 높다 (A, B)", "Only 19.8% bought online in the shutdown (4); single-channel lapse is about 5 pp higher even after controlling purchases (A, B)"), T("폐점 후 12개월 잔존율", "12-month retention after closing")],
   ];
@@ -549,7 +549,7 @@ STEP = "해결";
     [T("시나리오", "Scenario"), T("신규 첫해 가치", "New-customer first-year value"), T("표본 전체 가치", "Total sample value")],
     ["+1%p".replace("%p", T("%p", " pp")), "+1.0%", T("약 +0.3%", "about +0.3%")],
     ["+3%p".replace("%p", T("%p", " pp")), "+3.1%", { text: T("약 +0.9%", "about +0.9%"), options: { bold: true, color: RED } }],
-    [T("+6%p (2019-09 수준 회복)", "+6 pp (back to 2019-09 level)"), "+6.1%", T("약 +1.7%", "about +1.7%")],
+    [T("+5%p (2019-09 수준 회복)", "+5 pp (back to 2019-09 level)"), "+4.9%", T("약 +1.4%", "about +1.4%")],
   ], { x: 6.3, y: 2.45, w: 6.43, colW: [2.6, 2.0, 1.83], fontSize: 13, rowH: 0.5 });
   txt(s, [{ text: "28.4%  ", options: { bold: true, color: RED, fontSize: 20 } }, { text: T("표본의 최근 1년 가치 중 2019-03 이후 처음 산 고객의 몫. 표본 비율이라 H&M 그룹 매출과 직접 비교하지 않는다.", "share of the sample’s last-year value from customers first seen from 2019-03. A sample ratio, so not compared directly with H&M group sales.") }], { x: 6.3, y: 4.65, w: 6.43, h: 0.8, fontSize: 13 });
   txt(s, [mk("asm"), { text: T("상한 추정: ", "Upper bound: "), options: { bold: true } }, { text: T("혜택으로 돌아온 고객은 스스로 온 고객보다 덜 살 수 있고, 표본 비율을 그룹에 적용하는 것도 가정이다. 실제 크기는 A/B 테스트로 잰다.", "customers brought back by an offer may buy less than those who return on their own, and applying sample ratios to the group is an assumption. An A/B test measures the real size.") }], { x: 6.3, y: 5.6, w: 6.43, h: 0.95, fontSize: 12, color: G1 });
